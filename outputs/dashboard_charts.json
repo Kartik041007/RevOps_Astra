@@ -1,0 +1,1459 @@
+{
+  "kpis": {
+    "total_customers": 120,
+    "urgent_customers": 12,
+    "customers_needing_review": 56,
+    "healthy_customers": 52,
+    "overdue_followups": 116,
+    "expansion_candidates": 0,
+    "recorded_revenue_90d_associated_with_flagged_accounts": 1155785.68
+  },
+  "risk_distribution": [
+    {
+      "risk_level": "Urgent",
+      "customer_count": 12
+    },
+    {
+      "risk_level": "Needs Review",
+      "customer_count": 56
+    },
+    {
+      "risk_level": "Healthy",
+      "customer_count": 52
+    }
+  ],
+  "revenue_by_risk": [
+    {
+      "risk_level": "Urgent",
+      "customer_count": 12,
+      "recorded_revenue": 599853.56,
+      "recorded_revenue_90d": 163874.01
+    },
+    {
+      "risk_level": "Needs Review",
+      "customer_count": 56,
+      "recorded_revenue": 4672683.4,
+      "recorded_revenue_90d": 991911.67
+    },
+    {
+      "risk_level": "Healthy",
+      "customer_count": 52,
+      "recorded_revenue": 7667741.5600000005,
+      "recorded_revenue_90d": 2522017.0
+    }
+  ],
+  "usage_vs_revenue": [
+    {
+      "account_id": "ACC-001",
+      "company_name": "Northstar Components 001",
+      "usage_change_pct": -18.3565107459,
+      "recorded_revenue_90d": 6949.51,
+      "risk_level": "Urgent",
+      "risk_index": 70
+    },
+    {
+      "account_id": "ACC-002",
+      "company_name": "Ironclad Products 002",
+      "usage_change_pct": -21.6998504761,
+      "recorded_revenue_90d": 4686.14,
+      "risk_level": "Needs Review",
+      "risk_index": 50
+    },
+    {
+      "account_id": "ACC-003",
+      "company_name": "Redwood Operations 003",
+      "usage_change_pct": -17.1411324399,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Urgent",
+      "risk_index": 70
+    },
+    {
+      "account_id": "ACC-004",
+      "company_name": "Brightforge Enterprises 004",
+      "usage_change_pct": -22.9516994633,
+      "recorded_revenue_90d": 42253.36,
+      "risk_level": "Needs Review",
+      "risk_index": 50
+    },
+    {
+      "account_id": "ACC-005",
+      "company_name": "Harbor Technologies 005",
+      "usage_change_pct": -24.4557329463,
+      "recorded_revenue_90d": 53525.39,
+      "risk_level": "Urgent",
+      "risk_index": 70
+    },
+    {
+      "account_id": "ACC-006",
+      "company_name": "Crestline Components 006",
+      "usage_change_pct": -18.8735873526,
+      "recorded_revenue_90d": 40499.89,
+      "risk_level": "Urgent",
+      "risk_index": 70
+    },
+    {
+      "account_id": "ACC-007",
+      "company_name": "Silverline Enterprises 007",
+      "usage_change_pct": -24.619150468,
+      "recorded_revenue_90d": 12863.87,
+      "risk_level": "Needs Review",
+      "risk_index": 50
+    },
+    {
+      "account_id": "ACC-008",
+      "company_name": "Westfield Industries 008",
+      "usage_change_pct": -22.5755551314,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Urgent",
+      "risk_index": 70
+    },
+    {
+      "account_id": "ACC-009",
+      "company_name": "Clearwater Solutions 009",
+      "usage_change_pct": -23.2124010554,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Urgent",
+      "risk_index": 70
+    },
+    {
+      "account_id": "ACC-010",
+      "company_name": "Summit Products 010",
+      "usage_change_pct": -21.0732351001,
+      "recorded_revenue_90d": 55906.69,
+      "risk_level": "Urgent",
+      "risk_index": 70
+    },
+    {
+      "account_id": "ACC-011",
+      "company_name": "Nova Operations 011",
+      "usage_change_pct": -25.950115711,
+      "recorded_revenue_90d": 5116.5,
+      "risk_level": "Needs Review",
+      "risk_index": 40
+    },
+    {
+      "account_id": "ACC-012",
+      "company_name": "Apex Manufacturing 012",
+      "usage_change_pct": -23.0138540063,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Urgent",
+      "risk_index": 70
+    },
+    {
+      "account_id": "ACC-013",
+      "company_name": "Clearwater Solutions 013",
+      "usage_change_pct": -24.1926605505,
+      "recorded_revenue_90d": 16573.81,
+      "risk_level": "Urgent",
+      "risk_index": 70
+    },
+    {
+      "account_id": "ACC-014",
+      "company_name": "Harbor Components 014",
+      "usage_change_pct": -26.3259884357,
+      "recorded_revenue_90d": 58786.58,
+      "risk_level": "Needs Review",
+      "risk_index": 60
+    },
+    {
+      "account_id": "ACC-015",
+      "company_name": "Silverline Group 015",
+      "usage_change_pct": -21.7404441759,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Urgent",
+      "risk_index": 70
+    },
+    {
+      "account_id": "ACC-016",
+      "company_name": "Pioneer Group 016",
+      "usage_change_pct": -21.5062761506,
+      "recorded_revenue_90d": 81864.81,
+      "risk_level": "Needs Review",
+      "risk_index": 40
+    },
+    {
+      "account_id": "ACC-017",
+      "company_name": "Crestline Enterprises 017",
+      "usage_change_pct": -20.5275087575,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 40
+    },
+    {
+      "account_id": "ACC-018",
+      "company_name": "Northstar Industries 018",
+      "usage_change_pct": -14.8985930934,
+      "recorded_revenue_90d": 88731.33,
+      "risk_level": "Healthy",
+      "risk_index": 25
+    },
+    {
+      "account_id": "ACC-019",
+      "company_name": "Pioneer Operations 019",
+      "usage_change_pct": -26.6551383399,
+      "recorded_revenue_90d": -9581.28,
+      "risk_level": "Urgent",
+      "risk_index": 70
+    },
+    {
+      "account_id": "ACC-020",
+      "company_name": "Oakridge Components 020",
+      "usage_change_pct": -23.1298648095,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 40
+    },
+    {
+      "account_id": "ACC-021",
+      "company_name": "Harbor Enterprises 021",
+      "usage_change_pct": -17.6061908856,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Healthy",
+      "risk_index": 30
+    },
+    {
+      "account_id": "ACC-022",
+      "company_name": "Evergreen Group 022",
+      "usage_change_pct": -19.8142914816,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 40
+    },
+    {
+      "account_id": "ACC-023",
+      "company_name": "Crestline Products 023",
+      "usage_change_pct": -17.4636979671,
+      "recorded_revenue_90d": 21900.63,
+      "risk_level": "Needs Review",
+      "risk_index": 60
+    },
+    {
+      "account_id": "ACC-024",
+      "company_name": "BluePeak Enterprises 024",
+      "usage_change_pct": -18.7148810324,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Urgent",
+      "risk_index": 70
+    },
+    {
+      "account_id": "ACC-025",
+      "company_name": "Oakridge Manufacturing 025",
+      "usage_change_pct": -14.5767575323,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 45
+    },
+    {
+      "account_id": "ACC-026",
+      "company_name": "Nova Technologies 026",
+      "usage_change_pct": -3.1594975257,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 55
+    },
+    {
+      "account_id": "ACC-027",
+      "company_name": "Westfield Solutions 027",
+      "usage_change_pct": -7.261890281,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 45
+    },
+    {
+      "account_id": "ACC-028",
+      "company_name": "Oakridge Works 028",
+      "usage_change_pct": -14.8510086989,
+      "recorded_revenue_90d": 16042.97,
+      "risk_level": "Needs Review",
+      "risk_index": 55
+    },
+    {
+      "account_id": "ACC-029",
+      "company_name": "Pioneer Group 029",
+      "usage_change_pct": -14.3845371312,
+      "recorded_revenue_90d": 33627.57,
+      "risk_level": "Healthy",
+      "risk_index": 30
+    },
+    {
+      "account_id": "ACC-030",
+      "company_name": "Harbor Operations 030",
+      "usage_change_pct": -8.3458535867,
+      "recorded_revenue_90d": 7108.06,
+      "risk_level": "Needs Review",
+      "risk_index": 55
+    },
+    {
+      "account_id": "ACC-031",
+      "company_name": "Keystone Logistics 031",
+      "usage_change_pct": -10.9386156858,
+      "recorded_revenue_90d": 4956.33,
+      "risk_level": "Needs Review",
+      "risk_index": 55
+    },
+    {
+      "account_id": "ACC-032",
+      "company_name": "Sterling Manufacturing 032",
+      "usage_change_pct": -12.8813834538,
+      "recorded_revenue_90d": 81143.24,
+      "risk_level": "Needs Review",
+      "risk_index": 55
+    },
+    {
+      "account_id": "ACC-033",
+      "company_name": "Apex Logistics 033",
+      "usage_change_pct": -17.4438260153,
+      "recorded_revenue_90d": 31308.82,
+      "risk_level": "Needs Review",
+      "risk_index": 50
+    },
+    {
+      "account_id": "ACC-034",
+      "company_name": "Clearwater Group 034",
+      "usage_change_pct": -13.2201548282,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 55
+    },
+    {
+      "account_id": "ACC-035",
+      "company_name": "Summit Components 035",
+      "usage_change_pct": -16.3116883117,
+      "recorded_revenue_90d": 11195.09,
+      "risk_level": "Needs Review",
+      "risk_index": 45
+    },
+    {
+      "account_id": "ACC-036",
+      "company_name": "Oakridge Products 036",
+      "usage_change_pct": -6.7823571945,
+      "recorded_revenue_90d": 41862.65,
+      "risk_level": "Needs Review",
+      "risk_index": 55
+    },
+    {
+      "account_id": "ACC-037",
+      "company_name": "Harbor Manufacturing 037",
+      "usage_change_pct": -6.516810198,
+      "recorded_revenue_90d": 5547.87,
+      "risk_level": "Needs Review",
+      "risk_index": 55
+    },
+    {
+      "account_id": "ACC-038",
+      "company_name": "Ironclad Enterprises 038",
+      "usage_change_pct": -7.2511043153,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 45
+    },
+    {
+      "account_id": "ACC-039",
+      "company_name": "Keystone Operations 039",
+      "usage_change_pct": -7.7181074067,
+      "recorded_revenue_90d": 1619.85,
+      "risk_level": "Needs Review",
+      "risk_index": 40
+    },
+    {
+      "account_id": "ACC-040",
+      "company_name": "Brightforge Technologies 040",
+      "usage_change_pct": -11.4890756303,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 45
+    },
+    {
+      "account_id": "ACC-041",
+      "company_name": "BluePeak Industries 041",
+      "usage_change_pct": -14.912376508,
+      "recorded_revenue_90d": 22101.44,
+      "risk_level": "Needs Review",
+      "risk_index": 45
+    },
+    {
+      "account_id": "ACC-042",
+      "company_name": "Brightforge Group 042",
+      "usage_change_pct": -16.9155252949,
+      "recorded_revenue_90d": 34465.1,
+      "risk_level": "Needs Review",
+      "risk_index": 45
+    },
+    {
+      "account_id": "ACC-043",
+      "company_name": "Sterling Systems 043",
+      "usage_change_pct": 14.280458713,
+      "recorded_revenue_90d": 263730.49,
+      "risk_level": "Healthy",
+      "risk_index": 35
+    },
+    {
+      "account_id": "ACC-044",
+      "company_name": "Westfield Technologies 044",
+      "usage_change_pct": 16.2974264062,
+      "recorded_revenue_90d": 111522.51,
+      "risk_level": "Healthy",
+      "risk_index": 0
+    },
+    {
+      "account_id": "ACC-045",
+      "company_name": "Crestline Group 045",
+      "usage_change_pct": 7.5422454748,
+      "recorded_revenue_90d": 136664.4,
+      "risk_level": "Needs Review",
+      "risk_index": 45
+    },
+    {
+      "account_id": "ACC-046",
+      "company_name": "Clearwater Industries 046",
+      "usage_change_pct": 2.262398242,
+      "recorded_revenue_90d": 148472.47,
+      "risk_level": "Healthy",
+      "risk_index": 10
+    },
+    {
+      "account_id": "ACC-047",
+      "company_name": "Evergreen Logistics 047",
+      "usage_change_pct": 4.5926876203,
+      "recorded_revenue_90d": 36807.34,
+      "risk_level": "Healthy",
+      "risk_index": 30
+    },
+    {
+      "account_id": "ACC-048",
+      "company_name": "Sterling Components 048",
+      "usage_change_pct": 3.6392129549,
+      "recorded_revenue_90d": 43253.2,
+      "risk_level": "Healthy",
+      "risk_index": 10
+    },
+    {
+      "account_id": "ACC-049",
+      "company_name": "Oakridge Solutions 049",
+      "usage_change_pct": 1.8868988859,
+      "recorded_revenue_90d": 199373.32,
+      "risk_level": "Healthy",
+      "risk_index": 35
+    },
+    {
+      "account_id": "ACC-050",
+      "company_name": "Harbor Operations 050",
+      "usage_change_pct": 8.1204745969,
+      "recorded_revenue_90d": 70322.23,
+      "risk_level": "Healthy",
+      "risk_index": 30
+    },
+    {
+      "account_id": "ACC-051",
+      "company_name": "Silverline Systems 051",
+      "usage_change_pct": 13.794200416,
+      "recorded_revenue_90d": 26858.24,
+      "risk_level": "Healthy",
+      "risk_index": 0
+    },
+    {
+      "account_id": "ACC-052",
+      "company_name": "Clearwater Operations 052",
+      "usage_change_pct": 8.8218430034,
+      "recorded_revenue_90d": 20800.46,
+      "risk_level": "Healthy",
+      "risk_index": 0
+    },
+    {
+      "account_id": "ACC-053",
+      "company_name": "Vertex Logistics 053",
+      "usage_change_pct": 8.2443705097,
+      "recorded_revenue_90d": 46765.41,
+      "risk_level": "Healthy",
+      "risk_index": 0
+    },
+    {
+      "account_id": "ACC-054",
+      "company_name": "Oakridge Logistics 054",
+      "usage_change_pct": 12.2421012562,
+      "recorded_revenue_90d": 99039.07,
+      "risk_level": "Healthy",
+      "risk_index": 10
+    },
+    {
+      "account_id": "ACC-055",
+      "company_name": "Brightforge Industries 055",
+      "usage_change_pct": 5.8958068615,
+      "recorded_revenue_90d": 53978.9,
+      "risk_level": "Healthy",
+      "risk_index": 25
+    },
+    {
+      "account_id": "ACC-056",
+      "company_name": "Summit Components 056",
+      "usage_change_pct": 12.127324567,
+      "recorded_revenue_90d": 83770.25,
+      "risk_level": "Healthy",
+      "risk_index": 35
+    },
+    {
+      "account_id": "ACC-057",
+      "company_name": "BluePeak Industries 057",
+      "usage_change_pct": 16.815050027,
+      "recorded_revenue_90d": 27351.27,
+      "risk_level": "Healthy",
+      "risk_index": 0
+    },
+    {
+      "account_id": "ACC-058",
+      "company_name": "Northstar Systems 058",
+      "usage_change_pct": 5.5958010989,
+      "recorded_revenue_90d": 14686.19,
+      "risk_level": "Healthy",
+      "risk_index": 30
+    },
+    {
+      "account_id": "ACC-059",
+      "company_name": "Clearwater Enterprises 059",
+      "usage_change_pct": -8.4055361764,
+      "recorded_revenue_90d": 72740.73,
+      "risk_level": "Needs Review",
+      "risk_index": 55
+    },
+    {
+      "account_id": "ACC-060",
+      "company_name": "Oakridge Technologies 060",
+      "usage_change_pct": -3.5691465084,
+      "recorded_revenue_90d": 58664.29,
+      "risk_level": "Needs Review",
+      "risk_index": 55
+    },
+    {
+      "account_id": "ACC-061",
+      "company_name": "Harbor Group 061",
+      "usage_change_pct": 9.0262370136,
+      "recorded_revenue_90d": 19912.74,
+      "risk_level": "Needs Review",
+      "risk_index": 45
+    },
+    {
+      "account_id": "ACC-062",
+      "company_name": "Evergreen Industries 062",
+      "usage_change_pct": 2.7735728031,
+      "recorded_revenue_90d": 10287.8,
+      "risk_level": "Needs Review",
+      "risk_index": 55
+    },
+    {
+      "account_id": "ACC-063",
+      "company_name": "Crestline Products 063",
+      "usage_change_pct": -6.6828518249,
+      "recorded_revenue_90d": 29991.09,
+      "risk_level": "Needs Review",
+      "risk_index": 55
+    },
+    {
+      "account_id": "ACC-064",
+      "company_name": "BluePeak Solutions 064",
+      "usage_change_pct": 5.1753437355,
+      "recorded_revenue_90d": 82625.94,
+      "risk_level": "Needs Review",
+      "risk_index": 45
+    },
+    {
+      "account_id": "ACC-065",
+      "company_name": "Oakridge Solutions 065",
+      "usage_change_pct": 1.1293617717,
+      "recorded_revenue_90d": 10620.11,
+      "risk_level": "Needs Review",
+      "risk_index": 55
+    },
+    {
+      "account_id": "ACC-066",
+      "company_name": "Skybridge Enterprises 066",
+      "usage_change_pct": -6.2982566892,
+      "recorded_revenue_90d": 19731.94,
+      "risk_level": "Needs Review",
+      "risk_index": 55
+    },
+    {
+      "account_id": "ACC-067",
+      "company_name": "Harbor Systems 067",
+      "usage_change_pct": -2.3206068897,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 55
+    },
+    {
+      "account_id": "ACC-068",
+      "company_name": "Brightforge Works 068",
+      "usage_change_pct": -5.1005325957,
+      "recorded_revenue_90d": 22445.77,
+      "risk_level": "Needs Review",
+      "risk_index": 45
+    },
+    {
+      "account_id": "ACC-069",
+      "company_name": "Summit Group 069",
+      "usage_change_pct": 0.8231046931,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 55
+    },
+    {
+      "account_id": "ACC-070",
+      "company_name": "Apex Industries 070",
+      "usage_change_pct": 3.0839320133,
+      "recorded_revenue_90d": 6855.47,
+      "risk_level": "Needs Review",
+      "risk_index": 45
+    },
+    {
+      "account_id": "ACC-071",
+      "company_name": "Vertex Works 071",
+      "usage_change_pct": -3.9149979567,
+      "recorded_revenue_90d": 29701.8,
+      "risk_level": "Needs Review",
+      "risk_index": 55
+    },
+    {
+      "account_id": "ACC-072",
+      "company_name": "Clearwater Group 072",
+      "usage_change_pct": -11.8112471173,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 45
+    },
+    {
+      "account_id": "ACC-073",
+      "company_name": "Summit Technologies 073",
+      "usage_change_pct": -4.7606727038,
+      "recorded_revenue_90d": 61066.33,
+      "risk_level": "Healthy",
+      "risk_index": 35
+    },
+    {
+      "account_id": "ACC-074",
+      "company_name": "Nova Systems 074",
+      "usage_change_pct": -5.2327342695,
+      "recorded_revenue_90d": 6846.28,
+      "risk_level": "Needs Review",
+      "risk_index": 55
+    },
+    {
+      "account_id": "ACC-075",
+      "company_name": "BluePeak Systems 075",
+      "usage_change_pct": -4.0747577296,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 55
+    },
+    {
+      "account_id": "ACC-076",
+      "company_name": "Harbor Industries 076",
+      "usage_change_pct": -7.622389771,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 55
+    },
+    {
+      "account_id": "ACC-077",
+      "company_name": "Keystone Products 077",
+      "usage_change_pct": -3.9917525773,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 45
+    },
+    {
+      "account_id": "ACC-078",
+      "company_name": "Nova Industries 078",
+      "usage_change_pct": -0.3326732673,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 45
+    },
+    {
+      "account_id": "ACC-079",
+      "company_name": "Evergreen Works 079",
+      "usage_change_pct": 5.1548238212,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 40
+    },
+    {
+      "account_id": "ACC-080",
+      "company_name": "Redwood Works 080",
+      "usage_change_pct": -0.897812602,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 45
+    },
+    {
+      "account_id": "ACC-081",
+      "company_name": "Silverline Logistics 081",
+      "usage_change_pct": 4.5985174111,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Healthy",
+      "risk_index": 10
+    },
+    {
+      "account_id": "ACC-082",
+      "company_name": "Oakridge Enterprises 082",
+      "usage_change_pct": 1.6934100313,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Healthy",
+      "risk_index": 25
+    },
+    {
+      "account_id": "ACC-083",
+      "company_name": "Pioneer Logistics 083",
+      "usage_change_pct": 2.1292947559,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 40
+    },
+    {
+      "account_id": "ACC-084",
+      "company_name": "Vertex Products 084",
+      "usage_change_pct": -5.0456511293,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Healthy",
+      "risk_index": 10
+    },
+    {
+      "account_id": "ACC-085",
+      "company_name": "Skybridge Technologies 085",
+      "usage_change_pct": 7.4840955468,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Healthy",
+      "risk_index": 30
+    },
+    {
+      "account_id": "ACC-086",
+      "company_name": "Vertex Enterprises 086",
+      "usage_change_pct": -0.0346620451,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Healthy",
+      "risk_index": 25
+    },
+    {
+      "account_id": "ACC-087",
+      "company_name": "Pioneer Manufacturing 087",
+      "usage_change_pct": -5.8339087314,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 40
+    },
+    {
+      "account_id": "ACC-088",
+      "company_name": "Skybridge Technologies 088",
+      "usage_change_pct": -2.711741185,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 55
+    },
+    {
+      "account_id": "ACC-089",
+      "company_name": "Ironclad Group 089",
+      "usage_change_pct": -4.0522520071,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Healthy",
+      "risk_index": 10
+    },
+    {
+      "account_id": "ACC-090",
+      "company_name": "Evergreen Works 090",
+      "usage_change_pct": 2.7020357804,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 40
+    },
+    {
+      "account_id": "ACC-091",
+      "company_name": "Keystone Manufacturing 091",
+      "usage_change_pct": -7.8964002791,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Healthy",
+      "risk_index": 10
+    },
+    {
+      "account_id": "ACC-092",
+      "company_name": "Keystone Products 092",
+      "usage_change_pct": -5.684514412,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Healthy",
+      "risk_index": 25
+    },
+    {
+      "account_id": "ACC-093",
+      "company_name": "Northstar Systems 093",
+      "usage_change_pct": -3.7497586407,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 40
+    },
+    {
+      "account_id": "ACC-094",
+      "company_name": "Crestline Operations 094",
+      "usage_change_pct": -0.1610228266,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Healthy",
+      "risk_index": 25
+    },
+    {
+      "account_id": "ACC-095",
+      "company_name": "Oakridge Products 095",
+      "usage_change_pct": 10.4420184039,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 40
+    },
+    {
+      "account_id": "ACC-096",
+      "company_name": "Crestline Systems 096",
+      "usage_change_pct": -1.8732970027,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Needs Review",
+      "risk_index": 55
+    },
+    {
+      "account_id": "ACC-097",
+      "company_name": "Sterling Works 097",
+      "usage_change_pct": 2.9294803818,
+      "recorded_revenue_90d": 67994.19,
+      "risk_level": "Healthy",
+      "risk_index": 15
+    },
+    {
+      "account_id": "ACC-098",
+      "company_name": "Pioneer Enterprises 098",
+      "usage_change_pct": 4.9197612218,
+      "recorded_revenue_90d": 164258.16,
+      "risk_level": "Healthy",
+      "risk_index": 15
+    },
+    {
+      "account_id": "ACC-099",
+      "company_name": "Crestline Enterprises 099",
+      "usage_change_pct": 1.4488828707,
+      "recorded_revenue_90d": 70969.07,
+      "risk_level": "Healthy",
+      "risk_index": 20
+    },
+    {
+      "account_id": "ACC-100",
+      "company_name": "Oakridge Operations 100",
+      "usage_change_pct": -0.9241783274,
+      "recorded_revenue_90d": 88198.27,
+      "risk_level": "Healthy",
+      "risk_index": 0
+    },
+    {
+      "account_id": "ACC-101",
+      "company_name": "Westfield Solutions 101",
+      "usage_change_pct": -1.5702129298,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Healthy",
+      "risk_index": 35
+    },
+    {
+      "account_id": "ACC-102",
+      "company_name": "Ironclad Operations 102",
+      "usage_change_pct": -1.1600195467,
+      "recorded_revenue_90d": 48724.1,
+      "risk_level": "Healthy",
+      "risk_index": 0
+    },
+    {
+      "account_id": "ACC-103",
+      "company_name": "Harbor Group 103",
+      "usage_change_pct": 1.723150358,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Healthy",
+      "risk_index": 0
+    },
+    {
+      "account_id": "ACC-104",
+      "company_name": "Summit Operations 104",
+      "usage_change_pct": 12.7692763353,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Healthy",
+      "risk_index": 0
+    },
+    {
+      "account_id": "ACC-105",
+      "company_name": "Vertex Logistics 105",
+      "usage_change_pct": 5.8376602037,
+      "recorded_revenue_90d": 16104.95,
+      "risk_level": "Healthy",
+      "risk_index": 25
+    },
+    {
+      "account_id": "ACC-106",
+      "company_name": "Skybridge Components 106",
+      "usage_change_pct": 4.8329779673,
+      "recorded_revenue_90d": 51514.48,
+      "risk_level": "Healthy",
+      "risk_index": 10
+    },
+    {
+      "account_id": "ACC-107",
+      "company_name": "Pioneer Works 107",
+      "usage_change_pct": 2.8066298343,
+      "recorded_revenue_90d": 28434.87,
+      "risk_level": "Healthy",
+      "risk_index": 0
+    },
+    {
+      "account_id": "ACC-108",
+      "company_name": "Skybridge Industries 108",
+      "usage_change_pct": -1.3931122269,
+      "recorded_revenue_90d": 7485.05,
+      "risk_level": "Healthy",
+      "risk_index": 0
+    },
+    {
+      "account_id": "ACC-109",
+      "company_name": "Summit Group 109",
+      "usage_change_pct": -2.6093348034,
+      "recorded_revenue_90d": 25060.07,
+      "risk_level": "Healthy",
+      "risk_index": 15
+    },
+    {
+      "account_id": "ACC-110",
+      "company_name": "Redwood Works 110",
+      "usage_change_pct": 3.5830970703,
+      "recorded_revenue_90d": 153014.48,
+      "risk_level": "Healthy",
+      "risk_index": 15
+    },
+    {
+      "account_id": "ACC-111",
+      "company_name": "Sterling Systems 111",
+      "usage_change_pct": 1.7964592158,
+      "recorded_revenue_90d": 36527.14,
+      "risk_level": "Healthy",
+      "risk_index": 0
+    },
+    {
+      "account_id": "ACC-112",
+      "company_name": "Pioneer Group 112",
+      "usage_change_pct": -1.1464426247,
+      "recorded_revenue_90d": 59604.95,
+      "risk_level": "Healthy",
+      "risk_index": 30
+    },
+    {
+      "account_id": "ACC-113",
+      "company_name": "BluePeak Industries 113",
+      "usage_change_pct": -1.9675456389,
+      "recorded_revenue_90d": 0.0,
+      "risk_level": "Healthy",
+      "risk_index": 0
+    },
+    {
+      "account_id": "ACC-114",
+      "company_name": "Evergreen Logistics 114",
+      "usage_change_pct": 0.9558927812,
+      "recorded_revenue_90d": 60713.63,
+      "risk_level": "Healthy",
+      "risk_index": 20
+    },
+    {
+      "account_id": "ACC-115",
+      "company_name": "Brightforge Manufacturing 115",
+      "usage_change_pct": 2.102995888,
+      "recorded_revenue_90d": 7243.65,
+      "risk_level": "Healthy",
+      "risk_index": 10
+    },
+    {
+      "account_id": "ACC-116",
+      "company_name": "Silverline Group 116",
+      "usage_change_pct": 7.1348480378,
+      "recorded_revenue_90d": 56207.24,
+      "risk_level": "Healthy",
+      "risk_index": 0
+    },
+    {
+      "account_id": "ACC-117",
+      "company_name": "Evergreen Logistics 117",
+      "usage_change_pct": 4.76303599,
+      "recorded_revenue_90d": 27239.8,
+      "risk_level": "Healthy",
+      "risk_index": 0
+    },
+    {
+      "account_id": "ACC-118",
+      "company_name": "Apex Industries 118",
+      "usage_change_pct": -9.679944095,
+      "recorded_revenue_90d": 11908.47,
+      "risk_level": "Healthy",
+      "risk_index": 20
+    },
+    {
+      "account_id": "ACC-119",
+      "company_name": "BluePeak Products 119",
+      "usage_change_pct": 9.1987055016,
+      "recorded_revenue_90d": 75995.35,
+      "risk_level": "Healthy",
+      "risk_index": 30
+    },
+    {
+      "account_id": "ACC-120",
+      "company_name": "Brightforge Group 120",
+      "usage_change_pct": -4.7293356238,
+      "recorded_revenue_90d": 34662.5,
+      "risk_level": "Healthy",
+      "risk_index": 0
+    }
+  ],
+  "risk_drivers": [
+    {
+      "driver": "R4_OVERDUE_FOLLOWUP",
+      "customer_count": 78
+    },
+    {
+      "driver": "R2_HIGH_PRIORITY_TICKET",
+      "customer_count": 76
+    },
+    {
+      "driver": "R3_SUPPORT_BACKLOG",
+      "customer_count": 58
+    },
+    {
+      "driver": "R5_NEGATIVE_INTERACTION",
+      "customer_count": 48
+    },
+    {
+      "driver": "R1_USAGE_DROP_MODERATE",
+      "customer_count": 26
+    },
+    {
+      "driver": "R6_NO_RECENT_CONTACT",
+      "customer_count": 26
+    }
+  ],
+  "usage_trend": [
+    {
+      "snapshot_date": "2026-04-18T00:00:00.000",
+      "total_usage_events": 577420,
+      "average_active_users": 89.5583333333,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-04-25T00:00:00.000",
+      "total_usage_events": 564367,
+      "average_active_users": 87.3416666667,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-05-02T00:00:00.000",
+      "total_usage_events": 566576,
+      "average_active_users": 87.6666666667,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-05-09T00:00:00.000",
+      "total_usage_events": 564421,
+      "average_active_users": 87.325,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-05-16T00:00:00.000",
+      "total_usage_events": 563236,
+      "average_active_users": 86.0916666667,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-05-23T00:00:00.000",
+      "total_usage_events": 560133,
+      "average_active_users": 86.0833333333,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-05-30T00:00:00.000",
+      "total_usage_events": 554255,
+      "average_active_users": 84.5666666667,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-06-06T00:00:00.000",
+      "total_usage_events": 554562,
+      "average_active_users": 85.2833333333,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-06-13T00:00:00.000",
+      "total_usage_events": 547990,
+      "average_active_users": 84.1916666667,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-06-20T00:00:00.000",
+      "total_usage_events": 548680,
+      "average_active_users": 84.45,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-06-27T00:00:00.000",
+      "total_usage_events": 539368,
+      "average_active_users": 82.5583333333,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-07-04T00:00:00.000",
+      "total_usage_events": 538023,
+      "average_active_users": 82.3666666667,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-07-11T00:00:00.000",
+      "total_usage_events": 539358,
+      "average_active_users": 82.9666666667,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-07-18T00:00:00.000",
+      "total_usage_events": 532852,
+      "average_active_users": 82.0333333333,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-07-25T00:00:00.000",
+      "total_usage_events": 534899,
+      "average_active_users": 80.625,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-08-01T00:00:00.000",
+      "total_usage_events": 530329,
+      "average_active_users": 80.8666666667,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-08-08T00:00:00.000",
+      "total_usage_events": 529106,
+      "average_active_users": 80.9166666667,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-08-15T00:00:00.000",
+      "total_usage_events": 518349,
+      "average_active_users": 79.5333333333,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-08-22T00:00:00.000",
+      "total_usage_events": 512529,
+      "average_active_users": 78.5583333333,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-08-29T00:00:00.000",
+      "total_usage_events": 513441,
+      "average_active_users": 78.6,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-09-05T00:00:00.000",
+      "total_usage_events": 513508,
+      "average_active_users": 77.925,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-09-12T00:00:00.000",
+      "total_usage_events": 508807,
+      "average_active_users": 77.6333333333,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-09-19T00:00:00.000",
+      "total_usage_events": 509291,
+      "average_active_users": 76.875,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-09-26T00:00:00.000",
+      "total_usage_events": 509096,
+      "average_active_users": 77.0,
+      "account_count": 120
+    },
+    {
+      "snapshot_date": "2026-10-03T00:00:00.000",
+      "total_usage_events": 481705,
+      "average_active_users": 75.3879310345,
+      "account_count": 116
+    },
+    {
+      "snapshot_date": "2026-10-10T00:00:00.000",
+      "total_usage_events": 477813,
+      "average_active_users": 74.3017241379,
+      "account_count": 116
+    }
+  ],
+  "priority_accounts": [
+    {
+      "account_id": "ACC-010",
+      "company_name": "Summit Products 010",
+      "risk_level": "Urgent",
+      "risk_index": 70,
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "usage_change_pct": -21.0732351001,
+      "recorded_revenue_90d": 55906.69,
+      "open_tickets": 2,
+      "overdue_followups": 1.0,
+      "risk_driver_codes": "R1_USAGE_DROP_MODERATE; R2_HIGH_PRIORITY_TICKET; R3_SUPPORT_BACKLOG; R4_OVERDUE_FOLLOWUP; R5_NEGATIVE_INTERACTION"
+    },
+    {
+      "account_id": "ACC-005",
+      "company_name": "Harbor Technologies 005",
+      "risk_level": "Urgent",
+      "risk_index": 70,
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "usage_change_pct": -24.4557329463,
+      "recorded_revenue_90d": 53525.39,
+      "open_tickets": 2,
+      "overdue_followups": 1.0,
+      "risk_driver_codes": "R1_USAGE_DROP_MODERATE; R2_HIGH_PRIORITY_TICKET; R3_SUPPORT_BACKLOG; R4_OVERDUE_FOLLOWUP; R5_NEGATIVE_INTERACTION"
+    },
+    {
+      "account_id": "ACC-006",
+      "company_name": "Crestline Components 006",
+      "risk_level": "Urgent",
+      "risk_index": 70,
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "usage_change_pct": -18.8735873526,
+      "recorded_revenue_90d": 40499.89,
+      "open_tickets": 4,
+      "overdue_followups": 1.0,
+      "risk_driver_codes": "R1_USAGE_DROP_MODERATE; R2_HIGH_PRIORITY_TICKET; R3_SUPPORT_BACKLOG; R4_OVERDUE_FOLLOWUP; R5_NEGATIVE_INTERACTION"
+    },
+    {
+      "account_id": "ACC-013",
+      "company_name": "Clearwater Solutions 013",
+      "risk_level": "Urgent",
+      "risk_index": 70,
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "usage_change_pct": -24.1926605505,
+      "recorded_revenue_90d": 16573.81,
+      "open_tickets": 2,
+      "overdue_followups": 1.0,
+      "risk_driver_codes": "R1_USAGE_DROP_MODERATE; R2_HIGH_PRIORITY_TICKET; R3_SUPPORT_BACKLOG; R4_OVERDUE_FOLLOWUP; R5_NEGATIVE_INTERACTION"
+    },
+    {
+      "account_id": "ACC-001",
+      "company_name": "Northstar Components 001",
+      "risk_level": "Urgent",
+      "risk_index": 70,
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "usage_change_pct": -18.3565107459,
+      "recorded_revenue_90d": 6949.51,
+      "open_tickets": 2,
+      "overdue_followups": 2.0,
+      "risk_driver_codes": "R1_USAGE_DROP_MODERATE; R2_HIGH_PRIORITY_TICKET; R3_SUPPORT_BACKLOG; R4_OVERDUE_FOLLOWUP; R5_NEGATIVE_INTERACTION"
+    },
+    {
+      "account_id": "ACC-003",
+      "company_name": "Redwood Operations 003",
+      "risk_level": "Urgent",
+      "risk_index": 70,
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "usage_change_pct": -17.1411324399,
+      "recorded_revenue_90d": 0.0,
+      "open_tickets": 2,
+      "overdue_followups": 2.0,
+      "risk_driver_codes": "R1_USAGE_DROP_MODERATE; R2_HIGH_PRIORITY_TICKET; R3_SUPPORT_BACKLOG; R4_OVERDUE_FOLLOWUP; R5_NEGATIVE_INTERACTION"
+    },
+    {
+      "account_id": "ACC-008",
+      "company_name": "Westfield Industries 008",
+      "risk_level": "Urgent",
+      "risk_index": 70,
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "usage_change_pct": -22.5755551314,
+      "recorded_revenue_90d": 0.0,
+      "open_tickets": 3,
+      "overdue_followups": 2.0,
+      "risk_driver_codes": "R1_USAGE_DROP_MODERATE; R2_HIGH_PRIORITY_TICKET; R3_SUPPORT_BACKLOG; R4_OVERDUE_FOLLOWUP; R5_NEGATIVE_INTERACTION"
+    },
+    {
+      "account_id": "ACC-009",
+      "company_name": "Clearwater Solutions 009",
+      "risk_level": "Urgent",
+      "risk_index": 70,
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "usage_change_pct": -23.2124010554,
+      "recorded_revenue_90d": 0.0,
+      "open_tickets": 3,
+      "overdue_followups": 1.0,
+      "risk_driver_codes": "R1_USAGE_DROP_MODERATE; R2_HIGH_PRIORITY_TICKET; R3_SUPPORT_BACKLOG; R4_OVERDUE_FOLLOWUP; R5_NEGATIVE_INTERACTION"
+    },
+    {
+      "account_id": "ACC-012",
+      "company_name": "Apex Manufacturing 012",
+      "risk_level": "Urgent",
+      "risk_index": 70,
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "usage_change_pct": -23.0138540063,
+      "recorded_revenue_90d": 0.0,
+      "open_tickets": 2,
+      "overdue_followups": 2.0,
+      "risk_driver_codes": "R1_USAGE_DROP_MODERATE; R2_HIGH_PRIORITY_TICKET; R3_SUPPORT_BACKLOG; R4_OVERDUE_FOLLOWUP; R5_NEGATIVE_INTERACTION"
+    },
+    {
+      "account_id": "ACC-015",
+      "company_name": "Silverline Group 015",
+      "risk_level": "Urgent",
+      "risk_index": 70,
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "usage_change_pct": -21.7404441759,
+      "recorded_revenue_90d": 0.0,
+      "open_tickets": 3,
+      "overdue_followups": 1.0,
+      "risk_driver_codes": "R1_USAGE_DROP_MODERATE; R2_HIGH_PRIORITY_TICKET; R3_SUPPORT_BACKLOG; R4_OVERDUE_FOLLOWUP; R5_NEGATIVE_INTERACTION"
+    },
+    {
+      "account_id": "ACC-024",
+      "company_name": "BluePeak Enterprises 024",
+      "risk_level": "Urgent",
+      "risk_index": 70,
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "usage_change_pct": -18.7148810324,
+      "recorded_revenue_90d": 0.0,
+      "open_tickets": 2,
+      "overdue_followups": 2.0,
+      "risk_driver_codes": "R1_USAGE_DROP_MODERATE; R2_HIGH_PRIORITY_TICKET; R3_SUPPORT_BACKLOG; R4_OVERDUE_FOLLOWUP; R5_NEGATIVE_INTERACTION"
+    },
+    {
+      "account_id": "ACC-019",
+      "company_name": "Pioneer Operations 019",
+      "risk_level": "Urgent",
+      "risk_index": 70,
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "usage_change_pct": -26.6551383399,
+      "recorded_revenue_90d": -9581.28,
+      "open_tickets": 3,
+      "overdue_followups": 1.0,
+      "risk_driver_codes": "R1_USAGE_DROP_MODERATE; R2_HIGH_PRIORITY_TICKET; R3_SUPPORT_BACKLOG; R4_OVERDUE_FOLLOWUP; R5_NEGATIVE_INTERACTION"
+    },
+    {
+      "account_id": "ACC-014",
+      "company_name": "Harbor Components 014",
+      "risk_level": "Needs Review",
+      "risk_index": 60,
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "usage_change_pct": -26.3259884357,
+      "recorded_revenue_90d": 58786.58,
+      "open_tickets": 3,
+      "overdue_followups": 1.0,
+      "risk_driver_codes": "R1_USAGE_DROP_MODERATE; R2_HIGH_PRIORITY_TICKET; R3_SUPPORT_BACKLOG; R4_OVERDUE_FOLLOWUP"
+    },
+    {
+      "account_id": "ACC-023",
+      "company_name": "Crestline Products 023",
+      "risk_level": "Needs Review",
+      "risk_index": 60,
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "usage_change_pct": -17.4636979671,
+      "recorded_revenue_90d": 21900.63,
+      "open_tickets": 1,
+      "overdue_followups": 1.0,
+      "risk_driver_codes": "R1_USAGE_DROP_MODERATE; R2_HIGH_PRIORITY_TICKET; R4_OVERDUE_FOLLOWUP; R5_NEGATIVE_INTERACTION"
+    },
+    {
+      "account_id": "ACC-032",
+      "company_name": "Sterling Manufacturing 032",
+      "risk_level": "Needs Review",
+      "risk_index": 55,
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "usage_change_pct": -12.8813834538,
+      "recorded_revenue_90d": 81143.24,
+      "open_tickets": 2,
+      "overdue_followups": 1.0,
+      "risk_driver_codes": "R2_HIGH_PRIORITY_TICKET; R3_SUPPORT_BACKLOG; R4_OVERDUE_FOLLOWUP; R5_NEGATIVE_INTERACTION"
+    },
+    {
+      "account_id": "ACC-059",
+      "company_name": "Clearwater Enterprises 059",
+      "risk_level": "Needs Review",
+      "risk_index": 55,
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "usage_change_pct": -8.4055361764,
+      "recorded_revenue_90d": 72740.73,
+      "open_tickets": 4,
+      "overdue_followups": 3.0,
+      "risk_driver_codes": "R2_HIGH_PRIORITY_TICKET; R3_SUPPORT_BACKLOG; R4_OVERDUE_FOLLOWUP; R5_NEGATIVE_INTERACTION"
+    },
+    {
+      "account_id": "ACC-060",
+      "company_name": "Oakridge Technologies 060",
+      "risk_level": "Needs Review",
+      "risk_index": 55,
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "usage_change_pct": -3.5691465084,
+      "recorded_revenue_90d": 58664.29,
+      "open_tickets": 4,
+      "overdue_followups": 2.0,
+      "risk_driver_codes": "R2_HIGH_PRIORITY_TICKET; R3_SUPPORT_BACKLOG; R4_OVERDUE_FOLLOWUP; R5_NEGATIVE_INTERACTION"
+    },
+    {
+      "account_id": "ACC-036",
+      "company_name": "Oakridge Products 036",
+      "risk_level": "Needs Review",
+      "risk_index": 55,
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "usage_change_pct": -6.7823571945,
+      "recorded_revenue_90d": 41862.65,
+      "open_tickets": 2,
+      "overdue_followups": 2.0,
+      "risk_driver_codes": "R2_HIGH_PRIORITY_TICKET; R3_SUPPORT_BACKLOG; R4_OVERDUE_FOLLOWUP; R5_NEGATIVE_INTERACTION"
+    },
+    {
+      "account_id": "ACC-063",
+      "company_name": "Crestline Products 063",
+      "risk_level": "Needs Review",
+      "risk_index": 55,
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "usage_change_pct": -6.6828518249,
+      "recorded_revenue_90d": 29991.09,
+      "open_tickets": 4,
+      "overdue_followups": 1.0,
+      "risk_driver_codes": "R2_HIGH_PRIORITY_TICKET; R3_SUPPORT_BACKLOG; R4_OVERDUE_FOLLOWUP; R5_NEGATIVE_INTERACTION"
+    },
+    {
+      "account_id": "ACC-071",
+      "company_name": "Vertex Works 071",
+      "risk_level": "Needs Review",
+      "risk_index": 55,
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "usage_change_pct": -3.9149979567,
+      "recorded_revenue_90d": 29701.8,
+      "open_tickets": 3,
+      "overdue_followups": 2.0,
+      "risk_driver_codes": "R2_HIGH_PRIORITY_TICKET; R3_SUPPORT_BACKLOG; R4_OVERDUE_FOLLOWUP; R5_NEGATIVE_INTERACTION"
+    }
+  ],
+  "expansion_candidates": [],
+  "metric_notes": {
+    "recorded_revenue": "Recorded sales revenue, not predicted revenue loss.",
+    "risk_index": "Rule-based prototype score, not churn probability.",
+    "overdue_followups": "Counts overdue follow-up tasks, not all pending tasks."
+  }
+}

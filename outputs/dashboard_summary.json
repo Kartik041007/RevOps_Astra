@@ -1,0 +1,151 @@
+{
+  "total_accounts": 120,
+  "accounts_by_risk_level": {
+    "Urgent": 12,
+    "Needs Review": 56,
+    "Healthy": 52
+  },
+  "revenue_by_risk_level": [
+    {
+      "risk_level": "Urgent",
+      "account_count": 12,
+      "recorded_revenue": 599853.56,
+      "recorded_revenue_90d": 163874.01
+    },
+    {
+      "risk_level": "Needs Review",
+      "account_count": 56,
+      "recorded_revenue": 4672683.4,
+      "recorded_revenue_90d": 991911.67
+    },
+    {
+      "risk_level": "Healthy",
+      "account_count": 52,
+      "recorded_revenue": 7667741.5600000005,
+      "recorded_revenue_90d": 2522017.0
+    }
+  ],
+  "recorded_revenue_90d_associated_with_flagged_accounts": 1155785.68,
+  "expansion_candidate_count": 0,
+  "risk_driver_counts": {
+    "R4_OVERDUE_FOLLOWUP": 78,
+    "R2_HIGH_PRIORITY_TICKET": 76,
+    "R3_SUPPORT_BACKLOG": 58,
+    "R5_NEGATIVE_INTERACTION": 48,
+    "R1_USAGE_DROP_MODERATE": 26,
+    "R6_NO_RECENT_CONTACT": 26
+  },
+  "top_priority_accounts": [
+    {
+      "account_id": "ACC-010",
+      "company_name": "Summit Products 010",
+      "risk_index": 70,
+      "risk_level": "Urgent",
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "recorded_revenue_90d": 55906.69,
+      "risk_drivers": "Usage declined 21.1% over the comparison period; 1 high-priority open ticket(s); 2 open support tickets; 1 overdue follow-up(s); 1 negative interaction(s) in the recent period",
+      "counter_evidence": ""
+    },
+    {
+      "account_id": "ACC-005",
+      "company_name": "Harbor Technologies 005",
+      "risk_index": 70,
+      "risk_level": "Urgent",
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "recorded_revenue_90d": 53525.39,
+      "risk_drivers": "Usage declined 24.5% over the comparison period; 1 high-priority open ticket(s); 2 open support tickets; 1 overdue follow-up(s); 1 negative interaction(s) in the recent period",
+      "counter_evidence": ""
+    },
+    {
+      "account_id": "ACC-006",
+      "company_name": "Crestline Components 006",
+      "risk_index": 70,
+      "risk_level": "Urgent",
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "recorded_revenue_90d": 40499.89,
+      "risk_drivers": "Usage declined 18.9% over the comparison period; 3 high-priority open ticket(s); 4 open support tickets; 1 overdue follow-up(s); 1 negative interaction(s) in the recent period",
+      "counter_evidence": ""
+    },
+    {
+      "account_id": "ACC-013",
+      "company_name": "Clearwater Solutions 013",
+      "risk_index": 70,
+      "risk_level": "Urgent",
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "recorded_revenue_90d": 16573.81,
+      "risk_drivers": "Usage declined 24.2% over the comparison period; 1 high-priority open ticket(s); 2 open support tickets; 1 overdue follow-up(s); 2 negative interaction(s) in the recent period",
+      "counter_evidence": ""
+    },
+    {
+      "account_id": "ACC-001",
+      "company_name": "Northstar Components 001",
+      "risk_index": 70,
+      "risk_level": "Urgent",
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "recorded_revenue_90d": 6949.51,
+      "risk_drivers": "Usage declined 18.4% over the comparison period; 1 high-priority open ticket(s); 2 open support tickets; 2 overdue follow-up(s); 1 negative interaction(s) in the recent period",
+      "counter_evidence": ""
+    },
+    {
+      "account_id": "ACC-003",
+      "company_name": "Redwood Operations 003",
+      "risk_index": 70,
+      "risk_level": "Urgent",
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "recorded_revenue_90d": 0.0,
+      "risk_drivers": "Usage declined 17.1% over the comparison period; 1 high-priority open ticket(s); 2 open support tickets; 2 overdue follow-up(s); 2 negative interaction(s) in the recent period",
+      "counter_evidence": ""
+    },
+    {
+      "account_id": "ACC-008",
+      "company_name": "Westfield Industries 008",
+      "risk_index": 70,
+      "risk_level": "Urgent",
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "recorded_revenue_90d": 0.0,
+      "risk_drivers": "Usage declined 22.6% over the comparison period; 2 high-priority open ticket(s); 3 open support tickets; 2 overdue follow-up(s); 1 negative interaction(s) in the recent period",
+      "counter_evidence": ""
+    },
+    {
+      "account_id": "ACC-009",
+      "company_name": "Clearwater Solutions 009",
+      "risk_index": 70,
+      "risk_level": "Urgent",
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "recorded_revenue_90d": 0.0,
+      "risk_drivers": "Usage declined 23.2% over the comparison period; 1 high-priority open ticket(s); 3 open support tickets; 1 overdue follow-up(s); 1 negative interaction(s) in the recent period",
+      "counter_evidence": ""
+    },
+    {
+      "account_id": "ACC-012",
+      "company_name": "Apex Manufacturing 012",
+      "risk_index": 70,
+      "risk_level": "Urgent",
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "recorded_revenue_90d": 0.0,
+      "risk_drivers": "Usage declined 23.0% over the comparison period; 1 high-priority open ticket(s); 2 open support tickets; 2 overdue follow-up(s); 3 negative interaction(s) in the recent period",
+      "counter_evidence": ""
+    },
+    {
+      "account_id": "ACC-015",
+      "company_name": "Silverline Group 015",
+      "risk_index": 70,
+      "risk_level": "Urgent",
+      "evidence_confidence": 100,
+      "confidence_label": "High",
+      "recorded_revenue_90d": 0.0,
+      "risk_drivers": "Usage declined 21.7% over the comparison period; 1 high-priority open ticket(s); 3 open support tickets; 1 overdue follow-up(s); 3 negative interaction(s) in the recent period",
+      "counter_evidence": ""
+    }
+  ],
+  "scoring_note": "Prototype rule-based index; not a churn probability. Revenue is recorded sales, not predicted revenue loss."
+}
