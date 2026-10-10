@@ -1,0 +1,275 @@
+﻿followup_id,account_id,assigned_owner,created_at,due_date,status,title,reason,completed_at
+FUP-00001,ACC-001,Kabir Singh,2026-09-28,2026-10-01,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00002,ACC-001,Kabir Singh,2026-09-07,2026-09-19,completed,Check product usage decline,Investigate falling product activity,2026-09-11
+FUP-00003,ACC-001,Kabir Singh,2026-09-24,2026-09-29,completed,Schedule operator training,Help customer increase product adoption,2026-09-30
+FUP-00004,ACC-001,Kabir Singh,2026-09-22,2026-09-25,pending,Check product usage decline,Investigate falling product activity,
+FUP-00005,ACC-001,Kabir Singh,2026-10-02,2026-10-10,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-10-05
+FUP-00006,ACC-002,Neha Sharma,2026-09-12,2026-10-07,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00007,ACC-002,Neha Sharma,2026-10-07,2026-10-20,completed,Schedule operator training,Help customer increase product adoption,2026-10-13
+FUP-00008,ACC-002,Neha Sharma,2026-09-18,2026-09-23,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-09-23
+FUP-00009,ACC-002,Neha Sharma,2026-09-18,2026-09-29,pending,Confirm spare-parts delivery,Check order status and timing,
+FUP-00010,ACC-002,Neha Sharma,2026-10-09,2026-10-18,completed,Schedule operator training,Help customer increase product adoption,2026-10-17
+FUP-00011,ACC-003,Ananya Rao,2026-09-22,2026-09-28,pending,Discuss additional units,Assess expansion interest,
+FUP-00012,ACC-003,Ananya Rao,2026-09-19,2026-09-22,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00013,ACC-003,Ananya Rao,2026-09-10,2026-09-21,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-09-16
+FUP-00014,ACC-004,Rohan Mehta,2026-09-28,2026-09-29,pending,Check product usage decline,Investigate falling product activity,
+FUP-00015,ACC-004,Rohan Mehta,2026-09-10,2026-09-17,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-09-19
+FUP-00016,ACC-004,Rohan Mehta,2026-09-08,2026-09-12,completed,Customer health check-in,Confirm customer needs and next steps,2026-09-16
+FUP-00017,ACC-004,Rohan Mehta,2026-09-30,2026-10-11,completed,Schedule operator training,Help customer increase product adoption,2026-10-04
+FUP-00018,ACC-005,Maya Patel,2026-10-03,2026-10-06,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00019,ACC-005,Maya Patel,2026-09-12,2026-09-25,completed,Discuss additional units,Assess expansion interest,2026-09-15
+FUP-00020,ACC-006,Rohan Mehta,2026-10-01,2026-09-29,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00021,ACC-006,Rohan Mehta,2026-09-23,2026-09-26,completed,Discuss additional units,Assess expansion interest,2026-09-29
+FUP-00022,ACC-007,Dev Malhotra,2026-10-07,2026-09-29,pending,Check product usage decline,Investigate falling product activity,
+FUP-00023,ACC-007,Dev Malhotra,2026-09-19,2026-09-26,completed,Discuss additional units,Assess expansion interest,2026-09-27
+FUP-00024,ACC-007,Dev Malhotra,2026-09-21,2026-10-01,completed,Confirm spare-parts delivery,Check order status and timing,2026-09-28
+FUP-00025,ACC-007,Dev Malhotra,2026-09-13,2026-09-15,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00026,ACC-008,Maya Patel,2026-09-14,2026-09-30,pending,Confirm spare-parts delivery,Check order status and timing,
+FUP-00027,ACC-008,Maya Patel,2026-09-14,2026-09-18,completed,Schedule operator training,Help customer increase product adoption,2026-09-19
+FUP-00028,ACC-008,Maya Patel,2026-09-05,2026-09-13,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00029,ACC-009,Maya Patel,2026-09-10,2026-09-30,pending,Discuss additional units,Assess expansion interest,
+FUP-00030,ACC-009,Maya Patel,2026-09-25,2026-10-09,completed,Discuss additional units,Assess expansion interest,2026-09-30
+FUP-00031,ACC-010,Neha Sharma,2026-10-01,2026-10-01,pending,Discuss additional units,Assess expansion interest,
+FUP-00032,ACC-010,Neha Sharma,2026-09-16,2026-09-24,completed,Confirm spare-parts delivery,Check order status and timing,2026-09-17
+FUP-00033,ACC-011,Maya Patel,2026-09-25,2026-10-06,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00034,ACC-011,Maya Patel,2026-09-13,2026-09-24,completed,Check product usage decline,Investigate falling product activity,2026-09-15
+FUP-00035,ACC-011,Maya Patel,2026-10-01,2026-10-13,completed,Customer health check-in,Confirm customer needs and next steps,2026-10-02
+FUP-00036,ACC-011,Maya Patel,2026-09-17,2026-09-30,pending,Confirm spare-parts delivery,Check order status and timing,
+FUP-00037,ACC-012,Dev Malhotra,2026-10-01,2026-09-30,pending,Confirm spare-parts delivery,Check order status and timing,
+FUP-00038,ACC-012,Dev Malhotra,2026-10-07,2026-10-11,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-10-13
+FUP-00039,ACC-012,Dev Malhotra,2026-09-12,2026-09-22,completed,Customer health check-in,Confirm customer needs and next steps,2026-09-18
+FUP-00040,ACC-012,Dev Malhotra,2026-09-22,2026-10-06,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00041,ACC-013,Maya Patel,2026-09-22,2026-10-01,pending,Check product usage decline,Investigate falling product activity,
+FUP-00042,ACC-013,Maya Patel,2026-10-05,2026-10-12,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00043,ACC-013,Maya Patel,2026-10-06,2026-10-19,completed,Schedule operator training,Help customer increase product adoption,2026-10-12
+FUP-00044,ACC-013,Maya Patel,2026-09-23,2026-09-26,completed,Confirm spare-parts delivery,Check order status and timing,2026-09-28
+FUP-00045,ACC-014,Ananya Rao,2026-09-19,2026-10-04,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00046,ACC-014,Ananya Rao,2026-10-01,2026-10-09,completed,Customer health check-in,Confirm customer needs and next steps,2026-10-04
+FUP-00047,ACC-015,Kabir Singh,2026-10-07,2026-09-29,pending,Discuss additional units,Assess expansion interest,
+FUP-00048,ACC-015,Kabir Singh,2026-09-08,2026-09-21,completed,Schedule operator training,Help customer increase product adoption,2026-09-10
+FUP-00049,ACC-015,Kabir Singh,2026-10-05,2026-10-13,cancelled,Schedule operator training,Help customer increase product adoption,
+FUP-00050,ACC-015,Kabir Singh,2026-09-16,2026-09-22,completed,Customer health check-in,Confirm customer needs and next steps,2026-09-24
+FUP-00051,ACC-015,Kabir Singh,2026-09-27,2026-10-07,cancelled,Discuss additional units,Assess expansion interest,
+FUP-00052,ACC-016,Maya Patel,2026-09-17,2026-10-02,pending,Check product usage decline,Investigate falling product activity,
+FUP-00053,ACC-016,Maya Patel,2026-09-24,2026-09-30,completed,Customer health check-in,Confirm customer needs and next steps,2026-10-02
+FUP-00054,ACC-016,Maya Patel,2026-09-29,2026-10-12,completed,Discuss additional units,Assess expansion interest,2026-10-06
+FUP-00055,ACC-017,Dev Malhotra,2026-09-09,2026-09-30,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00056,ACC-017,Dev Malhotra,2026-09-30,2026-10-03,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00057,ACC-017,Dev Malhotra,2026-10-01,2026-10-14,completed,Confirm spare-parts delivery,Check order status and timing,2026-10-07
+FUP-00058,ACC-018,Ananya Rao,2026-10-08,2026-10-06,pending,Discuss additional units,Assess expansion interest,
+FUP-00059,ACC-018,Ananya Rao,2026-10-04,2026-10-18,pending,Confirm spare-parts delivery,Check order status and timing,
+FUP-00060,ACC-018,Ananya Rao,2026-10-02,2026-10-10,pending,Confirm spare-parts delivery,Check order status and timing,
+FUP-00061,ACC-019,Rohan Mehta,2026-09-22,2026-10-05,pending,Confirm spare-parts delivery,Check order status and timing,
+FUP-00062,ACC-020,Neha Sharma,2026-09-27,2026-10-07,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00063,ACC-020,Neha Sharma,2026-10-06,2026-10-09,completed,Confirm spare-parts delivery,Check order status and timing,2026-10-07
+FUP-00064,ACC-020,Neha Sharma,2026-09-24,2026-10-08,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00065,ACC-021,Kabir Singh,2026-10-08,2026-10-02,pending,Discuss additional units,Assess expansion interest,
+FUP-00066,ACC-021,Kabir Singh,2026-09-08,2026-09-10,completed,Check product usage decline,Investigate falling product activity,2026-09-09
+FUP-00067,ACC-021,Kabir Singh,2026-09-24,2026-09-28,completed,Discuss additional units,Assess expansion interest,2026-10-01
+FUP-00068,ACC-021,Kabir Singh,2026-10-05,2026-10-18,completed,Customer health check-in,Confirm customer needs and next steps,2026-10-10
+FUP-00069,ACC-021,Kabir Singh,2026-09-10,2026-09-21,completed,Check product usage decline,Investigate falling product activity,2026-09-16
+FUP-00070,ACC-022,Rohan Mehta,2026-09-13,2026-10-07,pending,Discuss additional units,Assess expansion interest,
+FUP-00071,ACC-022,Rohan Mehta,2026-09-28,2026-10-07,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-10-05
+FUP-00072,ACC-022,Rohan Mehta,2026-09-21,2026-09-24,completed,Discuss additional units,Assess expansion interest,2026-09-26
+FUP-00073,ACC-023,Dev Malhotra,2026-09-21,2026-09-28,pending,Confirm spare-parts delivery,Check order status and timing,
+FUP-00074,ACC-024,Ananya Rao,2026-10-04,2026-10-06,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00075,ACC-024,Ananya Rao,2026-09-24,2026-10-08,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00076,ACC-025,Kabir Singh,2026-09-20,2026-09-26,completed,Check product usage decline,Investigate falling product activity,2026-09-26
+FUP-00077,ACC-025,Kabir Singh,2026-09-13,2026-09-20,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00078,ACC-026,Ananya Rao,2026-10-03,2026-10-06,pending,Check product usage decline,Investigate falling product activity,
+FUP-00079,ACC-026,Ananya Rao,2026-09-05,2026-09-09,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00080,ACC-026,Ananya Rao,2026-09-21,2026-09-26,completed,Customer health check-in,Confirm customer needs and next steps,2026-09-22
+FUP-00081,ACC-026,Ananya Rao,2026-09-26,2026-10-07,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00082,ACC-027,Dev Malhotra,2026-09-21,2026-10-01,completed,Confirm spare-parts delivery,Check order status and timing,2026-09-23
+FUP-00083,ACC-027,Dev Malhotra,2026-09-14,2026-09-28,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00084,ACC-027,Dev Malhotra,2026-10-09,2026-10-13,completed,Discuss additional units,Assess expansion interest,2026-10-11
+FUP-00085,ACC-027,Dev Malhotra,2026-10-04,2026-10-11,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00086,ACC-028,Ananya Rao,2026-09-26,2026-10-04,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00087,ACC-028,Ananya Rao,2026-09-11,2026-09-15,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00088,ACC-028,Ananya Rao,2026-10-05,2026-10-10,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-10-10
+FUP-00089,ACC-028,Ananya Rao,2026-10-09,2026-10-16,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00090,ACC-029,Rohan Mehta,2026-09-15,2026-09-27,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-09-23
+FUP-00091,ACC-029,Rohan Mehta,2026-10-02,2026-10-16,pending,Confirm spare-parts delivery,Check order status and timing,
+FUP-00092,ACC-030,Ananya Rao,2026-10-08,2026-10-18,completed,Confirm spare-parts delivery,Check order status and timing,2026-10-15
+FUP-00093,ACC-030,Ananya Rao,2026-10-02,2026-10-07,pending,Discuss additional units,Assess expansion interest,
+FUP-00094,ACC-030,Ananya Rao,2026-10-06,2026-10-19,completed,Check product usage decline,Investigate falling product activity,2026-10-14
+FUP-00095,ACC-031,Dev Malhotra,2026-09-06,2026-09-11,pending,Check product usage decline,Investigate falling product activity,
+FUP-00096,ACC-031,Dev Malhotra,2026-10-07,2026-10-14,completed,Check product usage decline,Investigate falling product activity,2026-10-13
+FUP-00097,ACC-031,Dev Malhotra,2026-09-29,2026-10-07,completed,Customer health check-in,Confirm customer needs and next steps,2026-10-04
+FUP-00098,ACC-031,Dev Malhotra,2026-09-06,2026-09-08,pending,Confirm spare-parts delivery,Check order status and timing,
+FUP-00099,ACC-031,Dev Malhotra,2026-09-16,2026-09-19,pending,Check product usage decline,Investigate falling product activity,
+FUP-00100,ACC-032,Kabir Singh,2026-09-16,2026-09-25,pending,Discuss additional units,Assess expansion interest,
+FUP-00101,ACC-033,Neha Sharma,2026-09-18,2026-09-30,pending,Discuss additional units,Assess expansion interest,
+FUP-00102,ACC-033,Neha Sharma,2026-09-11,2026-09-20,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-09-16
+FUP-00103,ACC-033,Neha Sharma,2026-09-24,2026-10-03,completed,Discuss additional units,Assess expansion interest,2026-09-30
+FUP-00104,ACC-034,Rohan Mehta,2026-09-25,2026-10-08,completed,Discuss additional units,Assess expansion interest,2026-09-30
+FUP-00105,ACC-034,Rohan Mehta,2026-09-14,2026-09-18,pending,Discuss additional units,Assess expansion interest,
+FUP-00106,ACC-034,Rohan Mehta,2026-10-01,2026-10-14,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00107,ACC-034,Rohan Mehta,2026-10-07,2026-10-20,completed,Schedule operator training,Help customer increase product adoption,2026-10-17
+FUP-00108,ACC-034,Rohan Mehta,2026-09-10,2026-09-16,cancelled,Customer health check-in,Confirm customer needs and next steps,
+FUP-00109,ACC-035,Kabir Singh,2026-09-06,2026-09-11,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-09-09
+FUP-00110,ACC-035,Kabir Singh,2026-09-30,2026-10-14,pending,Check product usage decline,Investigate falling product activity,
+FUP-00111,ACC-036,Rohan Mehta,2026-09-22,2026-10-06,completed,Discuss additional units,Assess expansion interest,2026-09-23
+FUP-00112,ACC-036,Rohan Mehta,2026-10-06,2026-10-08,pending,Discuss additional units,Assess expansion interest,
+FUP-00113,ACC-036,Rohan Mehta,2026-10-05,2026-10-07,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00114,ACC-037,Dev Malhotra,2026-09-18,2026-09-30,completed,Customer health check-in,Confirm customer needs and next steps,2026-09-20
+FUP-00115,ACC-037,Dev Malhotra,2026-09-25,2026-10-02,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-09-27
+FUP-00116,ACC-037,Dev Malhotra,2026-10-06,2026-10-15,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-10-08
+FUP-00117,ACC-037,Dev Malhotra,2026-09-25,2026-09-29,completed,Schedule operator training,Help customer increase product adoption,2026-09-28
+FUP-00118,ACC-037,Dev Malhotra,2026-09-08,2026-09-22,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00119,ACC-038,Dev Malhotra,2026-09-11,2026-09-21,completed,Schedule operator training,Help customer increase product adoption,2026-09-19
+FUP-00120,ACC-038,Dev Malhotra,2026-09-16,2026-09-25,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00121,ACC-038,Dev Malhotra,2026-10-01,2026-10-10,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00122,ACC-039,Neha Sharma,2026-10-01,2026-10-04,completed,Customer health check-in,Confirm customer needs and next steps,2026-10-11
+FUP-00123,ACC-039,Neha Sharma,2026-09-24,2026-10-03,completed,Check product usage decline,Investigate falling product activity,2026-09-26
+FUP-00124,ACC-039,Neha Sharma,2026-09-22,2026-09-26,completed,Check product usage decline,Investigate falling product activity,2026-10-01
+FUP-00125,ACC-039,Neha Sharma,2026-09-23,2026-09-29,completed,Schedule operator training,Help customer increase product adoption,2026-10-01
+FUP-00126,ACC-040,Rohan Mehta,2026-09-15,2026-09-22,completed,Confirm spare-parts delivery,Check order status and timing,2026-09-20
+FUP-00127,ACC-040,Rohan Mehta,2026-09-28,2026-10-05,completed,Check product usage decline,Investigate falling product activity,2026-09-29
+FUP-00128,ACC-040,Rohan Mehta,2026-09-18,2026-09-23,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00129,ACC-040,Rohan Mehta,2026-10-03,2026-10-13,completed,Confirm spare-parts delivery,Check order status and timing,2026-10-09
+FUP-00130,ACC-041,Maya Patel,2026-09-10,2026-09-15,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00131,ACC-041,Maya Patel,2026-09-11,2026-09-19,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-09-18
+FUP-00132,ACC-041,Maya Patel,2026-09-11,2026-09-21,pending,Discuss additional units,Assess expansion interest,
+FUP-00133,ACC-041,Maya Patel,2026-09-13,2026-09-23,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00134,ACC-042,Kabir Singh,2026-10-05,2026-10-07,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-10-08
+FUP-00135,ACC-043,Rohan Mehta,2026-10-07,2026-10-18,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-10-15
+FUP-00136,ACC-043,Rohan Mehta,2026-09-19,2026-09-24,pending,Confirm spare-parts delivery,Check order status and timing,
+FUP-00137,ACC-044,Neha Sharma,2026-09-14,2026-09-21,completed,Discuss additional units,Assess expansion interest,2026-09-19
+FUP-00138,ACC-044,Neha Sharma,2026-09-23,2026-10-07,pending,Check product usage decline,Investigate falling product activity,
+FUP-00139,ACC-044,Neha Sharma,2026-10-02,2026-10-10,cancelled,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00140,ACC-045,Ananya Rao,2026-09-16,2026-09-21,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00141,ACC-049,Maya Patel,2026-10-04,2026-10-11,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-10-06
+FUP-00142,ACC-049,Maya Patel,2026-09-19,2026-09-28,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-09-28
+FUP-00143,ACC-049,Maya Patel,2026-09-19,2026-09-28,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00144,ACC-050,Neha Sharma,2026-09-18,2026-09-20,completed,Customer health check-in,Confirm customer needs and next steps,2026-09-26
+FUP-00145,ACC-054,Rohan Mehta,2026-10-02,2026-10-06,completed,Customer health check-in,Confirm customer needs and next steps,2026-10-06
+FUP-00146,ACC-055,Maya Patel,2026-10-02,2026-10-14,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00147,ACC-055,Maya Patel,2026-09-12,2026-09-17,pending,Confirm spare-parts delivery,Check order status and timing,
+FUP-00148,ACC-055,Maya Patel,2026-10-08,2026-10-10,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-10-14
+FUP-00149,ACC-056,Ananya Rao,2026-09-09,2026-09-19,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00150,ACC-056,Ananya Rao,2026-09-29,2026-10-12,cancelled,Customer health check-in,Confirm customer needs and next steps,
+FUP-00151,ACC-057,Rohan Mehta,2026-09-21,2026-10-04,pending,Check product usage decline,Investigate falling product activity,
+FUP-00152,ACC-057,Rohan Mehta,2026-09-24,2026-10-02,completed,Discuss additional units,Assess expansion interest,2026-09-27
+FUP-00153,ACC-057,Rohan Mehta,2026-09-10,2026-09-15,completed,Schedule operator training,Help customer increase product adoption,2026-09-19
+FUP-00154,ACC-059,Ananya Rao,2026-09-18,2026-10-06,pending,Discuss additional units,Assess expansion interest,
+FUP-00155,ACC-059,Ananya Rao,2026-09-10,2026-09-18,pending,Check product usage decline,Investigate falling product activity,
+FUP-00156,ACC-059,Ananya Rao,2026-09-14,2026-09-17,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00157,ACC-059,Ananya Rao,2026-09-29,2026-10-11,completed,Schedule operator training,Help customer increase product adoption,2026-09-30
+FUP-00158,ACC-060,Maya Patel,2026-09-05,2026-09-29,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00159,ACC-060,Maya Patel,2026-09-06,2026-09-12,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00160,ACC-060,Maya Patel,2026-09-06,2026-09-19,completed,Schedule operator training,Help customer increase product adoption,2026-09-16
+FUP-00161,ACC-060,Maya Patel,2026-09-21,2026-09-23,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-09-29
+FUP-00162,ACC-061,Rohan Mehta,2026-09-25,2026-10-07,pending,Check product usage decline,Investigate falling product activity,
+FUP-00163,ACC-061,Rohan Mehta,2026-09-30,2026-10-10,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00164,ACC-061,Rohan Mehta,2026-09-13,2026-09-17,completed,Schedule operator training,Help customer increase product adoption,2026-09-15
+FUP-00165,ACC-061,Rohan Mehta,2026-09-23,2026-10-05,pending,Confirm spare-parts delivery,Check order status and timing,
+FUP-00166,ACC-062,Dev Malhotra,2026-09-24,2026-10-02,pending,Check product usage decline,Investigate falling product activity,
+FUP-00167,ACC-062,Dev Malhotra,2026-09-16,2026-09-24,pending,Confirm spare-parts delivery,Check order status and timing,
+FUP-00168,ACC-062,Dev Malhotra,2026-09-29,2026-10-13,pending,Check product usage decline,Investigate falling product activity,
+FUP-00169,ACC-063,Kabir Singh,2026-09-27,2026-10-03,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00170,ACC-063,Kabir Singh,2026-09-22,2026-09-26,completed,Customer health check-in,Confirm customer needs and next steps,2026-09-27
+FUP-00171,ACC-064,Dev Malhotra,2026-09-26,2026-10-06,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00172,ACC-064,Dev Malhotra,2026-09-22,2026-10-05,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00173,ACC-064,Dev Malhotra,2026-09-12,2026-09-17,completed,Schedule operator training,Help customer increase product adoption,2026-09-13
+FUP-00174,ACC-065,Neha Sharma,2026-09-05,2026-10-04,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00175,ACC-065,Neha Sharma,2026-09-07,2026-09-20,completed,Check product usage decline,Investigate falling product activity,2026-09-12
+FUP-00176,ACC-065,Neha Sharma,2026-09-22,2026-10-02,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-09-30
+FUP-00177,ACC-065,Neha Sharma,2026-10-04,2026-10-17,pending,Discuss additional units,Assess expansion interest,
+FUP-00178,ACC-066,Kabir Singh,2026-09-08,2026-09-29,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00179,ACC-066,Kabir Singh,2026-09-14,2026-09-26,pending,Discuss additional units,Assess expansion interest,
+FUP-00180,ACC-066,Kabir Singh,2026-10-02,2026-10-10,completed,Confirm spare-parts delivery,Check order status and timing,2026-10-10
+FUP-00181,ACC-067,Ananya Rao,2026-09-15,2026-09-28,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00182,ACC-067,Ananya Rao,2026-09-26,2026-10-05,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-10-03
+FUP-00183,ACC-067,Ananya Rao,2026-09-29,2026-10-04,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00184,ACC-067,Ananya Rao,2026-09-12,2026-09-16,completed,Discuss additional units,Assess expansion interest,2026-09-19
+FUP-00185,ACC-068,Kabir Singh,2026-10-05,2026-10-03,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00186,ACC-068,Kabir Singh,2026-09-10,2026-09-14,completed,Discuss additional units,Assess expansion interest,2026-09-15
+FUP-00187,ACC-068,Kabir Singh,2026-10-05,2026-10-17,completed,Discuss additional units,Assess expansion interest,2026-10-13
+FUP-00188,ACC-068,Kabir Singh,2026-09-26,2026-10-10,completed,Check product usage decline,Investigate falling product activity,2026-09-30
+FUP-00189,ACC-068,Kabir Singh,2026-10-06,2026-10-16,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00190,ACC-069,Neha Sharma,2026-09-11,2026-09-28,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00191,ACC-069,Neha Sharma,2026-09-07,2026-09-21,completed,Schedule operator training,Help customer increase product adoption,2026-09-10
+FUP-00192,ACC-069,Neha Sharma,2026-09-05,2026-09-18,cancelled,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00193,ACC-070,Neha Sharma,2026-09-08,2026-10-03,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00194,ACC-070,Neha Sharma,2026-09-17,2026-09-21,pending,Check product usage decline,Investigate falling product activity,
+FUP-00195,ACC-070,Neha Sharma,2026-10-09,2026-10-15,completed,Discuss additional units,Assess expansion interest,2026-10-19
+FUP-00196,ACC-071,Dev Malhotra,2026-10-09,2026-10-03,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00197,ACC-071,Dev Malhotra,2026-09-20,2026-10-04,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00198,ACC-071,Dev Malhotra,2026-09-22,2026-09-29,completed,Discuss additional units,Assess expansion interest,2026-09-25
+FUP-00199,ACC-072,Dev Malhotra,2026-09-07,2026-10-04,pending,Discuss additional units,Assess expansion interest,
+FUP-00200,ACC-072,Dev Malhotra,2026-09-05,2026-09-09,pending,Discuss additional units,Assess expansion interest,
+FUP-00201,ACC-073,Dev Malhotra,2026-10-06,2026-10-09,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00202,ACC-073,Dev Malhotra,2026-10-06,2026-10-19,pending,Confirm spare-parts delivery,Check order status and timing,
+FUP-00203,ACC-074,Neha Sharma,2026-09-26,2026-10-01,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00204,ACC-074,Neha Sharma,2026-09-23,2026-10-03,pending,Confirm spare-parts delivery,Check order status and timing,
+FUP-00205,ACC-075,Maya Patel,2026-10-02,2026-09-28,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00206,ACC-075,Maya Patel,2026-10-01,2026-10-09,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00207,ACC-075,Maya Patel,2026-09-27,2026-10-06,completed,Confirm spare-parts delivery,Check order status and timing,2026-10-05
+FUP-00208,ACC-075,Maya Patel,2026-10-05,2026-10-09,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00209,ACC-075,Maya Patel,2026-09-22,2026-10-05,pending,Confirm spare-parts delivery,Check order status and timing,
+FUP-00210,ACC-076,Neha Sharma,2026-09-15,2026-10-01,pending,Confirm spare-parts delivery,Check order status and timing,
+FUP-00211,ACC-076,Neha Sharma,2026-09-16,2026-09-24,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00212,ACC-076,Neha Sharma,2026-09-25,2026-09-28,completed,Confirm spare-parts delivery,Check order status and timing,2026-09-27
+FUP-00213,ACC-077,Dev Malhotra,2026-09-17,2026-10-03,pending,Discuss additional units,Assess expansion interest,
+FUP-00214,ACC-077,Dev Malhotra,2026-10-05,2026-10-18,cancelled,Schedule operator training,Help customer increase product adoption,
+FUP-00215,ACC-077,Dev Malhotra,2026-09-06,2026-09-11,completed,Customer health check-in,Confirm customer needs and next steps,2026-09-07
+FUP-00216,ACC-078,Ananya Rao,2026-09-10,2026-10-03,pending,Check product usage decline,Investigate falling product activity,
+FUP-00217,ACC-078,Ananya Rao,2026-09-12,2026-09-19,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00218,ACC-078,Ananya Rao,2026-09-21,2026-09-27,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00219,ACC-079,Maya Patel,2026-09-13,2026-09-22,completed,Discuss additional units,Assess expansion interest,2026-09-20
+FUP-00220,ACC-079,Maya Patel,2026-10-03,2026-10-14,completed,Discuss additional units,Assess expansion interest,2026-10-09
+FUP-00221,ACC-079,Maya Patel,2026-10-06,2026-10-18,pending,Discuss additional units,Assess expansion interest,
+FUP-00222,ACC-080,Maya Patel,2026-10-07,2026-10-12,completed,Schedule operator training,Help customer increase product adoption,2026-10-08
+FUP-00223,ACC-080,Maya Patel,2026-09-21,2026-09-25,pending,Discuss additional units,Assess expansion interest,
+FUP-00224,ACC-080,Maya Patel,2026-09-15,2026-09-24,completed,Customer health check-in,Confirm customer needs and next steps,2026-09-17
+FUP-00225,ACC-082,Maya Patel,2026-09-28,2026-10-04,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00226,ACC-086,Dev Malhotra,2026-10-01,2026-10-10,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00227,ACC-086,Dev Malhotra,2026-09-26,2026-09-28,pending,Confirm spare-parts delivery,Check order status and timing,
+FUP-00228,ACC-087,Kabir Singh,2026-10-08,2026-10-17,completed,Discuss additional units,Assess expansion interest,2026-10-12
+FUP-00229,ACC-088,Ananya Rao,2026-09-30,2026-10-05,cancelled,Schedule operator training,Help customer increase product adoption,
+FUP-00230,ACC-088,Ananya Rao,2026-09-14,2026-09-17,pending,Follow up on support ticket,Confirm resolution and customer impact,
+FUP-00231,ACC-090,Kabir Singh,2026-10-06,2026-10-16,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00232,ACC-092,Dev Malhotra,2026-10-05,2026-10-19,completed,Check product usage decline,Investigate falling product activity,2026-10-12
+FUP-00233,ACC-092,Dev Malhotra,2026-09-17,2026-09-19,pending,Check product usage decline,Investigate falling product activity,
+FUP-00234,ACC-092,Dev Malhotra,2026-09-12,2026-09-14,completed,Check product usage decline,Investigate falling product activity,2026-09-16
+FUP-00235,ACC-093,Rohan Mehta,2026-10-07,2026-10-14,completed,Confirm spare-parts delivery,Check order status and timing,2026-10-15
+FUP-00236,ACC-094,Kabir Singh,2026-10-07,2026-10-14,pending,Check product usage decline,Investigate falling product activity,
+FUP-00237,ACC-094,Kabir Singh,2026-09-21,2026-09-30,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00238,ACC-094,Kabir Singh,2026-09-29,2026-10-10,completed,Customer health check-in,Confirm customer needs and next steps,2026-10-04
+FUP-00239,ACC-096,Neha Sharma,2026-09-23,2026-10-07,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00240,ACC-096,Neha Sharma,2026-10-03,2026-10-10,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00241,ACC-096,Neha Sharma,2026-10-04,2026-10-15,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-10-12
+FUP-00242,ACC-097,Kabir Singh,2026-09-15,2026-09-23,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-09-22
+FUP-00243,ACC-097,Kabir Singh,2026-09-07,2026-09-18,completed,Confirm spare-parts delivery,Check order status and timing,2026-09-17
+FUP-00244,ACC-097,Kabir Singh,2026-09-12,2026-09-14,pending,Check product usage decline,Investigate falling product activity,
+FUP-00245,ACC-098,Kabir Singh,2026-09-12,2026-09-20,pending,Discuss additional units,Assess expansion interest,
+FUP-00246,ACC-101,Neha Sharma,2026-09-06,2026-09-14,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-09-14
+FUP-00247,ACC-101,Neha Sharma,2026-09-15,2026-09-19,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00248,ACC-101,Neha Sharma,2026-09-13,2026-09-24,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00249,ACC-102,Neha Sharma,2026-09-08,2026-09-22,completed,Discuss additional units,Assess expansion interest,2026-09-09
+FUP-00250,ACC-103,Rohan Mehta,2026-09-10,2026-09-14,completed,Check product usage decline,Investigate falling product activity,2026-09-11
+FUP-00251,ACC-104,Ananya Rao,2026-09-16,2026-09-22,completed,Confirm spare-parts delivery,Check order status and timing,2026-09-18
+FUP-00252,ACC-105,Ananya Rao,2026-09-07,2026-09-16,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00253,ACC-105,Ananya Rao,2026-09-30,2026-10-08,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-10-06
+FUP-00254,ACC-106,Neha Sharma,2026-09-07,2026-09-16,completed,Discuss additional units,Assess expansion interest,2026-09-13
+FUP-00255,ACC-106,Neha Sharma,2026-09-19,2026-10-02,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-09-24
+FUP-00256,ACC-106,Neha Sharma,2026-09-29,2026-10-01,completed,Discuss additional units,Assess expansion interest,2026-10-08
+FUP-00257,ACC-108,Rohan Mehta,2026-09-18,2026-09-28,completed,Discuss additional units,Assess expansion interest,2026-09-20
+FUP-00258,ACC-108,Rohan Mehta,2026-09-22,2026-09-29,completed,Confirm spare-parts delivery,Check order status and timing,2026-09-24
+FUP-00259,ACC-108,Rohan Mehta,2026-10-07,2026-10-16,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00260,ACC-109,Maya Patel,2026-09-20,2026-09-30,pending,Customer health check-in,Confirm customer needs and next steps,
+FUP-00261,ACC-109,Maya Patel,2026-10-03,2026-10-06,pending,Schedule operator training,Help customer increase product adoption,
+FUP-00262,ACC-110,Neha Sharma,2026-10-03,2026-10-17,completed,Discuss additional units,Assess expansion interest,2026-10-13
+FUP-00263,ACC-110,Neha Sharma,2026-09-17,2026-09-30,pending,Discuss additional units,Assess expansion interest,
+FUP-00264,ACC-110,Neha Sharma,2026-10-05,2026-10-13,completed,Schedule operator training,Help customer increase product adoption,2026-10-06
+FUP-00265,ACC-111,Neha Sharma,2026-10-07,2026-10-18,completed,Customer health check-in,Confirm customer needs and next steps,2026-10-13
+FUP-00266,ACC-111,Neha Sharma,2026-09-20,2026-09-27,completed,Customer health check-in,Confirm customer needs and next steps,2026-09-21
+FUP-00267,ACC-111,Neha Sharma,2026-10-08,2026-10-15,pending,Confirm spare-parts delivery,Check order status and timing,
+FUP-00268,ACC-113,Dev Malhotra,2026-10-07,2026-10-15,pending,Confirm spare-parts delivery,Check order status and timing,
+FUP-00269,ACC-115,Rohan Mehta,2026-09-08,2026-09-15,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-09-10
+FUP-00270,ACC-116,Maya Patel,2026-09-08,2026-09-19,completed,Discuss additional units,Assess expansion interest,2026-09-09
+FUP-00271,ACC-116,Maya Patel,2026-09-08,2026-09-21,completed,Check product usage decline,Investigate falling product activity,2026-09-12
+FUP-00272,ACC-116,Maya Patel,2026-09-26,2026-10-10,pending,Discuss additional units,Assess expansion interest,
+FUP-00273,ACC-117,Dev Malhotra,2026-09-07,2026-09-14,completed,Follow up on support ticket,Confirm resolution and customer impact,2026-09-16
+FUP-00274,ACC-118,Kabir Singh,2026-10-05,2026-10-08,completed,Schedule operator training,Help customer increase product adoption,2026-10-06

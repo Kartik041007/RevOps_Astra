@@ -1,0 +1,16 @@
+﻿account_id,scenario,demo_note
+ACC-003,urgent_declining_usage,Usage is trending down materially; inspect recent transactions and any open tickets before recommending outreach.
+ACC-008,urgent_declining_usage,Usage is trending down materially; inspect recent transactions and any open tickets before recommending outreach.
+ACC-014,urgent_declining_usage,Usage is trending down materially; inspect recent transactions and any open tickets before recommending outreach.
+ACC-021,urgent_declining_usage,Usage is trending down materially; inspect recent transactions and any open tickets before recommending outreach.
+ACC-026,engaged_but_struggling,"Usage decline coexists with a recent help/training request; recommend assistance, not automatic churn language."
+ACC-031,engaged_but_struggling,"Usage decline coexists with a recent help/training request; recommend assistance, not automatic churn language."
+ACC-045,expansion_signal,"Usage is rising and interactions may indicate interest in additional capacity; treat as a candidate, not confirmed expansion."
+ACC-053,expansion_signal,"Usage is rising and interactions may indicate interest in additional capacity; treat as a candidate, not confirmed expansion."
+ACC-061,support_risk,Open high-severity ticket(s) and customer complaint may need account-owner escalation.
+ACC-073,support_risk,Open high-severity ticket(s) and customer complaint may need account-owner escalation.
+ACC-082,quiet_or_data_gap,Interaction is stale and/or recent usage snapshots are missing; lower confidence and create an information-gathering task.
+ACC-090,quiet_or_data_gap,Interaction is stale and/or recent usage snapshots are missing; lower confidence and create an information-gathering task.
+ACC-103,healthy,Relatively stable/improving usage and no strong current risk pattern; avoid unnecessary urgent action.
+ACC-111,healthy,Relatively stable/improving usage and no strong current risk pattern; avoid unnecessary urgent action.
+ACC-118,healthy,Relatively stable/improving usage and no strong current risk pattern; avoid unnecessary urgent action.

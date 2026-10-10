@@ -1,0 +1,9 @@
+﻿product_id,product_name,product_category,list_unit_price,usage_unit
+PRD-101,Connected Quality Monitor,Industrial Monitoring,6800,device_events
+PRD-102,Inventory Vision Terminal,Operations Hardware,4200,terminal_sessions
+PRD-103,Fleet Telemetry Gateway,IoT Gateway,3100,gateway_events
+PRD-104,Predictive Maintenance Sensor,Industrial Sensor,950,sensor_events
+PRD-105,Production Analytics Console,Analytics Product,8900,console_sessions
+PRD-106,Smart Warehouse Scanner,Warehouse Hardware,1250,scan_events
+PRD-107,Energy Insight Controller,Energy Monitoring,5600,controller_events
+PRD-108,Quality Lab Station,Quality Equipment,7400,station_sessions

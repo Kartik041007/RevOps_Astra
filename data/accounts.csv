@@ -1,0 +1,121 @@
+﻿account_id,company_name,industry,company_size_band,region,account_owner,account_opened_date,primary_product_id,customer_status
+ACC-001,Northstar Components 001,Manufacturing,Enterprise (250-999),West,Kabir Singh,2024-08-22,PRD-104,active
+ACC-002,Ironclad Products 002,Electronics,Enterprise (250-999),Central,Neha Sharma,2025-04-17,PRD-104,active
+ACC-003,Redwood Operations 003,Automotive Supply,Small (10-49),West,Ananya Rao,2024-02-13,PRD-106,active
+ACC-004,Brightforge Enterprises 004,Healthcare Equipment,Enterprise (250-999),West,Rohan Mehta,2024-07-12,PRD-106,active
+ACC-005,Harbor Technologies 005,Food Processing,Mid-market (50-249),Central,Maya Patel,2023-12-18,PRD-107,active
+ACC-006,Crestline Components 006,Automotive Supply,Small (10-49),South,Rohan Mehta,2025-10-25,PRD-101,active
+ACC-007,Silverline Enterprises 007,Healthcare Equipment,Large (1000+),West,Dev Malhotra,2024-12-29,PRD-103,active
+ACC-008,Westfield Industries 008,Logistics,Small (10-49),North,Maya Patel,2025-10-15,PRD-103,active
+ACC-009,Clearwater Solutions 009,Automotive Supply,Mid-market (50-249),West,Maya Patel,2023-02-23,PRD-103,active
+ACC-010,Summit Products 010,Food Processing,Large (1000+),Central,Neha Sharma,2025-08-11,PRD-102,active
+ACC-011,Nova Operations 011,Automotive Supply,Small (10-49),Central,Maya Patel,2023-06-18,PRD-106,active
+ACC-012,Apex Manufacturing 012,Healthcare Equipment,Small (10-49),South,Dev Malhotra,2025-06-10,PRD-102,active
+ACC-013,Clearwater Solutions 013,Automotive Supply,Large (1000+),South,Maya Patel,2023-10-20,PRD-108,active
+ACC-014,Harbor Components 014,Healthcare Equipment,Large (1000+),North,Ananya Rao,2024-12-03,PRD-104,active
+ACC-015,Silverline Group 015,Food Processing,Large (1000+),Central,Kabir Singh,2024-02-08,PRD-106,active
+ACC-016,Pioneer Group 016,Manufacturing,Large (1000+),Central,Maya Patel,2023-01-17,PRD-105,active
+ACC-017,Crestline Enterprises 017,Manufacturing,Mid-market (50-249),West,Dev Malhotra,2026-01-10,PRD-102,active
+ACC-018,Northstar Industries 018,Food Processing,Small (10-49),East,Ananya Rao,2023-04-02,PRD-108,active
+ACC-019,Pioneer Operations 019,Healthcare Equipment,Large (1000+),East,Rohan Mehta,2024-05-14,PRD-101,watchlist
+ACC-020,Oakridge Components 020,Packaging,Small (10-49),North,Neha Sharma,2024-06-25,PRD-104,active
+ACC-021,Harbor Enterprises 021,Manufacturing,Large (1000+),North,Kabir Singh,2025-01-29,PRD-105,active
+ACC-022,Evergreen Group 022,Packaging,Large (1000+),East,Rohan Mehta,2025-03-08,PRD-107,active
+ACC-023,Crestline Products 023,Manufacturing,Enterprise (250-999),South,Dev Malhotra,2024-11-10,PRD-101,active
+ACC-024,BluePeak Enterprises 024,Food Processing,Small (10-49),North,Ananya Rao,2025-07-20,PRD-108,active
+ACC-025,Oakridge Manufacturing 025,Packaging,Enterprise (250-999),North,Kabir Singh,2026-04-18,PRD-108,active
+ACC-026,Nova Technologies 026,Logistics,Enterprise (250-999),West,Ananya Rao,2023-11-13,PRD-104,active
+ACC-027,Westfield Solutions 027,Electronics,Enterprise (250-999),Central,Dev Malhotra,2026-03-27,PRD-103,active
+ACC-028,Oakridge Works 028,Manufacturing,Large (1000+),West,Ananya Rao,2024-05-16,PRD-105,active
+ACC-029,Pioneer Group 029,Automotive Supply,Small (10-49),East,Rohan Mehta,2024-03-19,PRD-107,active
+ACC-030,Harbor Operations 030,Healthcare Equipment,Large (1000+),East,Ananya Rao,2025-05-12,PRD-106,active
+ACC-031,Keystone Logistics 031,Electronics,Small (10-49),North,Dev Malhotra,2023-03-30,PRD-105,active
+ACC-032,Sterling Manufacturing 032,Logistics,Small (10-49),North,Kabir Singh,2024-05-04,PRD-101,active
+ACC-033,Apex Logistics 033,Electronics,Large (1000+),South,Neha Sharma,2025-05-29,PRD-102,active
+ACC-034,Clearwater Group 034,Electronics,Small (10-49),Central,Rohan Mehta,2025-12-18,PRD-108,active
+ACC-035,Summit Components 035,Automotive Supply,Mid-market (50-249),Central,Kabir Singh,2024-08-22,PRD-107,active
+ACC-036,Oakridge Products 036,Electronics,Enterprise (250-999),West,Rohan Mehta,2024-02-26,PRD-101,active
+ACC-037,Harbor Manufacturing 037,Automotive Supply,Mid-market (50-249),East,Dev Malhotra,2023-09-20,PRD-104,active
+ACC-038,Ironclad Enterprises 038,Electronics,Small (10-49),Central,Dev Malhotra,2024-10-28,PRD-108,active
+ACC-039,Keystone Operations 039,Logistics,Mid-market (50-249),Central,Neha Sharma,2023-10-03,PRD-104,active
+ACC-040,Brightforge Technologies 040,Retail Operations,Enterprise (250-999),Central,Rohan Mehta,2024-04-12,PRD-107,active
+ACC-041,BluePeak Industries 041,Automotive Supply,Large (1000+),East,Maya Patel,2026-05-09,PRD-103,active
+ACC-042,Brightforge Group 042,Electronics,Enterprise (250-999),Central,Kabir Singh,2025-08-01,PRD-102,active
+ACC-043,Sterling Systems 043,Manufacturing,Large (1000+),Central,Rohan Mehta,2023-11-23,PRD-107,active
+ACC-044,Westfield Technologies 044,Healthcare Equipment,Enterprise (250-999),Central,Neha Sharma,2024-08-07,PRD-101,active
+ACC-045,Crestline Group 045,Electronics,Small (10-49),West,Ananya Rao,2024-12-21,PRD-106,active
+ACC-046,Clearwater Industries 046,Electronics,Large (1000+),East,Rohan Mehta,2024-09-08,PRD-108,active
+ACC-047,Evergreen Logistics 047,Logistics,Large (1000+),Central,Rohan Mehta,2024-05-13,PRD-102,active
+ACC-048,Sterling Components 048,Automotive Supply,Mid-market (50-249),North,Dev Malhotra,2026-05-31,PRD-107,active
+ACC-049,Oakridge Solutions 049,Logistics,Mid-market (50-249),South,Maya Patel,2024-12-26,PRD-101,active
+ACC-050,Harbor Operations 050,Automotive Supply,Enterprise (250-999),South,Neha Sharma,2025-11-17,PRD-102,active
+ACC-051,Silverline Systems 051,Logistics,Large (1000+),East,Dev Malhotra,2026-02-10,PRD-108,watchlist
+ACC-052,Clearwater Operations 052,Retail Operations,Small (10-49),North,Kabir Singh,2023-06-26,PRD-104,active
+ACC-053,Vertex Logistics 053,Logistics,Large (1000+),South,Ananya Rao,2026-01-25,PRD-104,active
+ACC-054,Oakridge Logistics 054,Healthcare Equipment,Small (10-49),East,Rohan Mehta,2023-04-13,PRD-102,active
+ACC-055,Brightforge Industries 055,Food Processing,Enterprise (250-999),North,Maya Patel,2026-01-24,PRD-104,active
+ACC-056,Summit Components 056,Packaging,Small (10-49),North,Ananya Rao,2024-02-19,PRD-108,active
+ACC-057,BluePeak Industries 057,Packaging,Large (1000+),North,Rohan Mehta,2025-02-27,PRD-102,active
+ACC-058,Northstar Systems 058,Manufacturing,Enterprise (250-999),West,Neha Sharma,2025-02-10,PRD-103,active
+ACC-059,Clearwater Enterprises 059,Retail Operations,Large (1000+),West,Ananya Rao,2023-06-17,PRD-105,active
+ACC-060,Oakridge Technologies 060,Food Processing,Small (10-49),South,Maya Patel,2024-09-04,PRD-105,active
+ACC-061,Harbor Group 061,Automotive Supply,Large (1000+),North,Rohan Mehta,2025-12-28,PRD-106,active
+ACC-062,Evergreen Industries 062,Healthcare Equipment,Small (10-49),North,Dev Malhotra,2025-12-29,PRD-103,active
+ACC-063,Crestline Products 063,Electronics,Mid-market (50-249),Central,Kabir Singh,2026-04-04,PRD-106,active
+ACC-064,BluePeak Solutions 064,Retail Operations,Large (1000+),South,Dev Malhotra,2024-01-25,PRD-103,active
+ACC-065,Oakridge Solutions 065,Packaging,Mid-market (50-249),South,Neha Sharma,2024-06-17,PRD-103,active
+ACC-066,Skybridge Enterprises 066,Packaging,Mid-market (50-249),North,Kabir Singh,2024-06-16,PRD-104,active
+ACC-067,Harbor Systems 067,Packaging,Large (1000+),East,Ananya Rao,2023-06-06,PRD-104,active
+ACC-068,Brightforge Works 068,Packaging,Large (1000+),East,Kabir Singh,2025-09-05,PRD-107,active
+ACC-069,Summit Group 069,Electronics,Small (10-49),East,Neha Sharma,2023-12-03,PRD-107,active
+ACC-070,Apex Industries 070,Packaging,Small (10-49),Central,Neha Sharma,2026-01-11,PRD-104,active
+ACC-071,Vertex Works 071,Retail Operations,Small (10-49),West,Dev Malhotra,2023-05-30,PRD-101,active
+ACC-072,Clearwater Group 072,Healthcare Equipment,Small (10-49),Central,Dev Malhotra,2026-01-01,PRD-107,active
+ACC-073,Summit Technologies 073,Automotive Supply,Small (10-49),South,Dev Malhotra,2026-06-11,PRD-108,active
+ACC-074,Nova Systems 074,Manufacturing,Large (1000+),North,Neha Sharma,2023-06-25,PRD-104,active
+ACC-075,BluePeak Systems 075,Automotive Supply,Enterprise (250-999),Central,Maya Patel,2025-09-20,PRD-108,active
+ACC-076,Harbor Industries 076,Packaging,Mid-market (50-249),Central,Neha Sharma,2023-02-05,PRD-101,active
+ACC-077,Keystone Products 077,Electronics,Small (10-49),North,Dev Malhotra,2025-01-12,PRD-106,active
+ACC-078,Nova Industries 078,Electronics,Enterprise (250-999),South,Ananya Rao,2023-01-01,PRD-106,active
+ACC-079,Evergreen Works 079,Retail Operations,Small (10-49),Central,Maya Patel,2025-09-05,PRD-103,active
+ACC-080,Redwood Works 080,Logistics,Small (10-49),Central,Maya Patel,2025-06-05,PRD-106,active
+ACC-081,Silverline Logistics 081,Manufacturing,Large (1000+),South,Kabir Singh,2026-05-25,PRD-108,active
+ACC-082,Oakridge Enterprises 082,Logistics,Large (1000+),East,Maya Patel,2023-02-16,PRD-102,active
+ACC-083,Pioneer Logistics 083,Packaging,Large (1000+),North,Rohan Mehta,2026-02-02,PRD-106,active
+ACC-084,Vertex Products 084,Food Processing,Small (10-49),Central,Maya Patel,2023-12-16,PRD-105,watchlist
+ACC-085,Skybridge Technologies 085,Food Processing,Small (10-49),North,Maya Patel,2024-05-26,PRD-108,active
+ACC-086,Vertex Enterprises 086,Manufacturing,Small (10-49),East,Dev Malhotra,2023-08-12,PRD-108,active
+ACC-087,Pioneer Manufacturing 087,Food Processing,Large (1000+),North,Kabir Singh,2024-04-13,PRD-102,active
+ACC-088,Skybridge Technologies 088,Healthcare Equipment,Large (1000+),South,Ananya Rao,2024-06-01,PRD-106,active
+ACC-089,Ironclad Group 089,Food Processing,Large (1000+),East,Ananya Rao,2025-11-04,PRD-104,active
+ACC-090,Evergreen Works 090,Manufacturing,Large (1000+),East,Kabir Singh,2023-05-05,PRD-104,active
+ACC-091,Keystone Manufacturing 091,Retail Operations,Enterprise (250-999),East,Maya Patel,2026-06-05,PRD-105,active
+ACC-092,Keystone Products 092,Food Processing,Mid-market (50-249),Central,Dev Malhotra,2023-09-10,PRD-106,active
+ACC-093,Northstar Systems 093,Logistics,Small (10-49),East,Rohan Mehta,2025-09-27,PRD-104,active
+ACC-094,Crestline Operations 094,Retail Operations,Mid-market (50-249),West,Kabir Singh,2024-12-20,PRD-104,active
+ACC-095,Oakridge Products 095,Automotive Supply,Mid-market (50-249),Central,Dev Malhotra,2024-04-16,PRD-101,active
+ACC-096,Crestline Systems 096,Electronics,Large (1000+),North,Neha Sharma,2024-09-24,PRD-104,active
+ACC-097,Sterling Works 097,Logistics,Mid-market (50-249),North,Kabir Singh,2026-03-24,PRD-108,active
+ACC-098,Pioneer Enterprises 098,Food Processing,Small (10-49),North,Kabir Singh,2026-03-29,PRD-101,active
+ACC-099,Crestline Enterprises 099,Manufacturing,Enterprise (250-999),North,Rohan Mehta,2025-11-24,PRD-102,active
+ACC-100,Oakridge Operations 100,Logistics,Large (1000+),North,Kabir Singh,2026-01-07,PRD-106,active
+ACC-101,Westfield Solutions 101,Packaging,Small (10-49),Central,Neha Sharma,2023-08-26,PRD-102,active
+ACC-102,Ironclad Operations 102,Packaging,Enterprise (250-999),North,Neha Sharma,2023-08-17,PRD-101,active
+ACC-103,Harbor Group 103,Packaging,Small (10-49),North,Rohan Mehta,2025-07-10,PRD-106,active
+ACC-104,Summit Operations 104,Logistics,Small (10-49),East,Ananya Rao,2023-11-28,PRD-104,active
+ACC-105,Vertex Logistics 105,Healthcare Equipment,Small (10-49),West,Ananya Rao,2024-03-01,PRD-107,active
+ACC-106,Skybridge Components 106,Packaging,Small (10-49),North,Neha Sharma,2024-10-30,PRD-101,active
+ACC-107,Pioneer Works 107,Packaging,Small (10-49),West,Ananya Rao,2024-02-27,PRD-102,active
+ACC-108,Skybridge Industries 108,Food Processing,Large (1000+),North,Rohan Mehta,2025-09-18,PRD-104,active
+ACC-109,Summit Group 109,Food Processing,Mid-market (50-249),South,Maya Patel,2024-10-14,PRD-103,active
+ACC-110,Redwood Works 110,Logistics,Small (10-49),North,Neha Sharma,2024-02-29,PRD-107,active
+ACC-111,Sterling Systems 111,Healthcare Equipment,Enterprise (250-999),East,Neha Sharma,2025-01-24,PRD-101,active
+ACC-112,Pioneer Group 112,Packaging,Large (1000+),East,Neha Sharma,2023-11-26,PRD-105,active
+ACC-113,BluePeak Industries 113,Food Processing,Mid-market (50-249),South,Dev Malhotra,2023-10-01,PRD-108,active
+ACC-114,Evergreen Logistics 114,Manufacturing,Mid-market (50-249),South,Dev Malhotra,2025-04-20,PRD-108,active
+ACC-115,Brightforge Manufacturing 115,Electronics,Small (10-49),West,Rohan Mehta,2025-10-14,PRD-106,active
+ACC-116,Silverline Group 116,Packaging,Enterprise (250-999),North,Maya Patel,2026-02-02,PRD-102,active
+ACC-117,Evergreen Logistics 117,Manufacturing,Small (10-49),North,Dev Malhotra,2023-03-07,PRD-103,active
+ACC-118,Apex Industries 118,Electronics,Large (1000+),North,Kabir Singh,2024-03-30,PRD-106,active
+ACC-119,BluePeak Products 119,Logistics,Mid-market (50-249),South,Dev Malhotra,2025-05-25,PRD-102,active
+ACC-120,Brightforge Group 120,Automotive Supply,Large (1000+),South,Neha Sharma,2025-11-02,PRD-105,active

@@ -1,0 +1,121 @@
+﻿contact_id,account_id,contact_name,email,job_title,is_champion,is_exec_sponsor,is_active
+CON-001,ACC-001,Sam Shah,sam.shah.001@example.com,Plant Manager,true,false,true
+CON-002,ACC-002,Cameron Singh,cameron.singh.002@example.com,Plant Manager,false,true,true
+CON-003,ACC-003,Avery Reed,avery.reed.003@example.com,Director of Operations,false,false,true
+CON-004,ACC-004,Riley Wright,riley.wright.004@example.com,Director of Operations,true,false,true
+CON-005,ACC-005,Jamie Reed,jamie.reed.005@example.com,Operations Manager,false,false,true
+CON-006,ACC-006,Riley Morgan,riley.morgan.006@example.com,Product Lead,true,false,true
+CON-007,ACC-007,Alex Reed,alex.reed.007@example.com,IT Manager,true,true,true
+CON-008,ACC-008,Riley Shah,riley.shah.008@example.com,IT Manager,false,true,true
+CON-009,ACC-009,Taylor Diaz,taylor.diaz.009@example.com,Operations Manager,true,false,true
+CON-010,ACC-010,Alex Chen,alex.chen.010@example.com,IT Manager,true,false,true
+CON-011,ACC-011,Avery Singh,avery.singh.011@example.com,IT Manager,true,true,true
+CON-012,ACC-012,Jamie Singh,jamie.singh.012@example.com,Product Lead,false,true,true
+CON-013,ACC-013,Casey Wright,casey.wright.013@example.com,Product Lead,true,false,true
+CON-014,ACC-014,Avery Shah,avery.shah.014@example.com,Plant Manager,true,false,true
+CON-015,ACC-015,Jordan Kim,jordan.kim.015@example.com,VP Operations,true,false,true
+CON-016,ACC-016,Riley Singh,riley.singh.016@example.com,IT Manager,true,false,true
+CON-017,ACC-017,Morgan Wright,morgan.wright.017@example.com,Operations Manager,false,true,true
+CON-018,ACC-018,Jordan Brooks,jordan.brooks.018@example.com,Product Lead,true,true,true
+CON-019,ACC-019,Alex Kim,alex.kim.019@example.com,Director of Operations,true,false,true
+CON-020,ACC-020,Avery Diaz,avery.diaz.020@example.com,IT Manager,true,false,true
+CON-021,ACC-021,Riley Singh,riley.singh.021@example.com,IT Manager,true,true,true
+CON-022,ACC-022,Jamie Shah,jamie.shah.022@example.com,Director of Operations,true,true,true
+CON-023,ACC-023,Alex Reed,alex.reed.023@example.com,IT Manager,true,false,true
+CON-024,ACC-024,Cameron Morgan,cameron.morgan.024@example.com,IT Manager,true,false,true
+CON-025,ACC-025,Casey Kim,casey.kim.025@example.com,Procurement Manager,true,false,true
+CON-026,ACC-026,Cameron Patel,cameron.patel.026@example.com,Product Lead,false,false,true
+CON-027,ACC-027,Alex Brooks,alex.brooks.027@example.com,Procurement Manager,true,true,true
+CON-028,ACC-028,Sam Patel,sam.patel.028@example.com,Operations Manager,true,true,true
+CON-029,ACC-029,Casey Patel,casey.patel.029@example.com,Procurement Manager,false,false,true
+CON-030,ACC-030,Avery Diaz,avery.diaz.030@example.com,Director of Operations,false,false,true
+CON-031,ACC-031,Casey Reed,casey.reed.031@example.com,Product Lead,true,false,true
+CON-032,ACC-032,Alex Morgan,alex.morgan.032@example.com,Director of Operations,true,false,true
+CON-033,ACC-033,Riley Shah,riley.shah.033@example.com,Plant Manager,true,false,true
+CON-034,ACC-034,Jordan Wright,jordan.wright.034@example.com,Procurement Manager,true,false,true
+CON-035,ACC-035,Morgan Diaz,morgan.diaz.035@example.com,VP Operations,true,true,true
+CON-036,ACC-036,Alex Wright,alex.wright.036@example.com,Product Lead,false,false,true
+CON-037,ACC-037,Sam Diaz,sam.diaz.037@example.com,VP Operations,true,true,true
+CON-038,ACC-038,Casey Patel,casey.patel.038@example.com,Plant Manager,false,false,true
+CON-039,ACC-039,Avery Singh,avery.singh.039@example.com,Procurement Manager,false,true,true
+CON-040,ACC-040,Morgan Brooks,morgan.brooks.040@example.com,Plant Manager,true,false,true
+CON-041,ACC-041,Jordan Wright,jordan.wright.041@example.com,IT Manager,true,false,true
+CON-042,ACC-042,Alex Shah,alex.shah.042@example.com,IT Manager,true,false,true
+CON-043,ACC-043,Avery Diaz,avery.diaz.043@example.com,Plant Manager,true,false,true
+CON-044,ACC-044,Cameron Reed,cameron.reed.044@example.com,VP Operations,true,false,true
+CON-045,ACC-045,Sam Reed,sam.reed.045@example.com,Operations Manager,false,false,true
+CON-046,ACC-046,Cameron Patel,cameron.patel.046@example.com,Procurement Manager,true,true,true
+CON-047,ACC-047,Casey Wright,casey.wright.047@example.com,Product Lead,false,false,true
+CON-048,ACC-048,Cameron Patel,cameron.patel.048@example.com,VP Operations,false,false,true
+CON-049,ACC-049,Cameron Morgan,cameron.morgan.049@example.com,Product Lead,true,false,true
+CON-050,ACC-050,Riley Morgan,riley.morgan.050@example.com,Procurement Manager,false,false,true
+CON-051,ACC-051,Avery Shah,avery.shah.051@example.com,Product Lead,true,false,true
+CON-052,ACC-052,Jamie Morgan,jamie.morgan.052@example.com,VP Operations,false,true,true
+CON-053,ACC-053,Casey Patel,casey.patel.053@example.com,Director of Operations,true,false,true
+CON-054,ACC-054,Casey Chen,casey.chen.054@example.com,Operations Manager,true,false,true
+CON-055,ACC-055,Riley Kim,riley.kim.055@example.com,Director of Operations,false,true,true
+CON-056,ACC-056,Cameron Diaz,cameron.diaz.056@example.com,Director of Operations,true,false,true
+CON-057,ACC-057,Taylor Kim,taylor.kim.057@example.com,VP Operations,true,false,true
+CON-058,ACC-058,Jordan Diaz,jordan.diaz.058@example.com,Operations Manager,false,false,true
+CON-059,ACC-059,Cameron Chen,cameron.chen.059@example.com,VP Operations,true,false,true
+CON-060,ACC-060,Morgan Kim,morgan.kim.060@example.com,Procurement Manager,true,false,true
+CON-061,ACC-061,Jamie Chen,jamie.chen.061@example.com,Plant Manager,true,false,true
+CON-062,ACC-062,Morgan Reed,morgan.reed.062@example.com,Director of Operations,true,false,true
+CON-063,ACC-063,Morgan Morgan,morgan.morgan.063@example.com,Director of Operations,false,false,true
+CON-064,ACC-064,Taylor Patel,taylor.patel.064@example.com,Operations Manager,true,true,true
+CON-065,ACC-065,Alex Singh,alex.singh.065@example.com,Director of Operations,false,false,true
+CON-066,ACC-066,Sam Shah,sam.shah.066@example.com,VP Operations,true,true,true
+CON-067,ACC-067,Alex Diaz,alex.diaz.067@example.com,IT Manager,false,false,true
+CON-068,ACC-068,Jamie Shah,jamie.shah.068@example.com,Product Lead,true,false,true
+CON-069,ACC-069,Riley Diaz,riley.diaz.069@example.com,Procurement Manager,false,false,true
+CON-070,ACC-070,Cameron Reed,cameron.reed.070@example.com,IT Manager,false,true,true
+CON-071,ACC-071,Cameron Diaz,cameron.diaz.071@example.com,IT Manager,true,false,true
+CON-072,ACC-072,Sam Brooks,sam.brooks.072@example.com,Plant Manager,true,false,true
+CON-073,ACC-073,Sam Patel,sam.patel.073@example.com,Product Lead,false,true,true
+CON-074,ACC-074,Jamie Morgan,jamie.morgan.074@example.com,VP Operations,false,false,true
+CON-075,ACC-075,Riley Reed,riley.reed.075@example.com,Plant Manager,false,false,true
+CON-076,ACC-076,Alex Wright,alex.wright.076@example.com,Operations Manager,true,false,true
+CON-077,ACC-077,Jamie Shah,jamie.shah.077@example.com,Plant Manager,true,false,true
+CON-078,ACC-078,Morgan Wright,morgan.wright.078@example.com,Director of Operations,false,true,true
+CON-079,ACC-079,Jamie Morgan,jamie.morgan.079@example.com,VP Operations,false,false,true
+CON-080,ACC-080,Avery Diaz,avery.diaz.080@example.com,Director of Operations,true,true,true
+CON-081,ACC-081,Morgan Chen,morgan.chen.081@example.com,Product Lead,true,true,false
+CON-082,ACC-082,Avery Diaz,avery.diaz.082@example.com,Operations Manager,true,true,true
+CON-083,ACC-083,Morgan Kim,morgan.kim.083@example.com,Operations Manager,false,false,true
+CON-084,ACC-084,Alex Diaz,alex.diaz.084@example.com,Operations Manager,false,true,false
+CON-085,ACC-085,Taylor Chen,taylor.chen.085@example.com,IT Manager,true,false,true
+CON-086,ACC-086,Avery Chen,avery.chen.086@example.com,IT Manager,true,false,true
+CON-087,ACC-087,Taylor Diaz,taylor.diaz.087@example.com,Operations Manager,false,false,false
+CON-088,ACC-088,Casey Reed,casey.reed.088@example.com,Product Lead,true,false,true
+CON-089,ACC-089,Sam Patel,sam.patel.089@example.com,Plant Manager,false,true,true
+CON-090,ACC-090,Avery Chen,avery.chen.090@example.com,Operations Manager,false,false,false
+CON-091,ACC-091,Cameron Chen,cameron.chen.091@example.com,VP Operations,true,true,true
+CON-092,ACC-092,Jamie Shah,jamie.shah.092@example.com,Plant Manager,true,false,true
+CON-093,ACC-093,Morgan Morgan,morgan.morgan.093@example.com,IT Manager,true,false,false
+CON-094,ACC-094,Morgan Brooks,morgan.brooks.094@example.com,Plant Manager,true,false,true
+CON-095,ACC-095,Casey Diaz,casey.diaz.095@example.com,Plant Manager,true,false,true
+CON-096,ACC-096,Casey Singh,casey.singh.096@example.com,Plant Manager,true,false,false
+CON-097,ACC-097,Taylor Kim,taylor.kim.097@example.com,VP Operations,false,false,true
+CON-098,ACC-098,Alex Chen,alex.chen.098@example.com,Product Lead,true,false,true
+CON-099,ACC-099,Alex Shah,alex.shah.099@example.com,Plant Manager,true,false,true
+CON-100,ACC-100,Cameron Chen,cameron.chen.100@example.com,Plant Manager,true,false,true
+CON-101,ACC-101,Jamie Diaz,jamie.diaz.101@example.com,Director of Operations,false,false,true
+CON-102,ACC-102,Jordan Shah,jordan.shah.102@example.com,Operations Manager,false,false,true
+CON-103,ACC-103,Jamie Diaz,jamie.diaz.103@example.com,IT Manager,false,false,true
+CON-104,ACC-104,Sam Kim,sam.kim.104@example.com,Plant Manager,true,false,true
+CON-105,ACC-105,Morgan Reed,morgan.reed.105@example.com,VP Operations,true,false,true
+CON-106,ACC-106,Casey Brooks,casey.brooks.106@example.com,Product Lead,true,false,true
+CON-107,ACC-107,Sam Morgan,sam.morgan.107@example.com,Product Lead,true,false,true
+CON-108,ACC-108,Taylor Brooks,taylor.brooks.108@example.com,Plant Manager,false,true,true
+CON-109,ACC-109,Taylor Shah,taylor.shah.109@example.com,IT Manager,true,true,true
+CON-110,ACC-110,Alex Kim,alex.kim.110@example.com,VP Operations,true,false,true
+CON-111,ACC-111,Jamie Wright,jamie.wright.111@example.com,Procurement Manager,true,false,true
+CON-112,ACC-112,Jordan Diaz,jordan.diaz.112@example.com,Plant Manager,true,false,true
+CON-113,ACC-113,Jamie Shah,jamie.shah.113@example.com,Operations Manager,false,false,true
+CON-114,ACC-114,Riley Brooks,riley.brooks.114@example.com,VP Operations,true,false,true
+CON-115,ACC-115,Jamie Diaz,jamie.diaz.115@example.com,IT Manager,false,false,true
+CON-116,ACC-116,Alex Kim,alex.kim.116@example.com,Director of Operations,true,false,true
+CON-117,ACC-117,Morgan Singh,morgan.singh.117@example.com,Product Lead,true,true,true
+CON-118,ACC-118,Alex Kim,alex.kim.118@example.com,VP Operations,false,false,true
+CON-119,ACC-119,Riley Shah,riley.shah.119@example.com,Director of Operations,false,false,true
+CON-120,ACC-120,Jordan Morgan,jordan.morgan.120@example.com,Plant Manager,false,false,true

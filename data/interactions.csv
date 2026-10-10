@@ -1,0 +1,494 @@
+﻿interaction_id,account_id,contact_id,occurred_at,channel,direction,subject,body,sentiment,intent,replied,source_record_id
+INT-00016,ACC-004,CON-004,2026-06-12,meeting,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,MEETING-00016
+INT-00289,ACC-069,CON-069,2026-06-12,meeting,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,MEETING-00289
+INT-00224,ACC-055,CON-055,2026-06-13,meeting,inbound,Pricing for additional units,Please share pricing for adding ten more units.,neutral,pricing_for_more,true,MEETING-00224
+INT-00284,ACC-068,CON-068,2026-06-13,meeting,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,false,MEETING-00284
+INT-00401,ACC-097,CON-097,2026-06-13,email,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,EMAIL-00401
+INT-00174,ACC-042,CON-042,2026-06-14,meeting,inbound,Additional training request,Could we schedule another training session for the operators?,neutral,training_request,true,MEETING-00174
+INT-00207,ACC-051,CON-051,2026-06-14,call,inbound,Pricing for additional units,Please share pricing for adding ten more units.,neutral,pricing_for_more,true,CALL-00207
+INT-00238,ACC-058,CON-058,2026-06-14,meeting,inbound,Pricing for additional units,Please share pricing for adding ten more units.,neutral,pricing_for_more,true,MEETING-00238
+INT-00269,ACC-065,CON-065,2026-06-14,email,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,EMAIL-00269
+INT-00313,ACC-074,CON-074,2026-06-14,email,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,EMAIL-00313
+INT-00413,ACC-100,CON-100,2026-06-14,email,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,EMAIL-00413
+INT-00438,ACC-106,CON-106,2026-06-14,email,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,EMAIL-00438
+INT-00283,ACC-068,CON-068,2026-06-15,meeting,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,true,MEETING-00283
+INT-00415,ACC-100,CON-100,2026-06-15,meeting,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,MEETING-00415
+INT-00445,ACC-107,CON-107,2026-06-15,call,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,CALL-00445
+INT-00462,ACC-111,CON-111,2026-06-15,email,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,EMAIL-00462
+INT-00486,ACC-118,CON-118,2026-06-15,call,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,CALL-00486
+INT-00179,ACC-044,CON-044,2026-06-16,call,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,CALL-00179
+INT-00475,ACC-115,CON-115,2026-06-16,email,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,EMAIL-00475
+INT-00007,ACC-002,CON-002,2026-06-18,call,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,true,CALL-00007
+INT-00092,ACC-022,CON-022,2026-06-18,call,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,true,CALL-00092
+INT-00096,ACC-023,CON-023,2026-06-18,email,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,false,EMAIL-00096
+INT-00150,ACC-037,CON-037,2026-06-18,meeting,inbound,Additional training request,Could we schedule another training session for the operators?,neutral,training_request,true,MEETING-00150
+INT-00221,ACC-055,CON-055,2026-06-19,call,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,CALL-00221
+INT-00052,ACC-013,CON-013,2026-06-20,call,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,CALL-00052
+INT-00114,ACC-029,CON-029,2026-06-20,call,inbound,Additional training request,Could we schedule another training session for the operators?,neutral,training_request,true,CALL-00114
+INT-00199,ACC-049,CON-049,2026-06-20,call,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,CALL-00199
+INT-00439,ACC-106,CON-106,2026-06-20,email,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,EMAIL-00439
+INT-00104,ACC-025,CON-025,2026-06-22,meeting,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,MEETING-00104
+INT-00133,ACC-033,CON-033,2026-06-22,email,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,EMAIL-00133
+INT-00350,ACC-084,CON-084,2026-06-22,meeting,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,false,MEETING-00350
+INT-00241,ACC-059,CON-059,2026-06-23,meeting,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,MEETING-00241
+INT-00334,ACC-079,CON-079,2026-06-23,email,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,EMAIL-00334
+INT-00346,ACC-084,CON-084,2026-06-23,email,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,EMAIL-00346
+INT-00448,ACC-108,CON-108,2026-06-23,email,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,EMAIL-00448
+INT-00454,ACC-110,CON-110,2026-06-23,call,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,CALL-00454
+INT-00091,ACC-022,CON-022,2026-06-24,call,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,CALL-00091
+INT-00188,ACC-046,CON-046,2026-06-24,call,inbound,Pricing for additional units,Please share pricing for adding ten more units.,neutral,pricing_for_more,true,CALL-00188
+INT-00383,ACC-093,CON-093,2026-06-24,meeting,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,MEETING-00383
+INT-00387,ACC-094,CON-094,2026-06-24,meeting,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,MEETING-00387
+INT-00436,ACC-106,CON-106,2026-06-24,email,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,EMAIL-00436
+INT-00173,ACC-042,CON-042,2026-06-25,meeting,inbound,Additional training request,Could we schedule another training session for the operators?,neutral,training_request,true,MEETING-00173
+INT-00420,ACC-101,CON-101,2026-06-25,email,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,EMAIL-00420
+INT-00307,ACC-073,CON-073,2026-06-26,call,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,CALL-00307
+INT-00368,ACC-089,CON-089,2026-06-26,call,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,CALL-00368
+INT-00375,ACC-091,CON-091,2026-06-26,call,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,CALL-00375
+INT-00050,ACC-013,CON-013,2026-06-27,email,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,EMAIL-00050
+INT-00154,ACC-037,CON-037,2026-06-27,call,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,CALL-00154
+INT-00186,ACC-045,CON-045,2026-06-27,email,inbound,Pricing for additional units,Please share pricing for adding ten more units.,neutral,pricing_for_more,true,EMAIL-00186
+INT-00336,ACC-080,CON-080,2026-06-27,meeting,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,MEETING-00336
+INT-00355,ACC-086,CON-086,2026-06-27,meeting,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,false,MEETING-00355
+INT-00358,ACC-086,CON-086,2026-06-27,meeting,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,MEETING-00358
+INT-00362,ACC-088,CON-088,2026-06-27,call,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,CALL-00362
+INT-00457,ACC-110,CON-110,2026-06-27,call,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,CALL-00457
+INT-00299,ACC-071,CON-071,2026-06-28,call,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,true,CALL-00299
+INT-00430,ACC-104,CON-104,2026-06-28,email,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,EMAIL-00430
+INT-00113,ACC-028,CON-028,2026-06-29,email,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,EMAIL-00113
+INT-00157,ACC-038,CON-038,2026-06-29,call,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,CALL-00157
+INT-00190,ACC-047,CON-047,2026-06-29,meeting,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,MEETING-00190
+INT-00193,ACC-047,CON-047,2026-06-29,call,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,CALL-00193
+INT-00361,ACC-088,CON-088,2026-06-29,email,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,EMAIL-00361
+INT-00433,ACC-104,CON-104,2026-06-29,call,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,CALL-00433
+INT-00071,ACC-018,CON-018,2026-06-30,meeting,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,MEETING-00071
+INT-00249,ACC-060,CON-060,2026-06-30,email,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,EMAIL-00249
+INT-00275,ACC-067,CON-067,2026-06-30,email,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,EMAIL-00275
+INT-00312,ACC-074,CON-074,2026-06-30,call,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,CALL-00312
+INT-00316,ACC-075,CON-075,2026-06-30,email,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,EMAIL-00316
+INT-00331,ACC-079,CON-079,2026-06-30,call,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,CALL-00331
+INT-00369,ACC-089,CON-089,2026-06-30,call,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,CALL-00369
+INT-00459,ACC-110,CON-110,2026-06-30,meeting,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,MEETING-00459
+INT-00277,ACC-067,CON-067,2026-07-01,email,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,false,EMAIL-00277
+INT-00325,ACC-077,CON-077,2026-07-01,meeting,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,MEETING-00325
+INT-00363,ACC-088,CON-088,2026-07-01,email,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,EMAIL-00363
+INT-00379,ACC-092,CON-092,2026-07-01,meeting,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,MEETING-00379
+INT-00032,ACC-009,CON-009,2026-07-02,meeting,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,MEETING-00032
+INT-00101,ACC-024,CON-024,2026-07-02,meeting,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,MEETING-00101
+INT-00116,ACC-029,CON-029,2026-07-02,email,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,EMAIL-00116
+INT-00272,ACC-066,CON-066,2026-07-02,call,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,CALL-00272
+INT-00403,ACC-097,CON-097,2026-07-02,email,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,EMAIL-00403
+INT-00458,ACC-110,CON-110,2026-07-02,email,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,EMAIL-00458
+INT-00332,ACC-079,CON-079,2026-07-03,meeting,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,MEETING-00332
+INT-00434,ACC-105,CON-105,2026-07-03,call,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,CALL-00434
+INT-00094,ACC-023,CON-023,2026-07-04,email,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,EMAIL-00094
+INT-00407,ACC-098,CON-098,2026-07-04,call,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,CALL-00407
+INT-00435,ACC-105,CON-105,2026-07-04,call,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,CALL-00435
+INT-00132,ACC-033,CON-033,2026-07-05,meeting,inbound,Additional training request,Could we schedule another training session for the operators?,neutral,training_request,true,MEETING-00132
+INT-00181,ACC-044,CON-044,2026-07-05,meeting,inbound,Pricing for additional units,Please share pricing for adding ten more units.,neutral,pricing_for_more,true,MEETING-00181
+INT-00477,ACC-115,CON-115,2026-07-05,email,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,EMAIL-00477
+INT-00489,ACC-119,CON-119,2026-07-05,meeting,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,MEETING-00489
+INT-00067,ACC-018,CON-018,2026-07-06,call,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,CALL-00067
+INT-00135,ACC-033,CON-033,2026-07-06,email,inbound,Additional training request,Could we schedule another training session for the operators?,neutral,training_request,true,EMAIL-00135
+INT-00176,ACC-043,CON-043,2026-07-06,email,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,EMAIL-00176
+INT-00215,ACC-054,CON-054,2026-07-06,email,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,EMAIL-00215
+INT-00452,ACC-109,CON-109,2026-07-07,email,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,EMAIL-00452
+INT-00460,ACC-111,CON-111,2026-07-07,meeting,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,MEETING-00460
+INT-00033,ACC-009,CON-009,2026-07-09,meeting,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,MEETING-00033
+INT-00035,ACC-010,CON-010,2026-07-09,call,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,true,CALL-00035
+INT-00036,ACC-010,CON-010,2026-07-09,meeting,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,MEETING-00036
+INT-00098,ACC-023,CON-023,2026-07-09,email,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,EMAIL-00098
+INT-00287,ACC-069,CON-069,2026-07-09,meeting,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,MEETING-00287
+INT-00324,ACC-077,CON-077,2026-07-09,call,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,CALL-00324
+INT-00406,ACC-098,CON-098,2026-07-09,call,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,CALL-00406
+INT-00151,ACC-037,CON-037,2026-07-10,call,inbound,Additional training request,Could we schedule another training session for the operators?,neutral,training_request,true,CALL-00151
+INT-00222,ACC-055,CON-055,2026-07-10,meeting,inbound,Pricing for additional units,Please share pricing for adding ten more units.,neutral,pricing_for_more,true,MEETING-00222
+INT-00273,ACC-066,CON-066,2026-07-10,email,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,true,EMAIL-00273
+INT-00405,ACC-098,CON-098,2026-07-10,call,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,CALL-00405
+INT-00051,ACC-013,CON-013,2026-07-11,call,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,CALL-00051
+INT-00187,ACC-046,CON-046,2026-07-11,meeting,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,MEETING-00187
+INT-00418,ACC-101,CON-101,2026-07-11,call,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,CALL-00418
+INT-00225,ACC-056,CON-056,2026-07-12,email,inbound,Pricing for additional units,Please share pricing for adding ten more units.,neutral,pricing_for_more,true,EMAIL-00225
+INT-00359,ACC-087,CON-087,2026-07-12,call,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,CALL-00359
+INT-00144,ACC-036,CON-036,2026-07-14,call,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,CALL-00144
+INT-00393,ACC-095,CON-095,2026-07-14,meeting,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,MEETING-00393
+INT-00183,ACC-044,CON-044,2026-07-15,call,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,CALL-00183
+INT-00262,ACC-063,CON-063,2026-07-15,email,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,EMAIL-00262
+INT-00303,ACC-072,CON-072,2026-07-15,call,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,true,CALL-00303
+INT-00328,ACC-078,CON-078,2026-07-15,call,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,CALL-00328
+INT-00364,ACC-088,CON-088,2026-07-15,email,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,EMAIL-00364
+INT-00468,ACC-112,CON-112,2026-07-15,email,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,EMAIL-00468
+INT-00484,ACC-117,CON-117,2026-07-15,email,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,EMAIL-00484
+INT-00492,ACC-120,CON-120,2026-07-15,call,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,CALL-00492
+INT-00089,ACC-022,CON-022,2026-07-16,call,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,CALL-00089
+INT-00351,ACC-084,CON-084,2026-07-16,call,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,CALL-00351
+INT-00349,ACC-084,CON-084,2026-07-17,call,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,CALL-00349
+INT-00461,ACC-111,CON-111,2026-07-17,meeting,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,MEETING-00461
+INT-00485,ACC-118,CON-118,2026-07-17,meeting,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,MEETING-00485
+INT-00102,ACC-024,CON-024,2026-07-18,call,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,CALL-00102
+INT-00267,ACC-064,CON-064,2026-07-18,call,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,CALL-00267
+INT-00280,ACC-067,CON-067,2026-07-18,meeting,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,MEETING-00280
+INT-00288,ACC-069,CON-069,2026-07-18,email,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,EMAIL-00288
+INT-00333,ACC-079,CON-079,2026-07-18,email,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,EMAIL-00333
+INT-00352,ACC-085,CON-085,2026-07-18,meeting,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,MEETING-00352
+INT-00394,ACC-095,CON-095,2026-07-18,email,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,EMAIL-00394
+INT-00443,ACC-107,CON-107,2026-07-18,meeting,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,MEETING-00443
+INT-00465,ACC-112,CON-112,2026-07-18,email,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,EMAIL-00465
+INT-00139,ACC-035,CON-035,2026-07-19,email,inbound,Additional training request,Could we schedule another training session for the operators?,neutral,training_request,true,EMAIL-00139
+INT-00270,ACC-065,CON-065,2026-07-19,email,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,false,EMAIL-00270
+INT-00376,ACC-091,CON-091,2026-07-19,meeting,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,MEETING-00376
+INT-00437,ACC-106,CON-106,2026-07-19,email,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,EMAIL-00437
+INT-00229,ACC-057,CON-057,2026-07-20,meeting,inbound,Pricing for additional units,Please share pricing for adding ten more units.,neutral,pricing_for_more,true,MEETING-00229
+INT-00315,ACC-075,CON-075,2026-07-20,meeting,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,MEETING-00315
+INT-00347,ACC-084,CON-084,2026-07-20,email,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,EMAIL-00347
+INT-00372,ACC-090,CON-090,2026-07-20,meeting,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,MEETING-00372
+INT-00255,ACC-062,CON-062,2026-07-21,call,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,CALL-00255
+INT-00304,ACC-072,CON-072,2026-07-21,email,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,EMAIL-00304
+INT-00396,ACC-096,CON-096,2026-07-21,meeting,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,MEETING-00396
+INT-00476,ACC-115,CON-115,2026-07-21,meeting,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,MEETING-00476
+INT-00167,ACC-041,CON-041,2026-07-22,email,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,EMAIL-00167
+INT-00245,ACC-059,CON-059,2026-07-22,meeting,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,MEETING-00245
+INT-00271,ACC-065,CON-065,2026-07-22,call,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,false,CALL-00271
+INT-00367,ACC-089,CON-089,2026-07-22,call,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,false,CALL-00367
+INT-00384,ACC-093,CON-093,2026-07-22,call,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,false,CALL-00384
+INT-00075,ACC-019,CON-019,2026-07-23,call,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,true,CALL-00075
+INT-00131,ACC-033,CON-033,2026-07-24,email,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,EMAIL-00131
+INT-00161,ACC-039,CON-039,2026-07-24,email,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,EMAIL-00161
+INT-00162,ACC-040,CON-040,2026-07-24,call,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,CALL-00162
+INT-00478,ACC-115,CON-115,2026-07-24,meeting,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,MEETING-00478
+INT-00323,ACC-077,CON-077,2026-07-25,call,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,CALL-00323
+INT-00374,ACC-090,CON-090,2026-07-25,meeting,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,MEETING-00374
+INT-00390,ACC-095,CON-095,2026-07-25,email,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,EMAIL-00390
+INT-00063,ACC-016,CON-016,2026-07-26,call,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,CALL-00063
+INT-00068,ACC-018,CON-018,2026-07-26,email,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,EMAIL-00068
+INT-00073,ACC-019,CON-019,2026-07-26,meeting,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,MEETING-00073
+INT-00095,ACC-023,CON-023,2026-07-26,email,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,EMAIL-00095
+INT-00296,ACC-071,CON-071,2026-07-26,meeting,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,MEETING-00296
+INT-00338,ACC-081,CON-081,2026-07-26,email,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,false,EMAIL-00338
+INT-00425,ACC-102,CON-102,2026-07-26,email,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,EMAIL-00425
+INT-00431,ACC-104,CON-104,2026-07-26,call,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,CALL-00431
+INT-00440,ACC-106,CON-106,2026-07-26,email,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,EMAIL-00440
+INT-00474,ACC-115,CON-115,2026-07-26,email,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,EMAIL-00474
+INT-00074,ACC-019,CON-019,2026-07-27,meeting,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,MEETING-00074
+INT-00235,ACC-058,CON-058,2026-07-27,meeting,inbound,Pricing for additional units,Please share pricing for adding ten more units.,neutral,pricing_for_more,true,MEETING-00235
+INT-00265,ACC-064,CON-064,2026-07-27,email,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,EMAIL-00265
+INT-00343,ACC-082,CON-082,2026-07-28,meeting,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,MEETING-00343
+INT-00386,ACC-094,CON-094,2026-07-28,email,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,false,EMAIL-00386
+INT-00399,ACC-096,CON-096,2026-07-28,call,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,CALL-00399
+INT-00180,ACC-044,CON-044,2026-07-29,call,inbound,Pricing for additional units,Please share pricing for adding ten more units.,neutral,pricing_for_more,true,CALL-00180
+INT-00226,ACC-056,CON-056,2026-07-29,call,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,CALL-00226
+INT-00335,ACC-079,CON-079,2026-07-29,meeting,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,MEETING-00335
+INT-00076,ACC-019,CON-019,2026-07-30,call,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,CALL-00076
+INT-00138,ACC-035,CON-035,2026-07-30,call,inbound,Additional training request,Could we schedule another training session for the operators?,neutral,training_request,true,CALL-00138
+INT-00348,ACC-084,CON-084,2026-07-30,email,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,EMAIL-00348
+INT-00025,ACC-007,CON-007,2026-07-31,meeting,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,MEETING-00025
+INT-00029,ACC-008,CON-008,2026-07-31,call,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,CALL-00029
+INT-00083,ACC-020,CON-020,2026-07-31,meeting,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,MEETING-00083
+INT-00126,ACC-031,CON-031,2026-07-31,meeting,inbound,Additional training request,Could we schedule another training session for the operators?,neutral,training_request,true,MEETING-00126
+INT-00213,ACC-053,CON-053,2026-07-31,email,inbound,Pricing for additional units,Please share pricing for adding ten more units.,neutral,pricing_for_more,true,EMAIL-00213
+INT-00344,ACC-083,CON-083,2026-07-31,email,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,false,EMAIL-00344
+INT-00377,ACC-091,CON-091,2026-07-31,call,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,CALL-00377
+INT-00397,ACC-096,CON-096,2026-07-31,meeting,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,MEETING-00397
+INT-00002,ACC-001,CON-001,2026-08-01,email,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,EMAIL-00002
+INT-00040,ACC-011,CON-011,2026-08-01,call,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,true,CALL-00040
+INT-00081,ACC-020,CON-020,2026-08-01,email,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,true,EMAIL-00081
+INT-00088,ACC-022,CON-022,2026-08-01,email,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,EMAIL-00088
+INT-00195,ACC-047,CON-047,2026-08-01,email,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,EMAIL-00195
+INT-00382,ACC-093,CON-093,2026-08-01,email,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,EMAIL-00382
+INT-00449,ACC-108,CON-108,2026-08-01,meeting,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,MEETING-00449
+INT-00038,ACC-010,CON-010,2026-08-02,call,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,CALL-00038
+INT-00080,ACC-020,CON-020,2026-08-02,call,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,CALL-00080
+INT-00264,ACC-064,CON-064,2026-08-02,email,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,true,EMAIL-00264
+INT-00395,ACC-095,CON-095,2026-08-02,call,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,CALL-00395
+INT-00428,ACC-104,CON-104,2026-08-02,email,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,EMAIL-00428
+INT-00056,ACC-015,CON-015,2026-08-03,email,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,EMAIL-00056
+INT-00398,ACC-096,CON-096,2026-08-03,email,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,EMAIL-00398
+INT-00107,ACC-026,CON-026,2026-08-04,call,inbound,Additional training request,Could we schedule another training session for the operators?,neutral,training_request,true,CALL-00107
+INT-00365,ACC-088,CON-088,2026-08-04,meeting,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,MEETING-00365
+INT-00061,ACC-016,CON-016,2026-08-05,email,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,true,EMAIL-00061
+INT-00100,ACC-024,CON-024,2026-08-05,email,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,false,EMAIL-00100
+INT-00117,ACC-029,CON-029,2026-08-05,email,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,EMAIL-00117
+INT-00228,ACC-056,CON-056,2026-08-05,email,inbound,Pricing for additional units,Please share pricing for adding ten more units.,neutral,pricing_for_more,true,EMAIL-00228
+INT-00248,ACC-060,CON-060,2026-08-05,email,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,false,EMAIL-00248
+INT-00385,ACC-094,CON-094,2026-08-05,meeting,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,MEETING-00385
+INT-00005,ACC-002,CON-002,2026-08-06,call,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,CALL-00005
+INT-00163,ACC-040,CON-040,2026-08-06,email,inbound,Additional training request,Could we schedule another training session for the operators?,neutral,training_request,true,EMAIL-00163
+INT-00246,ACC-060,CON-060,2026-08-06,email,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,EMAIL-00246
+INT-00282,ACC-068,CON-068,2026-08-06,email,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,false,EMAIL-00282
+INT-00330,ACC-079,CON-079,2026-08-06,call,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,CALL-00330
+INT-00342,ACC-082,CON-082,2026-08-06,call,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,CALL-00342
+INT-00360,ACC-087,CON-087,2026-08-06,call,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,CALL-00360
+INT-00490,ACC-119,CON-119,2026-08-06,call,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,CALL-00490
+INT-00253,ACC-061,CON-061,2026-08-07,call,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,false,CALL-00253
+INT-00353,ACC-085,CON-085,2026-08-07,meeting,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,false,MEETING-00353
+INT-00373,ACC-090,CON-090,2026-08-07,meeting,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,MEETING-00373
+INT-00003,ACC-001,CON-001,2026-08-08,call,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,CALL-00003
+INT-00090,ACC-022,CON-022,2026-08-08,email,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,EMAIL-00090
+INT-00196,ACC-048,CON-048,2026-08-08,meeting,inbound,Pricing for additional units,Please share pricing for adding ten more units.,neutral,pricing_for_more,true,MEETING-00196
+INT-00252,ACC-061,CON-061,2026-08-08,email,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,EMAIL-00252
+INT-00309,ACC-074,CON-074,2026-08-08,call,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,CALL-00309
+INT-00354,ACC-085,CON-085,2026-08-08,email,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,EMAIL-00354
+INT-00371,ACC-090,CON-090,2026-08-08,email,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,false,EMAIL-00371
+INT-00189,ACC-046,CON-046,2026-08-09,email,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,EMAIL-00189
+INT-00260,ACC-063,CON-063,2026-08-09,email,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,EMAIL-00260
+INT-00370,ACC-090,CON-090,2026-08-09,email,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,EMAIL-00370
+INT-00236,ACC-058,CON-058,2026-08-10,email,inbound,Pricing for additional units,Please share pricing for adding ten more units.,neutral,pricing_for_more,true,EMAIL-00236
+INT-00429,ACC-104,CON-104,2026-08-10,call,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,CALL-00429
+INT-00279,ACC-067,CON-067,2026-08-11,meeting,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,false,MEETING-00279
+INT-00041,ACC-011,CON-011,2026-08-12,call,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,CALL-00041
+INT-00085,ACC-021,CON-021,2026-08-12,meeting,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,MEETING-00085
+INT-00321,ACC-077,CON-077,2026-08-12,email,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,EMAIL-00321
+INT-00388,ACC-094,CON-094,2026-08-13,email,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,EMAIL-00388
+INT-00049,ACC-013,CON-013,2026-08-14,email,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,EMAIL-00049
+INT-00357,ACC-086,CON-086,2026-08-14,call,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,CALL-00357
+INT-00410,ACC-099,CON-099,2026-08-14,meeting,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,MEETING-00410
+INT-00414,ACC-100,CON-100,2026-08-14,meeting,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,MEETING-00414
+INT-00242,ACC-059,CON-059,2026-08-16,meeting,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,true,MEETING-00242
+INT-00441,ACC-107,CON-107,2026-08-16,meeting,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,MEETING-00441
+INT-00451,ACC-108,CON-108,2026-08-16,call,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,CALL-00451
+INT-00466,ACC-112,CON-112,2026-08-16,call,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,CALL-00466
+INT-00070,ACC-018,CON-018,2026-08-17,call,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,CALL-00070
+INT-00209,ACC-052,CON-052,2026-08-17,call,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,CALL-00209
+INT-00286,ACC-068,CON-068,2026-08-17,call,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,CALL-00286
+INT-00340,ACC-081,CON-081,2026-08-17,email,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,EMAIL-00340
+INT-00381,ACC-093,CON-093,2026-08-17,meeting,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,MEETING-00381
+INT-00250,ACC-060,CON-060,2026-08-18,email,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,false,EMAIL-00250
+INT-00356,ACC-086,CON-086,2026-08-18,email,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,EMAIL-00356
+INT-00366,ACC-089,CON-089,2026-08-18,meeting,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,MEETING-00366
+INT-00018,ACC-005,CON-005,2026-08-19,meeting,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,false,MEETING-00018
+INT-00069,ACC-018,CON-018,2026-08-19,email,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,true,EMAIL-00069
+INT-00097,ACC-023,CON-023,2026-08-19,call,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,false,CALL-00097
+INT-00276,ACC-067,CON-067,2026-08-19,email,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,false,EMAIL-00276
+INT-00339,ACC-081,CON-081,2026-08-19,meeting,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,MEETING-00339
+INT-00389,ACC-094,CON-094,2026-08-19,email,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,EMAIL-00389
+INT-00128,ACC-032,CON-032,2026-08-20,meeting,inbound,Additional training request,Could we schedule another training session for the operators?,neutral,training_request,true,MEETING-00128
+INT-00185,ACC-045,CON-045,2026-08-20,call,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,CALL-00185
+INT-00261,ACC-063,CON-063,2026-08-20,meeting,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,true,MEETING-00261
+INT-00341,ACC-081,CON-081,2026-08-20,call,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,CALL-00341
+INT-00421,ACC-101,CON-101,2026-08-20,meeting,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,MEETING-00421
+INT-00447,ACC-108,CON-108,2026-08-20,call,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,CALL-00447
+INT-00301,ACC-072,CON-072,2026-08-21,email,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,EMAIL-00301
+INT-00322,ACC-077,CON-077,2026-08-21,email,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,true,EMAIL-00322
+INT-00392,ACC-095,CON-095,2026-08-21,call,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,CALL-00392
+INT-00411,ACC-099,CON-099,2026-08-21,call,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,CALL-00411
+INT-00043,ACC-011,CON-011,2026-08-22,email,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,false,EMAIL-00043
+INT-00380,ACC-092,CON-092,2026-08-22,call,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,false,CALL-00380
+INT-00424,ACC-102,CON-102,2026-08-22,email,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,EMAIL-00424
+INT-00147,ACC-036,CON-036,2026-08-23,email,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,EMAIL-00147
+INT-00184,ACC-045,CON-045,2026-08-23,call,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,CALL-00184
+INT-00256,ACC-062,CON-062,2026-08-23,email,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,EMAIL-00256
+INT-00378,ACC-092,CON-092,2026-08-23,call,outbound,Follow-up needed,Following up on our previous message; please let us know if you need anything.,neutral,no_response,false,CALL-00378
+INT-00442,ACC-107,CON-107,2026-08-23,meeting,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,MEETING-00442
+INT-00006,ACC-002,CON-002,2026-08-24,call,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,false,CALL-00006
+INT-00054,ACC-014,CON-014,2026-08-24,meeting,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,false,MEETING-00054
+INT-00143,ACC-035,CON-035,2026-08-24,call,inbound,Additional training request,Could we schedule another training session for the operators?,neutral,training_request,true,CALL-00143
+INT-00202,ACC-050,CON-050,2026-08-24,email,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,EMAIL-00202
+INT-00337,ACC-080,CON-080,2026-08-24,meeting,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,false,MEETING-00337
+INT-00345,ACC-083,CON-083,2026-08-24,call,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,false,CALL-00345
+INT-00223,ACC-055,CON-055,2026-08-25,meeting,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,MEETING-00223
+INT-00391,ACC-095,CON-095,2026-08-25,meeting,outbound,Customer check-in,We would like to check in on how the product is working for your team.,neutral,general_checkin,true,MEETING-00391
+INT-00028,ACC-008,CON-008,2026-08-26,call,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,true,CALL-00028
+INT-00305,ACC-073,CON-073,2026-08-26,meeting,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,MEETING-00305
+INT-00453,ACC-109,CON-109,2026-08-26,email,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,EMAIL-00453
+INT-00015,ACC-004,CON-004,2026-08-27,email,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,EMAIL-00015
+INT-00103,ACC-025,CON-025,2026-08-27,meeting,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,MEETING-00103
+INT-00292,ACC-070,CON-070,2026-08-27,call,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,CALL-00292
+INT-00412,ACC-099,CON-099,2026-08-27,meeting,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,MEETING-00412
+INT-00444,ACC-107,CON-107,2026-08-27,meeting,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,MEETING-00444
+INT-00027,ACC-008,CON-008,2026-08-28,call,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,CALL-00027
+INT-00311,ACC-074,CON-074,2026-08-28,meeting,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,false,MEETING-00311
+INT-00320,ACC-076,CON-076,2026-08-28,call,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,false,CALL-00320
+INT-00409,ACC-099,CON-099,2026-08-28,call,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,CALL-00409
+INT-00416,ACC-100,CON-100,2026-08-28,meeting,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,MEETING-00416
+INT-00254,ACC-062,CON-062,2026-08-29,call,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,false,CALL-00254
+INT-00432,ACC-104,CON-104,2026-08-29,call,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,CALL-00432
+INT-00086,ACC-021,CON-021,2026-08-30,email,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,EMAIL-00086
+INT-00230,ACC-057,CON-057,2026-09-01,email,inbound,Pricing for additional units,Please share pricing for adding ten more units.,neutral,pricing_for_more,true,EMAIL-00230
+INT-00258,ACC-063,CON-063,2026-09-01,meeting,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,MEETING-00258
+INT-00455,ACC-110,CON-110,2026-09-01,meeting,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,MEETING-00455
+INT-00122,ACC-031,CON-031,2026-09-02,email,inbound,Additional training request,Could we schedule another training session for the operators?,neutral,training_request,true,EMAIL-00122
+INT-00169,ACC-041,CON-041,2026-09-02,email,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,EMAIL-00169
+INT-00205,ACC-051,CON-051,2026-09-02,email,inbound,Pricing for additional units,Please share pricing for adding ten more units.,neutral,pricing_for_more,true,EMAIL-00205
+INT-00464,ACC-111,CON-111,2026-09-02,email,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,EMAIL-00464
+INT-00487,ACC-118,CON-118,2026-09-03,call,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,CALL-00487
+INT-00208,ACC-051,CON-051,2026-09-04,meeting,inbound,Pricing for additional units,Please share pricing for adding ten more units.,neutral,pricing_for_more,true,MEETING-00208
+INT-00327,ACC-078,CON-078,2026-09-04,call,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,CALL-00327
+INT-00009,ACC-003,CON-003,2026-09-05,call,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,CALL-00009
+INT-00127,ACC-032,CON-032,2026-09-05,call,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,CALL-00127
+INT-00210,ACC-052,CON-052,2026-09-05,meeting,inbound,Additional product capacity,What would it take to add more workstations and devices?,positive,expansion_interest,true,MEETING-00210
+INT-00423,ACC-102,CON-102,2026-09-05,call,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,CALL-00423
+INT-00450,ACC-108,CON-108,2026-09-05,meeting,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,MEETING-00450
+INT-00141,ACC-035,CON-035,2026-09-06,call,inbound,Additional training request,Could we schedule another training session for the operators?,neutral,training_request,true,CALL-00141
+INT-00177,ACC-043,CON-043,2026-09-06,call,inbound,Additional product capacity,What would it take to add more workstations and devices?,positive,expansion_interest,true,CALL-00177
+INT-00488,ACC-119,CON-119,2026-09-06,call,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,CALL-00488
+INT-00021,ACC-006,CON-006,2026-09-07,meeting,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,MEETING-00021
+INT-00206,ACC-051,CON-051,2026-09-07,email,inbound,Additional product capacity,What would it take to add more workstations and devices?,positive,expansion_interest,true,EMAIL-00206
+INT-00232,ACC-057,CON-057,2026-09-07,meeting,inbound,Additional product capacity,What would it take to add more workstations and devices?,positive,expansion_interest,true,MEETING-00232
+INT-00298,ACC-071,CON-071,2026-09-07,meeting,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,true,MEETING-00298
+INT-00115,ACC-029,CON-029,2026-09-08,email,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,EMAIL-00115
+INT-00306,ACC-073,CON-073,2026-09-08,meeting,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,MEETING-00306
+INT-00471,ACC-114,CON-114,2026-09-08,call,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,CALL-00471
+INT-00240,ACC-059,CON-059,2026-09-09,email,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,EMAIL-00240
+INT-00281,ACC-068,CON-068,2026-09-09,email,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,false,EMAIL-00281
+INT-00427,ACC-103,CON-103,2026-09-09,email,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,EMAIL-00427
+INT-00164,ACC-040,CON-040,2026-09-10,email,inbound,Additional training request,Could we schedule another training session for the operators?,neutral,training_request,true,EMAIL-00164
+INT-00294,ACC-070,CON-070,2026-09-10,meeting,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,MEETING-00294
+INT-00467,ACC-112,CON-112,2026-09-10,meeting,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,MEETING-00467
+INT-00042,ACC-011,CON-011,2026-09-11,call,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,CALL-00042
+INT-00060,ACC-016,CON-016,2026-09-11,meeting,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,MEETING-00060
+INT-00065,ACC-017,CON-017,2026-09-11,meeting,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,false,MEETING-00065
+INT-00160,ACC-039,CON-039,2026-09-11,email,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,EMAIL-00160
+INT-00237,ACC-058,CON-058,2026-09-11,email,inbound,Additional product capacity,What would it take to add more workstations and devices?,positive,expansion_interest,true,EMAIL-00237
+INT-00243,ACC-059,CON-059,2026-09-11,meeting,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,false,MEETING-00243
+INT-00426,ACC-103,CON-103,2026-09-11,call,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,CALL-00426
+INT-00012,ACC-004,CON-004,2026-09-12,call,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,CALL-00012
+INT-00120,ACC-030,CON-030,2026-09-12,email,inbound,Additional training request,Could we schedule another training session for the operators?,neutral,training_request,true,EMAIL-00120
+INT-00198,ACC-049,CON-049,2026-09-12,email,inbound,Additional product capacity,What would it take to add more workstations and devices?,positive,expansion_interest,true,EMAIL-00198
+INT-00290,ACC-069,CON-069,2026-09-12,call,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,CALL-00290
+INT-00048,ACC-013,CON-013,2026-09-14,call,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,CALL-00048
+INT-00227,ACC-056,CON-056,2026-09-14,meeting,inbound,Pricing for additional units,Please share pricing for adding ten more units.,neutral,pricing_for_more,true,MEETING-00227
+INT-00233,ACC-057,CON-057,2026-09-14,call,inbound,Additional product capacity,What would it take to add more workstations and devices?,positive,expansion_interest,true,CALL-00233
+INT-00257,ACC-062,CON-062,2026-09-14,email,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,EMAIL-00257
+INT-00274,ACC-066,CON-066,2026-09-14,call,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,CALL-00274
+INT-00302,ACC-072,CON-072,2026-09-14,email,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,true,EMAIL-00302
+INT-00456,ACC-110,CON-110,2026-09-14,meeting,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,MEETING-00456
+INT-00037,ACC-010,CON-010,2026-09-15,email,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,false,EMAIL-00037
+INT-00217,ACC-054,CON-054,2026-09-15,meeting,inbound,Additional product capacity,What would it take to add more workstations and devices?,positive,expansion_interest,true,MEETING-00217
+INT-00470,ACC-113,CON-113,2026-09-15,email,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,EMAIL-00470
+INT-00212,ACC-053,CON-053,2026-09-16,email,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,EMAIL-00212
+INT-00446,ACC-107,CON-107,2026-09-16,call,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,CALL-00446
+INT-00046,ACC-012,CON-012,2026-09-17,call,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,CALL-00046
+INT-00218,ACC-054,CON-054,2026-09-17,email,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,EMAIL-00218
+INT-00156,ACC-038,CON-038,2026-09-18,meeting,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,MEETING-00156
+INT-00200,ACC-050,CON-050,2026-09-18,meeting,inbound,Pricing for additional units,Please share pricing for adding ten more units.,neutral,pricing_for_more,true,MEETING-00200
+INT-00204,ACC-051,CON-051,2026-09-18,email,inbound,Additional product capacity,What would it take to add more workstations and devices?,positive,expansion_interest,true,EMAIL-00204
+INT-00259,ACC-063,CON-063,2026-09-18,meeting,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,false,MEETING-00259
+INT-00326,ACC-078,CON-078,2026-09-18,call,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,CALL-00326
+INT-00182,ACC-044,CON-044,2026-09-19,email,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,EMAIL-00182
+INT-00402,ACC-097,CON-097,2026-09-19,meeting,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,MEETING-00402
+INT-00159,ACC-039,CON-039,2026-09-20,meeting,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,MEETING-00159
+INT-00191,ACC-047,CON-047,2026-09-20,call,inbound,Additional product capacity,What would it take to add more workstations and devices?,positive,expansion_interest,true,CALL-00191
+INT-00058,ACC-015,CON-015,2026-09-21,meeting,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,MEETING-00058
+INT-00124,ACC-031,CON-031,2026-09-21,call,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,CALL-00124
+INT-00165,ACC-041,CON-041,2026-09-21,meeting,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,MEETING-00165
+INT-00219,ACC-054,CON-054,2026-09-21,email,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,EMAIL-00219
+INT-00055,ACC-015,CON-015,2026-09-22,call,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,CALL-00055
+INT-00119,ACC-030,CON-030,2026-09-22,email,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,EMAIL-00119
+INT-00121,ACC-030,CON-030,2026-09-22,call,inbound,Additional training request,Could we schedule another training session for the operators?,neutral,training_request,true,CALL-00121
+INT-00170,ACC-041,CON-041,2026-09-22,call,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,CALL-00170
+INT-00178,ACC-043,CON-043,2026-09-22,call,inbound,Additional product capacity,What would it take to add more workstations and devices?,positive,expansion_interest,true,CALL-00178
+INT-00308,ACC-074,CON-074,2026-09-22,email,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,EMAIL-00308
+INT-00004,ACC-002,CON-002,2026-09-23,email,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,false,EMAIL-00004
+INT-00045,ACC-012,CON-012,2026-09-23,email,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,EMAIL-00045
+INT-00057,ACC-015,CON-015,2026-09-23,email,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,EMAIL-00057
+INT-00140,ACC-035,CON-035,2026-09-23,call,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,CALL-00140
+INT-00142,ACC-035,CON-035,2026-09-23,call,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,CALL-00142
+INT-00192,ACC-047,CON-047,2026-09-23,meeting,inbound,Additional product capacity,What would it take to add more workstations and devices?,positive,expansion_interest,true,MEETING-00192
+INT-00417,ACC-101,CON-101,2026-09-23,email,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,EMAIL-00417
+INT-00031,ACC-009,CON-009,2026-09-24,meeting,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,MEETING-00031
+INT-00072,ACC-019,CON-019,2026-09-24,email,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,EMAIL-00072
+INT-00105,ACC-025,CON-025,2026-09-24,email,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,EMAIL-00105
+INT-00137,ACC-034,CON-034,2026-09-24,meeting,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,MEETING-00137
+INT-00266,ACC-064,CON-064,2026-09-24,email,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,false,EMAIL-00266
+INT-00295,ACC-071,CON-071,2026-09-24,meeting,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,true,MEETING-00295
+INT-00001,ACC-001,CON-001,2026-09-25,call,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,CALL-00001
+INT-00059,ACC-016,CON-016,2026-09-25,email,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,false,EMAIL-00059
+INT-00078,ACC-020,CON-020,2026-09-25,email,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,EMAIL-00078
+INT-00175,ACC-043,CON-043,2026-09-25,call,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,CALL-00175
+INT-00220,ACC-054,CON-054,2026-09-25,email,inbound,Additional product capacity,What would it take to add more workstations and devices?,positive,expansion_interest,true,EMAIL-00220
+INT-00008,ACC-003,CON-003,2026-09-26,email,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,EMAIL-00008
+INT-00011,ACC-004,CON-004,2026-09-26,meeting,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,true,MEETING-00011
+INT-00044,ACC-012,CON-012,2026-09-26,call,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,CALL-00044
+INT-00106,ACC-026,CON-026,2026-09-26,meeting,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,MEETING-00106
+INT-00111,ACC-027,CON-027,2026-09-26,call,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,CALL-00111
+INT-00146,ACC-036,CON-036,2026-09-26,call,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,CALL-00146
+INT-00197,ACC-048,CON-048,2026-09-26,call,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,CALL-00197
+INT-00211,ACC-053,CON-053,2026-09-26,call,inbound,Additional product capacity,What would it take to add more workstations and devices?,positive,expansion_interest,true,CALL-00211
+INT-00318,ACC-075,CON-075,2026-09-26,meeting,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,false,MEETING-00318
+INT-00013,ACC-004,CON-004,2026-09-27,call,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,CALL-00013
+INT-00047,ACC-013,CON-013,2026-09-27,meeting,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,MEETING-00047
+INT-00118,ACC-029,CON-029,2026-09-27,email,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,EMAIL-00118
+INT-00153,ACC-037,CON-037,2026-09-27,call,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,CALL-00153
+INT-00172,ACC-042,CON-042,2026-09-27,meeting,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,MEETING-00172
+INT-00400,ACC-097,CON-097,2026-09-27,call,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,CALL-00400
+INT-00408,ACC-098,CON-098,2026-09-27,email,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,EMAIL-00408
+INT-00020,ACC-006,CON-006,2026-09-28,meeting,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,MEETING-00020
+INT-00214,ACC-053,CON-053,2026-09-28,call,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,CALL-00214
+INT-00247,ACC-060,CON-060,2026-09-28,meeting,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,MEETING-00247
+INT-00293,ACC-070,CON-070,2026-09-28,email,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,true,EMAIL-00293
+INT-00404,ACC-097,CON-097,2026-09-28,meeting,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,MEETING-00404
+INT-00469,ACC-113,CON-113,2026-09-28,call,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,CALL-00469
+INT-00062,ACC-016,CON-016,2026-09-29,meeting,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,MEETING-00062
+INT-00066,ACC-018,CON-018,2026-09-29,email,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,EMAIL-00066
+INT-00125,ACC-031,CON-031,2026-09-29,meeting,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,MEETING-00125
+INT-00129,ACC-032,CON-032,2026-09-29,call,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,CALL-00129
+INT-00158,ACC-039,CON-039,2026-09-29,call,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,CALL-00158
+INT-00201,ACC-050,CON-050,2026-09-29,call,inbound,Additional product capacity,What would it take to add more workstations and devices?,positive,expansion_interest,true,CALL-00201
+INT-00268,ACC-065,CON-065,2026-09-29,call,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,CALL-00268
+INT-00314,ACC-075,CON-075,2026-09-29,call,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,CALL-00314
+INT-00317,ACC-075,CON-075,2026-09-29,call,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,false,CALL-00317
+INT-00022,ACC-007,CON-007,2026-09-30,meeting,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,MEETING-00022
+INT-00064,ACC-017,CON-017,2026-09-30,call,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,CALL-00064
+INT-00123,ACC-031,CON-031,2026-09-30,meeting,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,MEETING-00123
+INT-00166,ACC-041,CON-041,2026-09-30,email,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,EMAIL-00166
+INT-00239,ACC-058,CON-058,2026-09-30,email,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,EMAIL-00239
+INT-00419,ACC-101,CON-101,2026-09-30,meeting,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,MEETING-00419
+INT-00034,ACC-010,CON-010,2026-10-01,meeting,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,MEETING-00034
+INT-00053,ACC-014,CON-014,2026-10-01,email,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,true,EMAIL-00053
+INT-00077,ACC-019,CON-019,2026-10-01,call,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,true,CALL-00077
+INT-00093,ACC-023,CON-023,2026-10-01,meeting,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,MEETING-00093
+INT-00108,ACC-027,CON-027,2026-10-01,meeting,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,MEETING-00108
+INT-00134,ACC-033,CON-033,2026-10-01,call,inbound,Product feedback,Thanks for the quick reply. We want to get more of the team using it.,positive,positive_feedback,true,CALL-00134
+INT-00472,ACC-114,CON-114,2026-10-01,call,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,CALL-00472
+INT-00010,ACC-003,CON-003,2026-10-02,call,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,CALL-00010
+INT-00017,ACC-005,CON-005,2026-10-02,email,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,false,EMAIL-00017
+INT-00084,ACC-021,CON-021,2026-10-02,email,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,false,EMAIL-00084
+INT-00109,ACC-027,CON-027,2026-10-02,email,inbound,Additional training request,Could we schedule another training session for the operators?,neutral,training_request,true,EMAIL-00109
+INT-00145,ACC-036,CON-036,2026-10-02,call,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,CALL-00145
+INT-00148,ACC-036,CON-036,2026-10-02,call,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,CALL-00148
+INT-00171,ACC-042,CON-042,2026-10-02,email,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,EMAIL-00171
+INT-00493,ACC-120,CON-120,2026-10-02,email,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,true,EMAIL-00493
+INT-00026,ACC-008,CON-008,2026-10-03,meeting,outbound,Customer check-in,Checking whether the product is meeting your team's needs.,neutral,general_checkin,false,MEETING-00026
+INT-00039,ACC-011,CON-011,2026-10-03,meeting,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,MEETING-00039
+INT-00082,ACC-020,CON-020,2026-10-03,email,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,EMAIL-00082
+INT-00087,ACC-022,CON-022,2026-10-03,meeting,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,MEETING-00087
+INT-00112,ACC-028,CON-028,2026-10-03,meeting,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,MEETING-00112
+INT-00136,ACC-034,CON-034,2026-10-03,meeting,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,MEETING-00136
+INT-00234,ACC-057,CON-057,2026-10-03,email,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,EMAIL-00234
+INT-00263,ACC-063,CON-063,2026-10-03,call,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,CALL-00263
+INT-00297,ACC-071,CON-071,2026-10-03,call,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,CALL-00297
+INT-00481,ACC-116,CON-116,2026-10-03,meeting,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,MEETING-00481
+INT-00482,ACC-116,CON-116,2026-10-03,meeting,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,MEETING-00482
+INT-00030,ACC-008,CON-008,2026-10-04,email,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,EMAIL-00030
+INT-00216,ACC-054,CON-054,2026-10-04,email,inbound,Product feedback,The product is working well for our current team.,positive,positive_feedback,true,EMAIL-00216
+INT-00329,ACC-078,CON-078,2026-10-04,meeting,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,MEETING-00329
+INT-00099,ACC-024,CON-024,2026-10-05,call,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,CALL-00099
+INT-00149,ACC-037,CON-037,2026-10-05,call,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,CALL-00149
+INT-00310,ACC-074,CON-074,2026-10-05,call,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,false,CALL-00310
+INT-00483,ACC-117,CON-117,2026-10-05,meeting,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,MEETING-00483
+INT-00130,ACC-032,CON-032,2026-10-06,call,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,CALL-00130
+INT-00194,ACC-047,CON-047,2026-10-06,call,inbound,Additional product capacity,What would it take to add more workstations and devices?,positive,expansion_interest,true,CALL-00194
+INT-00300,ACC-071,CON-071,2026-10-06,email,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,true,EMAIL-00300
+INT-00479,ACC-116,CON-116,2026-10-06,call,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,CALL-00479
+INT-00491,ACC-120,CON-120,2026-10-06,call,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,CALL-00491
+INT-00079,ACC-020,CON-020,2026-10-07,call,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,CALL-00079
+INT-00244,ACC-059,CON-059,2026-10-07,email,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,EMAIL-00244
+INT-00319,ACC-076,CON-076,2026-10-07,email,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,EMAIL-00319
+INT-00019,ACC-005,CON-005,2026-10-08,meeting,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,MEETING-00019
+INT-00152,ACC-037,CON-037,2026-10-08,email,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,EMAIL-00152
+INT-00168,ACC-041,CON-041,2026-10-08,email,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,EMAIL-00168
+INT-00278,ACC-067,CON-067,2026-10-08,meeting,inbound,Open ticket follow-up,We have followed up twice and still need an update on the open ticket.,negative,support_escalation,true,MEETING-00278
+INT-00463,ACC-111,CON-111,2026-10-08,meeting,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,MEETING-00463
+INT-00014,ACC-004,CON-004,2026-10-09,meeting,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,MEETING-00014
+INT-00110,ACC-027,CON-027,2026-10-09,meeting,inbound,Help with onboarding,Our team is struggling with setup. Can someone walk us through the product?,negative,onboarding_help,true,MEETING-00110
+INT-00155,ACC-038,CON-038,2026-10-09,email,inbound,Additional training request,Could we schedule another training session for the operators?,neutral,training_request,true,EMAIL-00155
+INT-00203,ACC-050,CON-050,2026-10-09,email,inbound,Additional product capacity,What would it take to add more workstations and devices?,positive,expansion_interest,true,EMAIL-00203
+INT-00231,ACC-057,CON-057,2026-10-09,meeting,inbound,Additional product capacity,What would it take to add more workstations and devices?,positive,expansion_interest,true,MEETING-00231
+INT-00285,ACC-068,CON-068,2026-10-09,email,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,EMAIL-00285
+INT-00291,ACC-069,CON-069,2026-10-09,meeting,outbound,Customer check-in,We are checking on the status of your open support request.,neutral,general_checkin,false,MEETING-00291
+INT-00422,ACC-101,CON-101,2026-10-09,email,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,EMAIL-00422
+INT-00473,ACC-114,CON-114,2026-10-09,email,outbound,Customer check-in,Checking whether there is anything else we can help with.,neutral,general_checkin,false,EMAIL-00473
+INT-00480,ACC-116,CON-116,2026-10-09,email,inbound,Product feedback,The product is working well for our team. Thank you.,positive,positive_feedback,true,EMAIL-00480
+INT-00023,ACC-007,CON-007,2026-10-10,call,inbound,Product performance concern,We have seen a drop in team adoption and need help understanding why.,negative,product_issue,true,CALL-00023
+INT-00024,ACC-007,CON-007,2026-10-10,call,inbound,Product value review,We are not getting the expected value from the product at the moment.,negative,value_concern,true,CALL-00024
+INT-00251,ACC-060,CON-060,2026-10-10,call,inbound,Product performance concern,The issue is still affecting our workflow and has not been resolved.,negative,product_issue,true,CALL-00251

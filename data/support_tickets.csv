@@ -1,0 +1,423 @@
+﻿ticket_id,account_id,product_id,opened_at,resolved_at,priority,status,category,subject,description,resolution_hours,satisfaction_score
+TKT-00001,ACC-001,PRD-104,2026-04-27,,low,in_progress,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,,
+TKT-00002,ACC-001,PRD-104,2026-09-05,,high,in_progress,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00003,ACC-001,PRD-104,2026-06-05,2026-06-09,low,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,158.5,5
+TKT-00004,ACC-002,PRD-104,2026-10-03,,high,in_progress,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,,
+TKT-00005,ACC-002,PRD-104,2026-09-21,2026-09-24,urgent,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,112.3,3
+TKT-00006,ACC-002,PRD-104,2026-04-20,2026-04-21,high,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,85.8,5
+TKT-00007,ACC-003,PRD-106,2026-10-04,2026-10-05,medium,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,146.7,3
+TKT-00008,ACC-003,PRD-106,2026-07-08,2026-07-09,medium,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,111.4,2
+TKT-00009,ACC-003,PRD-106,2026-08-23,,urgent,open,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00010,ACC-003,PRD-106,2026-06-03,,low,open,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00011,ACC-004,PRD-106,2026-05-19,2026-05-21,high,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,179.7,3
+TKT-00012,ACC-004,PRD-106,2026-09-28,2026-09-30,high,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,160.1,2
+TKT-00013,ACC-004,PRD-106,2026-06-22,,medium,in_progress,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00014,ACC-004,PRD-106,2026-07-09,2026-07-12,high,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,19.7,3
+TKT-00015,ACC-004,PRD-106,2026-08-12,,medium,in_progress,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00016,ACC-005,PRD-107,2026-07-10,2026-07-11,low,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,71.7,2
+TKT-00017,ACC-005,PRD-107,2026-04-25,2026-04-28,medium,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,153.9,5
+TKT-00018,ACC-005,PRD-107,2026-07-07,,high,open,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,,
+TKT-00019,ACC-005,PRD-107,2026-07-31,2026-08-03,medium,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,48.9,5
+TKT-00020,ACC-005,PRD-107,2026-05-26,,medium,open,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,,
+TKT-00021,ACC-005,PRD-107,2026-08-20,2026-08-24,medium,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,131.9,2
+TKT-00022,ACC-006,PRD-101,2026-08-08,,urgent,open,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,,
+TKT-00023,ACC-006,PRD-101,2026-08-21,,high,in_progress,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,,
+TKT-00024,ACC-006,PRD-101,2026-09-29,,high,in_progress,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00025,ACC-006,PRD-101,2026-07-10,,low,open,Training,Request for additional operator training,Customer asks for additional guidance for their team.,,
+TKT-00026,ACC-006,PRD-101,2026-05-27,2026-05-31,high,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,98.1,5
+TKT-00027,ACC-007,PRD-103,2026-08-24,2026-08-27,medium,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,76.9,2
+TKT-00028,ACC-007,PRD-103,2026-08-25,,medium,in_progress,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,,
+TKT-00029,ACC-007,PRD-103,2026-05-14,2026-05-17,low,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,77.2,2
+TKT-00030,ACC-007,PRD-103,2026-08-21,2026-08-25,medium,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,82.5,3
+TKT-00031,ACC-007,PRD-103,2026-06-18,2026-06-22,urgent,resolved,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,87.8,5
+TKT-00032,ACC-007,PRD-103,2026-07-14,,medium,in_progress,Feature Request,Request for product capability,Customer asks whether additional capability is available.,,
+TKT-00033,ACC-007,PRD-103,2026-05-29,,low,in_progress,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00034,ACC-008,PRD-103,2026-06-02,,high,open,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00035,ACC-008,PRD-103,2026-06-01,,low,open,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00036,ACC-008,PRD-103,2026-06-08,,high,open,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00037,ACC-009,PRD-103,2026-06-14,,high,open,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,,
+TKT-00038,ACC-009,PRD-103,2026-06-28,,medium,in_progress,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,,
+TKT-00039,ACC-009,PRD-103,2026-08-14,2026-08-16,medium,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,57.7,
+TKT-00040,ACC-009,PRD-103,2026-10-02,,medium,open,Training,Request for additional operator training,Customer asks for additional guidance for their team.,,
+TKT-00041,ACC-009,PRD-103,2026-07-04,2026-07-07,urgent,resolved,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,153.4,3
+TKT-00042,ACC-010,PRD-102,2026-05-16,2026-05-18,high,resolved,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,150.2,4
+TKT-00043,ACC-010,PRD-102,2026-05-14,2026-05-16,medium,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,91.8,2
+TKT-00044,ACC-010,PRD-102,2026-04-28,,high,in_progress,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00045,ACC-010,PRD-102,2026-08-06,2026-08-07,medium,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,130.9,2
+TKT-00046,ACC-010,PRD-102,2026-04-18,,low,open,Training,Request for additional operator training,Customer asks for additional guidance for their team.,,
+TKT-00047,ACC-011,PRD-106,2026-07-15,2026-07-16,medium,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,86.2,4
+TKT-00048,ACC-011,PRD-106,2026-10-07,,medium,open,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,,
+TKT-00049,ACC-012,PRD-102,2026-08-12,2026-08-13,high,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,10.5,2
+TKT-00050,ACC-012,PRD-102,2026-08-10,2026-08-14,urgent,resolved,Feature Request,Request for product capability,Customer asks whether additional capability is available.,19.7,3
+TKT-00051,ACC-012,PRD-102,2026-06-18,,high,open,Feature Request,Request for product capability,Customer asks whether additional capability is available.,,
+TKT-00052,ACC-012,PRD-102,2026-07-07,2026-07-09,high,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,9.0,2
+TKT-00053,ACC-012,PRD-102,2026-08-19,2026-08-21,medium,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,119.1,5
+TKT-00054,ACC-012,PRD-102,2026-09-01,,medium,open,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00055,ACC-013,PRD-108,2026-09-22,2026-09-23,medium,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,27.9,3
+TKT-00056,ACC-013,PRD-108,2026-05-21,2026-05-22,urgent,resolved,Feature Request,Request for product capability,Customer asks whether additional capability is available.,21.1,
+TKT-00057,ACC-013,PRD-108,2026-06-21,,low,in_progress,Feature Request,Request for product capability,Customer asks whether additional capability is available.,,
+TKT-00058,ACC-013,PRD-108,2026-04-18,2026-04-22,medium,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,44.6,3
+TKT-00059,ACC-013,PRD-108,2026-07-27,2026-07-30,high,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,161.2,5
+TKT-00060,ACC-013,PRD-108,2026-06-01,,high,open,Feature Request,Request for product capability,Customer asks whether additional capability is available.,,
+TKT-00061,ACC-013,PRD-108,2026-07-17,2026-07-18,medium,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,137.1,3
+TKT-00062,ACC-014,PRD-104,2026-05-31,,high,open,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00063,ACC-014,PRD-104,2026-09-13,2026-09-15,low,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,73.4,5
+TKT-00064,ACC-014,PRD-104,2026-04-21,,high,in_progress,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,,
+TKT-00065,ACC-014,PRD-104,2026-06-14,2026-06-15,medium,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,137.1,3
+TKT-00066,ACC-014,PRD-104,2026-05-29,,low,open,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00067,ACC-015,PRD-106,2026-08-25,2026-08-29,low,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,34.2,3
+TKT-00068,ACC-015,PRD-106,2026-07-21,,low,in_progress,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,,
+TKT-00069,ACC-015,PRD-106,2026-09-07,2026-09-08,low,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,96.9,4
+TKT-00070,ACC-015,PRD-106,2026-08-12,2026-08-13,medium,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,64.0,5
+TKT-00071,ACC-015,PRD-106,2026-05-19,,urgent,open,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00072,ACC-015,PRD-106,2026-05-29,2026-05-30,medium,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,149.0,4
+TKT-00073,ACC-015,PRD-106,2026-05-18,,medium,in_progress,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00074,ACC-016,PRD-105,2026-07-15,2026-07-19,high,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,98.2,
+TKT-00075,ACC-016,PRD-105,2026-04-27,2026-04-28,urgent,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,149.9,5
+TKT-00076,ACC-016,PRD-105,2026-08-13,,medium,in_progress,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00077,ACC-017,PRD-102,2026-06-22,,medium,open,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00078,ACC-017,PRD-102,2026-10-06,2026-10-08,urgent,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,89.0,2
+TKT-00079,ACC-017,PRD-102,2026-10-01,2026-10-02,medium,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,140.0,2
+TKT-00080,ACC-018,PRD-108,2026-08-26,,low,open,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00081,ACC-018,PRD-108,2026-07-05,2026-07-08,high,resolved,Feature Request,Request for product capability,Customer asks whether additional capability is available.,176.3,4
+TKT-00082,ACC-018,PRD-108,2026-06-10,2026-06-14,low,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,18.0,3
+TKT-00083,ACC-018,PRD-108,2026-05-28,2026-05-31,medium,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,20.0,2
+TKT-00084,ACC-018,PRD-108,2026-10-08,2026-10-09,high,resolved,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,153.3,3
+TKT-00085,ACC-019,PRD-101,2026-06-05,,low,in_progress,Training,Request for additional operator training,Customer asks for additional guidance for their team.,,
+TKT-00086,ACC-019,PRD-101,2026-06-03,2026-06-05,urgent,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,43.2,3
+TKT-00087,ACC-019,PRD-101,2026-05-05,,high,open,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00088,ACC-019,PRD-101,2026-07-10,,medium,open,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00089,ACC-019,PRD-101,2026-05-20,2026-05-24,medium,resolved,Feature Request,Request for product capability,Customer asks whether additional capability is available.,57.4,5
+TKT-00090,ACC-020,PRD-104,2026-08-03,2026-08-04,medium,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,41.9,2
+TKT-00091,ACC-020,PRD-104,2026-05-07,,medium,open,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00092,ACC-020,PRD-104,2026-08-07,2026-08-08,low,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,19.4,4
+TKT-00093,ACC-021,PRD-105,2026-06-17,2026-06-21,high,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,32.5,2
+TKT-00094,ACC-021,PRD-105,2026-09-09,2026-09-10,medium,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,167.9,4
+TKT-00095,ACC-022,PRD-107,2026-06-07,2026-06-11,low,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,175.0,
+TKT-00096,ACC-022,PRD-107,2026-09-29,,medium,open,Feature Request,Request for product capability,Customer asks whether additional capability is available.,,
+TKT-00097,ACC-022,PRD-107,2026-08-14,2026-08-16,high,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,111.2,2
+TKT-00098,ACC-023,PRD-101,2026-05-24,2026-05-28,medium,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,137.8,5
+TKT-00099,ACC-023,PRD-101,2026-05-10,2026-05-12,urgent,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,173.5,4
+TKT-00100,ACC-023,PRD-101,2026-08-30,,high,in_progress,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00101,ACC-023,PRD-101,2026-04-22,2026-04-25,low,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,136.3,3
+TKT-00102,ACC-024,PRD-108,2026-10-02,,high,in_progress,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00103,ACC-024,PRD-108,2026-09-09,,high,open,Feature Request,Request for product capability,Customer asks whether additional capability is available.,,
+TKT-00104,ACC-025,PRD-108,2026-09-15,,high,open,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00105,ACC-025,PRD-108,2026-07-15,,low,open,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,,
+TKT-00106,ACC-026,PRD-104,2026-09-24,,high,open,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00107,ACC-026,PRD-104,2026-09-10,,medium,in_progress,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,,
+TKT-00108,ACC-026,PRD-104,2026-05-13,2026-05-14,medium,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,69.0,4
+TKT-00109,ACC-026,PRD-104,2026-05-02,,medium,in_progress,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00110,ACC-026,PRD-104,2026-08-19,,urgent,open,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00111,ACC-027,PRD-103,2026-09-19,,high,open,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00112,ACC-027,PRD-103,2026-05-21,2026-05-25,medium,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,123.9,5
+TKT-00113,ACC-028,PRD-105,2026-09-21,,urgent,open,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00114,ACC-028,PRD-105,2026-07-24,2026-07-26,medium,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,96.8,4
+TKT-00115,ACC-028,PRD-105,2026-09-29,,medium,in_progress,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00116,ACC-028,PRD-105,2026-07-20,2026-07-23,urgent,resolved,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,45.0,
+TKT-00117,ACC-029,PRD-107,2026-09-12,,urgent,in_progress,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00118,ACC-029,PRD-107,2026-06-20,,high,in_progress,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00119,ACC-029,PRD-107,2026-04-22,2026-04-26,low,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,117.3,3
+TKT-00120,ACC-029,PRD-107,2026-05-30,,urgent,open,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00121,ACC-029,PRD-107,2026-07-10,2026-07-11,medium,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,166.3,3
+TKT-00122,ACC-029,PRD-107,2026-07-27,2026-07-31,low,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,71.5,3
+TKT-00123,ACC-029,PRD-107,2026-08-13,2026-08-17,medium,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,75.3,
+TKT-00124,ACC-030,PRD-106,2026-10-02,,urgent,open,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00125,ACC-030,PRD-106,2026-07-25,2026-07-26,medium,resolved,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,97.1,4
+TKT-00126,ACC-030,PRD-106,2026-08-26,,low,in_progress,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00127,ACC-030,PRD-106,2026-09-10,2026-09-13,low,resolved,Feature Request,Request for product capability,Customer asks whether additional capability is available.,4.6,3
+TKT-00128,ACC-030,PRD-106,2026-09-12,2026-09-14,medium,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,89.2,5
+TKT-00129,ACC-030,PRD-106,2026-07-08,2026-07-12,high,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,150.1,4
+TKT-00130,ACC-030,PRD-106,2026-07-21,,urgent,open,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00131,ACC-031,PRD-105,2026-09-29,,urgent,open,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00132,ACC-031,PRD-105,2026-04-20,2026-04-22,medium,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,48.8,3
+TKT-00133,ACC-031,PRD-105,2026-08-31,2026-09-04,low,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,111.7,4
+TKT-00134,ACC-031,PRD-105,2026-04-27,,urgent,in_progress,Training,Request for additional operator training,Customer asks for additional guidance for their team.,,
+TKT-00135,ACC-032,PRD-101,2026-09-30,,urgent,in_progress,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00136,ACC-032,PRD-101,2026-06-12,,low,in_progress,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00137,ACC-032,PRD-101,2026-06-01,2026-06-02,high,resolved,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,124.8,3
+TKT-00138,ACC-033,PRD-102,2026-09-30,,urgent,in_progress,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00139,ACC-033,PRD-102,2026-05-25,2026-05-27,low,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,161.3,4
+TKT-00140,ACC-033,PRD-102,2026-07-13,2026-07-16,high,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,145.8,
+TKT-00141,ACC-034,PRD-108,2026-09-26,,high,open,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00142,ACC-034,PRD-108,2026-07-22,2026-07-24,low,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,160.2,5
+TKT-00143,ACC-034,PRD-108,2026-06-28,2026-06-29,low,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,176.8,4
+TKT-00144,ACC-034,PRD-108,2026-10-06,,urgent,open,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,,
+TKT-00145,ACC-034,PRD-108,2026-05-30,,high,open,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,,
+TKT-00146,ACC-035,PRD-107,2026-09-22,,urgent,open,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00147,ACC-035,PRD-107,2026-06-30,2026-07-03,medium,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,132.6,
+TKT-00148,ACC-035,PRD-107,2026-05-24,2026-05-27,medium,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,118.1,
+TKT-00149,ACC-035,PRD-107,2026-05-31,2026-06-01,low,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,101.7,3
+TKT-00150,ACC-035,PRD-107,2026-09-11,2026-09-12,urgent,resolved,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,159.0,
+TKT-00151,ACC-036,PRD-101,2026-09-28,,high,in_progress,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00152,ACC-036,PRD-101,2026-07-21,2026-07-23,high,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,61.3,4
+TKT-00153,ACC-036,PRD-101,2026-10-04,,high,open,Training,Request for additional operator training,Customer asks for additional guidance for their team.,,
+TKT-00154,ACC-036,PRD-101,2026-08-21,2026-08-23,low,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,9.1,2
+TKT-00155,ACC-036,PRD-101,2026-04-21,2026-04-23,low,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,26.0,3
+TKT-00156,ACC-037,PRD-104,2026-09-28,,high,open,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00157,ACC-037,PRD-104,2026-08-26,,low,in_progress,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,,
+TKT-00158,ACC-037,PRD-104,2026-05-13,,low,open,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00159,ACC-038,PRD-108,2026-10-01,,high,in_progress,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00160,ACC-038,PRD-108,2026-07-29,,medium,open,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,,
+TKT-00161,ACC-038,PRD-108,2026-06-01,2026-06-02,low,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,178.4,5
+TKT-00162,ACC-039,PRD-104,2026-09-15,,high,in_progress,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00163,ACC-039,PRD-104,2026-05-05,2026-05-09,medium,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,65.9,2
+TKT-00164,ACC-039,PRD-104,2026-04-20,2026-04-21,medium,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,160.8,5
+TKT-00165,ACC-039,PRD-104,2026-06-05,,medium,open,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00166,ACC-039,PRD-104,2026-07-18,,medium,in_progress,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00167,ACC-040,PRD-107,2026-09-27,,high,open,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00168,ACC-040,PRD-107,2026-05-05,2026-05-08,low,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,79.0,3
+TKT-00169,ACC-040,PRD-107,2026-05-13,,medium,open,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,,
+TKT-00170,ACC-041,PRD-103,2026-09-22,,urgent,open,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00171,ACC-041,PRD-103,2026-06-18,2026-06-20,high,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,62.5,2
+TKT-00172,ACC-041,PRD-103,2026-05-04,2026-05-08,urgent,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,94.1,5
+TKT-00173,ACC-041,PRD-103,2026-10-07,2026-10-10,urgent,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,38.7,3
+TKT-00174,ACC-041,PRD-103,2026-05-01,2026-05-05,low,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,20.8,
+TKT-00175,ACC-042,PRD-102,2026-09-19,,high,open,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00176,ACC-042,PRD-102,2026-05-17,2026-05-19,medium,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,62.8,3
+TKT-00177,ACC-042,PRD-102,2026-10-04,2026-10-05,medium,resolved,Feature Request,Request for product capability,Customer asks whether additional capability is available.,21.6,3
+TKT-00178,ACC-042,PRD-102,2026-09-22,2026-09-24,low,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,65.1,3
+TKT-00179,ACC-042,PRD-102,2026-05-19,2026-05-22,medium,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,7.8,3
+TKT-00180,ACC-042,PRD-102,2026-07-15,2026-07-16,high,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,133.2,
+TKT-00181,ACC-043,PRD-107,2026-06-30,2026-07-01,high,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,147.0,4
+TKT-00182,ACC-043,PRD-107,2026-05-15,2026-05-19,low,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,107.9,2
+TKT-00183,ACC-043,PRD-107,2026-05-19,,urgent,open,Training,Request for additional operator training,Customer asks for additional guidance for their team.,,
+TKT-00184,ACC-044,PRD-101,2026-06-18,,low,open,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00185,ACC-045,PRD-106,2026-08-14,2026-08-16,medium,resolved,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,93.5,3
+TKT-00186,ACC-045,PRD-106,2026-06-24,,high,in_progress,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,,
+TKT-00187,ACC-046,PRD-108,2026-06-01,2026-06-02,low,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,130.2,
+TKT-00188,ACC-046,PRD-108,2026-06-16,2026-06-18,medium,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,150.2,2
+TKT-00189,ACC-047,PRD-102,2026-08-18,,medium,in_progress,Feature Request,Request for product capability,Customer asks whether additional capability is available.,,
+TKT-00190,ACC-047,PRD-102,2026-06-03,,high,open,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00191,ACC-047,PRD-102,2026-06-04,,low,open,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00192,ACC-048,PRD-107,2026-06-09,2026-06-13,medium,resolved,Feature Request,Request for product capability,Customer asks whether additional capability is available.,27.8,4
+TKT-00193,ACC-048,PRD-107,2026-07-05,,medium,open,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,,
+TKT-00194,ACC-048,PRD-107,2026-06-30,2026-07-02,high,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,37.2,2
+TKT-00195,ACC-048,PRD-107,2026-05-01,,low,open,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00196,ACC-049,PRD-101,2026-06-04,,high,in_progress,Feature Request,Request for product capability,Customer asks whether additional capability is available.,,
+TKT-00197,ACC-049,PRD-101,2026-08-29,2026-09-01,medium,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,99.9,4
+TKT-00198,ACC-049,PRD-101,2026-06-09,2026-06-12,low,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,170.3,4
+TKT-00199,ACC-050,PRD-102,2026-06-28,,urgent,open,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00200,ACC-050,PRD-102,2026-07-24,,urgent,open,Training,Request for additional operator training,Customer asks for additional guidance for their team.,,
+TKT-00201,ACC-050,PRD-102,2026-10-03,,high,open,Training,Request for additional operator training,Customer asks for additional guidance for their team.,,
+TKT-00202,ACC-051,PRD-108,2026-09-27,2026-09-30,medium,resolved,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,168.8,2
+TKT-00203,ACC-051,PRD-108,2026-06-03,,medium,open,Training,Request for additional operator training,Customer asks for additional guidance for their team.,,
+TKT-00204,ACC-052,PRD-104,2026-04-15,2026-04-19,high,resolved,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,158.9,4
+TKT-00205,ACC-052,PRD-104,2026-07-24,,low,open,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00206,ACC-053,PRD-104,2026-09-01,2026-09-02,low,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,87.3,5
+TKT-00207,ACC-053,PRD-104,2026-07-23,2026-07-24,high,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,80.7,
+TKT-00208,ACC-053,PRD-104,2026-08-13,,medium,open,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,,
+TKT-00209,ACC-053,PRD-104,2026-06-09,2026-06-12,low,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,168.0,5
+TKT-00210,ACC-054,PRD-102,2026-08-23,,low,in_progress,Training,Request for additional operator training,Customer asks for additional guidance for their team.,,
+TKT-00211,ACC-054,PRD-102,2026-07-26,2026-07-29,low,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,54.5,4
+TKT-00212,ACC-054,PRD-102,2026-10-10,2026-10-14,high,resolved,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,167.8,3
+TKT-00213,ACC-054,PRD-102,2026-04-21,,medium,in_progress,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00214,ACC-055,PRD-104,2026-06-23,2026-06-25,medium,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,4.6,3
+TKT-00215,ACC-055,PRD-104,2026-07-05,2026-07-08,medium,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,87.8,3
+TKT-00216,ACC-055,PRD-104,2026-08-27,2026-08-29,low,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,149.7,3
+TKT-00217,ACC-056,PRD-108,2026-04-28,2026-04-30,medium,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,8.8,
+TKT-00218,ACC-056,PRD-108,2026-06-18,,high,open,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00219,ACC-056,PRD-108,2026-06-12,2026-06-14,low,resolved,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,127.0,
+TKT-00220,ACC-057,PRD-102,2026-09-16,,medium,open,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00221,ACC-057,PRD-102,2026-09-24,2026-09-25,high,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,161.8,5
+TKT-00222,ACC-058,PRD-103,2026-04-18,,high,in_progress,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00223,ACC-058,PRD-103,2026-08-30,,medium,in_progress,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00224,ACC-058,PRD-103,2026-06-10,2026-06-13,medium,resolved,Feature Request,Request for product capability,Customer asks whether additional capability is available.,155.4,4
+TKT-00225,ACC-058,PRD-103,2026-09-15,2026-09-19,high,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,64.7,2
+TKT-00226,ACC-059,PRD-105,2026-09-20,,high,open,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00227,ACC-059,PRD-105,2026-04-15,2026-04-16,urgent,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,101.3,3
+TKT-00228,ACC-059,PRD-105,2026-05-13,,medium,open,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,,
+TKT-00229,ACC-059,PRD-105,2026-09-14,,high,in_progress,Feature Request,Request for product capability,Customer asks whether additional capability is available.,,
+TKT-00230,ACC-059,PRD-105,2026-05-27,2026-05-31,high,resolved,Feature Request,Request for product capability,Customer asks whether additional capability is available.,139.6,3
+TKT-00231,ACC-059,PRD-105,2026-08-28,,medium,open,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00232,ACC-060,PRD-105,2026-09-30,,urgent,open,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00233,ACC-060,PRD-105,2026-07-23,,high,in_progress,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,,
+TKT-00234,ACC-060,PRD-105,2026-07-14,,medium,open,Training,Request for additional operator training,Customer asks for additional guidance for their team.,,
+TKT-00235,ACC-060,PRD-105,2026-05-15,2026-05-19,medium,resolved,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,34.3,4
+TKT-00236,ACC-060,PRD-105,2026-04-13,,high,in_progress,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00237,ACC-060,PRD-105,2026-05-12,2026-05-13,medium,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,157.6,3
+TKT-00238,ACC-061,PRD-106,2026-09-29,,urgent,open,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00239,ACC-061,PRD-106,2026-08-15,2026-08-18,low,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,18.1,4
+TKT-00240,ACC-061,PRD-106,2026-06-17,2026-06-19,medium,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,110.7,5
+TKT-00241,ACC-061,PRD-106,2026-10-10,2026-10-12,low,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,171.8,2
+TKT-00242,ACC-061,PRD-106,2026-10-04,2026-10-07,high,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,7.3,4
+TKT-00243,ACC-062,PRD-103,2026-09-29,,urgent,in_progress,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00244,ACC-062,PRD-103,2026-05-11,2026-05-12,high,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,46.9,
+TKT-00245,ACC-062,PRD-103,2026-05-18,,high,open,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00246,ACC-062,PRD-103,2026-04-17,2026-04-21,high,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,136.8,2
+TKT-00247,ACC-062,PRD-103,2026-08-13,,high,in_progress,Training,Request for additional operator training,Customer asks for additional guidance for their team.,,
+TKT-00248,ACC-062,PRD-103,2026-07-30,2026-07-31,low,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,12.9,4
+TKT-00249,ACC-063,PRD-106,2026-09-18,,high,in_progress,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00250,ACC-063,PRD-106,2026-04-16,,high,open,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,,
+TKT-00251,ACC-063,PRD-106,2026-06-15,2026-06-18,medium,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,178.9,4
+TKT-00252,ACC-063,PRD-106,2026-10-07,2026-10-10,low,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,80.4,3
+TKT-00253,ACC-063,PRD-106,2026-08-06,2026-08-09,low,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,23.9,3
+TKT-00254,ACC-063,PRD-106,2026-06-22,,urgent,open,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00255,ACC-063,PRD-106,2026-08-24,,urgent,open,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00256,ACC-064,PRD-103,2026-09-12,,high,open,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00257,ACC-064,PRD-103,2026-06-10,2026-06-12,medium,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,7.0,5
+TKT-00258,ACC-064,PRD-103,2026-05-24,,low,open,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,,
+TKT-00259,ACC-064,PRD-103,2026-08-09,2026-08-11,low,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,81.8,2
+TKT-00260,ACC-065,PRD-103,2026-09-30,,high,open,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00261,ACC-065,PRD-103,2026-07-21,,high,in_progress,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00262,ACC-065,PRD-103,2026-10-10,2026-10-14,high,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,42.6,5
+TKT-00263,ACC-065,PRD-103,2026-09-03,,high,open,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00264,ACC-066,PRD-104,2026-09-27,,high,in_progress,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00265,ACC-066,PRD-104,2026-07-13,,low,open,Feature Request,Request for product capability,Customer asks whether additional capability is available.,,
+TKT-00266,ACC-066,PRD-104,2026-06-13,2026-06-17,high,resolved,Feature Request,Request for product capability,Customer asks whether additional capability is available.,119.4,2
+TKT-00267,ACC-066,PRD-104,2026-07-02,2026-07-04,low,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,175.9,2
+TKT-00268,ACC-066,PRD-104,2026-05-08,,high,open,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00269,ACC-067,PRD-104,2026-09-24,,high,open,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00270,ACC-067,PRD-104,2026-05-28,2026-06-01,low,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,30.7,3
+TKT-00271,ACC-067,PRD-104,2026-07-19,2026-07-21,low,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,39.5,5
+TKT-00272,ACC-067,PRD-104,2026-04-23,,medium,open,Feature Request,Request for product capability,Customer asks whether additional capability is available.,,
+TKT-00273,ACC-067,PRD-104,2026-05-03,,medium,open,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,,
+TKT-00274,ACC-068,PRD-107,2026-09-27,,high,open,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00275,ACC-068,PRD-107,2026-06-04,2026-06-05,high,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,111.0,5
+TKT-00276,ACC-068,PRD-107,2026-04-23,2026-04-27,low,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,107.5,3
+TKT-00277,ACC-069,PRD-107,2026-09-14,,urgent,in_progress,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00278,ACC-069,PRD-107,2026-08-20,2026-08-21,medium,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,127.0,4
+TKT-00279,ACC-069,PRD-107,2026-08-08,,medium,open,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,,
+TKT-00280,ACC-069,PRD-107,2026-08-18,2026-08-21,high,resolved,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,104.5,4
+TKT-00281,ACC-070,PRD-104,2026-09-26,,high,open,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00282,ACC-070,PRD-104,2026-10-06,2026-10-07,low,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,136.6,5
+TKT-00283,ACC-070,PRD-104,2026-07-14,,high,in_progress,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00284,ACC-070,PRD-104,2026-08-24,2026-08-25,low,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,119.5,3
+TKT-00285,ACC-071,PRD-101,2026-09-12,,urgent,open,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00286,ACC-071,PRD-101,2026-05-09,,medium,open,Feature Request,Request for product capability,Customer asks whether additional capability is available.,,
+TKT-00287,ACC-071,PRD-101,2026-06-09,2026-06-10,low,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,27.4,3
+TKT-00288,ACC-071,PRD-101,2026-08-20,2026-08-22,high,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,81.9,4
+TKT-00289,ACC-071,PRD-101,2026-06-15,,low,open,Feature Request,Request for product capability,Customer asks whether additional capability is available.,,
+TKT-00290,ACC-071,PRD-101,2026-04-23,2026-04-24,medium,resolved,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,74.4,5
+TKT-00291,ACC-071,PRD-101,2026-09-03,2026-09-07,high,resolved,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,166.7,
+TKT-00292,ACC-072,PRD-107,2026-09-21,,high,in_progress,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00293,ACC-072,PRD-107,2026-07-15,2026-07-18,high,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,165.8,2
+TKT-00294,ACC-072,PRD-107,2026-08-22,2026-08-23,medium,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,4.0,2
+TKT-00295,ACC-072,PRD-107,2026-04-13,,high,in_progress,Training,Request for additional operator training,Customer asks for additional guidance for their team.,,
+TKT-00296,ACC-072,PRD-107,2026-06-27,,low,open,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,,
+TKT-00297,ACC-073,PRD-108,2026-09-26,,high,open,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00298,ACC-073,PRD-108,2026-05-16,2026-05-18,medium,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,98.5,3
+TKT-00299,ACC-074,PRD-104,2026-09-30,,urgent,open,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00300,ACC-074,PRD-104,2026-07-30,,high,in_progress,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00301,ACC-074,PRD-104,2026-09-26,,medium,in_progress,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00302,ACC-074,PRD-104,2026-05-11,,high,in_progress,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00303,ACC-075,PRD-108,2026-09-14,,high,open,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00304,ACC-075,PRD-108,2026-07-06,,low,open,Training,Request for additional operator training,Customer asks for additional guidance for their team.,,
+TKT-00305,ACC-075,PRD-108,2026-04-17,,medium,in_progress,Feature Request,Request for product capability,Customer asks whether additional capability is available.,,
+TKT-00306,ACC-075,PRD-108,2026-10-10,2026-10-13,medium,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,157.1,3
+TKT-00307,ACC-075,PRD-108,2026-06-21,,low,open,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00308,ACC-076,PRD-101,2026-09-17,,urgent,in_progress,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00309,ACC-076,PRD-101,2026-09-22,2026-09-24,medium,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,8.4,2
+TKT-00310,ACC-076,PRD-101,2026-06-29,,low,open,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00311,ACC-076,PRD-101,2026-09-11,,low,open,Training,Request for additional operator training,Customer asks for additional guidance for their team.,,
+TKT-00312,ACC-077,PRD-106,2026-09-17,,high,open,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00313,ACC-077,PRD-106,2026-07-13,2026-07-14,medium,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,90.8,2
+TKT-00314,ACC-078,PRD-106,2026-09-28,,urgent,in_progress,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00315,ACC-078,PRD-106,2026-05-25,2026-05-29,low,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,160.1,2
+TKT-00316,ACC-078,PRD-106,2026-09-15,2026-09-17,medium,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,49.6,4
+TKT-00317,ACC-078,PRD-106,2026-08-15,2026-08-17,low,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,165.3,2
+TKT-00318,ACC-078,PRD-106,2026-09-10,2026-09-14,low,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,176.4,5
+TKT-00319,ACC-078,PRD-106,2026-09-04,2026-09-05,medium,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,107.4,3
+TKT-00320,ACC-078,PRD-106,2026-05-08,2026-05-10,low,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,11.3,
+TKT-00321,ACC-079,PRD-103,2026-07-21,,low,in_progress,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00322,ACC-079,PRD-103,2026-06-17,,high,in_progress,Training,Request for additional operator training,Customer asks for additional guidance for their team.,,
+TKT-00323,ACC-079,PRD-103,2026-06-03,2026-06-04,medium,resolved,Feature Request,Request for product capability,Customer asks whether additional capability is available.,115.5,
+TKT-00324,ACC-079,PRD-103,2026-07-12,,low,in_progress,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00325,ACC-080,PRD-106,2026-09-18,,high,open,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,,
+TKT-00326,ACC-081,PRD-108,2026-10-01,2026-10-04,medium,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,57.9,3
+TKT-00327,ACC-081,PRD-108,2026-06-07,,low,open,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00328,ACC-082,PRD-102,2026-09-03,2026-09-07,high,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,15.6,4
+TKT-00329,ACC-082,PRD-102,2026-08-19,2026-08-20,medium,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,27.2,4
+TKT-00330,ACC-083,PRD-106,2026-09-05,,high,in_progress,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,,
+TKT-00331,ACC-083,PRD-106,2026-05-02,,low,in_progress,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00332,ACC-084,PRD-105,2026-05-29,2026-05-30,low,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,93.8,4
+TKT-00333,ACC-084,PRD-105,2026-05-07,,low,in_progress,Feature Request,Request for product capability,Customer asks whether additional capability is available.,,
+TKT-00334,ACC-085,PRD-108,2026-06-24,,urgent,in_progress,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,,
+TKT-00335,ACC-086,PRD-108,2026-10-08,2026-10-11,high,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,74.2,5
+TKT-00336,ACC-087,PRD-102,2026-06-16,2026-06-18,high,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,39.6,
+TKT-00337,ACC-087,PRD-102,2026-07-24,2026-07-26,medium,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,80.3,2
+TKT-00338,ACC-087,PRD-102,2026-09-24,,urgent,open,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,,
+TKT-00339,ACC-087,PRD-102,2026-06-24,,high,in_progress,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00340,ACC-088,PRD-106,2026-09-17,2026-09-20,low,resolved,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,109.9,
+TKT-00341,ACC-088,PRD-106,2026-04-17,,urgent,in_progress,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00342,ACC-088,PRD-106,2026-04-25,,low,open,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00343,ACC-088,PRD-106,2026-06-08,2026-06-11,medium,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,127.2,
+TKT-00344,ACC-089,PRD-104,2026-05-16,2026-05-18,medium,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,21.0,2
+TKT-00345,ACC-089,PRD-104,2026-06-19,2026-06-22,low,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,116.4,2
+TKT-00346,ACC-089,PRD-104,2026-07-12,,low,open,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00347,ACC-090,PRD-104,2026-05-30,,low,open,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00348,ACC-090,PRD-104,2026-08-29,2026-08-30,low,resolved,Feature Request,Request for product capability,Customer asks whether additional capability is available.,120.1,2
+TKT-00349,ACC-090,PRD-104,2026-10-03,2026-10-07,low,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,80.4,4
+TKT-00350,ACC-090,PRD-104,2026-10-09,,urgent,in_progress,Feature Request,Request for product capability,Customer asks whether additional capability is available.,,
+TKT-00351,ACC-091,PRD-105,2026-05-06,,medium,open,Feature Request,Request for product capability,Customer asks whether additional capability is available.,,
+TKT-00352,ACC-092,PRD-106,2026-06-26,,low,in_progress,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,,
+TKT-00353,ACC-093,PRD-104,2026-06-21,,urgent,in_progress,Feature Request,Request for product capability,Customer asks whether additional capability is available.,,
+TKT-00354,ACC-093,PRD-104,2026-09-17,,low,in_progress,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00355,ACC-093,PRD-104,2026-04-29,,low,open,Feature Request,Request for product capability,Customer asks whether additional capability is available.,,
+TKT-00356,ACC-094,PRD-104,2026-09-13,2026-09-15,urgent,resolved,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,114.5,3
+TKT-00357,ACC-094,PRD-104,2026-08-27,,medium,in_progress,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00358,ACC-095,PRD-101,2026-05-27,,high,in_progress,Training,Request for additional operator training,Customer asks for additional guidance for their team.,,
+TKT-00359,ACC-095,PRD-101,2026-09-11,2026-09-15,high,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,125.6,3
+TKT-00360,ACC-095,PRD-101,2026-05-15,2026-05-17,medium,resolved,Feature Request,Request for product capability,Customer asks whether additional capability is available.,150.8,2
+TKT-00361,ACC-095,PRD-101,2026-06-28,,low,open,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,,
+TKT-00362,ACC-096,PRD-104,2026-08-20,,low,open,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00363,ACC-096,PRD-104,2026-10-07,,medium,open,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00364,ACC-096,PRD-104,2026-09-03,,high,open,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,,
+TKT-00365,ACC-096,PRD-104,2026-09-08,2026-09-09,low,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,11.6,4
+TKT-00366,ACC-097,PRD-108,2026-08-26,2026-08-29,low,resolved,Feature Request,Request for product capability,Customer asks whether additional capability is available.,38.7,2
+TKT-00367,ACC-098,PRD-101,2026-10-08,2026-10-12,low,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,34.2,2
+TKT-00368,ACC-099,PRD-102,2026-10-09,2026-10-12,low,resolved,Feature Request,Request for product capability,Customer asks whether additional capability is available.,116.1,2
+TKT-00369,ACC-099,PRD-102,2026-08-20,2026-08-22,low,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,12.2,
+TKT-00370,ACC-099,PRD-102,2026-07-12,,high,open,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00371,ACC-100,PRD-106,2026-04-26,2026-04-29,low,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,153.3,5
+TKT-00372,ACC-101,PRD-102,2026-09-25,2026-09-29,low,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,40.1,3
+TKT-00373,ACC-101,PRD-102,2026-04-18,2026-04-22,low,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,61.2,
+TKT-00374,ACC-101,PRD-102,2026-07-31,,high,in_progress,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00375,ACC-102,PRD-101,2026-10-06,2026-10-08,low,resolved,Feature Request,Request for product capability,Customer asks whether additional capability is available.,126.8,2
+TKT-00376,ACC-102,PRD-101,2026-05-06,2026-05-09,low,resolved,Feature Request,Request for product capability,Customer asks whether additional capability is available.,94.9,5
+TKT-00377,ACC-102,PRD-101,2026-09-25,2026-09-26,medium,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,83.0,2
+TKT-00378,ACC-102,PRD-101,2026-05-31,2026-06-03,medium,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,4.8,5
+TKT-00379,ACC-103,PRD-106,2026-08-06,2026-08-10,low,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,38.2,4
+TKT-00380,ACC-104,PRD-104,2026-08-24,2026-08-26,low,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,35.3,3
+TKT-00381,ACC-105,PRD-107,2026-09-11,2026-09-14,low,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,62.1,2
+TKT-00382,ACC-105,PRD-107,2026-07-12,2026-07-14,medium,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,123.8,
+TKT-00383,ACC-105,PRD-107,2026-08-31,,low,in_progress,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,,
+TKT-00384,ACC-105,PRD-107,2026-05-24,2026-05-27,medium,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,103.1,4
+TKT-00385,ACC-106,PRD-101,2026-09-10,2026-09-11,low,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,66.6,2
+TKT-00386,ACC-106,PRD-101,2026-07-26,2026-07-29,medium,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,147.2,
+TKT-00387,ACC-107,PRD-102,2026-06-14,2026-06-18,low,resolved,Feature Request,Request for product capability,Customer asks whether additional capability is available.,60.2,5
+TKT-00388,ACC-107,PRD-102,2026-08-04,,low,open,Feature Request,Request for product capability,Customer asks whether additional capability is available.,,
+TKT-00389,ACC-107,PRD-102,2026-08-13,2026-08-14,high,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,7.1,
+TKT-00390,ACC-107,PRD-102,2026-08-11,2026-08-15,urgent,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,30.8,3
+TKT-00391,ACC-108,PRD-104,2026-09-16,2026-09-20,low,resolved,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,107.5,2
+TKT-00392,ACC-108,PRD-104,2026-06-28,2026-06-30,high,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,146.7,2
+TKT-00393,ACC-108,PRD-104,2026-04-25,2026-04-29,urgent,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,177.4,4
+TKT-00394,ACC-108,PRD-104,2026-08-30,2026-09-01,medium,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,11.8,4
+TKT-00395,ACC-109,PRD-103,2026-06-20,2026-06-24,low,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,139.9,2
+TKT-00396,ACC-109,PRD-103,2026-05-12,2026-05-13,medium,resolved,Billing/Invoice,Invoice clarification,Customer requests clarification on a transaction invoice.,176.8,3
+TKT-00397,ACC-110,PRD-107,2026-06-03,2026-06-05,low,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,26.8,5
+TKT-00398,ACC-110,PRD-107,2026-10-03,,medium,open,Feature Request,Request for product capability,Customer asks whether additional capability is available.,,
+TKT-00399,ACC-111,PRD-101,2026-05-25,2026-05-26,low,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,70.9,
+TKT-00400,ACC-111,PRD-101,2026-06-21,2026-06-23,low,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,175.7,
+TKT-00401,ACC-111,PRD-101,2026-09-19,2026-09-23,high,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,32.9,2
+TKT-00402,ACC-112,PRD-105,2026-05-18,2026-05-20,low,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,134.1,5
+TKT-00403,ACC-112,PRD-105,2026-09-27,,high,in_progress,Product Defect,Unexpected product behaviour,Customer reports a product issue and requests a fix.,,
+TKT-00404,ACC-112,PRD-105,2026-06-23,,medium,open,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00405,ACC-113,PRD-108,2026-08-08,2026-08-09,low,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,69.8,
+TKT-00406,ACC-113,PRD-108,2026-09-08,2026-09-11,low,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,12.3,2
+TKT-00407,ACC-114,PRD-108,2026-06-17,2026-06-19,low,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,142.2,
+TKT-00408,ACC-114,PRD-108,2026-07-24,2026-07-26,low,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,170.3,2
+TKT-00409,ACC-114,PRD-108,2026-05-01,,urgent,open,Spare Parts,Spare component request,Customer asks about spare parts and availability.,,
+TKT-00410,ACC-115,PRD-106,2026-08-15,2026-08-17,low,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,135.0,3
+TKT-00411,ACC-116,PRD-102,2026-07-16,2026-07-17,low,resolved,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,130.9,4
+TKT-00412,ACC-117,PRD-103,2026-04-26,2026-04-27,low,resolved,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,42.2,2
+TKT-00413,ACC-117,PRD-103,2026-09-13,,low,in_progress,Training,Request for additional operator training,Customer asks for additional guidance for their team.,,
+TKT-00414,ACC-118,PRD-106,2026-09-28,2026-10-01,low,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,177.3,2
+TKT-00415,ACC-118,PRD-106,2026-10-02,,high,in_progress,Performance,Performance below expected level,Customer reports slower than expected product performance.,,
+TKT-00416,ACC-118,PRD-106,2026-07-17,2026-07-18,low,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,68.6,4
+TKT-00417,ACC-119,PRD-102,2026-06-30,2026-07-03,low,resolved,Spare Parts,Spare component request,Customer asks about spare parts and availability.,177.5,3
+TKT-00418,ACC-119,PRD-102,2026-04-26,,medium,open,Installation,Installation setup assistance,Customer reports installation/setup difficulty.,,
+TKT-00419,ACC-119,PRD-102,2026-10-02,,urgent,in_progress,Integration,Integration support needed,Customer needs help connecting the product to existing systems.,,
+TKT-00420,ACC-120,PRD-105,2026-08-01,2026-08-03,low,resolved,Performance,Performance below expected level,Customer reports slower than expected product performance.,148.6,
+TKT-00421,ACC-120,PRD-105,2026-06-25,2026-06-29,medium,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,114.2,2
+TKT-00422,ACC-120,PRD-105,2026-04-14,2026-04-16,medium,resolved,Training,Request for additional operator training,Customer asks for additional guidance for their team.,101.5,5
