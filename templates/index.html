@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
     <!-- Ambient aurora background -->
     <div class="aurora" aria-hidden="true">
@@ -29,15 +31,25 @@
         <p class="nav-label">WORKSPACE</p>
         <nav class="nav">
             <a class="nav-item active" href="#overview">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="3" width="7" height="7" rx="2" />
+                    <rect x="14" y="3" width="7" height="7" rx="2" />
+                    <rect x="3" y="14" width="7" height="7" rx="2" />
+                    <rect x="14" y="14" width="7" height="7" rx="2" />
+                </svg>
                 <span>Overview</span>
             </a>
             <a class="nav-item" href="#risk-queue">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2.5 20h19L12 3Z"/><path d="M12 10v4M12 17.3v.01"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 3 2.5 20h19L12 3Z" />
+                    <path d="M12 10v4M12 17.3v.01" />
+                </svg>
                 <span>Risk Queue</span>
             </a>
             <a class="nav-item" href="#analytics">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" />
+                </svg>
                 <span>Analytics</span>
             </a>
         </nav>
@@ -56,7 +68,9 @@
                 <p class="subtitle">Monitor account health, identify risks and prioritize action.</p>
             </div>
             <button class="refresh-btn" id="refresh-btn">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7" />
+                </svg>
                 Refresh data
             </button>
         </header>
@@ -76,12 +90,13 @@
                     <svg class="ring" viewBox="0 0 120 120" aria-hidden="true">
                         <defs>
                             <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0" stop-color="#5ef2b4"/>
-                                <stop offset="1" stop-color="#4cc9ff"/>
+                                <stop offset="0" stop-color="#5ef2b4" />
+                                <stop offset="1" stop-color="#4cc9ff" />
                             </linearGradient>
                         </defs>
-                        <circle class="ring-bg" cx="60" cy="60" r="52"/>
-                        <circle class="ring-fg" id="ring-fg" cx="60" cy="60" r="52" stroke-dasharray="326.7" stroke-dashoffset="326.7"/>
+                        <circle class="ring-bg" cx="60" cy="60" r="52" />
+                        <circle class="ring-fg" id="ring-fg" cx="60" cy="60" r="52" stroke-dasharray="326.7"
+                            stroke-dashoffset="326.7" />
                     </svg>
                     <div class="ring-center">
                         <strong id="ring-value">—</strong>
@@ -109,46 +124,69 @@
             <div class="kpi-grid">
                 <article class="kpi-card glass">
                     <div class="kpi-top"><span>Total customers</span>
-                        <span class="kpi-icon blue"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.200-5.500 6.500-5.500s5.900 1.900 6.500 5.500M16 4.800a3.500 3.500 0 0 1 0 6.400M18 14.800c2 .6 3.200 2.300 3.500 5.200"/></svg></span></div>
+                        <span class="kpi-icon blue"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="9" cy="8" r="3.5" />
+                                <path
+                                    d="M2.5 20c.6-3.6 3.200-5.500 6.500-5.500s5.900 1.900 6.500 5.500M16 4.800a3.500 3.500 0 0 1 0 6.400M18 14.800c2 .6 3.200 2.300 3.500 5.200" />
+                            </svg></span>
+                    </div>
                     <h3 id="total-customers">—</h3>
                     <p>Accounts in portfolio</p>
                     <div class="kpi-meter"><i style="width:100%"></i></div>
                 </article>
                 <article class="kpi-card glass">
                     <div class="kpi-top"><span>Urgent accounts</span>
-                        <span class="kpi-icon red"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2.500 20h19L12 3Z"/><path d="M12 10v4M12 17.300v.01"/></svg></span></div>
+                        <span class="kpi-icon red"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 3 2.500 20h19L12 3Z" />
+                                <path d="M12 10v4M12 17.300v.01" />
+                            </svg></span>
+                    </div>
                     <h3 id="urgent-customers">—</h3>
                     <p>Require priority attention</p>
                     <div class="kpi-meter red"><i id="meter-urgent"></i></div>
                 </article>
                 <article class="kpi-card glass">
                     <div class="kpi-top"><span>Needs review</span>
-                        <span class="kpi-icon amber"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span></div>
+                        <span class="kpi-icon amber"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M12 7v5l3 2" />
+                            </svg></span>
+                    </div>
                     <h3 id="review-customers">—</h3>
                     <p>Accounts needing review</p>
                     <div class="kpi-meter amber"><i id="meter-review"></i></div>
                 </article>
                 <article class="kpi-card glass">
                     <div class="kpi-top"><span>Healthy accounts</span>
-                        <span class="kpi-icon green"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.500 2.700 2.700L16 9.500"/></svg></span></div>
+                        <span class="kpi-icon green"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="m8 12.500 2.700 2.700L16 9.500" />
+                            </svg></span>
+                    </div>
                     <h3 id="healthy-customers">—</h3>
                     <p>Currently classified healthy</p>
                     <div class="kpi-meter green"><i id="meter-healthy"></i></div>
                 </article>
                 <article class="kpi-card glass revenue-card">
                     <div class="kpi-top"><span>Recorded revenue · 90 days</span>
-                        <span class="kpi-icon purple"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M16.500 7.500C15.800 6.300 14.200 5.500 12 5.500c-2.500 0-4 1.100-4 2.800 0 4 8.500 1.900 8.500 6 0 1.800-1.700 3.200-4.500 3.200-2.300 0-4-.9-4.800-2.300"/></svg></span></div>
+                        <span class="kpi-icon purple"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M12 3v18M16.500 7.500C15.800 6.300 14.200 5.500 12 5.500c-2.500 0-4 1.100-4 2.800 0 4 8.500 1.900 8.500 6 0 1.800-1.700 3.200-4.500 3.200-2.300 0-4-.9-4.800-2.300" />
+                            </svg></span>
+                    </div>
                     <h3 id="recorded-revenue">—</h3>
                     <p>Associated with flagged accounts</p>
                     <svg class="wave" viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true">
                         <defs>
                             <linearGradient id="waveGrad" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="0" stop-color="#b58cff" stop-opacity=".45"/>
-                                <stop offset="1" stop-color="#b58cff" stop-opacity="0"/>
+                                <stop offset="0" stop-color="#b58cff" stop-opacity=".45" />
+                                <stop offset="1" stop-color="#b58cff" stop-opacity="0" />
                             </linearGradient>
                         </defs>
-                        <path d="M0 42 C40 20 70 50 110 34 S180 8 220 28 S300 52 340 22 S385 14 400 20 V60 H0Z" fill="url(#waveGrad)"/>
-                        <path d="M0 42 C40 20 70 50 110 34 S180 8 220 28 S300 52 340 22 S385 14 400 20" fill="none" stroke="#b58cff" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M0 42 C40 20 70 50 110 34 S180 8 220 28 S300 52 340 22 S385 14 400 20 V60 H0Z"
+                            fill="url(#waveGrad)" />
+                        <path d="M0 42 C40 20 70 50 110 34 S180 8 220 28 S300 52 340 22 S385 14 400 20" fill="none"
+                            stroke="#b58cff" stroke-width="2" stroke-linecap="round" />
                     </svg>
                 </article>
             </div>
@@ -168,18 +206,22 @@
                 </div>
             </article>
 
+
             <article class="panel glass chart-panel">
                 <div class="panel-heading">
                     <div>
-                        <h2>Portfolio health</h2>
-                        <p>Current account classification</p>
+                        <h2>Revenue & Account Risk Analysis</h2>
+                        <p>90-day recorded revenue vs account count by risk level</p>
                     </div>
                 </div>
                 <div class="chart-wrap">
                     <canvas id="health-chart"></canvas>
-                    <p id="health-empty" class="empty-message" hidden>No portfolio health data available.</p>
+                    <p id="health-empty" class="empty-message" hidden>
+                        No revenue or account data available.
+                    </p>
                 </div>
             </article>
+
         </section>
 
         <section id="risk-queue" class="panel glass queue-panel">
@@ -189,7 +231,10 @@
                     <p>Accounts ranked for customer-success review</p>
                 </div>
                 <label class="search-box">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.500-3.500"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="11" cy="11" r="7" />
+                        <path d="m20 20-3.500-3.500" />
+                    </svg>
                     <input id="search-input" type="search" placeholder="Search account...">
                 </label>
             </div>
@@ -207,7 +252,9 @@
                         </tr>
                     </thead>
                     <tbody id="risk-table-body">
-                        <tr><td colspan="6" class="empty-message">Loading account data...</td></tr>
+                        <tr>
+                            <td colspan="6" class="empty-message">Loading account data...</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -224,4 +271,5 @@
     <script src="{{ url_for('static', filename='js/glass.js') }}"></script>
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </body>
+
 </html>

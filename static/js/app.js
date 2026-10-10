@@ -64,20 +64,34 @@ async function getJSON(url) {
     return response.json();
 }
 
+
+
+
 function renderKPIs(data) {
     const kpis = data.kpis || data.summary || data;
+    const levels = kpis.accounts_by_risk_level || {};
 
-    $("total-customers").textContent =
-        number(kpis.total_customers ?? kpis.total_accounts);
+    const urgent = Number(
+        kpis.urgent_customers ?? kpis.urgent_accounts ?? levels.Urgent ?? 0
+    );
 
-    $("urgent-customers").textContent =
-        number(kpis.urgent_customers ?? kpis.urgent_accounts);
+    const review = Number(
+        kpis.customers_needing_review ??
+        kpis.accounts_needing_review ??
+        levels["Needs Review"] ?? 0
+    );
 
-    $("review-customers").textContent =
-        number(kpis.customers_needing_review ?? kpis.accounts_needing_review);
+    const healthy = Number(
+        kpis.healthy_customers ?? kpis.healthy_accounts ?? levels.Healthy ?? 0
+    );
 
-    $("healthy-customers").textContent =
-        number(kpis.healthy_customers ?? kpis.healthy_accounts);
+    $("total-customers").textContent = number(
+        kpis.total_customers ?? kpis.total_accounts ?? 0
+    );
+
+    $("urgent-customers").textContent = number(urgent);
+    $("review-customers").textContent = number(review);
+    $("healthy-customers").textContent = number(healthy);
 
     const revenue =
         kpis.recorded_revenue_90d_associated_with_flagged_accounts ??
@@ -87,6 +101,66 @@ function renderKPIs(data) {
     $("recorded-revenue").textContent =
         revenue == null ? "—" : money(revenue);
 }
+
+
+
+
+function renderPortfolioSnapshot(data) {
+    const kpis = data.kpis || data.summary || data;
+    const levels = kpis.accounts_by_risk_level || {};
+
+    const urgent = Number(
+        kpis.urgent_customers ?? kpis.urgent_accounts ?? levels.Urgent ?? 0
+    );
+
+    const review = Number(
+        kpis.customers_needing_review ??
+        kpis.accounts_needing_review ??
+        levels["Needs Review"] ?? 0
+    );
+
+    const healthy = Number(
+        kpis.healthy_customers ?? kpis.healthy_accounts ?? levels.Healthy ?? 0
+    );
+
+    const total = Number(
+        kpis.total_customers ?? kpis.total_accounts ??
+        (urgent + review + healthy)
+    );
+
+    const setText = (id, value) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = value;
+    };
+
+    setText("ring-value", number(healthy));
+
+    setText(
+        "snapshot-text",
+        `${number(total)} accounts classified · ${number(urgent)} urgent · ${number(review)} need review · ${number(healthy)} healthy`
+    );
+
+    const setWidth = (id, count) => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.style.width = `${total > 0 ? (count / total) * 100 : 0}%`;
+        }
+    };
+
+    setWidth("seg-urgent", urgent);
+    setWidth("seg-review", review);
+    setWidth("seg-healthy", healthy);
+
+    const ring = document.querySelector(".ring");
+    if (ring) {
+        ring.style.setProperty(
+            "--healthy-share",
+            `${total > 0 ? (healthy / total) * 100 : 0}%`
+        );
+    }
+}
+
+
 
 function normalizeLevel(value) {
     const text = String(value || "Unknown").toLowerCase();
@@ -98,12 +172,15 @@ function normalizeLevel(value) {
     return String(value || "Unknown");
 }
 
+
 function getAccounts(data) {
     if (Array.isArray(data.priority_accounts)) return data.priority_accounts;
+    if (Array.isArray(data.top_priority_accounts)) return data.top_priority_accounts;
     if (Array.isArray(data.risk_queue)) return data.risk_queue;
     if (Array.isArray(data.accounts)) return data.accounts;
     return [];
 }
+
 
 function renderRiskQueue(accounts) {
     allAccounts = accounts;
@@ -234,14 +311,89 @@ function barGradient(ctx, chartArea, color) {
     return g;
 }
 
-function renderCharts(summaryData, chartsData) {
-    const kpis = summaryData.kpis || {};
-    const riskRows = chartsData.risk_distribution ||
-        chartsData.riskDistribution ||
-        chartsData.risk_levels;
+/* Replays the chart's pop-up animation when it scrolls into view */
+let replayObserver = null;
+function replayOnView(chart, canvas) {
+    if (!window.IntersectionObserver) return;
+    if (replayObserver) replayObserver.disconnect();
+    let first = true;
+    replayObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            if (first) { first = false; }   // skip the initial callback if it's already animating
+            chart.reset();
+            chart.update();
+        });
+    }, { threshold: 0.45 });
+    replayObserver.observe(canvas);
+}
 
+
+function renderPortfolioSnapshot(data) {
+    const kpis = data.kpis || data.summary || data;
+    const levels = kpis.accounts_by_risk_level || {};
+
+    const urgent = Number(
+        kpis.urgent_customers ?? kpis.urgent_accounts ?? levels.Urgent ?? 0
+    );
+    const review = Number(
+        kpis.customers_needing_review ??
+        kpis.accounts_needing_review ??
+        levels["Needs Review"] ?? 0
+    );
+    const healthy = Number(
+        kpis.healthy_customers ?? kpis.healthy_accounts ?? levels.Healthy ?? 0
+    );
+    const total = Number(
+        kpis.total_customers ?? kpis.total_accounts ??
+        urgent + review + healthy
+    );
+
+    const setText = (id, value) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = value;
+    };
+
+    setText("ring-value", number(healthy));
+    setText(
+        "snapshot-text",
+        `${number(total)} accounts classified · ${number(urgent)} urgent · ${number(review)} need review · ${number(healthy)} healthy`
+    );
+
+    const setWidth = (id, count) => {
+        const el = document.getElementById(id);
+        if (el) el.style.width = `${total > 0 ? count / total * 100 : 0}%`;
+    };
+
+    setWidth("seg-urgent", urgent);
+    setWidth("seg-review", review);
+    setWidth("seg-healthy", healthy);
+
+    const ring = document.querySelector(".ring");
+    if (ring) {
+        ring.style.setProperty(
+            "--healthy-share",
+            `${total > 0 ? healthy / total * 100 : 0}%`
+        );
+    }
+
+    setText("legend-urgent", number(urgent));
+    setText("legend-review", number(review));
+    setText("legend-healthy", number(healthy));
+}
+
+
+
+function renderCharts(summaryData, chartsData) {
+    const kpis = summaryData.kpis || summaryData.summary || summaryData;
     let labels = [];
     let values = [];
+    const riskRows =
+    chartsData.risk_distribution ||
+    chartsData.revenue_by_risk_level ||
+    chartsData.riskDistribution ||
+    chartsData.risk_levels ||
+    [];
 
     if (Array.isArray(riskRows) && riskRows.length) {
         labels = riskRows.map((row) => row.risk_level || row.label || row.name || "Unknown");
@@ -263,81 +415,154 @@ function renderCharts(summaryData, chartsData) {
         );
         const total = values.reduce((a, b) => a + b, 0);
 
+        // legend shows the count next to each name
+        const legendLabels = labels.map((label, i) => `${label} · ${values[i]}`);
+        const gridLine = gridColor();
+
         riskChart = new Chart($("risk-chart"), {
-            type: "doughnut",
+            type: "polarArea",
             data: {
-                labels,
+                labels: legendLabels,
                 datasets: [{
                     data: values,
-                    backgroundColor: sliceColors,
-                    borderWidth: 0,
-                    borderRadius: 8,
-                    spacing: 3,
-                    hoverOffset: 8
+                    backgroundColor: sliceColors.map((c) => c + "cc"),
+                    borderColor: sliceColors,
+                    borderWidth: 2,
+                    hoverBackgroundColor: sliceColors,
+                    hoverBorderWidth: 3,
+                    hoverOffset: 10
                 }]
             },
             options: {
                 ...chartBaseOptions(),
-                cutout: "72%",
+                // pop-up animation: each slice grows from the centre with a bounce, one after another
+                animation: {
+                    animateRotate: true,
+                    animateScale: true,
+                    duration: 1300,
+                    easing: "easeOutBack",
+                    delay: (ctx) =>
+                        ctx.type === "data" && ctx.mode === "default" ? ctx.dataIndex * 160 : 0
+                },
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        ticks: { display: false, backdropColor: "transparent" },
+                        grid: { color: gridLine },
+                        angleLines: { color: gridLine },
+                        border: { display: false }
+                    }
+                },
                 plugins: {
                     ...chartBaseOptions().plugins,
                     tooltip: {
                         callbacks: {
                             label: (ctx) => {
                                 const pct = total ? ((ctx.raw / total) * 100).toFixed(0) : 0;
-                                return ` ${ctx.label}: ${ctx.raw} accounts (${pct}%)`;
+                                return ` ${labels[ctx.dataIndex]}: ${ctx.raw} accounts (${pct}%)`;
                             }
                         }
                     }
                 }
             }
         });
+        replayOnView(riskChart, $("risk-chart"));
     }
 
-    const healthLabels = ["Urgent", "Needs Review", "Healthy"];
-    const healthValues = [
-        Number(kpis.urgent_customers || 0),
-        Number(kpis.customers_needing_review || 0),
-        Number(kpis.healthy_customers || 0)
-    ];
-    const healthColors = [COLORS.Urgent, COLORS.High, COLORS.Healthy];
-    const hasHealthData = healthValues.some((value) => value > 0);
+    
+const revenueRows = summaryData.revenue_by_risk_level || [];
 
-    showChartEmpty("health-chart", "health-empty", !hasHealthData);
+const healthLabels = ["Urgent", "Needs Review", "Healthy"];
 
-    if (hasHealthData && window.Chart) {
-        if (healthChart) healthChart.destroy();
-        healthChart = new Chart($("health-chart"), {
-            type: "bar",
-            data: {
-                labels: healthLabels,
-                datasets: [{
-                    label: "Accounts",
-                    data: healthValues,
-                    backgroundColor: (context) =>
-                        barGradient(context.chart.ctx, context.chart.chartArea, healthColors[context.dataIndex]),
-                    borderColor: healthColors,
-                    borderWidth: { top: 2, right: 0, bottom: 0, left: 0 },
-                    borderRadius: 12,
-                    borderSkipped: false,
-                    maxBarThickness: 56
-                }]
-            },
-            options: {
-                ...chartBaseOptions(),
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        ticks: { precision: 0 },
-                        grid: { color: gridColor() },
-                        border: { display: false }
-                    },
-                    x: { grid: { display: false }, border: { display: false } }
+const revenueValues = healthLabels.map((level) => {
+    const row = revenueRows.find((item) => item.risk_level === level);
+    return Number(row?.recorded_revenue_90d ?? 0);
+});
+
+const accountValues = healthLabels.map((level) => {
+    const row = revenueRows.find((item) => item.risk_level === level);
+    return Number(
+        row?.account_count ??
+        summaryData.accounts_by_risk_level?.[level] ??
+        0
+    );
+});
+
+const hasHealthData = revenueValues.some(v => v > 0) ||
+    accountValues.some(v => v > 0);
+
+showChartEmpty("health-chart", "health-empty", !hasHealthData);
+
+if (hasHealthData && window.Chart) {
+    if (healthChart) healthChart.destroy();
+
+    healthChart = new Chart($("health-chart"), {
+        type: "bar",
+        data: {
+            labels: healthLabels,
+            datasets: [
+                {
+                    type: "bar",
+                    label: "Recorded Revenue (90d)",
+                    data: revenueValues,
+                    backgroundColor: "#3978ffcc",
+                    borderColor: "#3978ff",
+                    borderRadius: 8,
+                    yAxisID: "yRevenue"
                 },
-                plugins: { legend: { display: false } }
+                {
+                    type: "line",
+                    label: "Account Count",
+                    data: accountValues,
+                    borderColor: "#ff5268",
+                    backgroundColor: "#ff5268",
+                    pointRadius: 5,
+                    tension: 0.3,
+                    yAxisID: "yAccounts"
+                }
+            ]
+        },
+        options: {
+            ...chartBaseOptions(),
+            interaction: { mode: "index", intersect: false },
+            scales: {
+                yRevenue: {
+                    type: "linear",
+                    position: "left",
+                    beginAtZero: true,
+                    title: { display: true, text: "Revenue (₹)" },
+                    ticks: {
+                        callback: value =>
+                            "₹" + Number(value).toLocaleString("en-IN")
+                    },
+                    grid: { color: gridColor() }
+                },
+                yAccounts: {
+                    type: "linear",
+                    position: "right",
+                    beginAtZero: true,
+                    max: 60,
+                    title: { display: true, text: "Accounts" },
+                    ticks: { stepSize: 10, precision: 0 },
+                    grid: { drawOnChartArea: false }
+                },
+                x: { grid: { display: false } }
+            },
+            plugins: {
+                ...chartBaseOptions().plugins,
+                tooltip: {
+                    callbacks: {
+                        label: context =>
+                            context.dataset.yAxisID === "yRevenue"
+                                ? " Revenue: " + money(context.raw)
+                                : " Accounts: " + context.raw
+                    }
+                }
             }
-        });
-    }
+        }
+    });
+}
+
 }
 
 async function loadDashboard() {
@@ -352,6 +577,9 @@ async function loadDashboard() {
         ]);
 
         renderKPIs(summaryData);
+        renderPortfolioSnapshot(summaryData);
+        console.log("SUMMARY DATA:", summaryData);
+        console.log("CHARTS DATA:", chartsData);
         renderRiskQueue(getAccounts(summaryData));
         renderCharts(summaryData, chartsData);
 
