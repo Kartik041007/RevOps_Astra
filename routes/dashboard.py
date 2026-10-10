@@ -4,6 +4,9 @@ from pathlib import Path
 from flask import Blueprint, jsonify, request, render_template
 
 dashboard_bp = Blueprint("dashboard", __name__)
+@dashboard_bp.route("/dashboard", methods=["GET"])
+def dashboard_page():
+    return render_template("index.html")
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 OUTPUTS_DIR = PROJECT_ROOT / "outputs"
