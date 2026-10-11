@@ -144,9 +144,9 @@ def assess_customer(row):
 
     confidence = max(0, min(100, confidence))
 
-    if confidence >= 70:
+    if confidence >= 90:
         confidence_label = "High"
-    elif confidence >= 40:
+    elif confidence >= 70:
         confidence_label = "Medium"
     else:
         confidence_label = "Low"

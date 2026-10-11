@@ -4,3 +4,10 @@ __pycache__/
 venv/
 .env
 .pytest_cache/
+# Runtime agent state and generated LLM drafts
+outputs/audit_log.jsonl
+outputs/tasks.json
+outputs/proposed_actions.json
+outputs/notifications.json
+outputs/llm_brief_*.json
+
