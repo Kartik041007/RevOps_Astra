@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token }}">
     <title>RevOps Astra — AI Robot</title>
 
     <style>
@@ -393,7 +394,7 @@
             top: 18px;
             left: 18px;
             z-index: 5;
-            width: min(340px, 43%);
+            width: min(390px, 46%);
             max-height: calc(100% - 36px);
             overflow-y: auto;
             padding: 16px;
@@ -459,12 +460,159 @@
             font: inherit;
         }
 
+        .queue-divider {
+            border: 0;
+            border-top: 1px solid #e5e7f2;
+            margin: 18px 0;
+        }
+
+        .queue-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .queue-heading h3 {
+            margin: 0;
+        }
+
+        .queue-heading button,
+        .action-controls button,
+        .proposal-button {
+            width: auto;
+            padding: 8px 10px;
+            font-size: 12px;
+        }
+
+        .integration-note,
+        .queue-message,
+        .empty-queue {
+            margin: 10px 0;
+            color: #68708a;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .queue-list {
+            display: grid;
+            gap: 10px;
+        }
+
+        .action-card {
+            padding: 12px;
+            border: 1px solid #e5e7f2;
+            border-radius: 12px;
+            background: #ffffffd9;
+            overflow-wrap: anywhere;
+        }
+
+        .action-card h4 {
+            margin: 0 0 6px;
+            color: #33316f;
+            font-size: 13px;
+        }
+
+        .action-card p,
+        .action-card pre {
+            margin: 5px 0;
+            color: #68708a;
+            font-size: 12px;
+            line-height: 1.45;
+            white-space: pre-wrap;
+            font-family: inherit;
+        }
+
+        .action-status {
+            display: inline-block;
+            margin: 3px 0 8px;
+            padding: 4px 8px;
+            border-radius: 999px;
+            background: #efefff;
+            color: #4f46a5;
+            font-size: 10px;
+            font-weight: 800;
+        }
+
+        .action-status[data-status="REJECTED"],
+        .action-status[data-status="FAILED"] {
+            color: #a33d4b;
+            background: #fff0f1;
+        }
+
+        .action-status[data-status="COMPLETED"] {
+            color: #207752;
+            background: #e9f8ef;
+        }
+
+        .action-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 10px;
+        }
+
+        .action-controls .reject-button {
+            background: #9b4252;
+        }
+
+        .rejection-reason {
+            width: 100%;
+            min-height: 68px;
+            margin-top: 8px;
+            padding: 8px;
+            border: 1px solid #d9dced;
+            border-radius: 8px;
+            resize: vertical;
+            font: inherit;
+            font-size: 12px;
+        }
+
+        .proposal-button {
+            margin-top: 10px;
+        }
+
         @media (max-width: 650px) {
+            body {
+                overflow: auto;
+            }
+
+            .scene {
+                width: 100%;
+                min-height: 100vh;
+                height: auto;
+                display: block;
+                transform: none;
+                padding: 12px;
+            }
+
             .agent-panel {
-                top: 12px;
-                left: 12px;
+                position: relative;
+                top: auto;
+                left: auto;
+                width: 100%;
+                max-height: min(78vh, 720px);
+                margin: 0 auto 300px;
+            }
+
+            .robot-wrap {
+                position: absolute;
+                top: 410px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .caption {
+                position: absolute;
+                top: 770px;
+                bottom: auto;
                 width: calc(100% - 24px);
-                max-height: 42%;
+            }
+
+            .word,
+            .ambient,
+            .orbit {
+                display: none;
             }
         }
     </style>
@@ -478,7 +626,7 @@
             <p>Generate an evidence-based customer brief.</p>
 
             <form id="briefForm">
-                <input id="accountId" name="account_id" type="text" value="ACC-001" maxlength="64"
+                <input id="accountId" name="account_id" type="text" maxlength="64"
                     placeholder="Enter account ID" required>
                 <button id="generateBrief" type="submit">
                     Generate Customer Brief
@@ -487,6 +635,21 @@
 
             <div id="briefStatus" role="status" aria-live="polite"></div>
             <div id="briefResult" class="agent-result"></div>
+            <button id="queueProposal" class="proposal-button" type="button" hidden>
+                Submit email draft for approval
+            </button>
+            <div id="proposalStatus" class="queue-message" role="status" aria-live="polite"></div>
+
+            <hr class="queue-divider">
+            <div class="queue-heading">
+                <h3>Action Queue</h3>
+                <button id="refreshQueue" type="button">Refresh</button>
+            </div>
+            <p id="integrationStatus" class="integration-note">
+                Integration status: checking configuration…
+            </p>
+            <div id="queueStatus" class="queue-message" role="status" aria-live="polite"></div>
+            <div id="actionQueue" class="queue-list" aria-live="polite"></div>
         </section>
 
         <div class="ambient"></div>
@@ -536,8 +699,17 @@
     const button = document.getElementById("generateBrief");
     const status = document.getElementById("briefStatus");
     const result = document.getElementById("briefResult");
+    const queue = document.getElementById("actionQueue");
+    const queueStatus = document.getElementById("queueStatus");
+    const integrationStatus = document.getElementById("integrationStatus");
+    const refreshQueue = document.getElementById("refreshQueue");
+    const queueProposal = document.getElementById("queueProposal");
+    const proposalStatus = document.getElementById("proposalStatus");
+    const csrfToken = document.querySelector('meta[name="csrf-token"]')?.content || "";
+    let currentDraft = null;
+    let integrationConfigured = false;
 
-    if (!form || !accountInput || !button || !status || !result) return;
+    if (!form || !accountInput || !button || !status || !result || !queue) return;
 
     function addText(parent, tag, text) {
         const element = document.createElement(tag);
@@ -586,7 +758,221 @@
             "p",
             "Draft only — no email sent and no CRM changes made."
         );
+        currentDraft = {
+            accountId: accountInput.value.trim(),
+            action: draft.recommended_next_action || "",
+            explanation: draft.issue_summary || "",
+            subject: draft.email_subject || "",
+            body: draft.email_body || "",
+            evidence: Array.isArray(draft.evidence_used) ? draft.evidence_used : []
+        };
+        queueProposal.hidden = !(
+            currentDraft.action && currentDraft.explanation &&
+            currentDraft.subject && currentDraft.body
+        );
     }
+
+    function addParagraph(parent, text) {
+        const paragraph = document.createElement("p");
+        paragraph.textContent = text || "";
+        parent.appendChild(paragraph);
+        return paragraph;
+    }
+
+    function statusLabel(status) {
+        if (status === "APPROVED") return "Approved — awaiting integration/execution";
+        return ({
+            PENDING: "Pending",
+            REJECTED: "Rejected",
+            EXECUTING: "Executing",
+            COMPLETED: "Completed",
+            FAILED: "Failed",
+            ON_HOLD: "On Hold"
+        })[status] || status;
+    }
+
+    function renderAction(action) {
+        const card = document.createElement("article");
+        card.className = "action-card";
+
+        addText(card, "h4", `Action ${action.action_id}`);
+        addParagraph(card, `Account: ${action.account_id} · ${action.customer_name || "Unknown customer"}`);
+        addParagraph(card, `Risk: ${action.risk_level || "Unknown"}`);
+
+        const statusBadge = addText(card, "span", statusLabel(action.status));
+        statusBadge.className = "action-status";
+        statusBadge.dataset.status = action.status;
+
+        const payload = action.proposed_payload || {};
+        addText(card, "h4", "Proposed action");
+        addParagraph(card, payload.proposed_action || "No action details.");
+        addText(card, "h4", "Explanation");
+        addParagraph(card, payload.explanation || "No explanation provided.");
+
+        const evidence = Array.isArray(action.evidence_refs) ? action.evidence_refs : [];
+        addText(card, "h4", "Supporting evidence");
+        addParagraph(card, evidence.length ? evidence.join(", ") : "No evidence references.");
+
+        if (payload.email) {
+            addText(card, "h4", "Proposed email");
+            addParagraph(card, `Subject: ${payload.email.subject || ""}`);
+            const emailBody = document.createElement("pre");
+            emailBody.textContent = payload.email.body || "";
+            card.appendChild(emailBody);
+        }
+        if (payload.crm_field_changes) {
+            addText(card, "h4", "Proposed CRM field changes");
+            addParagraph(card, JSON.stringify(payload.crm_field_changes));
+        } else {
+            addText(card, "h4", "Proposed CRM field changes");
+            addParagraph(card, "None proposed.");
+        }
+        if (action.decision_reason) {
+            addText(card, "h4", "Decision reason");
+            addParagraph(card, action.decision_reason);
+        }
+        if (action.execution_result) {
+            addText(card, "h4", "Execution result");
+            addParagraph(card, JSON.stringify(action.execution_result));
+        }
+
+        if (action.status === "PENDING") {
+            const controls = document.createElement("div");
+            controls.className = "action-controls";
+            const approve = addText(controls, "button", "Approve");
+            approve.type = "button";
+            approve.addEventListener("click", () => decide(action.action_id, "approve"));
+
+            const reject = addText(controls, "button", "Reject");
+            reject.type = "button";
+            reject.className = "reject-button";
+            const reason = document.createElement("textarea");
+            reason.className = "rejection-reason";
+            reason.maxLength = 2000;
+            reason.required = true;
+            reason.placeholder = "Required reason for rejection";
+            controls.append(approve, reject, reason);
+            reject.addEventListener("click", () => {
+                if (!reason.value.trim()) {
+                    reason.setCustomValidity("A rejection reason is required.");
+                    reason.reportValidity();
+                    return;
+                }
+                reason.setCustomValidity("");
+                decide(action.action_id, "reject", reason.value.trim());
+            });
+            card.appendChild(controls);
+        } else if (action.status === "APPROVED" && integrationConfigured) {
+            const execute = addText(card, "button", "Execute approved action");
+            execute.type = "button";
+            execute.addEventListener("click", () => executeAction(action));
+        }
+        return card;
+    }
+
+    async function apiRequest(url, method = "GET", body) {
+        const options = {
+            method,
+            credentials: "same-origin",
+            headers: { "Accept": "application/json" }
+        };
+        if (body !== undefined) {
+            options.headers["Content-Type"] = "application/json";
+            options.headers["X-CSRFToken"] = csrfToken;
+            options.body = JSON.stringify(body);
+        }
+        const response = await fetch(url, options);
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok) {
+            throw new Error(data.error || `Request failed (${response.status}).`);
+        }
+        return data;
+    }
+
+    async function loadQueue() {
+        queueStatus.textContent = "Loading actions…";
+        try {
+            const data = await apiRequest("/api/actions");
+            integrationConfigured = data.integration_configured === true;
+            integrationStatus.textContent = integrationConfigured
+                ? "Integration configured. Approval remains separate; execution requires explicit action."
+                : "Integration not configured — approvals will wait; no email or CRM updates can run.";
+            queue.replaceChildren();
+            if (!data.actions.length) {
+                addText(queue, "p", "No saved proposals yet. Generate a brief and submit its draft for approval.");
+                queue.lastElementChild.className = "empty-queue";
+            } else {
+                data.actions.forEach(action => queue.appendChild(renderAction(action)));
+            }
+            queueStatus.textContent = `${data.count} saved action${data.count === 1 ? "" : "s"}.`;
+        } catch (error) {
+            queue.replaceChildren();
+            queueStatus.textContent = error.message || "Could not load the action queue.";
+            integrationStatus.textContent = "Integration status unavailable.";
+        }
+    }
+
+    async function decide(actionId, decision, reason) {
+        queueStatus.textContent = `${decision === "approve" ? "Saving approval" : "Saving rejection"}…`;
+        try {
+            await apiRequest(
+                `/api/actions/${encodeURIComponent(actionId)}/${decision}`,
+                "POST",
+                decision === "reject" ? { reason } : {}
+            );
+            queueStatus.textContent = decision === "approve"
+                ? "Approved — awaiting integration/execution. No action was executed."
+                : "Rejected. This action cannot be executed.";
+            await loadQueue();
+        } catch (error) {
+            queueStatus.textContent = error.message || "Could not save the decision.";
+        }
+    }
+
+    async function executeAction(action) {
+        queueStatus.textContent = "Requesting explicit execution…";
+        try {
+            await apiRequest(
+                `/api/actions/${encodeURIComponent(action.action_id)}/execute`,
+                "POST",
+                { payload: action.proposed_payload }
+            );
+            await loadQueue();
+        } catch (error) {
+            queueStatus.textContent = error.message || "Execution was not completed.";
+            await loadQueue();
+        }
+    }
+
+    queueProposal.addEventListener("click", async () => {
+        if (!currentDraft) return;
+        queueProposal.disabled = true;
+        proposalStatus.textContent = "Saving proposal…";
+        try {
+            await apiRequest("/api/actions", "POST", {
+                account_id: currentDraft.accountId,
+                action_type: "customer_outreach_email",
+                proposed_payload: {
+                    proposed_action: currentDraft.action,
+                    explanation: currentDraft.explanation,
+                    email: {
+                        subject: currentDraft.subject,
+                        body: currentDraft.body
+                    }
+                },
+                evidence_refs: currentDraft.evidence
+            });
+            proposalStatus.textContent = "Proposal saved as Pending. No email was sent and no CRM changes were made.";
+            queueProposal.hidden = true;
+            await loadQueue();
+        } catch (error) {
+            proposalStatus.textContent = error.message || "Could not save the proposal.";
+        } finally {
+            queueProposal.disabled = false;
+        }
+    });
+
+    refreshQueue.addEventListener("click", loadQueue);
 
     form.addEventListener("submit", async (event) => {
         event.preventDefault();
@@ -623,6 +1009,7 @@
             button.disabled = false;
         }
     });
+    loadQueue();
 })();
 </script>
 

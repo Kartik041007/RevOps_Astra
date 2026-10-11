@@ -1,0 +1,3 @@
+-- Safe rollback is application-code rollback only. Keep these tables so that
+-- reviewer decisions and audit history remain intact. Do not drop persisted
+-- approval records as part of an application rollback.

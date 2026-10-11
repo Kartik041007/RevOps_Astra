@@ -2,6 +2,7 @@
 import json
 from pathlib import Path
 from flask import Blueprint, jsonify, request, render_template,session, redirect, url_for, flash,current_app
+from flask_wtf.csrf import generate_csrf
 
 from flask_wtf import FlaskForm
 import mysql
@@ -366,7 +367,7 @@ def customer_impact(customer_id):
 
 @dashboard_bp.route("/ai-agent", methods=["GET"])
 def ai_agent_page():
-    return render_template("ai_agent_3d.html")
+    return render_template("ai_agent_3d.html", csrf_token=generate_csrf())
 
 @dashboard_bp.route("/api/ai-agent/brief", methods=["POST"])
 @admin_required

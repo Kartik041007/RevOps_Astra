@@ -1,6 +1,7 @@
 
 from flask import Flask, app, jsonify
 from routes.dashboard import dashboard_bp
+from routes.approval_actions import approval_bp
 
 
 def create_app():
@@ -13,6 +14,7 @@ def create_app():
 
 
     app.register_blueprint(dashboard_bp)
+    app.register_blueprint(approval_bp)
 
     @app.errorhandler(404)
     def not_found(error):
