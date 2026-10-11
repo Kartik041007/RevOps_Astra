@@ -1,10 +1,172 @@
 
 import json
 from pathlib import Path
-from flask import Blueprint, jsonify, request, render_template
+from flask import Blueprint, jsonify, request, render_template,session, redirect, url_for, flash
+
+from flask_wtf import FlaskForm
+import mysql
+from wtforms import StringField, PasswordField, SubmitField
+from wtforms.validators import DataRequired, Length, EqualTo
+from werkzeug.security import generate_password_hash, check_password_hash
+from functools import wraps
+import mysql.connector
+def get_admin_db():
+    return mysql.connector.connect(
+        host="localhost",
+        user="root",
+        password="1234",  # Apna actual MySQL password
+        database="RevOps_Astra"
+    )
+
+
+class registerform(FlaskForm):
+    name = StringField("Name", validators=[DataRequired()])
+    username = StringField(
+        "Username",
+        validators=[DataRequired(), Length(min=3, max=50)]
+    )
+    password = PasswordField(
+        "Password",
+        validators=[DataRequired(), Length(min=8)]
+    )
+    confirm_password = PasswordField(
+        "Confirm Password",
+        validators=[
+            DataRequired(),
+            EqualTo("password", message="Passwords must match")
+        ]
+    )
+    submit = SubmitField("Register")
+
+
+class loginform(FlaskForm):
+    username = StringField("Username", validators=[DataRequired()])
+    password = PasswordField("Password", validators=[DataRequired()])
+    submit = SubmitField("Login")
 
 
 dashboard_bp = Blueprint("dashboard", __name__)
+
+def admin_required(view):
+    @wraps(view)
+    def wrapped(*args, **kwargs):
+        if "admin_id" not in session:
+            return redirect(url_for("dashboard.login"))
+        return view(*args, **kwargs)
+    return wrapped
+
+
+# ---------------- REGISTER ----------------
+@dashboard_bp.route("/register", methods=["GET", "POST"])
+def register():
+    form = registerform()
+
+    if form.validate_on_submit():
+        name = form.name.data.strip()
+        username = form.username.data.strip()
+        password = form.password.data
+
+        db = None
+        cursor = None
+
+        try:
+            db = get_admin_db()
+            cursor = db.cursor()
+
+            cursor.execute(
+                """
+                INSERT INTO admins (name, username, password_hash)
+                VALUES (%s, %s, %s)
+                """,
+                (
+                    name,
+                    username,
+                    generate_password_hash(password)
+                )
+            )
+            db.commit()
+
+            flash("Registration successful. Please log in.", "success")
+            return redirect(url_for("dashboard.login"))
+
+        except mysql.connector.IntegrityError:
+            if db:
+                db.rollback()
+            flash("That username already exists.", "error")
+
+        except mysql.connector.Error:
+            if db:
+                db.rollback()
+            flash("Database error. Please try again.", "error")
+
+        finally:
+            if cursor:
+                cursor.close()
+            if db and db.is_connected():
+                db.close()
+
+    return render_template("register.html", form=form)
+
+
+# ---------------- LOGIN ----------------
+@dashboard_bp.route("/", methods=["GET", "POST"])
+def login():
+    form = loginform()
+
+    if form.validate_on_submit():
+        username = form.username.data.strip()
+        password = form.password.data
+
+        db = None
+        cursor = None
+
+        try:
+            db = get_admin_db()
+            cursor = db.cursor(dictionary=True)
+
+            cursor.execute(
+                """
+                SELECT id, name, username, password_hash
+                FROM admins
+                WHERE username = %s
+                """,
+                (username,)
+            )
+            admin = cursor.fetchone()
+
+            if admin and check_password_hash(
+                admin["password_hash"], password
+            ):
+                session.clear()
+                session["admin_id"] = admin["id"]
+                session["admin_name"] = admin["name"]
+                session["role"] = "admin"
+
+                flash("Login successful.", "success")
+                return redirect(url_for("dashboard.dashboard_page"))
+
+            flash("Invalid username or password.", "error")
+
+        except mysql.connector.Error:
+            flash("Database connection failed.", "error")
+
+        finally:
+            if cursor:
+                cursor.close()
+            if db and db.is_connected():
+                db.close()
+
+    return render_template("login.html", form=form)
+
+
+# ---------------- LOGOUT ----------------
+@dashboard_bp.route("/logout", methods=["POST"])
+@admin_required
+def logout():
+    session.clear()
+    flash("You have been logged out.", "success")
+    return redirect(url_for("dashboard.login"))
+
 @dashboard_bp.route("/api/health", methods=["GET"])
 def health_check():
     return jsonify({
@@ -201,6 +363,10 @@ def customer_impact(customer_id):
         "evidence_count": len(matching_evidence),
         "insight_count": len(matching_insights)
     }), 200
+
+@dashboard_bp.route("/ai-agent", methods=["GET"])
+def ai_agent_page():
+    return render_template("ai_agent_3d.html")
 
 @dashboard_bp.route("/customer-impact", methods=["GET"])
 def customer_impact_page():

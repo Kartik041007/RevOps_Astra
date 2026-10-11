@@ -1,10 +1,17 @@
 
-from flask import Flask, jsonify
+from flask import Flask, app, jsonify
 from routes.dashboard import dashboard_bp
 
 
 def create_app():
     app = Flask(__name__)
+    import os
+    app.config["SECRET_KEY"] = os.environ.get(
+    "RevOps_Astra_SECRET_KEY",
+    "dev-only-change-this-secret"
+)
+
+
     app.register_blueprint(dashboard_bp)
 
     @app.errorhandler(404)

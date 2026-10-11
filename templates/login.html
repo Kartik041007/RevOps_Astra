@@ -1,0 +1,429 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Admin Login | RevOps Astra</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/login.css">
+
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            font-family: 'Manrope', sans-serif;
+            color: #182033;
+            background: linear-gradient(135deg, #edf2ff, #f5f0ff, #eaf6ff);
+        }
+
+        .scene {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .orb {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            filter: blur(90px);
+            opacity: .35;
+        }
+
+        .orb.a { background: #818cf8; top: -100px; left: -80px; }
+        .orb.b { background: #c084fc; right: -80px; bottom: -100px; }
+        .orb.c { background: #7dd3fc; left: 45%; bottom: 20%; }
+
+        .shell {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 1050px;
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: #182033;
+            font-size: 21px;
+            font-weight: 800;
+            text-decoration: none;
+            margin-bottom: 38px;
+        }
+
+        .brand-mark {
+            width: 44px;
+            height: 44px;
+            display: grid;
+            place-items: center;
+            border-radius: 14px;
+            color: white;
+            background: linear-gradient(135deg, #5b50e6, #9333ea);
+            box-shadow: 0 8px 20px #635bff30;
+        }
+
+        .eyebrow {
+            color: #6558d9;
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        h1 {
+            font-size: clamp(34px, 4vw, 49px);
+            line-height: 1.12;
+            letter-spacing: -1.8px;
+            margin: 18px 0;
+        }
+
+        .grad { display: block; color: #635bdb; }
+
+        .lead {
+            max-width: 440px;
+            color: #69738b;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .points {
+            list-style: none;
+            padding: 0;
+            margin-top: 35px;
+        }
+
+        .point {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin: 23px 0;
+        }
+
+        .point-icon {
+            flex-shrink: 0;
+            display: grid;
+            place-items: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 12px;
+            color: #635bdb;
+            background: white;
+            border: 1px solid #e4e5f5;
+        }
+
+        .point-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.7;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .point b, .point div span { display: block; }
+        .point b { font-size: 13px; margin: 1px 0 5px; }
+        .point div span { color: #737d94; font-size: 12px; line-height: 1.7; }
+
+        .card {
+            background: rgba(255, 255, 255, .94);
+            border: 1px solid #e5e7f5;
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: 0 25px 70px #3730a315;
+        }
+
+        .card-head { margin-bottom: 25px; }
+
+        .lock {
+            width: 46px;
+            height: 46px;
+            display: grid;
+            place-items: center;
+            margin-bottom: 20px;
+            color: white;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #6257ee, #9333ea);
+            font-size: 22px;
+        }
+
+        h2 { font-size: 25px; margin: 0 0 7px; }
+        .muted { color: #778198; font-size: 13px; margin: 0; }
+
+        .field { margin-bottom: 19px; }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #dce1ee;
+            border-radius: 11px;
+            font-family: inherit;
+            font-size: 13px;
+            outline: none;
+            background: white;
+        }
+
+        input:focus {
+            border-color: #7569ed;
+            box-shadow: 0 0 0 3px #7569ed18;
+        }
+
+        .password-wrap { position: relative; }
+        .password-wrap input { padding-right: 65px; }
+
+        .reveal {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 0;
+            color: #635bdb;
+            background: transparent;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .label-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .label-row label { margin-bottom: 7px; }
+        .small-link { font-size: 11px; }
+
+        .check {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 12px;
+            color: #69738b;
+            font-weight: 500;
+            cursor: pointer;
+            margin: 5px 0 20px;
+        }
+
+        .check input { accent-color: #635bdb; }
+
+        .submit {
+            width: 100%;
+            padding: 14px;
+            margin-top: 5px;
+            border: 0;
+            border-radius: 12px;
+            background: linear-gradient(110deg, #5b50e6, #7c3aed);
+            color: white;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: transform .2s, opacity .2s;
+        }
+
+        .submit:hover { transform: translateY(-1px); }
+        .submit:disabled { opacity: .65; cursor: wait; }
+
+        .foot {
+            text-align: center;
+            margin: 23px 0 0;
+            font-size: 12px;
+            color: #778198;
+        }
+
+        .legal {
+            text-align: center;
+            color: #8a92a6;
+            font-size: 10px;
+            margin: 18px 0 0;
+        }
+
+        a { color: #5b50e6; font-weight: 800; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .flash {
+            padding: 11px 13px;
+            border-radius: 10px;
+            margin-bottom: 16px;
+            font-size: 12px;
+            background: #fff1f2;
+            color: #be123c;
+        }
+
+        .flash.success { background: #ecfdf5; color: #047857; }
+        .field-error { color: #be123c; font-size: 11px; margin-top: 5px; }
+
+        @media (max-width: 800px) {
+            .shell { grid-template-columns: 1fr; max-width: 450px; gap: 20px; }
+            .story { display: none; }
+            .card { padding: 26px 22px; }
+        }
+    </style>
+</head>
+
+<body>
+<div class="scene" aria-hidden="true">
+    <span class="orb a"></span>
+    <span class="orb b"></span>
+    <span class="orb c"></span>
+</div>
+
+<main class="shell">
+    <section class="story">
+        <a class="brand" href="/">
+            <span class="brand-mark">A</span>
+            <span>RevOps <strong>Astra</strong></span>
+        </a>
+
+        <p class="eyebrow">Revenue intelligence for customer success</p>
+        <h1>Welcome back. <span class="grad">Your accounts are waiting.</span></h1>
+        <p class="lead">
+            Sign in to see which accounts need attention, what the evidence says,
+            and what to do next.
+        </p>
+
+        <ul class="points">
+            <li class="point">
+                <span class="point-icon">↗</span>
+                <div>
+                    <b>Explainable risk scores</b>
+                    <span>Every score traces back to the records behind it.</span>
+                </div>
+            </li>
+            <li class="point">
+                <span class="point-icon">✓</span>
+                <div>
+                    <b>Next best action</b>
+                    <span>Suggested follow-ups for each signal that fired.</span>
+                </div>
+            </li>
+            <li class="point">
+                <span class="point-icon">₹</span>
+                <div>
+                    <b>90-day revenue in view</b>
+                    <span>Recorded revenue next to the accounts that carry the risk.</span>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="panel">
+        <div class="card">
+            <header class="card-head">
+                <div class="lock">✦</div>
+                <h2>Welcome back</h2>
+                <p class="muted">Sign in to open your admin dashboard.</p>
+            </header>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% for category, message in messages %}
+                    <div class="flash {{ category }}" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endwith %}
+
+            <form id="login-form"
+                  method="POST"
+                  action="{{ url_for('dashboard.login') }}">
+
+                {{ form.hidden_tag() }}
+
+                <div class="field">
+                    <label for="username">Username</label>
+                    {{ form.username(id="username", placeholder="Enter your username", autocomplete="username", required=true) }}
+                    {% for error in form.username.errors %}
+                        <p class="field-error">{{ error }}</p>
+                    {% endfor %}
+                </div>
+
+                <div class="field">
+                    <div class="label-row">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="password-wrap">
+                        {{ form.password(id="password", placeholder="Enter your password", autocomplete="current-password", required=true) }}
+                        <button class="reveal" id="reveal" type="button"
+                                aria-label="Show password" aria-pressed="false">
+                            Show
+                        </button>
+                    </div>
+                    {% for error in form.password.errors %}
+                        <p class="field-error">{{ error }}</p>
+                    {% endfor %}
+                </div>
+
+                <label class="check" for="remember">
+                    <input id="remember" name="remember" type="checkbox">
+                    Keep me signed in on this device
+                </label>
+
+                <button class="submit" id="submit-btn" type="submit">
+                    <span class="label">Sign in</span>
+                </button>
+            </form>
+
+            <p class="foot">
+                Need an admin account?
+                <a href="{{ url_for('dashboard.register') }}">Register</a>
+            </p>
+        </div>
+
+        <p class="legal">RevOps Astra · Customer Retention Intelligence</p>
+    </section>
+</main>
+
+<script>
+    const passwordInput = document.getElementById("password");
+    const revealButton = document.getElementById("reveal");
+
+    revealButton.addEventListener("click", () => {
+        const show = passwordInput.type === "password";
+        passwordInput.type = show ? "text" : "password";
+        revealButton.textContent = show ? "Hide" : "Show";
+        revealButton.setAttribute("aria-pressed", String(show));
+        revealButton.setAttribute(
+            "aria-label", show ? "Hide password" : "Show password"
+        );
+    });
+
+    document.getElementById("login-form").addEventListener("submit", event => {
+        if (!event.target.checkValidity()) {
+            event.preventDefault();
+            event.target.reportValidity();
+            return;
+        }
+
+        const button = document.getElementById("submit-btn");
+        button.disabled = true;
+        button.querySelector(".label").textContent = "Signing in...";
+    });
+</script>
+</body>
+</html>

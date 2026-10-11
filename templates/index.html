@@ -23,7 +23,11 @@
         <div class="brand">
             <div class="brand-icon">A</div>
             <div>
-                <h2>RevOps Astra</h2>
+
+                <div style="font-weight:700; font-size:14px; padding:10px;">
+                    Welcome, {{ session.get('admin_name', 'Admin') }} 👋
+                </div>
+
                 <span>Revenue Intelligence</span>
             </div>
         </div>
@@ -59,11 +63,43 @@
             </a>
 
         </nav>
+        <!-- AI Agent Button -->
+
+        <button type="button" class="ai-agent-button" id="aiAgentButton" onclick="window.location.href='/ai-agent'">
+
+            <span class="ai-agent-icon">🤖</span>
+
+            <span class="ai-agent-label">
+                <strong>ASTRA AGENT</strong>
+                <small></small>
+            </span>
+
+            <span class="ai-agent-status"></span>
+        </button>
+
 
         <div class="sidebar-bottom">
             <span class="status-dot"></span>
             <span id="connection-status">Connecting to API...</span>
         </div>
+
+
+
+
+
+        <!-- AI Agent popup -->
+
+        <div id="aiAgentModal" class="ai-agent-modal">
+            <div class="ai-agent-modal-content">
+                <button type="button" id="closeAIAgent" class="ai-agent-close">×</button>
+
+                <iframe src="{{ url_for('dashboard.ai_agent_page') }}" title="ASTRA AI Robot" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+
+
     </aside>
 
     <main class="main-content">

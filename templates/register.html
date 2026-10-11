@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Registration | RevOps Astra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/register.css">
+</head>
+<body>
+    <div class="scene" aria-hidden="true">
+        <span class="orb a"></span>
+        <span class="orb b"></span>
+        <span class="orb c"></span>
+    </div>
+
+    <main class="shell">
+        <section class="story">
+            <a class="brand" href="/">
+                <span class="brand-mark">A</span>
+                <span>RevOps <strong>Astra</strong></span>
+            </a>
+
+            <p class="eyebrow">Revenue intelligence for customer success</p>
+            <h1>Spot revenue risk <span class="grad">before it grows.</span></h1>
+            <p class="lead">
+                Access customer risk insights, review urgent accounts,
+                and coordinate retention actions from one workspace.
+            </p>
+
+            <ol class="steps">
+                <li class="step">
+                    <span class="step-no">1</span>
+                    <div>
+                        <b>Create your admin account</b>
+                        <span>Choose a unique username and secure password.</span>
+                    </div>
+                </li>
+                <li class="step">
+                    <span class="step-no">2</span>
+                    <div>
+                        <b>Review the risk queue</b>
+                        <span>Find accounts that need attention.</span>
+                    </div>
+                </li>
+                <li class="step">
+                    <span class="step-no">3</span>
+                    <div>
+                        <b>Take action</b>
+                        <span>Review evidence and prepare retention emails.</span>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="panel">
+            <div class="card">
+                <header class="card-head">
+                    <span class="lock" aria-hidden="true">✦</span>
+                    <h2>Create admin account</h2>
+                    <p class="muted">Set up your RevOps Astra login.</p>
+                </header>
+
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% for category, message in messages %}
+                        <div class="flash {{ category }}" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endwith %}
+
+                <form id="register-form"
+                      method="POST"
+                      action="{{ url_for('dashboard.register') }}">
+
+                    {{ form.hidden_tag() }}
+
+                    <div class="field">
+                        <label for="name">Full name</label>
+                        {{ form.name(id="name", placeholder="Enter your full name", autocomplete="name", required=true) }}
+                        {% for error in form.name.errors %}
+                            <p class="field-error">{{ error }}</p>
+                        {% endfor %}
+                    </div>
+
+                    <div class="field">
+                        <label for="username">Username</label>
+                        {{ form.username(id="username", placeholder="Choose a username", autocomplete="username", required=true) }}
+                        {% for error in form.username.errors %}
+                            <p class="field-error">{{ error }}</p>
+                        {% endfor %}
+                    </div>
+
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <div class="password-wrap">
+                            {{ form.password(id="password", placeholder="At least 8 characters", autocomplete="new-password", required=true) }}
+                            <button class="reveal" type="button" data-target="password">Show</button>
+                        </div>
+
+                        <ul class="rules">
+                            <li id="rule-length">At least 8 characters</li>
+                            <li id="rule-case">Upper and lower case letters</li>
+                            <li id="rule-number">At least one number</li>
+                        </ul>
+
+                        {% for error in form.password.errors %}
+                            <p class="field-error">{{ error }}</p>
+                        {% endfor %}
+                    </div>
+
+                    <div class="field">
+                        <label for="confirm_password">Confirm password</label>
+                        <div class="password-wrap">
+                            {{ form.confirm_password(id="confirm_password", placeholder="Repeat your password", autocomplete="new-password", required=true) }}
+                            <button class="reveal" type="button" data-target="confirm_password">Show</button>
+                        </div>
+
+                        {% for error in form.confirm_password.errors %}
+                            <p class="field-error">{{ error }}</p>
+                        {% endfor %}
+                    </div>
+
+                    <button class="submit" id="submit-btn" type="submit">
+                        Create admin account
+                    </button>
+                </form>
+
+                <p class="foot">
+                    Already have an account?
+                    <a href="{{ url_for('dashboard.login') }}">Sign in</a>
+                </p>
+            </div>
+
+            <p class="legal">RevOps Astra · Customer Retention Intelligence</p>
+        </section>
+    </main>
+
+    <script>
+        document.querySelectorAll(".reveal").forEach(button => {
+            button.addEventListener("click", () => {
+                const input = document.getElementById(button.dataset.target);
+                const show = input.type === "password";
+                input.type = show ? "text" : "password";
+                button.textContent = show ? "Hide" : "Show";
+            });
+        });
+
+        const password = document.getElementById("password");
+        const confirmPassword = document.getElementById("confirm_password");
+        const form = document.getElementById("register-form");
+        const submitButton = document.getElementById("submit-btn");
+
+        function updateRules() {
+            const value = password.value;
+
+            document.getElementById("rule-length")
+                .classList.toggle("valid", value.length >= 8);
+
+            document.getElementById("rule-case")
+                .classList.toggle(
+                    "valid",
+                    /[a-z]/.test(value) && /[A-Z]/.test(value)
+                );
+
+            document.getElementById("rule-number")
+                .classList.toggle("valid", /\d/.test(value));
+
+            confirmPassword.setCustomValidity(
+                confirmPassword.value && confirmPassword.value !== value
+                    ? "Passwords do not match"
+                    : ""
+            );
+        }
+
+        password.addEventListener("input", updateRules);
+        confirmPassword.addEventListener("input", updateRules);
+
+        form.addEventListener("submit", event => {
+            updateRules();
+
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                form.reportValidity();
+                return;
+            }
+
+            submitButton.disabled = true;
+            submitButton.textContent = "Creating account...";
+        });
+    </script>
+</body>
+</html>
