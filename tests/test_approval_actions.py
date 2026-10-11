@@ -53,6 +53,40 @@ class MemoryActionStore:
         }]
         return action
 
+    def update_email_draft(self, action_id, email, editor_admin_id):
+        action = self.actions.get(action_id)
+        if action is None:
+            raise ActionNotFound(action_id)
+        if action["status"] not in ("PENDING", "APPROVED"):
+            raise ActionConflict(action["status"])
+        payload = action.get("proposed_payload") or {}
+        if "email" not in payload:
+            raise ValueError("Action does not have an email draft to edit.")
+        new_subject = str(email.get("subject", "")).strip()
+        new_body = str(email.get("body", "")).strip()
+        if not new_subject or len(new_subject) > 300:
+            raise ValueError("Email subject must be between 1 and 300 characters.")
+        if not new_body or len(new_body) > 10000:
+            raise ValueError("Email body must be between 1 and 10000 characters.")
+        payload["email"] = {
+            "subject": new_subject,
+            "body": new_body,
+        }
+        action["proposed_payload"] = payload
+        from_status = action["status"]
+        if from_status == "APPROVED":
+            action["status"] = "PENDING"
+            action["reviewer_id"] = None
+            action["decision_reason"] = None
+        self.audit[action_id].append({
+            "event_type": "EMAIL_EDITED",
+            "actor_admin_id": editor_admin_id,
+            "from_status": from_status,
+            "to_status": "PENDING",
+            "details": {"subject": new_subject},
+        })
+        return action
+
     def decide_action(self, action_id, decision, reviewer_id, reason=None):
         action = self.actions.get(action_id)
         if action is None:
@@ -60,9 +94,10 @@ class MemoryActionStore:
         if action["status"] != "PENDING":
             raise ActionConflict(action["status"])
         if decision == "approve":
-            validate_email_action_payload(
-                action["action_type"], action["proposed_payload"]
-            )
+            if action["action_type"] == ACTION_TYPE:
+                validate_email_action_payload(
+                    action["action_type"], action["proposed_payload"]
+                )
             action["status"] = "APPROVED"
         else:
             action["status"] = "REJECTED"
@@ -332,6 +367,65 @@ class ApprovalActionApiTests(unittest.TestCase):
             self.store.get_audit_events(action_id)[-1]["event_type"],
             "EXECUTION_BLOCKED",
         )
+
+    def test_ai_agent_page_renders_action_queue_button_and_separate_panel(self):
+        response = self.client.get("/ai-agent")
+        self.assertEqual(response.status_code, 200)
+        html = response.get_data(as_text=True)
+
+        # 1. Action Queue button replaces Account Health label in w5 position
+        self.assertIn('id="openQueueButton"', html)
+        self.assertIn('class="word w5 action-queue-btn"', html)
+        self.assertIn('id="queueBadge"', html)
+        self.assertNotIn("Account Health</div>", html)
+
+        # 2. Separate floating Action Queue panel
+        self.assertIn('id="queuePanel"', html)
+        self.assertIn('id="closeQueue"', html)
+        self.assertIn('id="refreshQueue"', html)
+        self.assertIn('id="queueLoading"', html)
+        self.assertIn('id="queueStatus"', html)
+        self.assertIn('id="actionQueue"', html)
+
+        # 3. Customer brief panel does NOT contain the action queue
+        agent_panel_match = re.search(r'<section class="agent-panel">(.*?)</section>', html, re.DOTALL)
+        self.assertIsNotNone(agent_panel_match)
+        agent_panel_html = agent_panel_match.group(1)
+        self.assertIn('id="briefForm"', agent_panel_html)
+        self.assertIn('id="queueProposal"', agent_panel_html)
+        self.assertIn('id="proposalStatus"', agent_panel_html)
+        self.assertNotIn('id="actionQueue"', agent_panel_html)
+        self.assertNotIn('class="queue-divider"', agent_panel_html)
+
+    def test_proposal_lifecycle_and_queue_listing(self):
+        # Initial queue is empty
+        res0 = self.client.get("/api/actions")
+        self.assertEqual(res0.status_code, 200)
+        self.assertEqual(res0.get_json()["count"], 0)
+
+        # Create proposal
+        action_id = self.create_proposal()
+        self.assertIsNotNone(action_id)
+
+        # Queue now has 1 pending action with real ID and enriched customer details
+        res1 = self.client.get("/api/actions")
+        self.assertEqual(res1.status_code, 200)
+        data1 = res1.get_json()
+        self.assertEqual(data1["count"], 1)
+        action = data1["actions"][0]
+        self.assertEqual(action["action_id"], action_id)
+        self.assertEqual(action["status"], "PENDING")
+        self.assertEqual(action["customer_name"], "Test Account")
+        self.assertEqual(action["risk_level"], "Needs Review")
+
+        # Approve action
+        res_app = self.approve(action_id)
+        self.assertEqual(res_app.status_code, 200)
+        self.assertEqual(res_app.get_json()["action"]["status"], "APPROVED")
+
+        # Queue reflects updated status
+        res2 = self.client.get("/api/actions")
+        self.assertEqual(res2.get_json()["actions"][0]["status"], "APPROVED")
 
 
 if __name__ == "__main__":

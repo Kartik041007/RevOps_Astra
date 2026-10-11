@@ -258,6 +258,49 @@ def reject_action(action_id):
     return _decide(action_id, "reject")
 
 
+@approval_bp.route("/api/actions/<action_id>/email", methods=["PUT", "PATCH"])
+@_reviewer_required
+def update_action_email(action_id):
+    csrf_response = _csrf_error()
+    if csrf_response:
+        return csrf_response
+    if not re.fullmatch(r"[0-9a-fA-F-]{36}", action_id):
+        return jsonify({"error": "Invalid action ID."}), 400
+    data = _json_object()
+    if data is None:
+        return jsonify({"error": "A JSON object is required."}), 400
+
+    email_data = data.get("email") if isinstance(data.get("email"), dict) else data
+    subject = email_data.get("subject")
+    body = email_data.get("body")
+
+    if not isinstance(subject, str) or not subject.strip() or len(subject.strip()) > 300:
+        return jsonify({"error": "Email subject must be a non-empty string of at most 300 characters."}), 400
+    if not isinstance(body, str) or not body.strip() or len(body.strip()) > 10000:
+        return jsonify({"error": "Email body must be a non-empty string of at most 10000 characters."}), 400
+
+    try:
+        action = _store().update_email_draft(
+            action_id=action_id,
+            email={"subject": subject.strip(), "body": body.strip()},
+            editor_admin_id=session["admin_id"],
+        )
+    except ActionNotFound:
+        return jsonify({"error": "Action not found."}), 404
+    except ActionConflict as exc:
+        return jsonify({"error": f"Action cannot be edited from its current status ({exc})."}), 409
+    except ValueError as exc:
+        return jsonify({"error": str(exc)}), 400
+    except mysql.connector.Error:
+        return _database_error()
+
+    risk_rows, _ = _account_context()
+    return jsonify({
+        "action": _enrich_action(action, risk_rows or []),
+        "message": "Email draft updated successfully. Please review before approval.",
+    }), 200
+
+
 @approval_bp.post("/api/actions/<action_id>/execute")
 @_reviewer_required
 def execute_action(action_id):

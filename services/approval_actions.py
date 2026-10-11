@@ -244,6 +244,88 @@ class MySQLApprovalActionStore:
             db.close()
         return self.get_action(action_id)
 
+    def update_email_draft(
+        self,
+        action_id: str,
+        email: dict,
+        editor_admin_id: int,
+    ) -> dict:
+        db = self.connection_factory()
+        cursor = None
+        try:
+            cursor = db.cursor(dictionary=True)
+            cursor.execute(
+                "SELECT * FROM approval_actions WHERE action_id = %s FOR UPDATE",
+                (action_id,),
+            )
+            action = cursor.fetchone()
+            if action is None:
+                raise ActionNotFound(action_id)
+            if action["status"] not in ("PENDING", "APPROVED"):
+                raise ActionConflict(action["status"])
+
+            payload = _decode_json(action["proposed_payload"])
+            if not isinstance(payload, dict) or "email" not in payload:
+                raise ValueError("Action does not have an email draft to edit.")
+
+            new_subject = str(email.get("subject", "")).strip()
+            new_body = str(email.get("body", "")).strip()
+            if not new_subject or len(new_subject) > 300:
+                raise ValueError("Email subject must be between 1 and 300 characters.")
+            if not new_body or len(new_body) > 10000:
+                raise ValueError("Email body must be between 1 and 10000 characters.")
+
+            payload["email"] = {
+                "subject": new_subject,
+                "body": new_body,
+            }
+            validate_email_action_payload(action["action_type"], payload)
+
+            from_status = action["status"]
+            to_status = "PENDING"
+
+            if from_status == "APPROVED":
+                cursor.execute(
+                    """
+                    UPDATE approval_actions
+                    SET proposed_payload = %s,
+                        status = 'PENDING',
+                        reviewer_id = NULL,
+                        decided_at = NULL,
+                        decision_reason = NULL
+                    WHERE action_id = %s
+                    """,
+                    (json.dumps(payload), action_id),
+                )
+            else:
+                cursor.execute(
+                    """
+                    UPDATE approval_actions
+                    SET proposed_payload = %s
+                    WHERE action_id = %s AND status = 'PENDING'
+                    """,
+                    (json.dumps(payload), action_id),
+                )
+
+            self._audit(
+                cursor,
+                action_id,
+                "EMAIL_EDITED",
+                editor_admin_id,
+                from_status,
+                to_status,
+                details={"subject": new_subject},
+            )
+            db.commit()
+        except Exception:
+            db.rollback()
+            raise
+        finally:
+            if cursor:
+                cursor.close()
+            db.close()
+        return self.get_action(action_id)
+
     def decide_action(
         self,
         action_id: str,
@@ -265,7 +347,7 @@ class MySQLApprovalActionStore:
                 raise ActionNotFound(action_id)
             if action["status"] != "PENDING":
                 raise ActionConflict(action["status"])
-            if decision == "approve":
+            if decision == "approve" and action["action_type"] == ACTION_TYPE:
                 validate_email_action_payload(
                     action["action_type"],
                     _decode_json(action["proposed_payload"]),

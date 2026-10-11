@@ -460,72 +460,353 @@
             font: inherit;
         }
 
-        .queue-divider {
-            border: 0;
-            border-top: 1px solid #e5e7f2;
-            margin: 18px 0;
+        /* Floating Action Queue Button replacing Account Health (w5) */
+        button.action-queue-btn {
+            font-family: inherit;
+            cursor: pointer;
+            border: 1px solid #ffffffd9;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+            outline: none;
+            user-select: none;
         }
 
-        .queue-heading {
+        button.action-queue-btn:hover {
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 14px 32px rgba(85, 82, 160, 0.25);
+            background: #ffffff;
+        }
+
+        button.action-queue-btn:focus-visible {
+            box-shadow: 0 0 0 3px #9d8bff80, 0 12px 30px #6d69b21b;
+        }
+
+        button.action-queue-btn:active {
+            transform: scale(0.98);
+        }
+
+        .queue-btn-icon {
+            font-size: 14px;
+        }
+
+        .queue-btn-label {
+            font-weight: 700;
+        }
+
+        /* Dynamic badge for pending approvals */
+        .queue-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 22px;
+            height: 22px;
+            padding: 0 7px;
+            border-radius: 999px;
+            background: #6555d9;
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: 0.2px;
+            box-shadow: 0 2px 6px rgba(101, 85, 217, 0.35);
+            transition: all 0.25s ease;
+        }
+
+        .queue-badge.has-pending {
+            background: #e63946;
+            box-shadow: 0 2px 8px rgba(230, 57, 70, 0.45);
+            animation: badgePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes badgePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.12); }
+        }
+
+        /* Separate Floating Action Queue Panel */
+        .queue-panel {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            z-index: 20;
+            width: min(430px, calc(100% - 36px));
+            max-height: calc(100% - 36px);
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            border: 1px solid #ffffff;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.96);
+            box-shadow: 0 16px 45px rgba(50, 45, 110, 0.22);
+            backdrop-filter: blur(16px);
+            animation: panelFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            overflow: hidden;
+        }
+
+        .queue-panel[hidden] {
+            display: none !important;
+        }
+
+        @keyframes panelFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-8px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .queue-panel-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 10px;
+            gap: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #edf0f8;
+            flex-shrink: 0;
         }
 
-        .queue-heading h3 {
+        .queue-panel-title-wrap {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .queue-panel-title-wrap h3 {
             margin: 0;
+            font-size: 17px;
+            font-weight: 800;
+            color: #202746;
         }
 
-        .queue-heading button,
-        .action-controls button,
-        .proposal-button {
-            width: auto;
-            padding: 8px 10px;
+        .queue-panel-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .queue-action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 6px 12px;
+            border: 1px solid #d9dced;
+            border-radius: 9px;
+            background: #f7f8fc;
+            color: #4a4d68;
             font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .queue-action-btn:hover:not(:disabled) {
+            background: #edeef8;
+            color: #33316f;
+            border-color: #c4c8de;
+        }
+
+        .queue-action-btn:disabled {
+            opacity: 0.6;
+            cursor: wait;
+        }
+
+        .queue-close-btn {
+            display: grid;
+            place-items: center;
+            width: 32px;
+            height: 32px;
+            border: 0;
+            border-radius: 50%;
+            background: #f0f2fa;
+            color: #555870;
+            font-size: 20px;
+            line-height: 1;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .queue-close-btn:hover {
+            background: #e2e5f2;
+            color: #1a1c29;
+            transform: scale(1.06);
+        }
+
+        .queue-loading {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            margin: 10px 0 6px;
+            border-radius: 10px;
+            background: #f0f2ff;
+            color: #4f46a5;
+            font-size: 12px;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .queue-loading[hidden] {
+            display: none !important;
+        }
+
+        .queue-spinner {
+            width: 14px;
+            height: 14px;
+            border: 2px solid #b8b3f2;
+            border-top-color: #6555d9;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
 
         .integration-note,
         .queue-message,
         .empty-queue {
-            margin: 10px 0;
+            margin: 8px 0;
             color: #68708a;
             font-size: 12px;
             line-height: 1.5;
+            flex-shrink: 0;
+        }
+
+        .queue-message.error {
+            color: #a32a39;
+            background: #fff0f1;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid #fcd2d7;
+        }
+
+        .queue-message.success {
+            color: #1b6d46;
+            background: #e9f8ef;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid #bfead0;
+        }
+
+        .queue-message.loading {
+            color: #4f46a5;
+        }
+
+        .empty-queue {
+            padding: 24px 16px;
+            text-align: center;
+            background: #f8f9fd;
+            border: 1px dashed #d5d8ea;
+            border-radius: 12px;
+            color: #727793;
+            font-size: 13px;
         }
 
         .queue-list {
             display: grid;
-            gap: 10px;
+            gap: 12px;
+            overflow-y: auto;
+            padding: 6px 2px 8px 0;
+            margin-top: 6px;
+            flex-grow: 1;
+            scrollbar-width: thin;
         }
 
+        .queue-list::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .queue-list::-webkit-scrollbar-thumb {
+            background: #d2d5e8;
+            border-radius: 3px;
+        }
+
+        /* Action Cards */
         .action-card {
-            padding: 12px;
+            padding: 14px;
             border: 1px solid #e5e7f2;
-            border-radius: 12px;
-            background: #ffffffd9;
+            border-radius: 14px;
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(60, 55, 120, 0.05);
             overflow-wrap: anywhere;
+            word-break: break-word;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .action-card h4 {
-            margin: 0 0 6px;
-            color: #33316f;
-            font-size: 13px;
+        .action-card:hover {
+            box-shadow: 0 6px 18px rgba(60, 55, 120, 0.1);
         }
 
-        .action-card p,
-        .action-card pre {
-            margin: 5px 0;
-            color: #68708a;
-            font-size: 12px;
-            line-height: 1.45;
-            white-space: pre-wrap;
-            font-family: inherit;
+        .action-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .action-card-id {
+            font-size: 11px;
+            font-weight: 700;
+            color: #7b809a;
+            font-family: monospace;
+            word-break: break-all;
+        }
+
+        .action-card-customer {
+            margin: 0 0 4px;
+            font-size: 14px;
+            font-weight: 800;
+            color: #242250;
+        }
+
+        .action-card-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .risk-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 999px;
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .risk-badge[data-risk="Urgent"],
+        .risk-badge[data-risk="High"] {
+            background: #ffe8eb;
+            color: #d92d43;
+        }
+
+        .risk-badge[data-risk="Needs Review"] {
+            background: #f2e9fc;
+            color: #8c4ad6;
+        }
+
+        .risk-badge[data-risk="Healthy"] {
+            background: #e2f9ed;
+            color: #179354;
+        }
+
+        .risk-badge:not([data-risk]) {
+            background: #f0f2f8;
+            color: #636882;
         }
 
         .action-status {
             display: inline-block;
-            margin: 3px 0 8px;
             padding: 4px 8px;
             border-radius: 999px;
             background: #efefff;
@@ -540,36 +821,373 @@
             background: #fff0f1;
         }
 
+        .action-status[data-status="APPROVED"] {
+            color: #1b6d46;
+            background: #e9f8ef;
+        }
+
         .action-status[data-status="COMPLETED"] {
             color: #207752;
             background: #e9f8ef;
         }
 
+        .action-section-title {
+            margin: 10px 0 3px;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            color: #5552a0;
+        }
+
+        .action-card p {
+            margin: 3px 0 8px;
+            color: #4a4e69;
+            font-size: 12px;
+            line-height: 1.45;
+        }
+
+        .action-section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 0 4px;
+        }
+
+        .action-section-header .action-section-title {
+            margin: 0;
+        }
+
+        .edit-email-btn {
+            padding: 4px 10px !important;
+            font-size: 11px !important;
+            border-radius: 6px !important;
+            background: #edeef8 !important;
+            color: #4a46a5 !important;
+            border: 1px solid #dcdff2 !important;
+            cursor: pointer;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .edit-email-btn:hover {
+            background: #e2e4f6 !important;
+            color: #33316f !important;
+            border-color: #c8ccee !important;
+        }
+
+        .action-email-box {
+            margin: 4px 0 10px;
+            padding: 10px;
+            border-radius: 9px;
+            background: #f8f9fe;
+            border: 1px solid #e9ebf6;
+        }
+
+        .action-email-box[hidden] {
+            display: none !important;
+        }
+
+        .action-email-subject {
+            font-size: 12px;
+            font-weight: 700;
+            color: #2b285b;
+            margin-bottom: 6px;
+        }
+
+        .action-email-body {
+            margin: 0;
+            font-size: 11px;
+            line-height: 1.5;
+            color: #4c516d;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+            font-family: inherit;
+        }
+
+        .action-email-editor {
+            margin: 6px 0 10px;
+            padding: 12px;
+            border-radius: 12px;
+            background: #fbfbfe;
+            border: 1px solid #dcdff2;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .action-email-editor[hidden] {
+            display: none !important;
+        }
+
+        .editor-field-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .editor-label {
+            font-size: 11px;
+            font-weight: 700;
+            color: #5552a0;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .editor-subject-input,
+        .editor-body-textarea {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #d9dced;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 12px;
+            box-sizing: border-box;
+            background: #ffffff;
+            color: #202746;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .editor-subject-input:focus,
+        .editor-body-textarea:focus {
+            outline: none;
+            border-color: #6555d9;
+            box-shadow: 0 0 0 3px rgba(101, 85, 217, 0.15);
+        }
+
+        .editor-body-textarea {
+            resize: vertical;
+            min-height: 90px;
+            line-height: 1.45;
+        }
+
+        .editor-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
+        .save-draft-btn {
+            background: #6555d9 !important;
+            color: #ffffff !important;
+            padding: 6px 14px !important;
+            font-size: 11px !important;
+            border-radius: 7px !important;
+        }
+
+        .save-draft-btn:hover:not(:disabled) {
+            background: #5140cb !important;
+        }
+
+        .cancel-edit-btn {
+            background: #f0f2f8 !important;
+            color: #525672 !important;
+            border: 1px solid #dcdff2 !important;
+            padding: 6px 12px !important;
+            font-size: 11px !important;
+            border-radius: 7px !important;
+        }
+
+        .cancel-edit-btn:hover:not(:disabled) {
+            background: #e4e7f2 !important;
+            color: #202746 !important;
+        }
+
+        .editor-status {
+            font-size: 11px;
+            line-height: 1.4;
+            padding: 4px 8px;
+            border-radius: 6px;
+        }
+
+        .editor-status:empty {
+            display: none;
+        }
+
+        .editor-status.error {
+            background: #fff0f1;
+            color: #a32a39;
+            border: 1px solid #fcd2d7;
+        }
+
+        .editor-status.success {
+            background: #e9f8ef;
+            color: #1b6d46;
+            border: 1px solid #bfead0;
+        }
+
+        .editor-status.loading {
+            background: #f0f2ff;
+            color: #4f46a5;
+        }
+
+        .unsaved-warning {
+            font-size: 11px;
+            color: #a32a39;
+            background: #fff0f1;
+            padding: 6px 10px;
+            border-radius: 6px;
+            border: 1px solid #fcd2d7;
+            margin-top: 6px;
+            width: 100%;
+        }
+
+        .unsaved-warning:empty {
+            display: none;
+        }
+
         .action-controls {
             display: flex;
             flex-wrap: wrap;
-            gap: 7px;
-            margin-top: 10px;
+            gap: 8px;
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px solid #f0f2f8;
+        }
+
+        .action-controls button,
+        .proposal-button {
+            width: auto;
+            padding: 8px 14px;
+            font-size: 12px;
+            border-radius: 8px;
+            border: 0;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.2s ease;
+        }
+
+        .action-controls .approve-button {
+            background: #1b6d46;
+            color: #ffffff;
+        }
+
+        .action-controls .approve-button:hover:not(:disabled) {
+            background: #155737;
         }
 
         .action-controls .reject-button {
             background: #9b4252;
+            color: #ffffff;
+        }
+
+        .action-controls .reject-button:hover:not(:disabled) {
+            background: #7d3441;
+        }
+
+        .action-controls button:disabled {
+            opacity: 0.6;
+            cursor: wait;
         }
 
         .rejection-reason {
             width: 100%;
-            min-height: 68px;
-            margin-top: 8px;
+            min-height: 64px;
+            margin-top: 6px;
             padding: 8px;
             border: 1px solid #d9dced;
             border-radius: 8px;
             resize: vertical;
             font: inherit;
             font-size: 12px;
+            box-sizing: border-box;
+        }
+
+        .rejection-reason:focus {
+            border-color: #9d8bff;
+            outline: none;
         }
 
         .proposal-button {
-            margin-top: 10px;
+            margin-top: 12px;
+            background: #6555d9;
+            color: white;
+        }
+
+        .proposal-button:hover:not(:disabled) {
+            background: #5344be;
+        }
+
+        .proposal-button:disabled {
+            opacity: 0.6;
+            cursor: wait;
+        }
+
+        /* Proposal Status and Retry */
+        .proposal-status {
+            margin: 10px 0;
+            padding: 10px 12px;
+            border-radius: 10px;
+            font-size: 12px;
+            line-height: 1.45;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .proposal-status:empty {
+            display: none;
+        }
+
+        .proposal-status.loading {
+            background: #f0f2ff;
+            color: #4f46a5;
+        }
+
+        .proposal-status.success {
+            background: #e9f8ef;
+            color: #1b6d46;
+            border: 1px solid #bfead0;
+        }
+
+        .proposal-status.error {
+            background: #fff0f1;
+            color: #a32a39;
+            border: 1px solid #fcd2d7;
+        }
+
+        .proposal-status.warning {
+            background: #fff8e8;
+            color: #9c6500;
+            border: 1px solid #fde4a8;
+        }
+
+        .retry-button {
+            align-self: flex-start;
+            padding: 6px 12px;
+            border: 1px solid #d9a742;
+            border-radius: 8px;
+            background: #ffffff;
+            color: #8c5900;
+            font-size: 11px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .retry-button:hover:not(:disabled) {
+            background: #fef4dc;
+        }
+
+        .retry-button:disabled {
+            opacity: 0.6;
+            cursor: wait;
+        }
+
+        @media (max-width: 768px) {
+            .queue-panel {
+                top: 12px;
+                right: 12px;
+                left: 12px;
+                width: auto;
+                max-width: calc(100% - 24px);
+                max-height: calc(100% - 24px);
+                z-index: 100;
+            }
         }
 
         @media (max-width: 650px) {
@@ -614,6 +1232,25 @@
             .orbit {
                 display: none;
             }
+
+            .action-queue-btn {
+                display: inline-flex !important;
+                position: fixed;
+                top: 12px;
+                right: 12px;
+                z-index: 1000;
+                animation: none;
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            }
+
+            .queue-panel {
+                position: fixed;
+                inset: 10px;
+                width: auto;
+                max-width: 100%;
+                max-height: calc(100vh - 20px);
+                z-index: 2000;
+            }
         }
     </style>
 </head>
@@ -621,6 +1258,7 @@
 <body>
     <div class="scene">
 
+        <!-- ASTRA Intelligence Customer Brief Panel -->
         <section class="agent-panel">
             <h3>✦ ASTRA Intelligence</h3>
             <p>Generate an evidence-based customer brief.</p>
@@ -638,17 +1276,35 @@
             <button id="queueProposal" class="proposal-button" type="button" hidden>
                 Submit email draft for approval
             </button>
-            <div id="proposalStatus" class="queue-message" role="status" aria-live="polite"></div>
+            <div id="proposalStatus" class="proposal-status" role="status" aria-live="polite"></div>
+        </section>
 
-            <hr class="queue-divider">
-            <div class="queue-heading">
-                <h3>Action Queue</h3>
-                <button id="refreshQueue" type="button">Refresh</button>
+        <!-- Separate Floating Action Queue Panel -->
+        <section id="queuePanel" class="queue-panel" hidden role="dialog" aria-modal="false" aria-labelledby="queueTitle">
+            <div class="queue-panel-header">
+                <div class="queue-panel-title-wrap">
+                    <h3 id="queueTitle">📋 Action Queue</h3>
+                    <span id="queueHeaderBadge" class="queue-badge" title="Pending approvals">0</span>
+                </div>
+                <div class="queue-panel-actions">
+                    <button id="refreshQueue" type="button" class="queue-action-btn" title="Refresh Action Queue">
+                        <span class="btn-icon">🔄</span> Refresh
+                    </button>
+                    <button id="closeQueue" type="button" class="queue-close-btn" aria-label="Close Action Queue" title="Close">×</button>
+                </div>
             </div>
+
             <p id="integrationStatus" class="integration-note">
                 Integration status: checking configuration…
             </p>
+
+            <div id="queueLoading" class="queue-loading" hidden role="status" aria-live="polite">
+                <span class="queue-spinner" aria-hidden="true"></span>
+                <span>Loading actions…</span>
+            </div>
+
             <div id="queueStatus" class="queue-message" role="status" aria-live="polite"></div>
+
             <div id="actionQueue" class="queue-list" aria-live="polite"></div>
         </section>
 
@@ -659,7 +1315,11 @@
         <div class="word w2"><span>📊</span>Revenue Insights</div>
         <div class="word w3"><span>🛡️</span>Churn Alert</div>
         <div class="word w4"><span>✦</span>AI Intelligence</div>
-        <div class="word w5"><span>◎</span>Account Health</div>
+        <button id="openQueueButton" class="word w5 action-queue-btn" type="button" aria-haspopup="dialog" aria-expanded="false" title="Open Action Queue">
+            <span class="queue-btn-icon">📋</span>
+            <span class="queue-btn-label">Action Queue</span>
+            <span id="queueBadge" class="queue-badge" aria-label="Pending approvals">0</span>
+        </button>
 
         <div class="robot-wrap">
             <div class="robot">
@@ -699,23 +1359,78 @@
     const button = document.getElementById("generateBrief");
     const status = document.getElementById("briefStatus");
     const result = document.getElementById("briefResult");
+    const queuePanel = document.getElementById("queuePanel");
+    const openQueueButton = document.getElementById("openQueueButton");
+    const closeQueue = document.getElementById("closeQueue");
+    const refreshQueue = document.getElementById("refreshQueue");
+    const queueBadge = document.getElementById("queueBadge");
+    const queueHeaderBadge = document.getElementById("queueHeaderBadge");
+    const queueLoading = document.getElementById("queueLoading");
     const queue = document.getElementById("actionQueue");
     const queueStatus = document.getElementById("queueStatus");
     const integrationStatus = document.getElementById("integrationStatus");
-    const refreshQueue = document.getElementById("refreshQueue");
     const queueProposal = document.getElementById("queueProposal");
     const proposalStatus = document.getElementById("proposalStatus");
     const csrfToken = document.querySelector('meta[name="csrf-token"]')?.content || "";
+
     let currentDraft = null;
     let integrationConfigured = false;
+    let isQueueLoading = false;
 
-    if (!form || !accountInput || !button || !status || !result || !queue) return;
+    if (!form || !accountInput || !button || !status || !result || !queue || !queuePanel || !openQueueButton) return;
+
+    function openQueuePanel() {
+        queuePanel.hidden = false;
+        openQueueButton.setAttribute("aria-expanded", "true");
+        if (closeQueue) closeQueue.focus();
+    }
+
+    function closeQueuePanel() {
+        queuePanel.hidden = true;
+        openQueueButton.setAttribute("aria-expanded", "false");
+        openQueueButton.focus();
+    }
+
+    openQueueButton.addEventListener("click", () => {
+        if (queuePanel.hidden) {
+            openQueuePanel();
+        } else {
+            closeQueuePanel();
+        }
+    });
+
+    if (closeQueue) {
+        closeQueue.addEventListener("click", closeQueuePanel);
+    }
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !queuePanel.hidden) {
+            closeQueuePanel();
+        }
+    });
+
+    document.addEventListener("click", (event) => {
+        if (
+            !queuePanel.hidden &&
+            !queuePanel.contains(event.target) &&
+            !openQueueButton.contains(event.target)
+        ) {
+            closeQueuePanel();
+        }
+    });
 
     function addText(parent, tag, text) {
         const element = document.createElement(tag);
         element.textContent = text == null ? "" : String(text);
         parent.appendChild(element);
         return element;
+    }
+
+    function addParagraph(parent, text) {
+        const paragraph = document.createElement("p");
+        paragraph.textContent = text || "";
+        parent.appendChild(paragraph);
+        return paragraph;
     }
 
     function renderBrief(brief) {
@@ -770,13 +1485,8 @@
             currentDraft.action && currentDraft.explanation &&
             currentDraft.subject && currentDraft.body
         );
-    }
-
-    function addParagraph(parent, text) {
-        const paragraph = document.createElement("p");
-        paragraph.textContent = text || "";
-        parent.appendChild(paragraph);
-        return paragraph;
+        proposalStatus.replaceChildren();
+        proposalStatus.className = "proposal-status";
     }
 
     function statusLabel(status) {
@@ -794,79 +1504,338 @@
     function renderAction(action) {
         const card = document.createElement("article");
         card.className = "action-card";
+        card.id = `action-${action.action_id}`;
 
-        addText(card, "h4", `Action ${action.action_id}`);
-        addParagraph(card, `Account: ${action.account_id} · ${action.customer_name || "Unknown customer"}`);
-        addParagraph(card, `Risk: ${action.risk_level || "Unknown"}`);
+        const cardHeader = document.createElement("div");
+        cardHeader.className = "action-card-header";
 
-        const statusBadge = addText(card, "span", statusLabel(action.status));
+        const idSpan = document.createElement("span");
+        idSpan.className = "action-card-id";
+        idSpan.textContent = `ID: ${action.action_id}`;
+        cardHeader.appendChild(idSpan);
+
+        const statusBadge = document.createElement("span");
         statusBadge.className = "action-status";
         statusBadge.dataset.status = action.status;
+        statusBadge.textContent = statusLabel(action.status);
+        cardHeader.appendChild(statusBadge);
+        card.appendChild(cardHeader);
+
+        const customerHeading = document.createElement("h4");
+        customerHeading.className = "action-card-customer";
+        customerHeading.textContent = `${action.customer_name || "Unknown customer"} (${action.account_id})`;
+        card.appendChild(customerHeading);
+
+        const badgesRow = document.createElement("div");
+        badgesRow.className = "action-card-badges";
+        const riskBadge = document.createElement("span");
+        riskBadge.className = "risk-badge";
+        riskBadge.dataset.risk = action.risk_level || "Unknown";
+        riskBadge.textContent = `Risk: ${action.risk_level || "Unknown"}`;
+        badgesRow.appendChild(riskBadge);
+        card.appendChild(badgesRow);
 
         const payload = action.proposed_payload || {};
-        addText(card, "h4", "Proposed action");
+        addText(card, "h5", "Proposed Action").className = "action-section-title";
         addParagraph(card, payload.proposed_action || "No action details.");
-        addText(card, "h4", "Explanation");
+
+        addText(card, "h5", "Explanation").className = "action-section-title";
         addParagraph(card, payload.explanation || "No explanation provided.");
 
         const evidence = Array.isArray(action.evidence_refs) ? action.evidence_refs : [];
-        addText(card, "h4", "Supporting evidence");
+        addText(card, "h5", "Supporting Evidence").className = "action-section-title";
         addParagraph(card, evidence.length ? evidence.join(", ") : "No evidence references.");
 
+        let subjectInput = null;
+        let bodyInput = null;
+        let getHasUnsavedEdits = () => false;
+        let isEditorOpen = () => false;
+        let unsavedWarning = null;
+
         if (payload.email) {
-            addText(card, "h4", "Proposed email");
-            addParagraph(card, `Subject: ${payload.email.subject || ""}`);
+            const emailHeader = document.createElement("div");
+            emailHeader.className = "action-section-header";
+
+            const emailTitle = document.createElement("h5");
+            emailTitle.className = "action-section-title";
+            emailTitle.textContent = "Proposed Email";
+            emailHeader.appendChild(emailTitle);
+
+            let savedSubject = (payload.email.subject || "").trim();
+            let savedBody = (payload.email.body || "").trim();
+            let editorVisible = false;
+
+            const emailBox = document.createElement("div");
+            emailBox.className = "action-email-box";
+
+            const emailSub = document.createElement("div");
+            emailSub.className = "action-email-subject";
+            emailSub.textContent = `Subject: ${savedSubject}`;
+            emailBox.appendChild(emailSub);
+
             const emailBody = document.createElement("pre");
-            emailBody.textContent = payload.email.body || "";
-            card.appendChild(emailBody);
+            emailBody.className = "action-email-body";
+            emailBody.textContent = savedBody;
+            emailBox.appendChild(emailBody);
+
+            const canEdit = action.status === "PENDING" || action.status === "APPROVED";
+
+            let editBtn = null;
+            let editorPanel = null;
+            let statusEl = null;
+
+            if (canEdit) {
+                editBtn = document.createElement("button");
+                editBtn.type = "button";
+                editBtn.className = "edit-email-btn";
+                editBtn.textContent = "✏️ Edit Email";
+                emailHeader.appendChild(editBtn);
+
+                editorPanel = document.createElement("div");
+                editorPanel.className = "action-email-editor";
+                editorPanel.hidden = true;
+
+                const subjectGroup = document.createElement("div");
+                subjectGroup.className = "editor-field-group";
+                const subjectLabel = document.createElement("label");
+                subjectLabel.className = "editor-label";
+                subjectLabel.textContent = "Subject (1–300 chars):";
+                subjectInput = document.createElement("input");
+                subjectInput.type = "text";
+                subjectInput.className = "editor-subject-input";
+                subjectInput.maxLength = 300;
+                subjectInput.value = savedSubject;
+                subjectGroup.append(subjectLabel, subjectInput);
+
+                const bodyGroup = document.createElement("div");
+                bodyGroup.className = "editor-field-group";
+                const bodyLabel = document.createElement("label");
+                bodyLabel.className = "editor-label";
+                bodyLabel.textContent = "Email Body (1–10,000 chars):";
+                bodyInput = document.createElement("textarea");
+                bodyInput.className = "editor-body-textarea";
+                bodyInput.rows = 5;
+                bodyInput.maxLength = 10000;
+                bodyInput.value = savedBody;
+                bodyGroup.append(bodyLabel, bodyInput);
+
+                statusEl = document.createElement("div");
+                statusEl.className = "editor-status";
+
+                const editorControls = document.createElement("div");
+                editorControls.className = "editor-controls";
+
+                const saveDraftBtn = document.createElement("button");
+                saveDraftBtn.type = "button";
+                saveDraftBtn.className = "save-draft-btn";
+                saveDraftBtn.textContent = "Save Draft";
+
+                const cancelEditBtn = document.createElement("button");
+                cancelEditBtn.type = "button";
+                cancelEditBtn.className = "cancel-edit-btn";
+                cancelEditBtn.textContent = "Cancel";
+
+                editorControls.append(saveDraftBtn, cancelEditBtn);
+                editorPanel.append(subjectGroup, bodyGroup, editorControls, statusEl);
+
+                getHasUnsavedEdits = () => {
+                    return subjectInput.value.trim() !== savedSubject || bodyInput.value.trim() !== savedBody;
+                };
+                isEditorOpen = () => editorVisible;
+
+                const onInput = () => {
+                    if (unsavedWarning) unsavedWarning.textContent = "";
+                    if (statusEl.className.includes("error")) statusEl.textContent = "";
+                };
+                subjectInput.addEventListener("input", onInput);
+                bodyInput.addEventListener("input", onInput);
+
+                function openEditor() {
+                    editorVisible = true;
+                    editorPanel.hidden = false;
+                    emailBox.hidden = true;
+                    editBtn.textContent = "👁️ View Email";
+                    statusEl.textContent = "";
+                    subjectInput.focus();
+                }
+
+                function closeEditor() {
+                    editorVisible = false;
+                    editorPanel.hidden = true;
+                    emailBox.hidden = false;
+                    editBtn.textContent = "✏️ Edit Email";
+                }
+
+                editBtn.addEventListener("click", () => {
+                    if (editorVisible) {
+                        closeEditor();
+                    } else {
+                        openEditor();
+                    }
+                });
+
+                cancelEditBtn.addEventListener("click", () => {
+                    subjectInput.value = savedSubject;
+                    bodyInput.value = savedBody;
+                    if (unsavedWarning) unsavedWarning.textContent = "";
+                    statusEl.textContent = "";
+                    closeEditor();
+                });
+
+                saveDraftBtn.addEventListener("click", async () => {
+                    const newSub = subjectInput.value.trim();
+                    const newBdy = bodyInput.value.trim();
+
+                    if (!newSub) {
+                        statusEl.className = "editor-status error";
+                        statusEl.textContent = "Subject cannot be empty.";
+                        subjectInput.focus();
+                        return;
+                    }
+                    if (newSub.length > 300) {
+                        statusEl.className = "editor-status error";
+                        statusEl.textContent = "Subject must be 300 characters or less.";
+                        subjectInput.focus();
+                        return;
+                    }
+                    if (!newBdy) {
+                        statusEl.className = "editor-status error";
+                        statusEl.textContent = "Email body cannot be empty.";
+                        bodyInput.focus();
+                        return;
+                    }
+                    if (newBdy.length > 10000) {
+                        statusEl.className = "editor-status error";
+                        statusEl.textContent = "Email body must be 10,000 characters or less.";
+                        bodyInput.focus();
+                        return;
+                    }
+
+                    saveDraftBtn.disabled = true;
+                    cancelEditBtn.disabled = true;
+                    statusEl.className = "editor-status loading";
+                    statusEl.textContent = "Saving draft to server...";
+
+                    try {
+                        const response = await apiRequest(`/api/actions/${action.action_id}/email`, "PUT", {
+                            email: { subject: newSub, body: newBdy }
+                        });
+                        const updatedEmail = response.action && response.action.proposed_payload && response.action.proposed_payload.email;
+                        if (updatedEmail) {
+                            savedSubject = updatedEmail.subject || newSub;
+                            savedBody = updatedEmail.body || newBdy;
+                        } else {
+                            savedSubject = newSub;
+                            savedBody = newBdy;
+                        }
+
+                        subjectInput.value = savedSubject;
+                        bodyInput.value = savedBody;
+                        emailSub.textContent = `Subject: ${savedSubject}`;
+                        emailBody.textContent = savedBody;
+
+                        statusEl.className = "editor-status success";
+                        statusEl.textContent = "✓ Draft saved. Review the email above before deciding.";
+                        if (unsavedWarning) unsavedWarning.textContent = "";
+
+                        closeEditor();
+
+                        if (action.status === "APPROVED") {
+                            await loadQueue();
+                        }
+                    } catch (err) {
+                        statusEl.className = "editor-status error";
+                        statusEl.textContent = `Save failed: ${err.message}`;
+                    } finally {
+                        saveDraftBtn.disabled = false;
+                        cancelEditBtn.disabled = false;
+                    }
+                });
+            }
+
+            card.appendChild(emailHeader);
+            card.appendChild(emailBox);
+            if (editorPanel) {
+                card.appendChild(editorPanel);
+            }
         }
+
         if (payload.crm_field_changes) {
-            addText(card, "h4", "Proposed CRM field changes");
+            addText(card, "h5", "Proposed CRM Field Changes").className = "action-section-title";
             addParagraph(card, JSON.stringify(payload.crm_field_changes));
-        } else {
-            addText(card, "h4", "Proposed CRM field changes");
-            addParagraph(card, "None proposed.");
         }
+
         if (action.decision_reason) {
-            addText(card, "h4", "Decision reason");
+            addText(card, "h5", "Decision Reason").className = "action-section-title";
             addParagraph(card, action.decision_reason);
         }
+
         if (action.execution_result) {
-            addText(card, "h4", "Execution result");
+            addText(card, "h5", "Execution Result").className = "action-section-title";
             addParagraph(card, JSON.stringify(action.execution_result));
         }
 
         if (action.status === "PENDING") {
             const controls = document.createElement("div");
             controls.className = "action-controls";
+
             const approve = addText(controls, "button", "Approve");
             approve.type = "button";
-            approve.addEventListener("click", () => decide(action.action_id, "approve"));
+            approve.className = "approve-button";
 
             const reject = addText(controls, "button", "Reject");
             reject.type = "button";
             reject.className = "reject-button";
+
             const reason = document.createElement("textarea");
             reason.className = "rejection-reason";
             reason.maxLength = 2000;
             reason.required = true;
-            reason.placeholder = "Required reason for rejection";
-            controls.append(approve, reject, reason);
+            reason.placeholder = "Required reason for rejection (1–2000 characters)";
+
+            unsavedWarning = document.createElement("div");
+            unsavedWarning.className = "unsaved-warning";
+
+            controls.append(approve, reject, reason, unsavedWarning);
+
+            approve.addEventListener("click", () => {
+                if (getHasUnsavedEdits()) {
+                    unsavedWarning.textContent = "⚠️ You have unsaved email edits. Please save your draft or cancel changes before approving.";
+                    return;
+                }
+                if (isEditorOpen()) {
+                    unsavedWarning.textContent = "ℹ️ Please close or save the editor to review the final email before approving.";
+                    return;
+                }
+                unsavedWarning.textContent = "";
+                decide(action.action_id, "approve", null, [approve, reject]);
+            });
+
             reject.addEventListener("click", () => {
-                if (!reason.value.trim()) {
+                const trimmed = reason.value.trim();
+                if (!trimmed) {
                     reason.setCustomValidity("A rejection reason is required.");
                     reason.reportValidity();
                     return;
                 }
+                if (trimmed.length > 2000) {
+                    reason.setCustomValidity("Rejection reason must be 2000 characters or less.");
+                    reason.reportValidity();
+                    return;
+                }
                 reason.setCustomValidity("");
-                decide(action.action_id, "reject", reason.value.trim());
+                if (unsavedWarning) unsavedWarning.textContent = "";
+                decide(action.action_id, "reject", trimmed, [approve, reject]);
             });
+
             card.appendChild(controls);
         } else if (action.status === "APPROVED" && integrationConfigured) {
             const execute = addText(card, "button", "Execute approved action");
             execute.type = "button";
+            execute.className = "proposal-button";
             execute.addEventListener("click", () => executeAction(action));
         }
+
         return card;
     }
 
@@ -890,29 +1859,69 @@
     }
 
     async function loadQueue() {
-        queueStatus.textContent = "Loading actions…";
+        if (isQueueLoading) return;
+        isQueueLoading = true;
+        if (queueLoading) queueLoading.hidden = false;
+        if (refreshQueue) refreshQueue.disabled = true;
+        queueStatus.textContent = "";
+        queueStatus.className = "queue-message";
+
         try {
             const data = await apiRequest("/api/actions");
             integrationConfigured = data.integration_configured === true;
             integrationStatus.textContent = integrationConfigured
                 ? "Integration configured. Approval remains separate; execution requires explicit action."
                 : "Integration not configured — approvals will wait; no email or CRM updates can run.";
+
+            const actions = Array.isArray(data.actions) ? data.actions : [];
+            const pendingActions = actions.filter(action => action.status === "PENDING");
+            const pendingCount = pendingActions.length;
+
+            queueBadge.textContent = String(pendingCount);
+            queueBadge.setAttribute("aria-label", `${pendingCount} pending approval${pendingCount === 1 ? "" : "s"}`);
+            if (pendingCount > 0) {
+                queueBadge.classList.add("has-pending");
+            } else {
+                queueBadge.classList.remove("has-pending");
+            }
+
+            if (queueHeaderBadge) {
+                queueHeaderBadge.textContent = String(pendingCount);
+                if (pendingCount > 0) {
+                    queueHeaderBadge.classList.add("has-pending");
+                } else {
+                    queueHeaderBadge.classList.remove("has-pending");
+                }
+            }
+
             queue.replaceChildren();
-            if (!data.actions.length) {
+            if (!actions.length) {
                 addText(queue, "p", "No saved proposals yet. Generate a brief and submit its draft for approval.");
                 queue.lastElementChild.className = "empty-queue";
             } else {
-                data.actions.forEach(action => queue.appendChild(renderAction(action)));
+                actions.forEach(action => queue.appendChild(renderAction(action)));
             }
-            queueStatus.textContent = `${data.count} saved action${data.count === 1 ? "" : "s"}.`;
+            queueStatus.className = "queue-message";
+            queueStatus.textContent = `${data.count} saved action${data.count === 1 ? "" : "s"} (${pendingCount} pending approval).`;
+            return data;
         } catch (error) {
             queue.replaceChildren();
+            queueStatus.className = "queue-message error";
             queueStatus.textContent = error.message || "Could not load the action queue.";
             integrationStatus.textContent = "Integration status unavailable.";
+            throw error;
+        } finally {
+            isQueueLoading = false;
+            if (queueLoading) queueLoading.hidden = true;
+            if (refreshQueue) refreshQueue.disabled = false;
         }
     }
 
-    async function decide(actionId, decision, reason) {
+    async function decide(actionId, decision, reason, controlButtons) {
+        if (controlButtons) {
+            controlButtons.forEach(btn => btn.disabled = true);
+        }
+        queueStatus.className = "queue-message loading";
         queueStatus.textContent = `${decision === "approve" ? "Saving approval" : "Saving rejection"}…`;
         try {
             await apiRequest(
@@ -920,16 +1929,22 @@
                 "POST",
                 decision === "reject" ? { reason } : {}
             );
+            queueStatus.className = "queue-message success";
             queueStatus.textContent = decision === "approve"
                 ? "Approved — awaiting integration/execution. No action was executed."
                 : "Rejected. This action cannot be executed.";
             await loadQueue();
         } catch (error) {
+            queueStatus.className = "queue-message error";
             queueStatus.textContent = error.message || "Could not save the decision.";
+            if (controlButtons) {
+                controlButtons.forEach(btn => btn.disabled = false);
+            }
         }
     }
 
     async function executeAction(action) {
+        queueStatus.className = "queue-message loading";
         queueStatus.textContent = "Requesting explicit execution…";
         try {
             await apiRequest(
@@ -939,6 +1954,7 @@
             );
             await loadQueue();
         } catch (error) {
+            queueStatus.className = "queue-message error";
             queueStatus.textContent = error.message || "Execution was not completed.";
             await loadQueue();
         }
@@ -946,10 +1962,15 @@
 
     queueProposal.addEventListener("click", async () => {
         if (!currentDraft) return;
+        if (queueProposal.disabled) return;
+
         queueProposal.disabled = true;
-        proposalStatus.textContent = "Saving proposal…";
+        proposalStatus.className = "proposal-status loading";
+        proposalStatus.textContent = "Saving proposal for review…";
+
+        let saveResponse;
         try {
-            await apiRequest("/api/actions", "POST", {
+            saveResponse = await apiRequest("/api/actions", "POST", {
                 account_id: currentDraft.accountId,
                 action_type: "customer_outreach_email",
                 proposed_payload: {
@@ -962,17 +1983,53 @@
                 },
                 evidence_refs: currentDraft.evidence
             });
-            proposalStatus.textContent = "Proposal saved as Pending. No email was sent and no CRM changes were made.";
-            queueProposal.hidden = true;
-            await loadQueue();
-        } catch (error) {
-            proposalStatus.textContent = error.message || "Could not save the proposal.";
-        } finally {
+        } catch (saveError) {
+            proposalStatus.className = "proposal-status error";
+            proposalStatus.textContent = saveError.message || "Could not save the proposal.";
             queueProposal.disabled = false;
+            return;
+        }
+
+        const savedAction = saveResponse && saveResponse.action;
+        const actionId = savedAction ? savedAction.action_id : "";
+        proposalStatus.className = "proposal-status success";
+        proposalStatus.textContent = `Proposal saved as Pending (Action ID: ${actionId}). No email was sent and no CRM changes were made.`;
+        queueProposal.hidden = true;
+
+        try {
+            await loadQueue();
+        } catch (refreshError) {
+            proposalStatus.className = "proposal-status warning";
+            proposalStatus.replaceChildren();
+
+            const warnMsg = document.createElement("p");
+            warnMsg.textContent = `Proposal was saved (Action ID: ${actionId}), but the Action Queue could not be refreshed (${refreshError.message}).`;
+
+            const retryBtn = document.createElement("button");
+            retryBtn.type = "button";
+            retryBtn.className = "retry-button";
+            retryBtn.textContent = "Retry refreshing queue";
+            retryBtn.addEventListener("click", async () => {
+                retryBtn.disabled = true;
+                retryBtn.textContent = "Refreshing…";
+                try {
+                    await loadQueue();
+                    proposalStatus.className = "proposal-status success";
+                    proposalStatus.textContent = `Proposal saved as Pending (Action ID: ${actionId}) and Action Queue refreshed.`;
+                } catch (err) {
+                    retryBtn.disabled = false;
+                    retryBtn.textContent = "Retry refreshing queue";
+                    warnMsg.textContent = `Proposal was saved (Action ID: ${actionId}), but refreshing failed: ${err.message}`;
+                }
+            });
+
+            proposalStatus.append(warnMsg, retryBtn);
         }
     });
 
-    refreshQueue.addEventListener("click", loadQueue);
+    if (refreshQueue) {
+        refreshQueue.addEventListener("click", () => loadQueue().catch(() => {}));
+    }
 
     form.addEventListener("submit", async (event) => {
         event.preventDefault();
@@ -1009,7 +2066,8 @@
             button.disabled = false;
         }
     });
-    loadQueue();
+
+    loadQueue().catch(() => {});
 })();
 </script>
 
