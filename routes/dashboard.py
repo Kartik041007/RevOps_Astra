@@ -1,7 +1,7 @@
 
 import json
 from pathlib import Path
-from flask import Blueprint, jsonify, request, render_template,session, redirect, url_for, flash
+from flask import Blueprint, jsonify, request, render_template,session, redirect, url_for, flash,current_app
 
 from flask_wtf import FlaskForm
 import mysql
@@ -367,6 +367,52 @@ def customer_impact(customer_id):
 @dashboard_bp.route("/ai-agent", methods=["GET"])
 def ai_agent_page():
     return render_template("ai_agent_3d.html")
+
+@dashboard_bp.route("/api/ai-agent/brief", methods=["POST"])
+@admin_required
+def ai_agent_brief_api():
+    data = request.get_json(silent=True) or {}
+    account_id = str(data.get("account_id", "")).strip()
+
+    if not account_id or len(account_id) > 64:
+        return jsonify({
+            "success": False,
+            "error": "Please provide a valid account ID."
+        }), 400
+
+    try:
+        from ai.llm_service import generate_customer_brief
+
+        brief = generate_customer_brief(account_id)
+
+        return jsonify({
+            "success": True,
+            "brief": brief
+        }), 200
+
+    except ValueError as exc:
+        return jsonify({
+            "success": False,
+            "error": str(exc)
+        }), 404
+
+    except (RuntimeError, FileNotFoundError) as exc:
+        current_app.logger.warning("ASTRA AI unavailable: %s", exc)
+
+        return jsonify({
+            "success": False,
+            "error": str(exc)
+        }), 503
+
+    except Exception:
+        current_app.logger.exception(
+            "Unexpected ASTRA AI brief generation error"
+        )
+
+        return jsonify({
+            "success": False,
+            "error": "Could not generate the AI brief. Check the Flask terminal."
+        }), 500
 
 @dashboard_bp.route("/customer-impact", methods=["GET"])
 def customer_impact_page():

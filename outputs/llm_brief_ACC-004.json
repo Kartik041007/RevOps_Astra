@@ -1,0 +1,45 @@
+{
+  "account_id": "ACC-004",
+  "customer": {
+    "account_id": "ACC-004",
+    "company_name": "Brightforge Enterprises 004",
+    "risk_index": 50,
+    "risk_level": "Needs Review",
+    "evidence_confidence": 100,
+    "confidence_label": "High",
+    "usage_change_pct": -22.951699463327373,
+    "recorded_revenue_90d": 42253.36,
+    "open_tickets": 2,
+    "overdue_followups": 1.0,
+    "risk_drivers": "Usage declined 23.0% over the comparison period; 2 open support tickets; 1 overdue follow-up(s); 3 negative interaction(s) in the recent period",
+    "counter_evidence": null
+  },
+  "draft": {
+    "issue_summary": "Usage decline, open support tickets, overdue follow-ups, and negative interactions suggest potential issues with the product.",
+    "evidence_used": [
+      "ACC-004@2026-08-15",
+      "ACC-004@2026-08-22",
+      "ACC-004@2026-08-29",
+      "ACC-004@2026-09-05",
+      "ACC-004@2026-09-12",
+      "ACC-004@2026-09-19",
+      "ACC-004@2026-09-26",
+      "ACC-004@2026-10-03",
+      "ACC-004@2026-10-10",
+      "FUP-00014",
+      "INT-00012",
+      "INT-00013",
+      "INT-00014",
+      "TKT-00013",
+      "TKT-00015"
+    ],
+    "recommended_next_action": "Review the product usage and support tickets to identify the root cause of the decline. Investigate the overdue follow-ups and negative interactions to understand the customer's concerns and address them promptly.",
+    "email_subject": "Potential Issues with Product Usage and Customer Feedback",
+    "email_body": "Dear [Salesperson's Name],\n\nWe have identified several potential issues with the product usage and customer feedback based on the evidence provided. The usage has declined by 23.0% over the past few months, with open support tickets and overdue follow-ups indicating ongoing issues. Additionally, negative interactions have been observed, suggesting that the product may not be meeting the expectations of the customers.\n\nTo address these issues, we recommend reviewing the product usage and support tickets to identify the root cause of the decline. Investigate the overdue follow-ups and negative interactions to understand the customer's concerns and address them promptly. Please let us know if you need any further information or assistance.\n\nBest regards,\n[Your Name]",
+    "counter_evidence": [],
+    "evidence_gaps": []
+  },
+  "approval_required": true,
+  "email_sent": false,
+  "crm_updated": false
+}
