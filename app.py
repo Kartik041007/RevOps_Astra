@@ -16,7 +16,7 @@ def create_app():
 
     @app.errorhandler(404)
     def not_found(error):
-        return jsonify({"error": "Endpoint not found"}), 404
+        return jsonify({"error": "Endpoint not found"}), 404 
 
     @app.errorhandler(500)
     def internal_error(error):

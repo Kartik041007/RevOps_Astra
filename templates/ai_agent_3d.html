@@ -1,359 +1,632 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RevOps Astra — AI Robot</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RevOps Astra — AI Robot</title>
 
-<style>
-* {
-    box-sizing: border-box;
-}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-body {
-    margin: 0;
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-    overflow: hidden;
-    background:
-        radial-gradient(ellipse at center, #ffffff 0%, #eef0ff 55%, #e5e8ff 100%);
-    font-family: Inter, Arial, sans-serif;
-    color: #202746;
-}
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse at center, #ffffff 0%, #eef0ff 55%, #e5e8ff 100%);
+            font-family: Inter, Arial, sans-serif;
+            color: #202746;
+        }
 
-.scene {
-    width: min(900px, 100%);
-    height: 650px;
-    position: relative;
-    display: grid;
-    place-items: center;
-    isolation: isolate;
-}
+        .scene {
+            width: min(900px, 100%);
+            height: 650px;
+            position: relative;
+            display: grid;
+            place-items: center;
+            isolation: isolate;
+        }
 
-.ambient {
-    position: absolute;
-    width: 390px;
-    height: 390px;
-    border-radius: 50%;
-    background: radial-gradient(circle, #f9c66c50, #9d8bff20 60%, transparent 72%);
-    filter: blur(8px);
-    z-index: -2;
-}
+        .ambient {
+            position: absolute;
+            width: 390px;
+            height: 390px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #f9c66c50, #9d8bff20 60%, transparent 72%);
+            filter: blur(8px);
+            z-index: -2;
+        }
 
-.robot-wrap {
-    position: relative;
-    width: 260px;
-    height: 380px;
-    animation: float 4s ease-in-out infinite;
-    filter: drop-shadow(0 28px 24px #7c65b52c);
-    z-index: 2;
-}
+        .robot-wrap {
+            position: relative;
+            width: 260px;
+            height: 380px;
+            animation: float 4s ease-in-out infinite;
+            filter: drop-shadow(0 28px 24px #7c65b52c);
+            z-index: 2;
+        }
 
-.robot {
-    position: absolute;
-    inset: 0;
-}
+        .robot {
+            position: absolute;
+            inset: 0;
+        }
 
-/* Head */
-.head {
-    position: absolute;
-    top: 15px;
-    left: 28px;
-    width: 204px;
-    height: 157px;
-    border-radius: 46% 46% 39% 39%;
-    background: linear-gradient(145deg, #ffe7a0 0%, #f6c75c 28%, #d98b24 72%, #f4bd51 100%);
-    box-shadow:
-        inset 7px 7px 8px #fff4c9,
-        inset -8px -9px 10px #b66a1d,
-        0 9px 0 #d9a142;
-    transform: rotate(-2deg);
-}
+        /* Head */
+        .head {
+            position: absolute;
+            top: 15px;
+            left: 28px;
+            width: 204px;
+            height: 157px;
+            border-radius: 46% 46% 39% 39%;
+            background: linear-gradient(145deg, #ffe7a0 0%, #f6c75c 28%, #d98b24 72%, #f4bd51 100%);
+            box-shadow:
+                inset 7px 7px 8px #fff4c9,
+                inset -8px -9px 10px #b66a1d,
+                0 9px 0 #d9a142;
+            transform: rotate(-2deg);
+        }
 
-.head::before {
-    content: "";
-    position: absolute;
-    inset: 10px 10px 12px;
-    border-radius: 45% 45% 36% 36%;
-    border: 2px solid #ffedb7a0;
-    box-shadow: inset 0 3px 5px #a9672e35;
-}
+        .head::before {
+            content: "";
+            position: absolute;
+            inset: 10px 10px 12px;
+            border-radius: 45% 45% 36% 36%;
+            border: 2px solid #ffedb7a0;
+            box-shadow: inset 0 3px 5px #a9672e35;
+        }
 
-/* Face screen */
-.face {
-    position: absolute;
-    left: 17px;
-    top: 24px;
-    width: 170px;
-    height: 94px;
-    border-radius: 44px;
-    background: linear-gradient(155deg, #4e4b4a, #181c2a 50%, #4b4139);
-    border: 5px solid #c99544;
-    box-shadow:
-        inset 0 5px 12px #0009,
-        0 3px 2px #fff0b0;
-    overflow: hidden;
-}
+        /* Face screen */
+        .face {
+            position: absolute;
+            left: 17px;
+            top: 24px;
+            width: 170px;
+            height: 94px;
+            border-radius: 44px;
+            background: linear-gradient(155deg, #4e4b4a, #181c2a 50%, #4b4139);
+            border: 5px solid #c99544;
+            box-shadow:
+                inset 0 5px 12px #0009,
+                0 3px 2px #fff0b0;
+            overflow: hidden;
+        }
 
-.face::before {
-    content: "";
-    position: absolute;
-    inset: 4px;
-    border-radius: 35px;
-    background: linear-gradient(145deg, #777b85, #d7d0c4 48%, #77757a);
-    opacity: .85;
-}
+        .face::before {
+            content: "";
+            position: absolute;
+            inset: 4px;
+            border-radius: 35px;
+            background: linear-gradient(145deg, #777b85, #d7d0c4 48%, #77757a);
+            opacity: .85;
+        }
 
-/* Eyes */
-.eye {
-    position: absolute;
-    top: 28px;
-    width: 29px;
-    height: 31px;
-    border-radius: 50%;
-    background:
-        radial-gradient(circle at 34% 27%, white 0 10%, transparent 12%),
-        radial-gradient(circle at 63% 70%, #070e28 0 30%, #203a70 43%, #5277a3 64%, #111a32 69%);
-    border: 2px solid #b2b9c4;
-    box-shadow: 0 2px 5px #1118;
-    z-index: 1;
-    animation: blink 5s infinite;
-}
+        /* Eyes */
+        .eye {
+            position: absolute;
+            top: 28px;
+            width: 29px;
+            height: 31px;
+            border-radius: 50%;
+            background:
+                radial-gradient(circle at 34% 27%, white 0 10%, transparent 12%),
+                radial-gradient(circle at 63% 70%, #070e28 0 30%, #203a70 43%, #5277a3 64%, #111a32 69%);
+            border: 2px solid #b2b9c4;
+            box-shadow: 0 2px 5px #1118;
+            z-index: 1;
+            animation: blink 5s infinite;
+        }
 
-.eye.left { left: 31px; }
-.eye.right { right: 31px; }
+        .eye.left {
+            left: 31px;
+        }
 
-/* Side headphones */
-.ear {
-    position: absolute;
-    top: 61px;
-    width: 26px;
-    height: 53px;
-    border-radius: 12px;
-    background: linear-gradient(90deg, #bd711e, #ffe49a, #dc8d26);
-    box-shadow: inset 3px 0 4px #fff5b4, 0 4px 5px #a8652b55;
-}
+        .eye.right {
+            right: 31px;
+        }
 
-.ear.left { left: 9px; }
-.ear.right { right: 9px; }
+        /* Side headphones */
+        .ear {
+            position: absolute;
+            top: 61px;
+            width: 26px;
+            height: 53px;
+            border-radius: 12px;
+            background: linear-gradient(90deg, #bd711e, #ffe49a, #dc8d26);
+            box-shadow: inset 3px 0 4px #fff5b4, 0 4px 5px #a8652b55;
+        }
 
-/* Body */
-.body {
-    position: absolute;
-    top: 163px;
-    left: 42px;
-    width: 176px;
-    height: 173px;
-    border-radius: 43px 43px 37px 37px;
-    background: linear-gradient(145deg, #fff0ad, #f4c55f 38%, #dc922c 76%, #f8ca68);
-    border: 3px solid #e6af4a;
-    box-shadow:
-        inset 7px 7px 10px #fff6ca,
-        inset -8px -7px 10px #c77a24,
-        0 9px 0 #d28d32;
-}
+        .ear.left {
+            left: 9px;
+        }
 
-.body-panel {
-    position: absolute;
-    inset: 12px 10px 12px;
-    border-radius: 34px;
-    border: 2px solid #ffedb1;
-    box-shadow: inset 0 5px 10px #d2913338;
-}
+        .ear.right {
+            right: 9px;
+        }
 
-.body-light {
-    position: absolute;
-    top: 29px;
-    right: 23px;
-    display: grid;
-    gap: 7px;
-}
+        /* Body */
+        .body {
+            position: absolute;
+            top: 163px;
+            left: 42px;
+            width: 176px;
+            height: 173px;
+            border-radius: 43px 43px 37px 37px;
+            background: linear-gradient(145deg, #fff0ad, #f4c55f 38%, #dc922c 76%, #f8ca68);
+            border: 3px solid #e6af4a;
+            box-shadow:
+                inset 7px 7px 10px #fff6ca,
+                inset -8px -7px 10px #c77a24,
+                0 9px 0 #d28d32;
+        }
 
-.body-light i {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #56504b, #181c25);
-    box-shadow: 0 1px 2px #fff3b0;
-}
+        .body-panel {
+            position: absolute;
+            inset: 12px 10px 12px;
+            border-radius: 34px;
+            border: 2px solid #ffedb1;
+            box-shadow: inset 0 5px 10px #d2913338;
+        }
 
-/* Arms */
-.arm {
-    position: absolute;
-    top: 190px;
-    width: 38px;
-    height: 109px;
-    border-radius: 22px;
-    background: linear-gradient(90deg, #c87520, #f9bf50 40%, #ffdb7d 70%, #d17d25);
-    box-shadow: inset 5px 0 6px #ffe6a2, 0 7px 9px #b57a2b33;
-}
+        .body-light {
+            position: absolute;
+            top: 29px;
+            right: 23px;
+            display: grid;
+            gap: 7px;
+        }
 
-.arm.left {
-    left: 12px;
-    transform: rotate(5deg);
-}
+        .body-light i {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #56504b, #181c25);
+            box-shadow: 0 1px 2px #fff3b0;
+        }
 
-.arm.right {
-    right: 12px;
-    transform: rotate(-5deg);
-}
+        /* Arms */
+        .arm {
+            position: absolute;
+            top: 190px;
+            width: 38px;
+            height: 109px;
+            border-radius: 22px;
+            background: linear-gradient(90deg, #c87520, #f9bf50 40%, #ffdb7d 70%, #d17d25);
+            box-shadow: inset 5px 0 6px #ffe6a2, 0 7px 9px #b57a2b33;
+        }
 
-/* Floating words */
-.word {
-    position: absolute;
-    padding: 12px 17px;
-    border: 1px solid #ffffffd9;
-    border-radius: 14px;
-    background: #ffffffbd;
-    backdrop-filter: blur(12px);
-    box-shadow: 0 12px 30px #6d69b21b;
-    font-size: 13px;
-    font-weight: 700;
-    color: #5552a0;
-    white-space: nowrap;
-    animation: wordFloat 5s ease-in-out infinite;
-}
+        .arm.left {
+            left: 12px;
+            transform: rotate(5deg);
+        }
 
-.word span {
-    margin-right: 7px;
-}
+        .arm.right {
+            right: 12px;
+            transform: rotate(-5deg);
+        }
 
-.w1 { top: 125px; left: 8%; animation-delay: -.5s; }
-.w2 { top: 210px; right: 6%; animation-delay: -2s; }
-.w3 { bottom: 150px; left: 7%; animation-delay: -3s; }
-.w4 { bottom: 115px; right: 9%; animation-delay: -1s; }
-.w5 { top: 65px; right: 23%; animation-delay: -2.5s; }
+        /* Floating words */
+        .word {
+            position: absolute;
+            padding: 12px 17px;
+            border: 1px solid #ffffffd9;
+            border-radius: 14px;
+            background: #ffffffbd;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 12px 30px #6d69b21b;
+            font-size: 13px;
+            font-weight: 700;
+            color: #5552a0;
+            white-space: nowrap;
+            animation: wordFloat 5s ease-in-out infinite;
+        }
 
-.orbit {
-    position: absolute;
-    width: 450px;
-    height: 450px;
-    border: 1px solid #aaa7e83d;
-    border-radius: 50%;
-    z-index: -1;
-}
+        .word span {
+            margin-right: 7px;
+        }
 
-.orbit::before,
-.orbit::after {
-    content: "";
-    position: absolute;
-    border: 1px dashed #9c97e84a;
-    border-radius: 50%;
-    inset: 28px;
-}
+        .w1 {
+            top: 125px;
+            left: 8%;
+            animation-delay: -.5s;
+        }
 
-.orbit::after {
-    inset: 60px;
-}
+        .w2 {
+            top: 210px;
+            right: 6%;
+            animation-delay: -2s;
+        }
 
-.caption {
-    position: absolute;
-    bottom: 24px;
-    text-align: center;
-}
+        .w3 {
+            bottom: 150px;
+            left: 7%;
+            animation-delay: -3s;
+        }
 
-.caption h2 {
-    margin: 0;
-    font-size: 25px;
-    letter-spacing: -.7px;
-}
+        .w4 {
+            bottom: 115px;
+            right: 9%;
+            animation-delay: -1s;
+        }
 
-.caption h2 span {
-    color: #7c65e9;
-}
+        .w5 {
+            top: 65px;
+            right: 23%;
+            animation-delay: -2.5s;
+        }
 
-.caption p {
-    margin: 9px 0 0;
-    color: #7d849d;
-    font-size: 13px;
-}
+        .orbit {
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            border: 1px solid #aaa7e83d;
+            border-radius: 50%;
+            z-index: -1;
+        }
 
-.online {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    margin-top: 13px;
-    color: #299c72;
-    font-size: 11px;
-    font-weight: 700;
-}
+        .orbit::before,
+        .orbit::after {
+            content: "";
+            position: absolute;
+            border: 1px dashed #9c97e84a;
+            border-radius: 50%;
+            inset: 28px;
+        }
 
-.online i {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: #35d69a;
-    box-shadow: 0 0 10px #35d69a;
-}
+        .orbit::after {
+            inset: 60px;
+        }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0) rotate(-1deg); }
-    50% { transform: translateY(-16px) rotate(1deg); }
-}
+        .caption {
+            position: absolute;
+            bottom: 24px;
+            text-align: center;
+        }
 
-@keyframes wordFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-11px); }
-}
+        .caption h2 {
+            margin: 0;
+            font-size: 25px;
+            letter-spacing: -.7px;
+        }
 
-@keyframes blink {
-    0%, 44%, 48%, 100% { transform: scaleY(1); }
-    46% { transform: scaleY(.12); }
-}
+        .caption h2 span {
+            color: #7c65e9;
+        }
 
-@media (max-width: 600px) {
-    .scene { height: 620px; transform: scale(.82); }
-    .w1 { left: 1%; }
-    .w2 { right: 0; }
-    .w3 { left: 0; }
-    .w4 { right: 0; }
-    .w5 { right: 5%; }
-}
-</style>
+        .caption p {
+            margin: 9px 0 0;
+            color: #7d849d;
+            font-size: 13px;
+        }
+
+        .online {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            margin-top: 13px;
+            color: #299c72;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .online i {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #35d69a;
+            box-shadow: 0 0 10px #35d69a;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(-1deg);
+            }
+
+            50% {
+                transform: translateY(-16px) rotate(1deg);
+            }
+        }
+
+        @keyframes wordFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-11px);
+            }
+        }
+
+        @keyframes blink {
+
+            0%,
+            44%,
+            48%,
+            100% {
+                transform: scaleY(1);
+            }
+
+            46% {
+                transform: scaleY(.12);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .scene {
+                height: 620px;
+                transform: scale(.82);
+            }
+
+            .w1 {
+                left: 1%;
+            }
+
+            .w2 {
+                right: 0;
+            }
+
+            .w3 {
+                left: 0;
+            }
+
+            .w4 {
+                right: 0;
+            }
+
+            .w5 {
+                right: 5%;
+            }
+        }
+
+        /* ASTRA AI brief interface */
+        .agent-panel {
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            z-index: 5;
+            width: min(340px, 43%);
+            max-height: calc(100% - 36px);
+            overflow-y: auto;
+            padding: 16px;
+            border: 1px solid #ffffff;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.92);
+            box-shadow: 0 12px 30px #5552a020;
+            backdrop-filter: blur(12px);
+        }
+
+        .agent-panel h3 {
+            margin: 0 0 8px;
+            font-size: 18px;
+        }
+
+        .agent-panel p {
+            margin: 0 0 12px;
+            color: #68708a;
+            font-size: 12px;
+        }
+
+        .agent-panel input,
+        .agent-panel button {
+            width: 100%;
+            padding: 11px;
+            border-radius: 10px;
+            font: inherit;
+        }
+
+        .agent-panel input {
+            margin-bottom: 8px;
+            border: 1px solid #d9dced;
+        }
+
+        .agent-panel button {
+            border: 0;
+            background: #6555d9;
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .agent-panel button:disabled {
+            opacity: .6;
+            cursor: wait;
+        }
+
+        .agent-result {
+            margin-top: 14px;
+            font-size: 13px;
+            line-height: 1.5;
+            overflow-wrap: anywhere;
+        }
+
+        .agent-result h4 {
+            margin: 12px 0 4px;
+            color: #33316f;
+        }
+
+        .agent-result pre {
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+            font: inherit;
+        }
+
+        @media (max-width: 650px) {
+            .agent-panel {
+                top: 12px;
+                left: 12px;
+                width: calc(100% - 24px);
+                max-height: 42%;
+            }
+        }
+    </style>
 </head>
 
 <body>
-<div class="scene">
-    <div class="ambient"></div>
-    <div class="orbit"></div>
+    <div class="scene">
 
-    <div class="word w1"><span>⚡</span>Customer Risk</div>
-    <div class="word w2"><span>📊</span>Revenue Insights</div>
-    <div class="word w3"><span>🛡️</span>Churn Alert</div>
-    <div class="word w4"><span>✦</span>AI Intelligence</div>
-    <div class="word w5"><span>◎</span>Account Health</div>
+        <section class="agent-panel">
+            <h3>✦ ASTRA Intelligence</h3>
+            <p>Generate an evidence-based customer brief.</p>
 
-    <div class="robot-wrap">
-        <div class="robot">
-            <div class="ear left"></div>
-            <div class="ear right"></div>
+            <form id="briefForm">
+                <input id="accountId" name="account_id" type="text" value="ACC-001" maxlength="64"
+                    placeholder="Enter account ID" required>
+                <button id="generateBrief" type="submit">
+                    Generate Customer Brief
+                </button>
+            </form>
 
-            <div class="head">
-                <div class="face">
-                    <div class="eye left"></div>
-                    <div class="eye right"></div>
+            <div id="briefStatus" role="status" aria-live="polite"></div>
+            <div id="briefResult" class="agent-result"></div>
+        </section>
+
+        <div class="ambient"></div>
+        <div class="orbit"></div>
+
+        <div class="word w1"><span>⚡</span>Customer Risk</div>
+        <div class="word w2"><span>📊</span>Revenue Insights</div>
+        <div class="word w3"><span>🛡️</span>Churn Alert</div>
+        <div class="word w4"><span>✦</span>AI Intelligence</div>
+        <div class="word w5"><span>◎</span>Account Health</div>
+
+        <div class="robot-wrap">
+            <div class="robot">
+                <div class="ear left"></div>
+                <div class="ear right"></div>
+
+                <div class="head">
+                    <div class="face">
+                        <div class="eye left"></div>
+                        <div class="eye right"></div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="arm left"></div>
-            <div class="arm right"></div>
+                <div class="arm left"></div>
+                <div class="arm right"></div>
 
-            <div class="body">
-                <div class="body-panel"></div>
-                <div class="body-light">
-                    <i></i><i></i><i></i>
+                <div class="body">
+                    <div class="body-panel"></div>
+                    <div class="body-light">
+                        <i></i><i></i><i></i>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="caption">
+            <h2>Meet <span>ASTRA AI</span></h2>
+            <p>Your intelligent revenue operations companion</p>
+            <div class="online"><i></i> AI ASSISTANT READY</div>
+        </div>
     </div>
 
-    <div class="caption">
-        <h2>Meet <span>ASTRA AI</span></h2>
-        <p>Your intelligent revenue operations companion</p>
-        <div class="online"><i></i> AI ASSISTANT READY</div>
-    </div>
-</div>
+<script>
+(() => {
+    const form = document.getElementById("briefForm");
+    const accountInput = document.getElementById("accountId");
+    const button = document.getElementById("generateBrief");
+    const status = document.getElementById("briefStatus");
+    const result = document.getElementById("briefResult");
+
+    if (!form || !accountInput || !button || !status || !result) return;
+
+    function addText(parent, tag, text) {
+        const element = document.createElement(tag);
+        element.textContent = text == null ? "" : String(text);
+        parent.appendChild(element);
+        return element;
+    }
+
+    function renderBrief(brief) {
+        result.replaceChildren();
+
+        const customer = brief.customer || {};
+        const draft = brief.draft || {};
+
+        addText(result, "h4", customer.company_name || brief.account_id);
+        addText(
+            result,
+            "p",
+            `Risk: ${customer.risk_level || "Unknown"} · Index: ${customer.risk_index ?? "N/A"}`
+        );
+
+        addText(result, "h4", "Issue Summary");
+        addText(result, "p", draft.issue_summary || "No summary returned.");
+
+        addText(result, "h4", "Recommended Next Action");
+        addText(result, "p", draft.recommended_next_action || "No action returned.");
+
+        addText(result, "h4", "Evidence Used");
+        const evidence = Array.isArray(draft.evidence_used)
+            ? draft.evidence_used
+            : [];
+
+        addText(
+            result,
+            "p",
+            evidence.length ? evidence.join(", ") : "No source IDs returned."
+        );
+
+        addText(result, "h4", "Email Draft");
+        addText(result, "p", `Subject: ${draft.email_subject || ""}`);
+        const email = addText(result, "pre", draft.email_body || "");
+        email.style.margin = "0";
+
+        addText(
+            result,
+            "p",
+            "Draft only — no email sent and no CRM changes made."
+        );
+    }
+
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const accountId = accountInput.value.trim();
+        if (!accountId) return;
+
+        button.disabled = true;
+        status.textContent = "Generating brief… this may take a few minutes.";
+        result.replaceChildren();
+
+        try {
+            const response = await fetch("/api/ai-agent/brief", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                credentials: "same-origin",
+                body: JSON.stringify({ account_id: accountId })
+            });
+
+            const data = await response.json().catch(() => ({}));
+
+            if (!response.ok || !data.success) {
+                throw new Error(data.error || `Request failed (${response.status}).`);
+            }
+
+            renderBrief(data.brief || {});
+            status.textContent = "Brief generated successfully.";
+        } catch (error) {
+            status.textContent = error.message || "Could not generate the brief.";
+        } finally {
+            button.disabled = false;
+        }
+    });
+})();
+</script>
+
+
 </body>
+
 </html>

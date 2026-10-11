@@ -1269,3 +1269,42 @@ footer {
     font-size: 13px;
     border-top: 1px solid rgba(120, 130, 160, 0.16);
 }
+
+/* ASTRA AI modal layout fix */
+#aiAgentModal .ai-agent-modal-content {
+    width: min(900px, 95vw);
+    height: min(720px, 92vh);
+    min-height: 0;
+    background: #eef0ff;
+}
+
+#aiAgentModal iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    border: 0;
+    background: #eef0ff;
+}
+
+/* Keep robot scene centered inside the iframe */
+body:has(.scene) {
+    overflow: hidden;
+}
+
+.scene {
+    width: 100%;
+    max-width: 900px;
+    height: 100%;
+    min-height: 500px;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .scene {
+        min-height: 500px;
+        height: 100%;
+        transform: scale(.82);
+        transform-origin: center center;
+    }
+}

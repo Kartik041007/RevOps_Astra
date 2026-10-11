@@ -600,3 +600,35 @@ $("refresh-btn").addEventListener("click", loadDashboard);
 $("search-input").addEventListener("input", applySearch);
 
 loadDashboard();
+// ASTRA AI Agent modal controls
+const aiAgentButton = document.getElementById("aiAgentButton");
+const aiAgentModal = document.getElementById("aiAgentModal");
+const closeAIAgent = document.getElementById("closeAIAgent");
+
+if (aiAgentButton && aiAgentModal) {
+    aiAgentButton.addEventListener("click", () => {
+        aiAgentModal.classList.add("open");
+        aiAgentModal.setAttribute("aria-hidden", "false");
+    });
+
+    if (closeAIAgent) {
+        closeAIAgent.addEventListener("click", () => {
+            aiAgentModal.classList.remove("open");
+            aiAgentModal.setAttribute("aria-hidden", "true");
+        });
+    }
+
+    aiAgentModal.addEventListener("click", (event) => {
+        if (event.target === aiAgentModal) {
+            aiAgentModal.classList.remove("open");
+            aiAgentModal.setAttribute("aria-hidden", "true");
+        }
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && aiAgentModal.classList.contains("open")) {
+            aiAgentModal.classList.remove("open");
+            aiAgentModal.setAttribute("aria-hidden", "true");
+        }
+    });
+}
