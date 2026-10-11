@@ -1,0 +1,386 @@
+
+/* Customers page only — isolated from the Overview CSS */
+
+.customers-page {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #edf2ff 0%, #dce6ff 48%, #f1e7ff 100%);
+  color: #18233c;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.customers-page * {
+  box-sizing: border-box;
+}
+
+.customers-layout {
+  display: grid;
+  grid-template-columns: 248px minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.customers-sidebar {
+  position: sticky;
+  top: 16px;
+  height: calc(100vh - 32px);
+  margin: 16px 0 16px 16px;
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255,255,255,.9);
+  border-radius: 25px;
+  background: rgba(255,255,255,.78);
+  box-shadow: 0 12px 36px rgba(66, 85, 150, .08);
+}
+
+.customers-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 34px;
+}
+
+.customers-brand-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  color: white;
+  font-weight: 800;
+  background: linear-gradient(135deg, #6587ff, #9455f5);
+  box-shadow: 0 8px 18px rgba(102, 116, 255, .28);
+}
+
+.customers-brand strong,
+.customers-brand small {
+  display: block;
+}
+
+.customers-brand small {
+  margin-top: 4px;
+  color: #7c8ba8;
+  font-size: 11px;
+}
+
+.customers-nav-label {
+  margin: 0 12px 10px;
+  color: #96a3bc;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.customers-sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 12px;
+  margin-bottom: 5px;
+  border-radius: 12px;
+  color: #6f7e9b;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .18s ease, transform .18s ease;
+}
+
+.customers-sidebar a:hover {
+  background: #edf1ff;
+  transform: translateX(2px);
+}
+
+.customers-sidebar a.active {
+  color: #26365c;
+  background: linear-gradient(110deg, #dbe2ff, #e5e9ff);
+  box-shadow: 0 5px 14px rgba(102, 116, 255, .13);
+}
+
+.customers-sidebar .sidebar-footer {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid #e0e7f4;
+  color: #7888a5;
+  font-size: 11px;
+}
+
+.customers-main {
+  min-width: 0;
+  padding: 28px 34px 40px;
+}
+
+.customers-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.customers-heading h1 {
+  margin: 0 0 7px;
+  font-size: clamp(25px, 3vw, 34px);
+  letter-spacing: -.8px;
+}
+
+.customers-heading p {
+  margin: 0;
+  color: #71809d;
+  font-size: 13px;
+}
+
+.customers-page .eyebrow {
+  margin-bottom: 8px;
+  color: #7788ee;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.customers-api-status {
+  padding: 9px 13px;
+  border: 1px solid #b5f0dd;
+  border-radius: 30px;
+  background: #d9f8ed;
+  color: #258b70;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.customers-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.customers-stat,
+.customers-panel {
+  border: 1px solid rgba(255,255,255,.95);
+  border-radius: 22px;
+  background: rgba(255,255,255,.73);
+  box-shadow: 0 8px 28px rgba(72, 91, 155, .06);
+}
+
+.customers-stat {
+  padding: 21px;
+  min-width: 0;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.customers-stat:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(72, 91, 155, .12);
+}
+
+.customers-stat span {
+  display: block;
+  color: #7584a1;
+  font-size: 12px;
+}
+
+.customers-stat strong {
+  display: block;
+  margin: 13px 0 6px;
+  font-size: clamp(24px, 3vw, 33px);
+}
+
+.customers-stat small {
+  color: #8794ad;
+  font-size: 10px;
+}
+
+.customers-panel {
+  padding: 24px;
+}
+
+.customers-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.customers-toolbar input,
+.customers-toolbar select {
+  min-width: 0;
+  padding: 13px 15px;
+  border: 1px solid #dce4f5;
+  border-radius: 12px;
+  outline: none;
+  background: rgba(255,255,255,.85);
+  color: #26334f;
+  font: inherit;
+  font-size: 12px;
+}
+
+.customers-toolbar input {
+  flex: 1;
+}
+
+.customers-toolbar input:focus,
+.customers-toolbar select:focus {
+  border-color: #8a9cff;
+  box-shadow: 0 0 0 3px rgba(125,145,255,.12);
+}
+
+.customers-table-wrap {
+  overflow-x: auto;
+}
+
+.customers-page table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.customers-page th {
+  padding: 14px 12px;
+  color: #8592ad;
+  font-size: 10px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+.customers-page td {
+  padding: 16px 12px;
+  border-top: 1px solid #e6ebf6;
+  font-size: 12px;
+}
+
+.customers-page tbody tr {
+  transition: background .18s ease;
+}
+
+.customers-page tbody tr:hover {
+  background: rgba(224,232,255,.5);
+}
+
+.customers-page .customer-subtext {
+  margin-top: 4px;
+  color: #8996b0;
+  font-size: 10px;
+}
+
+.customers-page .risk-label {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.customers-page .risk-urgent {
+  color: #d94e66;
+  background: #ffe3e9;
+}
+
+.customers-page .risk-review {
+  color: #ad731c;
+  background: #fff0d5;
+}
+
+.customers-page .risk-healthy {
+  color: #218967;
+  background: #d9f8e9;
+}
+
+.customers-page .risk-unknown {
+  color: #667692;
+  background: #e8edf6;
+}
+
+.customers-page .customer-open-link {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid #d5def8;
+  border-radius: 9px;
+  background: #edf1ff;
+  color: #536be2;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.customers-page .customer-open-link:hover {
+  background: #dce4ff;
+}
+
+.customers-page #customer-message {
+  padding: 12px 0;
+  color: #7887a2;
+  font-size: 12px;
+}
+
+@media (max-width: 1000px) {
+  .customers-layout {
+    grid-template-columns: 210px minmax(0, 1fr);
+  }
+
+  .customers-main {
+    padding: 24px 20px;
+  }
+
+  .customers-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .customers-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .customers-sidebar {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .customers-brand {
+    margin-bottom: 15px;
+  }
+
+  .customers-sidebar .sidebar-footer,
+  .customers-nav-label {
+    display: none;
+  }
+
+  .customers-sidebar nav {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+  }
+
+  .customers-sidebar a {
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  .customers-main {
+    padding: 18px 12px;
+  }
+
+  .customers-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .customers-stats {
+    gap: 10px;
+  }
+
+  .customers-stat {
+    padding: 15px;
+  }
+
+  .customers-panel {
+    padding: 15px;
+  }
+
+  .customers-toolbar {
+    flex-direction: column;
+  }
+}

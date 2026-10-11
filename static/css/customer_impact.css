@@ -1,0 +1,134 @@
+
+.customer-impact-page {
+  margin: 0;
+  min-height: 100vh;
+  color: #1b2943;
+  background: linear-gradient(135deg, #edf2ff, #dce6ff 55%, #f1e7ff);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.customer-impact-page * { box-sizing: border-box; }
+.customer-impact-page a { text-decoration: none; }
+
+.ci-layout {
+  display: grid;
+  grid-template-columns: 248px minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.ci-sidebar {
+  position: sticky;
+  top: 16px;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 32px);
+  margin: 16px 0 16px 16px;
+  padding: 24px 18px;
+  border: 1px solid white;
+  border-radius: 24px;
+  background: rgba(255,255,255,.8);
+}
+
+.ci-brand { display: flex; align-items: center; gap: 12px; color: #26334f; }
+.ci-brand-icon {
+  display: grid; place-items: center; width: 42px; height: 42px;
+  border-radius: 13px; color: white; font-weight: 800;
+  background: linear-gradient(135deg, #6587ff, #9455f5);
+}
+.ci-brand strong, .ci-brand small { display: block; }
+.ci-brand small { margin-top: 4px; color: #8592ad; font-size: 10px; }
+.ci-nav-label, .ci-eyebrow {
+  color: #7a89e8; font-size: 10px; font-weight: 800; letter-spacing: 1.4px;
+}
+.ci-nav-label { margin: 34px 10px 12px; }
+.ci-nav { display: grid; gap: 6px; }
+.ci-nav a {
+  padding: 13px 12px; border-radius: 11px; color: #72809b; font-size: 13px;
+}
+.ci-nav a:hover, .ci-nav a.active { background: #e2e8ff; color: #4258c6; }
+.ci-sidebar-footer {
+  margin-top: auto; padding-top: 18px; border-top: 1px solid #e0e7f4;
+  color: #71809c; font-size: 11px;
+}
+
+.ci-main { min-width: 0; padding: 30px 34px; }
+.ci-header {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  gap: 20px; margin-bottom: 24px;
+}
+.ci-back { display: inline-block; margin-bottom: 22px; color: #5d70d8; font-size: 12px; }
+.ci-header h1 { margin: 6px 0; font-size: clamp(26px, 3vw, 36px); letter-spacing: -.8px; }
+.ci-subtitle, .ci-muted { color: #7c89a3; font-size: 12px; }
+.ci-risk-badge, .ci-count {
+  padding: 8px 12px; border-radius: 30px; background: #ffe5e9;
+  color: #d64d67; font-size: 11px; font-weight: 750; white-space: nowrap;
+}
+.ci-count { background: #e6ebff; color: #5668d2; }
+
+.ci-kpis {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px; margin-bottom: 20px;
+}
+.ci-kpi, .ci-panel {
+  min-width: 0; border: 1px solid rgba(255,255,255,.95);
+  border-radius: 20px; background: rgba(255,255,255,.76);
+  box-shadow: 0 8px 26px rgba(72,91,155,.06);
+}
+.ci-kpi { padding: 20px; }
+.ci-kpi span, .ci-kpi small { display: block; color: #7e8ba4; font-size: 11px; }
+.ci-kpi strong { display: block; margin: 12px 0 7px; font-size: clamp(22px, 2.5vw, 30px); overflow-wrap: anywhere; }
+.ci-panel { padding: 24px; margin-bottom: 18px; }
+.ci-section-heading { display: flex; justify-content: space-between; gap: 15px; margin-bottom: 20px; }
+.ci-section-heading h2 { margin: 5px 0; font-size: 20px; }
+.ci-section-heading p { margin-bottom: 0; }
+.ci-usage-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 20px; }
+.ci-usage-metric { padding: 15px; border: 1px solid #e2e8f5; border-radius: 13px; background: rgba(255,255,255,.7); }
+.ci-usage-metric span { display: block; color: #7e8ba4; font-size: 10px; }
+.ci-usage-metric strong { display: block; margin-top: 7px; font-size: 18px; overflow-wrap: anywhere; }
+
+.ci-chart-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.ci-chart-card { min-width: 0; padding: 17px; border: 1px solid #e2e8f5; border-radius: 15px; background: rgba(255,255,255,.6); }
+.ci-chart-card h3 { margin: 0 0 14px; font-size: 14px; }
+.ci-chart-wrap { position: relative; height: 240px; }
+
+.ci-evidence-list, .ci-action-list { display: grid; gap: 10px; }
+.ci-evidence-item, .ci-action-item {
+  display: flex; align-items: flex-start; gap: 13px; padding: 16px;
+  border: 1px solid #e2e8f5; border-radius: 13px; background: rgba(255,255,255,.65);
+}
+.ci-evidence-marker {
+  display: grid; place-items: center; flex: 0 0 30px; height: 30px;
+  border-radius: 9px; background: #ffe5e9; color: #d64d67; font-weight: 800;
+}
+.ci-evidence-item strong, .ci-action-item strong { font-size: 13px; }
+.ci-evidence-item p, .ci-action-item p { margin: 5px 0; color: #74819b; font-size: 11px; }
+.ci-evidence-item small { color: #8793aa; font-size: 10px; overflow-wrap: anywhere; }
+.ci-action-priority { margin-left: auto; padding: 5px 9px; border-radius: 20px; background: #fff0d8; color: #a36d20; font-size: 10px; white-space: nowrap; }
+.ci-impact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.ci-impact-card { min-width: 0; padding: 19px; border: 1px solid #e2e8f5; border-radius: 14px; background: rgba(255,255,255,.65); }
+.ci-impact-card.positive { border-color: #bfeedd; }
+.ci-impact-card.negative { border-color: #ffd1d8; }
+.ci-impact-card h3 { margin-top: 0; font-size: 14px; }
+.ci-impact-item { margin: 10px 0 0; color: #64738f; font-size: 12px; overflow-wrap: anywhere; }
+.ci-disclaimer { margin: 15px 0 0; color: #8793aa; font-size: 10px; line-height: 1.6; }
+.ci-error { padding: 13px; margin-bottom: 15px; border-radius: 10px; background: #ffe5e9; color: #bd3d55; font-size: 12px; }
+.ci-footer { display: flex; justify-content: space-between; gap: 15px; color: #8592ad; font-size: 10px; padding: 12px 2px; }
+
+@media (max-width: 1050px) {
+  .ci-layout { grid-template-columns: 210px minmax(0, 1fr); }
+  .ci-main { padding: 24px 18px; }
+  .ci-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ci-usage-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 680px) {
+  .ci-layout { grid-template-columns: 1fr; }
+  .ci-sidebar { position: static; height: auto; margin: 10px; }
+  .ci-nav { display: flex; overflow-x: auto; }
+  .ci-nav a { flex-shrink: 0; }
+  .ci-main { padding: 16px 12px; }
+  .ci-header { align-items: flex-start; flex-direction: column; }
+  .ci-chart-grid, .ci-impact-grid { grid-template-columns: 1fr; }
+  .ci-panel { padding: 16px; }
+  .ci-footer { flex-direction: column; }
+}

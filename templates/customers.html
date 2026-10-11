@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>All Customers | RevOps Astra</title>
+
+    <!-- Customers page ki separate CSS -->
+    <link rel="stylesheet" href="/static/css/customers.css">
+</head>
+
+<body class="customers-page">
+
+    <div class="customers-layout">
+
+        <!-- LEFT SIDEBAR -->
+        <aside class="customers-sidebar">
+
+            <a href="/dashboard" class="customers-brand">
+                <div class="customers-brand-icon">A</div>
+                <div>
+                    <strong>RevOps Astra</strong>
+                    <small>Revenue Intelligence</small>
+                </div>
+            </a>
+
+            <p class="customers-nav-label">WORKSPACE</p>
+
+            <nav class="customers-nav">
+                <a href="/dashboard" class="customers-nav-link">
+                    <span class="nav-icon">▦</span>
+                    <span>Overview</span>
+                </a>
+
+                <a href="/dashboard#risk-queue" class="customers-nav-link">
+                    <span class="nav-icon">⚠</span>
+                    <span>Risk Queue</span>
+                </a>
+
+                <a href="/dashboard#analytics" class="customers-nav-link">
+                    <span class="nav-icon">▥</span>
+                    <span>Analytics</span>
+                </a>
+
+                <a href="/customers" class="customers-nav-link active">
+                    <span class="nav-icon">♟</span>
+                    <span>Customers</span>
+                </a>
+            </nav>
+
+            <div class="customers-sidebar-footer">
+                <span class="connection-dot"></span>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="customers-main">
+
+            <!-- PAGE HEADER -->
+            <header class="customers-heading">
+                <div>
+                    <p class="eyebrow">CUSTOMER PORTFOLIO</p>
+                    <h1>All Customers</h1>
+                    <p class="customers-subtitle">
+                        Search accounts, review customer health and investigate individual customers.
+                    </p>
+                </div>
+
+                <div class="customers-api-status">
+                    <span class="connection-dot"></span>
+                    API DATA
+                </div>
+            </header>
+
+
+            <!-- PORTFOLIO SUMMARY -->
+            <section class="customers-stats">
+
+                <article class="customers-stat">
+                    <div class="stat-top">
+                        <span>Total Customers</span>
+                        <span class="stat-icon icon-blue">♟</span>
+                    </div>
+                    <strong id="total-customers">—</strong>
+                    <small>Accounts in portfolio</small>
+                    <div class="stat-progress progress-blue"></div>
+                </article>
+
+                <article class="customers-stat">
+                    <div class="stat-top">
+                        <span>Urgent Accounts</span>
+                        <span class="stat-icon icon-red">⚠</span>
+                    </div>
+                    <strong id="urgent-count">—</strong>
+                    <small>Require priority attention</small>
+                    <div class="stat-progress progress-red"></div>
+                </article>
+
+                <article class="customers-stat">
+                    <div class="stat-top">
+                        <span>Needs Review</span>
+                        <span class="stat-icon icon-orange">◷</span>
+                    </div>
+                    <strong id="review-count">—</strong>
+                    <small>Accounts needing review</small>
+                    <div class="stat-progress progress-orange"></div>
+                </article>
+
+                <article class="customers-stat">
+                    <div class="stat-top">
+                        <span>Healthy Accounts</span>
+                        <span class="stat-icon icon-green">✓</span>
+                    </div>
+                    <strong id="healthy-count">—</strong>
+                    <small>Currently classified healthy</small>
+                    <div class="stat-progress progress-green"></div>
+                </article>
+
+            </section>
+
+
+            <!-- CUSTOMER TABLE PANEL -->
+            <section class="customers-panel">
+
+                <div class="customers-panel-heading">
+                    <div>
+                        <h2>Customer Directory</h2>
+                        <p>Choose any account to open its Customer 360 dashboard.</p>
+                    </div>
+
+                    <span class="customer-total-badge" id="customer-total-badge">
+
+                    </span>
+                </div>
+
+
+                <!-- SEARCH AND FILTER -->
+                <div class="customers-toolbar">
+
+                    <div class="customer-search-box">
+                        <span>⌕</span>
+                        <input id="customer-search" type="search"
+                            placeholder="Search customer name, ID, industry or owner..." autocomplete="off">
+                    </div>
+
+                    <select id="risk-filter" aria-label="Filter by risk level">
+                        <option value="all">All risk levels</option>
+                        <option value="Urgent">Urgent</option>
+                        <option value="Needs Review">Needs Review</option>
+                        <option value="Healthy">Healthy</option>
+                        <option value="Unclassified">Unclassified</option>
+                    </select>
+
+                </div>
+
+
+                <!-- API STATUS / RESULT COUNT -->
+                <div class="customers-table-meta">
+                    <span id="customer-message">Loading customers from backend…</span>
+                </div>
+
+
+                <!-- RESPONSIVE TABLE -->
+
+                <div class="customers-table-wrap">
+                    <table class="customers-table">
+                        <thead>
+                            <tr>
+                                <th>Customer</th>
+                                <th>Account ID</th>
+                                <th>Risk Index</th>
+                                <th>Risk Level</th>
+                                <th>90-Day Revenue</th>
+                                <th>Usage Change</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="customers-table-body">
+                            <tr>
+                                <td colspan="6" class="table-loading">
+                                    Loading customer accounts…
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <!-- EMPTY STATE -->
+                <div id="customers-empty" class="customers-empty" hidden>
+                    <div class="empty-icon">⌕</div>
+                    <h3>No customers found</h3>
+                    <p>Try another search term or change the risk filter.</p>
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+            <footer class="customers-footer">
+                <span>RevOps Astra · Customer Intelligence</span>
+                <a href="/dashboard">Back to Overview ↑</a>
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- Separate JavaScript for Customers page -->
+    <script src="/static/js/customers.js"></script>
+
+</body>
+
+</html>

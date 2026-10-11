@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer 360 | RevOps Astra</title>
+  <link rel="stylesheet" href="/static/css/customer_impact.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="customer-impact-page">
+  <div class="ci-layout">
+
+    <aside class="ci-sidebar">
+      <a href="/dashboard" class="ci-brand">
+        <span class="ci-brand-icon">A</span>
+        <span><strong>RevOps Astra</strong><small>Revenue Intelligence</small></span>
+      </a>
+
+      <p class="ci-nav-label">WORKSPACE</p>
+      <nav class="ci-nav">
+        <a href="/dashboard">▦ &nbsp; Overview</a>
+        <a href="/dashboard#risk-queue">⚠ &nbsp; Risk Queue</a>
+        <a href="/dashboard#analytics">▥ &nbsp; Analytics</a>
+        <a href="/customers" class="active">♟ &nbsp; Customers</a>
+      </nav>
+
+      <div class="ci-sidebar-footer">● Customer Intelligence</div>
+    </aside>
+
+    <main class="ci-main">
+      <header class="ci-header">
+        <div>
+          <a href="/customers" class="ci-back">← Back to All Customers</a>
+          <p class="ci-eyebrow">CUSTOMER PROFILE / INVESTIGATION</p>
+          <h1 id="customer-name">Loading customer…</h1>
+          <p class="ci-subtitle" id="customer-meta">Loading account details…</p>
+        </div>
+        <div id="customer-risk-badge" class="ci-risk-badge">Loading</div>
+      </header>
+
+      <div id="ci-error" class="ci-error" hidden></div>
+
+      <section class="ci-kpis" id="account-summary">
+        <article class="ci-kpi"><span>Risk Index</span><strong>—</strong><small>Loading</small></article>
+        <article class="ci-kpi"><span>90-Day Revenue</span><strong>—</strong><small>Recorded revenue</small></article>
+        <article class="ci-kpi"><span>Active Users · 30d</span><strong>—</strong><small>Average active users</small></article>
+        <article class="ci-kpi"><span>Open Tickets</span><strong>—</strong><small>Current recorded count</small></article>
+      </section>
+
+      <section class="ci-panel">
+        <div class="ci-section-heading">
+          <div>
+            <p class="ci-eyebrow">PRODUCT HEALTH</p>
+            <h2>Usage Investigation</h2>
+            <p class="ci-muted">Investigate product usage, adoption and errors from the account data.</p>
+          </div>
+        </div>
+
+        <div class="ci-usage-grid" id="usage-metrics"></div>
+
+        <div class="ci-chart-grid">
+          <div class="ci-chart-card">
+            <h3>Usage Signals</h3>
+            <div class="ci-chart-wrap"><canvas id="usage-chart"></canvas></div>
+          </div>
+          <div class="ci-chart-card">
+            <h3>Support Overview</h3>
+            <div class="ci-chart-wrap"><canvas id="support-chart"></canvas></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ci-panel">
+        <div class="ci-section-heading">
+          <div>
+            <p class="ci-eyebrow">EVIDENCE REVIEW</p>
+            <h2>Risk Signals & Investigation Timeline</h2>
+            <p class="ci-muted">Source records associated with this account.</p>
+          </div>
+          <span class="ci-count" id="evidence-count">0 records</span>
+        </div>
+        <div id="risk-pathway" class="ci-evidence-list"></div>
+      </section>
+
+      <section class="ci-panel">
+        <div class="ci-section-heading">
+          <div>
+            <p class="ci-eyebrow">NEXT BEST ACTION</p>
+            <h2>Retention Action Center</h2>
+            <p class="ci-muted">Suggested interventions based on available risk evidence.</p>
+          </div>
+          <span class="ci-count" id="action-count">0 actions</span>
+        </div>
+        <div id="action-board" class="ci-action-list"></div>
+        <p class="ci-disclaimer">
+          Suggestions are not completed tasks. Action ownership, status and outcomes are not
+          saved in this version.
+        </p>
+      </section>
+
+      <section class="ci-panel">
+        <div class="ci-section-heading">
+          <div>
+            <p class="ci-eyebrow">BUSINESS CONTEXT</p>
+            <h2>Positive vs Negative Business Impact</h2>
+          </div>
+        </div>
+        <div class="ci-impact-grid">
+          <div class="ci-impact-card positive">
+            <h3>Positive Indicators</h3>
+            <div id="positive-impact"></div>
+          </div>
+          <div class="ci-impact-card negative">
+            <h3>Risk Indicators</h3>
+            <div id="negative-impact"></div>
+          </div>
+        </div>
+        <p class="ci-disclaimer">
+          Recorded revenue is not predicted revenue loss. Positive indicators are shown only
+          when supported by the source data.
+        </p>
+      </section>
+
+      <footer class="ci-footer">
+        <span>RevOps Astra · Customer 360</span>
+        <span>Prototype risk score is not a verified churn probability.</span>
+      </footer>
+    </main>
+  </div>
+
+  <script src="/static/js/customer_impact.js"></script>
+</body>
+</html>
