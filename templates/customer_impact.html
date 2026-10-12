@@ -24,6 +24,7 @@
         <a href="/dashboard#risk-queue">⚠ &nbsp; Risk Queue</a>
         <a href="/dashboard#analytics">▥ &nbsp; Analytics</a>
         <a href="/customers" class="active">♟ &nbsp; Customers</a>
+        <a href="/ai-agent">🤖 &nbsp; ASTRA Agent</a>
       </nav>
 
       <div class="ci-sidebar-footer">● Customer Intelligence</div>
@@ -47,6 +48,30 @@
         <article class="ci-kpi"><span>90-Day Revenue</span><strong>—</strong><small>Recorded revenue</small></article>
         <article class="ci-kpi"><span>Active Users · 30d</span><strong>—</strong><small>Average active users</small></article>
         <article class="ci-kpi"><span>Open Tickets</span><strong>—</strong><small>Current recorded count</small></article>
+      </section>
+
+      <section class="ci-panel" id="crm-details-panel">
+        <div class="ci-section-heading">
+          <div>
+            <p class="ci-eyebrow">ACCOUNT REPOSITORY</p>
+            <h2>CRM Account Profile</h2>
+            <p class="ci-muted">Account owner, current CRM lifecycle status, and relationship notes.</p>
+          </div>
+          <span class="ci-count" id="crm-provider-badge">CRM Profile</span>
+        </div>
+        <div class="ci-crm-grid" id="crm-details-grid"></div>
+      </section>
+
+      <section class="ci-panel" id="verified-crm-panel">
+        <div class="ci-section-heading">
+          <div>
+            <p class="ci-eyebrow">MODEL CONTEXT PROTOCOL</p>
+            <h2>Verified CRM Updates</h2>
+            <p class="ci-muted">Live synchronization verified via MCP against the customer record.</p>
+          </div>
+          <span class="ci-count unverified" id="crm-sync-badge">No verified CRM updates yet</span>
+        </div>
+        <div class="ci-crm-grid" id="verified-crm-grid"></div>
       </section>
 
       <section class="ci-panel">

@@ -151,6 +151,13 @@ function renderPortfolioSnapshot(data) {
     setWidth("seg-review", review);
     setWidth("seg-healthy", healthy);
 
+    const ringFg = $("ring-fg");
+    if (ringFg && total > 0) {
+        const circumference = 326.7;
+        const healthyRatio = Math.max(0, Math.min(1, healthy / total));
+        ringFg.style.strokeDashoffset = (circumference * (1 - healthyRatio)).toFixed(1);
+    }
+
     const ring = document.querySelector(".ring");
     if (ring) {
         ring.style.setProperty(
@@ -230,11 +237,25 @@ function applySearch() {
         const accountCell = row.insertCell();
         const name = document.createElement("div");
         name.className = "account-name";
-        name.textContent = company;
+        const link = document.createElement("a");
+        link.href = `/customers/${encodeURIComponent(id)}`;
+        link.textContent = company;
+        link.title = `View Customer 360 for ${company}`;
+        link.style.color = "inherit";
+        link.style.textDecoration = "none";
+        name.append(link);
         const accountId = document.createElement("div");
         accountId.className = "account-id";
         accountId.textContent = id;
         accountCell.append(name, accountId);
+
+        row.style.cursor = "pointer";
+        row.title = `Open Customer 360 for ${company}`;
+        row.addEventListener("click", (e) => {
+            if (e.target.tagName !== "A") {
+                window.location.href = `/customers/${encodeURIComponent(id)}`;
+            }
+        });
 
         const levelCell = row.insertCell();
         const pill = document.createElement("span");
@@ -632,3 +653,15 @@ if (aiAgentButton && aiAgentModal) {
         }
     });
 }
+
+// Listen for action lifecycle events from the embedded ASTRA AI Robot iframe
+window.addEventListener("message", (event) => {
+    if (event.data && event.data.type === "ASTRA_ACTION_UPDATE") {
+        const { message, status, actionId } = event.data;
+        if (message) {
+            showToast(message);
+        } else if (status) {
+            showToast(`Action ${status}: ${actionId ? actionId.slice(0, 8) + "..." : ""}`);
+        }
+    }
+});

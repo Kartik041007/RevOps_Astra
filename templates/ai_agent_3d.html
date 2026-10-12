@@ -1084,6 +1084,141 @@
             cursor: wait;
         }
 
+        .action-controls .execute-button {
+            background: #1b6d46;
+            color: #ffffff;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 8px;
+            border: 0;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .action-controls .execute-button:hover:not(:disabled) {
+            background: #155737;
+            box-shadow: 0 2px 8px rgba(27, 109, 70, 0.25);
+        }
+
+        .action-controls .execute-button:disabled {
+            opacity: 0.6;
+            cursor: wait;
+        }
+
+        .action-execution-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px solid #f0f2f8;
+        }
+
+        .execution-feedback {
+            font-size: 11px;
+            line-height: 1.45;
+            padding: 6px 10px;
+            border-radius: 6px;
+            margin-top: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .execution-feedback:empty {
+            display: none;
+        }
+
+        .execution-feedback.loading {
+            background: #f0f2ff;
+            color: #4f46a5;
+            border: 1px solid #dcdff2;
+        }
+
+        .execution-feedback.success {
+            background: #e9f8ef;
+            color: #1b6d46;
+            border: 1px solid #bfead0;
+        }
+
+        .execution-feedback.error {
+            background: #fff0f1;
+            color: #a32a39;
+            border: 1px solid #fcd2d7;
+        }
+
+        .execution-unavailable-note {
+            font-size: 11px;
+            color: #717595;
+            margin: 4px 0 0;
+            font-style: italic;
+        }
+
+        .action-execution-result-box {
+            margin: 6px 0 10px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            font-size: 11px;
+            line-height: 1.45;
+            border: 1px solid #e2e4f0;
+            background: #fbfbfe;
+        }
+
+        .action-execution-result-box.verified {
+            background: #f4faf6;
+            border-color: #c0ebd2;
+            color: #1b6d46;
+        }
+
+        .action-execution-result-box.failed {
+            background: #fff5f5;
+            border-color: #fcd2d7;
+            color: #a32a39;
+        }
+
+        .exec-badge {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-bottom: 4px;
+        }
+
+        .exec-badge.verified {
+            background: #d4f3e1;
+            color: #155737;
+        }
+
+        .exec-badge.failed {
+            background: #fcd7db;
+            color: #8b2330;
+        }
+
+        .exec-message {
+            margin: 2px 0 4px;
+            font-weight: 600;
+            font-size: 11px;
+        }
+
+        .exec-updates {
+            font-size: 11px;
+            color: #3b3f5c;
+            margin-top: 4px;
+        }
+
+        .exec-updates code {
+            font-family: monospace;
+            background: rgba(0, 0, 0, 0.05);
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
         .rejection-reason {
             width: 100%;
             min-height: 64px;
@@ -1256,6 +1391,20 @@
 </head>
 
 <body>
+    <!-- Standalone top navigation (hidden when loaded in modal iframe) -->
+    <nav id="agentTopNav" class="agent-top-nav" style="display:none; position:fixed; top:14px; left:16px; z-index:1000; gap:8px;">
+        <a href="/dashboard" style="background:rgba(255,255,255,0.92); backdrop-filter:blur(8px); padding:8px 14px; border-radius:20px; border:1px solid #dce4f5; color:#202746; text-decoration:none; font-size:12px; font-weight:600; box-shadow:0 2px 8px rgba(0,0,0,0.06); display:inline-flex; align-items:center; gap:6px;">← Dashboard</a>
+        <a href="/customers" style="background:rgba(255,255,255,0.92); backdrop-filter:blur(8px); padding:8px 14px; border-radius:20px; border:1px solid #dce4f5; color:#202746; text-decoration:none; font-size:12px; font-weight:600; box-shadow:0 2px 8px rgba(0,0,0,0.06); display:inline-flex; align-items:center; gap:6px;">👥 Customers</a>
+    </nav>
+    <script>
+        if (window.self === window.top) {
+            document.addEventListener("DOMContentLoaded", () => {
+                const nav = document.getElementById("agentTopNav");
+                if (nav) nav.style.display = "flex";
+            });
+        }
+    </script>
+
     <div class="scene">
 
         <!-- ASTRA Intelligence Customer Brief Panel -->
@@ -1438,6 +1587,8 @@
 
         const customer = brief.customer || {};
         const draft = brief.draft || {};
+        const latestAction = brief.latest_action || null;
+        const crmRecord = brief.crm_record || null;
 
         addText(result, "h4", customer.company_name || brief.account_id);
         addText(
@@ -1445,6 +1596,23 @@
             "p",
             `Risk: ${customer.risk_level || "Unknown"} · Index: ${customer.risk_index ?? "N/A"}`
         );
+
+        if (crmRecord) {
+            addText(result, "h4", "CRM Record Status");
+            const crmStatusText = `Owner: ${crmRecord.account_owner || "Unassigned"}${crmRecord.owner_email ? ` (${crmRecord.owner_email})` : ""} · Status: ${crmRecord.customer_status || crmRecord.status || "Active"}`;
+            addText(result, "p", crmStatusText);
+            if (crmRecord.notes) {
+                addText(result, "p", `Notes: ${crmRecord.notes}`);
+            }
+            if (brief.crm_synced || brief.mock_crm_synced || (latestAction && (latestAction.status === "COMPLETED" || latestAction.status === "EXECUTED"))) {
+                const provLabel = brief.crm_provider === "mysql" ? "MySQL CRM synced" : "mock CRM synced";
+                const verifiedTag = addText(result, "small", `✓ Verified via MCP (${provLabel})`);
+                verifiedTag.style.display = "inline-block";
+                verifiedTag.style.color = "#1b6d46";
+                verifiedTag.style.fontWeight = "700";
+                verifiedTag.style.marginBottom = "8px";
+            }
+        }
 
         addText(result, "h4", "Issue Summary");
         addText(result, "p", draft.issue_summary || "No summary returned.");
@@ -1468,25 +1636,57 @@
         const email = addText(result, "pre", draft.email_body || "");
         email.style.margin = "0";
 
-        addText(
-            result,
-            "p",
-            "Draft only — no email sent and no CRM changes made."
-        );
-        currentDraft = {
-            accountId: accountInput.value.trim(),
-            action: draft.recommended_next_action || "",
-            explanation: draft.issue_summary || "",
-            subject: draft.email_subject || "",
-            body: draft.email_body || "",
-            evidence: Array.isArray(draft.evidence_used) ? draft.evidence_used : []
-        };
-        queueProposal.hidden = !(
-            currentDraft.action && currentDraft.explanation &&
-            currentDraft.subject && currentDraft.body
-        );
-        proposalStatus.replaceChildren();
-        proposalStatus.className = "proposal-status";
+        isSubmittingProposal = false;
+        queueProposal.disabled = false;
+
+        if (latestAction && (latestAction.status === "COMPLETED" || latestAction.status === "EXECUTED")) {
+            addText(
+                result,
+                "p",
+                `✓ Action executed via MCP and verified in mock CRM (Action ID: ${latestAction.action_id}).`
+            );
+            queueProposal.hidden = true;
+            proposalStatus.className = "proposal-status success";
+            proposalStatus.textContent = `Action ${latestAction.action_id} was executed and verified. Mock CRM updated.`;
+        } else if (latestAction && latestAction.status === "APPROVED") {
+            addText(
+                result,
+                "p",
+                `Action approved (Action ID: ${latestAction.action_id}) — ready for execution in the Action Queue.`
+            );
+            queueProposal.hidden = true;
+            proposalStatus.className = "proposal-status success";
+            proposalStatus.textContent = `Action ${latestAction.action_id} is approved. Click "Execute Approved Action" in the Action Queue.`;
+        } else if (latestAction && latestAction.status === "PENDING") {
+            addText(
+                result,
+                "p",
+                `Proposal submitted (Action ID: ${latestAction.action_id}) — pending review in the Action Queue.`
+            );
+            queueProposal.hidden = true;
+            proposalStatus.className = "proposal-status success";
+            proposalStatus.textContent = `Proposal is pending review in Action Queue (Action ID: ${latestAction.action_id}).`;
+        } else {
+            addText(
+                result,
+                "p",
+                "Draft only — no email sent and no CRM changes made."
+            );
+            currentDraft = {
+                accountId: accountInput.value.trim(),
+                action: draft.recommended_next_action || "",
+                explanation: draft.issue_summary || "",
+                subject: draft.email_subject || "",
+                body: draft.email_body || "",
+                evidence: Array.isArray(draft.evidence_used) ? draft.evidence_used : []
+            };
+            queueProposal.hidden = !(
+                currentDraft.action && currentDraft.explanation &&
+                currentDraft.subject && currentDraft.body
+            );
+            proposalStatus.replaceChildren();
+            proposalStatus.className = "proposal-status";
+        }
     }
 
     function statusLabel(status) {
@@ -1772,7 +1972,45 @@
 
         if (action.execution_result) {
             addText(card, "h5", "Execution Result").className = "action-section-title";
-            addParagraph(card, JSON.stringify(action.execution_result));
+            const execBox = document.createElement("div");
+            execBox.className = "action-execution-result-box";
+            if (action.execution_result.verified) {
+                execBox.classList.add("verified");
+                const badge = document.createElement("div");
+                badge.className = "exec-badge verified";
+                badge.textContent = `✓ Verified via MCP (${action.execution_result.mode || "mock"})`;
+
+                const msg = document.createElement("p");
+                msg.className = "exec-message";
+                msg.textContent = action.execution_result.message || "Execution completed and verified.";
+
+                execBox.append(badge, msg);
+
+                if (action.execution_result.applied_updates) {
+                    const updatesEl = document.createElement("div");
+                    updatesEl.className = "exec-updates";
+                    const strong = document.createElement("strong");
+                    strong.textContent = "Applied Updates: ";
+                    const code = document.createElement("code");
+                    code.textContent = JSON.stringify(action.execution_result.applied_updates);
+                    updatesEl.append(strong, code);
+                    execBox.appendChild(updatesEl);
+                }
+            } else if (action.execution_result.error) {
+                execBox.classList.add("failed");
+                const badge = document.createElement("div");
+                badge.className = "exec-badge failed";
+                badge.textContent = "❌ Execution Failed";
+
+                const msg = document.createElement("p");
+                msg.className = "exec-message";
+                msg.textContent = `${action.execution_result.error} (${action.execution_result.error_type || "Error"})`;
+
+                execBox.append(badge, msg);
+            } else {
+                execBox.textContent = JSON.stringify(action.execution_result, null, 2);
+            }
+            card.appendChild(execBox);
         }
 
         if (action.status === "PENDING") {
@@ -1808,7 +2046,7 @@
                     return;
                 }
                 unsavedWarning.textContent = "";
-                decide(action.action_id, "approve", null, [approve, reject]);
+                decide(action.action_id, "approve", null, [approve, reject], action.account_id);
             });
 
             reject.addEventListener("click", () => {
@@ -1825,46 +2063,111 @@
                 }
                 reason.setCustomValidity("");
                 if (unsavedWarning) unsavedWarning.textContent = "";
-                decide(action.action_id, "reject", trimmed, [approve, reject]);
+                decide(action.action_id, "reject", trimmed, [approve, reject], action.account_id);
             });
 
             card.appendChild(controls);
-        } else if (action.status === "APPROVED" && integrationConfigured) {
-            const execute = addText(card, "button", "Execute approved action");
-            execute.type = "button";
-            execute.className = "proposal-button";
-            execute.addEventListener("click", () => executeAction(action));
+        } else if (action.status === "APPROVED") {
+            const execControls = document.createElement("div");
+            execControls.className = "action-controls action-execution-controls";
+
+            const execFeedback = document.createElement("div");
+            execFeedback.className = "execution-feedback";
+            execFeedback.id = `exec-feedback-${action.action_id}`;
+
+            if (integrationConfigured) {
+                const executeBtn = document.createElement("button");
+                executeBtn.type = "button";
+                executeBtn.className = "execute-button";
+                executeBtn.id = `execute-${action.action_id}`;
+                executeBtn.textContent = "⚡ Execute Approved Action";
+
+                executeBtn.addEventListener("click", async () => {
+                    if (getHasUnsavedEdits()) {
+                        execFeedback.className = "execution-feedback error";
+                        execFeedback.textContent = "⚠️ You have unsaved email edits. Please save your draft or cancel changes before executing.";
+                        return;
+                    }
+                    if (isEditorOpen()) {
+                        execFeedback.className = "execution-feedback error";
+                        execFeedback.textContent = "ℹ️ Please close or save the editor to review the final email before executing.";
+                        return;
+                    }
+                    execFeedback.textContent = "";
+                    await executeAction(action, executeBtn, execFeedback);
+                });
+
+                execControls.append(executeBtn, execFeedback);
+            } else {
+                const unavailMsg = document.createElement("p");
+                unavailMsg.className = "execution-unavailable-note";
+                unavailMsg.textContent = "⏳ Execution unavailable — integration not configured.";
+                execControls.appendChild(unavailMsg);
+            }
+
+            card.appendChild(execControls);
         }
 
         return card;
     }
 
-    async function apiRequest(url, method = "GET", body) {
+    async function apiRequest(url, method = "GET", body, timeoutMs = 15000) {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+
         const options = {
             method,
             credentials: "same-origin",
-            headers: { "Accept": "application/json" }
+            headers: { "Accept": "application/json" },
+            signal: controller.signal
         };
         if (body !== undefined) {
             options.headers["Content-Type"] = "application/json";
             options.headers["X-CSRFToken"] = csrfToken;
             options.body = JSON.stringify(body);
         }
-        const response = await fetch(url, options);
-        const data = await response.json().catch(() => ({}));
-        if (!response.ok) {
-            throw new Error(data.error || `Request failed (${response.status}).`);
+
+        try {
+            const response = await fetch(url, options);
+            clearTimeout(timeoutId);
+
+            if (response.redirected && response.url.includes("/login")) {
+                throw new Error("Session expired. Please log in again.");
+            }
+
+            const contentType = response.headers.get("content-type") || "";
+            let data = {};
+            if (contentType.includes("application/json")) {
+                data = await response.json().catch(() => ({}));
+            } else {
+                const text = await response.text().catch(() => "");
+                if (!response.ok) {
+                    throw new Error(`Server returned error (${response.status}).`);
+                }
+            }
+
+            if (!response.ok) {
+                throw new Error(data.error || `Request failed (${response.status}).`);
+            }
+            return data;
+        } catch (error) {
+            clearTimeout(timeoutId);
+            if (error.name === "AbortError") {
+                throw new Error("Request timed out. Please try again.");
+            }
+            throw error;
         }
-        return data;
     }
 
-    async function loadQueue() {
+    async function loadQueue(options = {}) {
         if (isQueueLoading) return;
         isQueueLoading = true;
         if (queueLoading) queueLoading.hidden = false;
         if (refreshQueue) refreshQueue.disabled = true;
-        queueStatus.textContent = "";
-        queueStatus.className = "queue-message";
+        if (!options.preserveStatusMessage) {
+            queueStatus.textContent = "";
+            queueStatus.className = "queue-message";
+        }
 
         try {
             const data = await apiRequest("/api/actions");
@@ -1901,8 +2204,10 @@
             } else {
                 actions.forEach(action => queue.appendChild(renderAction(action)));
             }
-            queueStatus.className = "queue-message";
-            queueStatus.textContent = `${data.count} saved action${data.count === 1 ? "" : "s"} (${pendingCount} pending approval).`;
+            if (!options.preserveStatusMessage) {
+                queueStatus.className = "queue-message";
+                queueStatus.textContent = `${data.count} saved action${data.count === 1 ? "" : "s"} (${pendingCount} pending approval).`;
+            }
             return data;
         } catch (error) {
             queue.replaceChildren();
@@ -1917,7 +2222,7 @@
         }
     }
 
-    async function decide(actionId, decision, reason, controlButtons) {
+    async function decide(actionId, decision, reason, controlButtons, targetAccountId) {
         if (controlButtons) {
             controlButtons.forEach(btn => btn.disabled = true);
         }
@@ -1931,9 +2236,24 @@
             );
             queueStatus.className = "queue-message success";
             queueStatus.textContent = decision === "approve"
-                ? "Approved — awaiting integration/execution. No action was executed."
+                ? "Approved — ready for execution. Click 'Execute Approved Action' on the action card to proceed."
                 : "Rejected. This action cannot be executed.";
-            await loadQueue();
+            await loadQueue({ preserveStatusMessage: true });
+
+            // Refresh brief if currently displaying this customer
+            const currentAcc = accountInput ? accountInput.value.trim() : "";
+            if (targetAccountId && currentAcc === targetAccountId) {
+                fetchCustomerBrief(targetAccountId, "Refreshing brief with updated action decision…");
+            }
+
+            if (window.parent && window.parent !== window) {
+                window.parent.postMessage({
+                    type: "ASTRA_ACTION_UPDATE",
+                    actionId,
+                    status: decision === "approve" ? "APPROVED" : "REJECTED",
+                    message: decision === "approve" ? `Action ${actionId.slice(0, 8)}... approved.` : `Action ${actionId.slice(0, 8)}... rejected.`
+                }, "*");
+            }
         } catch (error) {
             queueStatus.className = "queue-message error";
             queueStatus.textContent = error.message || "Could not save the decision.";
@@ -1943,102 +2263,75 @@
         }
     }
 
-    async function executeAction(action) {
+    async function executeAction(action, executeBtn, execFeedback) {
+        if (executeBtn) {
+            executeBtn.disabled = true;
+            executeBtn.textContent = "Executing via MCP…";
+        }
+        if (execFeedback) {
+            execFeedback.className = "execution-feedback loading";
+            execFeedback.textContent = "Calling MCP update_customer_record and verifying read-back…";
+        }
         queueStatus.className = "queue-message loading";
-        queueStatus.textContent = "Requesting explicit execution…";
+        queueStatus.textContent = `Executing action ${action.action_id} via MCP…`;
+
         try {
-            await apiRequest(
+            const result = await apiRequest(
                 `/api/actions/${encodeURIComponent(action.action_id)}/execute`,
                 "POST",
                 { payload: action.proposed_payload }
             );
-            await loadQueue();
+
+            const verifiedMsg = (result.action && result.action.execution_result && result.action.execution_result.message)
+                || result.message
+                || "Action executed and verified via MCP.";
+
+            queueStatus.className = "queue-message success";
+            queueStatus.textContent = `✓ ${verifiedMsg}`;
+
+            if (execFeedback) {
+                execFeedback.className = "execution-feedback success";
+                execFeedback.textContent = `✓ ${verifiedMsg}`;
+            }
+
+            // Refresh queue to display COMPLETED status and verified execution result box
+            await loadQueue({ preserveStatusMessage: true });
+
+            // Refresh customer brief if currently showing this account
+            if (accountInput && accountInput.value.trim() === action.account_id) {
+                fetchCustomerBrief(action.account_id, "Refreshing brief with verified customer data…");
+            }
+
+            if (window.parent && window.parent !== window) {
+                window.parent.postMessage({
+                    type: "ASTRA_ACTION_UPDATE",
+                    actionId: action.action_id,
+                    status: "COMPLETED",
+                    message: `Action ${action.action_id.slice(0, 8)}... executed and verified via MCP.`
+                }, "*");
+            }
         } catch (error) {
             queueStatus.className = "queue-message error";
-            queueStatus.textContent = error.message || "Execution was not completed.";
-            await loadQueue();
+            queueStatus.textContent = `❌ Execution failed: ${error.message}`;
+
+            if (execFeedback) {
+                execFeedback.className = "execution-feedback error";
+                execFeedback.textContent = `Execution failed: ${error.message}`;
+            }
+
+            if (executeBtn) {
+                executeBtn.disabled = false;
+                executeBtn.textContent = "⚡ Execute Approved Action";
+            }
+
+            await loadQueue({ preserveStatusMessage: true });
         }
     }
 
-    queueProposal.addEventListener("click", async () => {
-        if (!currentDraft) return;
-        if (queueProposal.disabled) return;
-
-        queueProposal.disabled = true;
-        proposalStatus.className = "proposal-status loading";
-        proposalStatus.textContent = "Saving proposal for review…";
-
-        let saveResponse;
-        try {
-            saveResponse = await apiRequest("/api/actions", "POST", {
-                account_id: currentDraft.accountId,
-                action_type: "customer_outreach_email",
-                proposed_payload: {
-                    proposed_action: currentDraft.action,
-                    explanation: currentDraft.explanation,
-                    email: {
-                        subject: currentDraft.subject,
-                        body: currentDraft.body
-                    }
-                },
-                evidence_refs: currentDraft.evidence
-            });
-        } catch (saveError) {
-            proposalStatus.className = "proposal-status error";
-            proposalStatus.textContent = saveError.message || "Could not save the proposal.";
-            queueProposal.disabled = false;
-            return;
-        }
-
-        const savedAction = saveResponse && saveResponse.action;
-        const actionId = savedAction ? savedAction.action_id : "";
-        proposalStatus.className = "proposal-status success";
-        proposalStatus.textContent = `Proposal saved as Pending (Action ID: ${actionId}). No email was sent and no CRM changes were made.`;
-        queueProposal.hidden = true;
-
-        try {
-            await loadQueue();
-        } catch (refreshError) {
-            proposalStatus.className = "proposal-status warning";
-            proposalStatus.replaceChildren();
-
-            const warnMsg = document.createElement("p");
-            warnMsg.textContent = `Proposal was saved (Action ID: ${actionId}), but the Action Queue could not be refreshed (${refreshError.message}).`;
-
-            const retryBtn = document.createElement("button");
-            retryBtn.type = "button";
-            retryBtn.className = "retry-button";
-            retryBtn.textContent = "Retry refreshing queue";
-            retryBtn.addEventListener("click", async () => {
-                retryBtn.disabled = true;
-                retryBtn.textContent = "Refreshing…";
-                try {
-                    await loadQueue();
-                    proposalStatus.className = "proposal-status success";
-                    proposalStatus.textContent = `Proposal saved as Pending (Action ID: ${actionId}) and Action Queue refreshed.`;
-                } catch (err) {
-                    retryBtn.disabled = false;
-                    retryBtn.textContent = "Retry refreshing queue";
-                    warnMsg.textContent = `Proposal was saved (Action ID: ${actionId}), but refreshing failed: ${err.message}`;
-                }
-            });
-
-            proposalStatus.append(warnMsg, retryBtn);
-        }
-    });
-
-    if (refreshQueue) {
-        refreshQueue.addEventListener("click", () => loadQueue().catch(() => {}));
-    }
-
-    form.addEventListener("submit", async (event) => {
-        event.preventDefault();
-
-        const accountId = accountInput.value.trim();
+    async function fetchCustomerBrief(accountId, customStatus) {
         if (!accountId) return;
-
         button.disabled = true;
-        status.textContent = "Generating brief… this may take a few minutes.";
+        status.textContent = customStatus || "Generating brief… this may take a few minutes.";
         result.replaceChildren();
 
         try {
@@ -2059,12 +2352,119 @@
             }
 
             renderBrief(data.brief || {});
-            status.textContent = "Brief generated successfully.";
+            status.textContent = customStatus ? "Customer brief updated with verified data." : "Brief generated successfully.";
         } catch (error) {
             status.textContent = error.message || "Could not generate the brief.";
         } finally {
             button.disabled = false;
         }
+    }
+
+    let isSubmittingProposal = false;
+
+    queueProposal.addEventListener("click", async () => {
+        if (!currentDraft || isSubmittingProposal) return;
+        if (queueProposal.disabled) return;
+
+        isSubmittingProposal = true;
+        queueProposal.disabled = true;
+        proposalStatus.className = "proposal-status loading";
+        proposalStatus.replaceChildren();
+        proposalStatus.textContent = "Saving proposal for review…";
+
+        let saveResponse = null;
+        let actionId = "";
+
+        try {
+            saveResponse = await apiRequest("/api/actions", "POST", {
+                account_id: currentDraft.accountId,
+                action_type: "customer_outreach_email",
+                proposed_payload: {
+                    proposed_action: currentDraft.action,
+                    explanation: currentDraft.explanation,
+                    email: {
+                        subject: currentDraft.subject,
+                        body: currentDraft.body
+                    }
+                },
+                evidence_refs: currentDraft.evidence
+            });
+
+            const savedAction = saveResponse && saveResponse.action;
+            actionId = savedAction && savedAction.action_id;
+
+            if (!savedAction || !actionId) {
+                throw new Error(
+                    (saveResponse && saveResponse.error) ||
+                    "Proposal was not created: server returned an incomplete response."
+                );
+            }
+
+            proposalStatus.className = "proposal-status success";
+            proposalStatus.textContent = `Proposal saved as Pending (Action ID: ${actionId}). No email was sent and no CRM changes were made.`;
+            queueProposal.hidden = true;
+
+            if (window.parent && window.parent !== window) {
+                window.parent.postMessage({
+                    type: "ASTRA_ACTION_UPDATE",
+                    actionId,
+                    status: "PENDING",
+                    message: `Proposal saved as Pending (Action ID: ${actionId.slice(0, 8)}...).`
+                }, "*");
+            }
+
+            try {
+                await loadQueue();
+            } catch (refreshError) {
+                proposalStatus.className = "proposal-status warning";
+                proposalStatus.replaceChildren();
+
+                const warnMsg = document.createElement("p");
+                warnMsg.textContent = `Proposal was saved (Action ID: ${actionId}), but the Action Queue could not be refreshed (${refreshError.message}).`;
+
+                const retryBtn = document.createElement("button");
+                retryBtn.type = "button";
+                retryBtn.className = "retry-button";
+                retryBtn.textContent = "Retry refreshing queue";
+                retryBtn.addEventListener("click", async () => {
+                    retryBtn.disabled = true;
+                    retryBtn.textContent = "Refreshing…";
+                    try {
+                        await loadQueue();
+                        proposalStatus.className = "proposal-status success";
+                        proposalStatus.textContent = `Proposal saved as Pending (Action ID: ${actionId}) and Action Queue refreshed.`;
+                    } catch (err) {
+                        retryBtn.disabled = false;
+                        retryBtn.textContent = "Retry refreshing queue";
+                        warnMsg.textContent = `Proposal was saved (Action ID: ${actionId}), but refreshing failed: ${err.message}`;
+                    }
+                });
+
+                proposalStatus.append(warnMsg, retryBtn);
+            }
+        } catch (saveError) {
+            proposalStatus.className = "proposal-status error";
+            proposalStatus.replaceChildren();
+            proposalStatus.textContent = saveError.message || "Could not save the proposal.";
+            queueProposal.hidden = false;
+            queueProposal.disabled = false;
+        } finally {
+            isSubmittingProposal = false;
+            if (proposalStatus.classList.contains("loading")) {
+                proposalStatus.classList.remove("loading");
+            }
+        }
+    });
+
+    if (refreshQueue) {
+        refreshQueue.addEventListener("click", () => loadQueue().catch(() => {}));
+    }
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const accountId = accountInput.value.trim();
+        if (!accountId) return;
+        fetchCustomerBrief(accountId);
     });
 
     loadQueue().catch(() => {});

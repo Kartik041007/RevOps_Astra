@@ -193,6 +193,9 @@ def create_action():
         )
     except mysql.connector.Error:
         return _database_error()
+    except Exception as exc:
+        current_app.logger.exception("Failed to create action proposal.")
+        return jsonify({"error": f"Failed to save proposal: {str(exc)}"}), 500
     return jsonify({
         "action": _enrich_action(action, risk_rows),
         "message": "Proposal saved for review. No email was sent and no CRM changes were made.",

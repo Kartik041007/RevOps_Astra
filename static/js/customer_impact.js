@@ -111,6 +111,153 @@ function renderKPIs(account) {
   `).join("");
 }
 
+function renderCRMDetails(account) {
+  const panel = $("crm-details-panel");
+  const grid = $("crm-details-grid");
+  const badge = $("crm-provider-badge");
+  if (!panel || !grid) return;
+
+  const crmRecord = account.crm_record || {};
+  const provider = (account.crm_provider || "").toLowerCase();
+  const providerLabel = provider === "mysql" ? "MySQL CRM" : (provider === "mock" ? "Mock CRM" : "CRM Profile");
+  if (badge) {
+    badge.textContent = providerLabel;
+  }
+
+  const items = [];
+
+  // 1. CRM Status
+  const statusVal = crmRecord.customer_status || crmRecord.status || account.customer_status || account.status;
+  if (statusVal) {
+    items.push(`
+      <div class="ci-crm-item">
+        <span>Lifecycle Status</span>
+        <strong class="ci-crm-badge-val">${esc(statusVal)}</strong>
+      </div>
+    `);
+  }
+
+  // 2. Assigned Owner & Email
+  const ownerVal = crmRecord.account_owner || account.account_owner;
+  const emailVal = crmRecord.owner_email || account.owner_email;
+  if (ownerVal || emailVal) {
+    items.push(`
+      <div class="ci-crm-item">
+        <span>Assigned Owner</span>
+        <strong>${esc(ownerVal || "Unassigned")}</strong>
+        ${emailVal ? `<small class="ci-muted">${esc(emailVal)}</small>` : ""}
+      </div>
+    `);
+  }
+
+  // 3. Last Contact Date
+  const contactDate = crmRecord.last_contact_date || account.last_contact_date;
+  if (contactDate) {
+    items.push(`
+      <div class="ci-crm-item">
+        <span>Last Contact Date</span>
+        <strong>${esc(contactDate)}</strong>
+      </div>
+    `);
+  }
+
+  // 4. CRM Notes
+  const notesVal = crmRecord.notes || account.notes;
+  if (notesVal) {
+    items.push(`
+      <div class="ci-crm-item full-width">
+        <span>Account CRM Notes</span>
+        <strong>${esc(notesVal)}</strong>
+      </div>
+    `);
+  }
+
+  if (items.length === 0) {
+    grid.innerHTML = `<div class="ci-crm-empty full-width"><p>No CRM profile data recorded for this account.</p></div>`;
+  } else {
+    grid.innerHTML = items.join("");
+  }
+}
+
+function renderVerifiedCRM(account) {
+  const panel = $("verified-crm-panel");
+  const grid = $("verified-crm-grid");
+  const syncBadge = $("crm-sync-badge");
+  if (!panel || !grid) return;
+
+  const verifiedUpdate = account.verified_update || null;
+  const hasVerified = Boolean(account.has_verified_mutation && verifiedUpdate);
+
+  if (!hasVerified) {
+    if (syncBadge) {
+      syncBadge.textContent = "No verified CRM updates yet";
+      syncBadge.className = "ci-count unverified";
+    }
+    grid.innerHTML = `
+      <div class="ci-crm-empty full-width">
+        <p>No verified CRM updates yet for this account. Proposed outreach actions must be reviewed and approved in the Action Queue, then executed via MCP with read-back verification before execution receipts appear here.</p>
+      </div>
+    `;
+    return;
+  }
+
+  if (syncBadge) {
+    const provider = (verifiedUpdate.mode || account.crm_provider || "").toLowerCase();
+    const providerName = provider === "mysql" ? "MySQL" : "Mock";
+    syncBadge.textContent = `✓ Verified via MCP (${providerName})`;
+    syncBadge.className = "ci-count verified";
+  }
+
+  const items = [];
+
+  // 1. Action ID / Status
+  items.push(`
+    <div class="ci-crm-item">
+      <span>Action ID / Status</span>
+      <strong>${esc(verifiedUpdate.action_id || "—")}</strong>
+      <small class="ci-muted">Status: <strong style="color: #15803d;">${esc(verifiedUpdate.status || "COMPLETED")}</strong></small>
+    </div>
+  `);
+
+  // 2. Execution / Verification Timestamp
+  items.push(`
+    <div class="ci-crm-item">
+      <span>Verification Timestamp</span>
+      <strong>${esc(verifiedUpdate.executed_at ? String(verifiedUpdate.executed_at).replace("T", " ").slice(0, 19) : "Verified via MCP")}</strong>
+      <small class="ci-muted">${esc(verifiedUpdate.integration || "mcp_mysql_crm")} · Read-back verified</small>
+    </div>
+  `);
+
+  // 3. Audit trail (if available from MySQL audit_logs)
+  if (verifiedUpdate.audit_event) {
+    const auditEv = verifiedUpdate.audit_event;
+    items.push(`
+      <div class="ci-crm-item">
+        <span>MySQL Audit Record</span>
+        <strong>Log #${esc(auditEv.log_id)} · ${esc(auditEv.event_type || "CRM_RECORD_UPDATED")}</strong>
+        <small class="ci-muted">Actor: ${esc(auditEv.actor || "MCP_SERVER")}</small>
+      </div>
+    `);
+  }
+
+  // 4. Applied updates details (full width)
+  const applied = verifiedUpdate.applied_updates || {};
+  const appliedStr = Object.entries(applied)
+    .map(([k, v]) => `${k}: "${v}"`)
+    .join(", ");
+  const message = verifiedUpdate.message || "Executed and read-back verified against CRM via MCP.";
+
+  items.push(`
+    <div class="ci-crm-item full-width verified-highlight">
+      <span>Verified CRM Mutation Receipt</span>
+      <strong>${esc(appliedStr || message)}</strong>
+      <small class="ci-muted">${esc(message)}</small>
+    </div>
+  `);
+
+  grid.innerHTML = items.join("");
+}
+
 function renderUsageMetrics(account) {
   const metrics = [
     ["Usage events · 30d", account.usage_events_30d],
@@ -339,6 +486,8 @@ async function loadCustomer() {
 
     renderHeader(account, customerId);
     renderKPIs(account);
+    renderCRMDetails(account);
+    renderVerifiedCRM(account);
     renderUsageMetrics(account);
     renderCharts(account);
     renderEvidence(evidence);
